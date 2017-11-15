@@ -2,6 +2,7 @@ package nl.naxanria.researchpower.tile;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraftforge.energy.IEnergyStorage;
 import nl.naxanria.researchpower.util.EnumHelper;
 
 public class BatteryEntity extends TileEntityBase implements IEnergySharingProvider
@@ -11,6 +12,12 @@ public class BatteryEntity extends TileEntityBase implements IEnergySharingProvi
   public BatteryEntity(BaseEnergyStorage storage)
   {
     this.storage = storage;
+  }
+  
+  @Override
+  public IEnergyStorage getEnergyStorage(EnumFacing facing)
+  {
+    return storage;
   }
   
   @Override

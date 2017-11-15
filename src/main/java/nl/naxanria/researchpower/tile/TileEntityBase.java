@@ -8,6 +8,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.energy.CapabilityEnergy;
@@ -74,6 +76,10 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
               shareSides)
             {
               TileEntity tile = tilesAround[side.ordinal()];
+              if (tile == null)
+              {
+                continue;
+              }
               if (energySharingProvider.canShareTo(tile))
               {
                 WorldUtil.doEnergyInteraction(this, tile, side, amount);
@@ -83,6 +89,13 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
         }
       }
     }
+  }
+  
+  @Nullable
+  @Override
+  public ITextComponent getDisplayName()
+  {
+    return new TextComponentString(getClass().getName());
   }
   
   public void saveDataOnChangeOrWorldStart()
