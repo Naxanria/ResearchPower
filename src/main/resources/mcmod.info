@@ -1,0 +1,20 @@
+[
+  {
+    "modid": "researchpower",
+    "name": "ResearchPower",
+    "description": "Research cause why not",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "Naxanria"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": [
+      ""
+    ]
+  }
+]
