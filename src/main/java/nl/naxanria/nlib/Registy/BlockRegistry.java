@@ -2,45 +2,36 @@ package nl.naxanria.nlib.Registy;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.registries.IForgeRegistry;
 import nl.naxanria.nlib.block.BlockTileBase;
 import nl.naxanria.nlib.block.IBlockBase;
 
 import java.util.ArrayList;
 
-public class BlockRegistry
+public class BlockRegistry extends Registry<IBlockBase, IForgeRegistry<Block>>
 {
-  private static ArrayList<IBlockBase> toRegister = new ArrayList<>();
-  
-  public static void addBlock(IBlockBase block)
+  @Override
+  public void register(IForgeRegistry<Block> registry, IBlockBase iBlockBase)
   {
-    toRegister.add(block);
+    registry.register(iBlockBase.getBlock());
   }
   
-  public static void register(IForgeRegistry<Block> registry)
-  {
-    for (IBlockBase b :
-      toRegister)
-    {
-      registry.register(b.getBlock());
-    }
-  }
-
-  public static void registerItemBlocks(IForgeRegistry<Item> registry)
+  public void registerItemBlocks(IForgeRegistry<Item> registry)
   {
     for (IBlockBase b :
       toRegister)
     {
       registry.register(b.createItemBlock());
-      
+
       if (b instanceof BlockTileBase)
       {
         ((BlockTileBase) b).registerTileEntity();
       }
     }
   }
-
-  public static void registerModels()
+  
+  public void registerModels()
   {
     for (IBlockBase b :
       toRegister)

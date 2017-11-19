@@ -10,17 +10,11 @@ public class Items
   
   }
   
-  public static void init()
+  public static void init(ItemRegistry registry)
   {
-  
-  }
-  
-  private static void addItems(IItemBase... items)
-  {
-    for (IItemBase item :
-      items)
-    {
-      ItemRegistry.addItem(item);
-    }
+    registry.addAll
+    (
+    
+    );
   }
 }

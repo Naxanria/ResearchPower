@@ -2,6 +2,7 @@
 out/
 run/
 gradle/
+build/
 .gradle/
 *.jar
 #ignore thumbnails created by windows

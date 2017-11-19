@@ -4,27 +4,15 @@ import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 import nl.naxanria.nlib.item.IItemBase;
 
-import java.util.ArrayList;
-
-public class ItemRegistry
+public class ItemRegistry extends Registry<IItemBase, IForgeRegistry<Item>>
 {
-  private static ArrayList<IItemBase> toRegister = new ArrayList<>();
-  
-  public static void addItem(IItemBase item)
+  @Override
+  public void register(IForgeRegistry<Item> registry, IItemBase item)
   {
-    toRegister.add(item);
+    registry.register(item.getItem());
   }
   
-  public static void registerItems(IForgeRegistry<Item> registry)
-  {
-    for (IItemBase item :
-      toRegister)
-    {
-      registry.register(item.getItem());
-    }
-  }
-  
-  public static void registerModels()
+  public void registerModels()
   {
     for (IItemBase item :
       toRegister)

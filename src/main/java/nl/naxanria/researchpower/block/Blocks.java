@@ -16,22 +16,13 @@ public class Blocks
     public static final BlockVacuumGenerator vacuumGenerator = new BlockVacuumGenerator();
   }
   
-  public static void init()
+  public static void init(BlockRegistry registry)
   {
-    addBlocks
+    registry.addAll
     (
       Machines.battery,
       Machines.researchStation,
       Machines.vacuumGenerator
     );
-  }
-  
-  private static void addBlocks(IBlockBase... blocks)
-  {
-    for (IBlockBase b :
-      blocks)
-    {
-      BlockRegistry.addBlock(b);
-    }
   }
 }

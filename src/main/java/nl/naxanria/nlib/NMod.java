@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import nl.naxanria.nlib.Registy.BlockRegistry;
 import nl.naxanria.nlib.Registy.ItemRegistry;
+import nl.naxanria.nlib.Registy.RecipeRegistry;
 import nl.naxanria.nlib.network.PacketHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -54,6 +55,10 @@ public abstract class NMod
   public abstract String modName();
   public abstract String modVersion();
   
+  protected BlockRegistry blockRegistry = new BlockRegistry();
+  protected ItemRegistry itemRegistry = new ItemRegistry();
+  protected RecipeRegistry recipeRegistry = new RecipeRegistry();
+  
   /**
    * This is the first initialization event. Register tile entities here.
    * The registry events below will have fired prior to entry to this method.
@@ -96,10 +101,16 @@ public abstract class NMod
   
   private static void initClass(Class<?> c)
   {
+    initClass(c, null);
+  }
+  
+  private static <T> void initClass(Class<?> c, T arg)
+  {
     try
     {
-      Method method = c.getMethod("init");
-      method.invoke(null);
+      Class argClass = (arg != null) ? arg.getClass() : null;
+      Method method = c.getMethod("init", argClass);
+      method.invoke(null, arg);
     }
     catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e)
     {
@@ -111,17 +122,17 @@ public abstract class NMod
   
   private static void initItemClass()
   {
-    initClass(instance.getItemClass());
+    initClass(instance.getItemClass(), instance.itemRegistry);
   }
   
   private static void initBlockClass()
   {
-    initClass(instance.getBlockClass());
+    initClass(instance.getBlockClass(), instance.blockRegistry);
   }
   
   private static void initRecipeClass()
   {
-    initClass(instance.getRecipeClass());
+    initClass(instance.getRecipeClass(), instance.recipeRegistry);
   }
   
   @Mod.EventBusSubscriber
@@ -132,23 +143,22 @@ public abstract class NMod
     {
       initItemClass();
       
-      ItemRegistry.registerItems(event.getRegistry());
-      BlockRegistry.registerItemBlocks(event.getRegistry());
+      instance.itemRegistry.registerAll(event.getRegistry());
+      instance.blockRegistry.registerItemBlocks(event.getRegistry());
     }
     
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
       initBlockClass();
-      BlockRegistry.register(event.getRegistry());
+      instance.blockRegistry.registerAll(event.getRegistry());
     }
     
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event)
     {
-      ItemRegistry.registerModels();
-      BlockRegistry.registerModels();
+      instance.itemRegistry.registerModels();
+      instance.blockRegistry.registerModels();
     }
   }
-  
 }

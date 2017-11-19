@@ -1,247 +1,273 @@
 Symbol range map extraction starting
-Processing 35 files
-startProcessing "nl\naxanria\nlib\NMod.java" md5: d5e089ec451982cea9f46017f23e78ef
+Processing 37 files
+startProcessing "nl\naxanria\nlib\NMod.java" md5: 10720144328071ec676a69d8fe5d1e21
 Cache Hit!
 @|nl\naxanria\nlib\NMod.java|8|24|nl.naxanria.nlib|package|nl.naxanria.nlib|(file)
 Class Start: nl.naxanria.nlib.NMod
-   @|nl\naxanria\nlib\NMod.java|848|852|NMod|class|nl.naxanria.nlib.NMod
-   @|nl\naxanria\nlib\NMod.java|874|878|NMod|class|nl.naxanria.nlib.NMod
-   @|nl\naxanria\nlib\NMod.java|874|878|NMod|class|nl.naxanria.nlib.NMod
-   @|nl\naxanria\nlib\NMod.java|879|887|instance|field|nl.naxanria.nlib.NMod|instance|
-   @|nl\naxanria\nlib\NMod.java|905|911|Logger|class|org.apache.logging.log4j.Logger
-   @|nl\naxanria\nlib\NMod.java|905|911|Logger|class|org.apache.logging.log4j.Logger
-   @|nl\naxanria\nlib\NMod.java|912|918|LOGGER|field|nl.naxanria.nlib.NMod|LOGGER|
+   @|nl\naxanria\nlib\NMod.java|896|900|NMod|class|nl.naxanria.nlib.NMod
+   @|nl\naxanria\nlib\NMod.java|922|926|NMod|class|nl.naxanria.nlib.NMod
+   @|nl\naxanria\nlib\NMod.java|922|926|NMod|class|nl.naxanria.nlib.NMod
+   @|nl\naxanria\nlib\NMod.java|927|935|instance|field|nl.naxanria.nlib.NMod|instance|
+   @|nl\naxanria\nlib\NMod.java|953|959|Logger|class|org.apache.logging.log4j.Logger
+   @|nl\naxanria\nlib\NMod.java|953|959|Logger|class|org.apache.logging.log4j.Logger
+   @|nl\naxanria\nlib\NMod.java|960|966|LOGGER|field|nl.naxanria.nlib.NMod|LOGGER|
    Method Start: NMod()V
-      @|nl\naxanria\nlib\NMod.java|932|936|NMod|method|nl.naxanria.nlib.NMod|NMod|()V
-      @|nl\naxanria\nlib\NMod.java|947|955|instance|field|nl.naxanria.nlib.NMod|instance
-      @|nl\naxanria\nlib\NMod.java|968|974|LOGGER|field|nl.naxanria.nlib.NMod|LOGGER
-      @|nl\naxanria\nlib\NMod.java|977|987|LogManager|class|org.apache.logging.log4j.LogManager
-      @|nl\naxanria\nlib\NMod.java|988|997|getLogger|method|org.apache.logging.log4j.LogManager|getLogger|(Ljava/lang/String;)Lorg/apache/logging/log4j/Logger;
-      @|nl\naxanria\nlib\NMod.java|998|1003|modId|method|nl.naxanria.nlib.NMod|modId|()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|1017|1023|LOGGER|field|nl.naxanria.nlib.NMod|LOGGER
-      @|nl\naxanria\nlib\NMod.java|1024|1028|info|method|org.apache.logging.log4j.Logger|info|(Ljava/lang/String;)V
-      @|nl\naxanria\nlib\NMod.java|1057|1067|getModName|method|nl.naxanria.nlib.NMod|getModName|()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|1078|1088|getVersion|method|nl.naxanria.nlib.NMod|getVersion|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|980|984|NMod|method|nl.naxanria.nlib.NMod|NMod|()V
+      @|nl\naxanria\nlib\NMod.java|995|1003|instance|field|nl.naxanria.nlib.NMod|instance
+      @|nl\naxanria\nlib\NMod.java|1016|1022|LOGGER|field|nl.naxanria.nlib.NMod|LOGGER
+      @|nl\naxanria\nlib\NMod.java|1025|1035|LogManager|class|org.apache.logging.log4j.LogManager
+      @|nl\naxanria\nlib\NMod.java|1036|1045|getLogger|method|org.apache.logging.log4j.LogManager|getLogger|(Ljava/lang/String;)Lorg/apache/logging/log4j/Logger;
+      @|nl\naxanria\nlib\NMod.java|1046|1051|modId|method|nl.naxanria.nlib.NMod|modId|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|1065|1071|LOGGER|field|nl.naxanria.nlib.NMod|LOGGER
+      @|nl\naxanria\nlib\NMod.java|1072|1076|info|method|org.apache.logging.log4j.Logger|info|(Ljava/lang/String;)V
+      @|nl\naxanria\nlib\NMod.java|1105|1115|getModName|method|nl.naxanria.nlib.NMod|getModName|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|1126|1136|getVersion|method|nl.naxanria.nlib.NMod|getVersion|()Ljava/lang/String;
    Method End: NMod()V
    Method Start: getModId()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|1116|1122|String|class|java.lang.String
-      @|nl\naxanria\nlib\NMod.java|1123|1131|getModId|method|nl.naxanria.nlib.NMod|getModId|()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|1149|1157|instance|field|nl.naxanria.nlib.NMod|instance
-      @|nl\naxanria\nlib\NMod.java|1158|1163|modId|method|nl.naxanria.nlib.NMod|modId|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|1164|1170|String|class|java.lang.String
+      @|nl\naxanria\nlib\NMod.java|1171|1179|getModId|method|nl.naxanria.nlib.NMod|getModId|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|1197|1205|instance|field|nl.naxanria.nlib.NMod|instance
+      @|nl\naxanria\nlib\NMod.java|1206|1211|modId|method|nl.naxanria.nlib.NMod|modId|()Ljava/lang/String;
    Method End: getModId()Ljava/lang/String;
    Method Start: getModName()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|1190|1196|String|class|java.lang.String
-      @|nl\naxanria\nlib\NMod.java|1197|1207|getModName|method|nl.naxanria.nlib.NMod|getModName|()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|1225|1233|instance|field|nl.naxanria.nlib.NMod|instance
-      @|nl\naxanria\nlib\NMod.java|1234|1241|modName|method|nl.naxanria.nlib.NMod|modName|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|1238|1244|String|class|java.lang.String
+      @|nl\naxanria\nlib\NMod.java|1245|1255|getModName|method|nl.naxanria.nlib.NMod|getModName|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|1273|1281|instance|field|nl.naxanria.nlib.NMod|instance
+      @|nl\naxanria\nlib\NMod.java|1282|1289|modName|method|nl.naxanria.nlib.NMod|modName|()Ljava/lang/String;
    Method End: getModName()Ljava/lang/String;
    Method Start: getVersion()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|1268|1274|String|class|java.lang.String
-      @|nl\naxanria\nlib\NMod.java|1275|1285|getVersion|method|nl.naxanria.nlib.NMod|getVersion|()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|1303|1311|instance|field|nl.naxanria.nlib.NMod|instance
-      @|nl\naxanria\nlib\NMod.java|1312|1322|modVersion|method|nl.naxanria.nlib.NMod|modVersion|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|1316|1322|String|class|java.lang.String
+      @|nl\naxanria\nlib\NMod.java|1323|1333|getVersion|method|nl.naxanria.nlib.NMod|getVersion|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|1351|1359|instance|field|nl.naxanria.nlib.NMod|instance
+      @|nl\naxanria\nlib\NMod.java|1360|1370|modVersion|method|nl.naxanria.nlib.NMod|modVersion|()Ljava/lang/String;
    Method End: getVersion()Ljava/lang/String;
    Method Start: getBlockClass()Ljava/lang/Class;
-      @|nl\naxanria\nlib\NMod.java|1354|1359|Class|class|java.lang.Class
-      @|nl\naxanria\nlib\NMod.java|1360|1373|getBlockClass|method|nl.naxanria.nlib.NMod|getBlockClass|()Ljava/lang/Class;
+      @|nl\naxanria\nlib\NMod.java|1402|1407|Class|class|java.lang.Class
+      @|nl\naxanria\nlib\NMod.java|1408|1421|getBlockClass|method|nl.naxanria.nlib.NMod|getBlockClass|()Ljava/lang/Class;
    Method End: getBlockClass()Ljava/lang/Class;
    Method Start: getItemClass()Ljava/lang/Class;
-      @|nl\naxanria\nlib\NMod.java|1398|1403|Class|class|java.lang.Class
-      @|nl\naxanria\nlib\NMod.java|1404|1416|getItemClass|method|nl.naxanria.nlib.NMod|getItemClass|()Ljava/lang/Class;
+      @|nl\naxanria\nlib\NMod.java|1446|1451|Class|class|java.lang.Class
+      @|nl\naxanria\nlib\NMod.java|1452|1464|getItemClass|method|nl.naxanria.nlib.NMod|getItemClass|()Ljava/lang/Class;
    Method End: getItemClass()Ljava/lang/Class;
    Method Start: getRecipeClass()Ljava/lang/Class;
-      @|nl\naxanria\nlib\NMod.java|1441|1446|Class|class|java.lang.Class
-      @|nl\naxanria\nlib\NMod.java|1447|1461|getRecipeClass|method|nl.naxanria.nlib.NMod|getRecipeClass|()Ljava/lang/Class;
+      @|nl\naxanria\nlib\NMod.java|1489|1494|Class|class|java.lang.Class
+      @|nl\naxanria\nlib\NMod.java|1495|1509|getRecipeClass|method|nl.naxanria.nlib.NMod|getRecipeClass|()Ljava/lang/Class;
    Method End: getRecipeClass()Ljava/lang/Class;
    Method Start: modId()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|1486|1492|String|class|java.lang.String
-      @|nl\naxanria\nlib\NMod.java|1493|1498|modId|method|nl.naxanria.nlib.NMod|modId|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|1534|1540|String|class|java.lang.String
+      @|nl\naxanria\nlib\NMod.java|1541|1546|modId|method|nl.naxanria.nlib.NMod|modId|()Ljava/lang/String;
    Method End: modId()Ljava/lang/String;
    Method Start: modName()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|1520|1526|String|class|java.lang.String
-      @|nl\naxanria\nlib\NMod.java|1527|1534|modName|method|nl.naxanria.nlib.NMod|modName|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|1568|1574|String|class|java.lang.String
+      @|nl\naxanria\nlib\NMod.java|1575|1582|modName|method|nl.naxanria.nlib.NMod|modName|()Ljava/lang/String;
    Method End: modName()Ljava/lang/String;
    Method Start: modVersion()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|1556|1562|String|class|java.lang.String
-      @|nl\naxanria\nlib\NMod.java|1563|1573|modVersion|method|nl.naxanria.nlib.NMod|modVersion|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|1604|1610|String|class|java.lang.String
+      @|nl\naxanria\nlib\NMod.java|1611|1621|modVersion|method|nl.naxanria.nlib.NMod|modVersion|()Ljava/lang/String;
    Method End: modVersion()Ljava/lang/String;
+   @|nl\naxanria\nlib\NMod.java|1640|1653|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
+   @|nl\naxanria\nlib\NMod.java|1640|1653|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
+   @|nl\naxanria\nlib\NMod.java|1654|1667|blockRegistry|field|nl.naxanria.nlib.NMod|blockRegistry|
+   @|nl\naxanria\nlib\NMod.java|1674|1687|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
+   @|nl\naxanria\nlib\NMod.java|1703|1715|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
+   @|nl\naxanria\nlib\NMod.java|1703|1715|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
+   @|nl\naxanria\nlib\NMod.java|1716|1728|itemRegistry|field|nl.naxanria.nlib.NMod|itemRegistry|
+   @|nl\naxanria\nlib\NMod.java|1735|1747|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
+   @|nl\naxanria\nlib\NMod.java|1763|1777|RecipeRegistry|class|nl.naxanria.nlib.Registy.RecipeRegistry
+   @|nl\naxanria\nlib\NMod.java|1763|1777|RecipeRegistry|class|nl.naxanria.nlib.Registy.RecipeRegistry
+   @|nl\naxanria\nlib\NMod.java|1778|1792|recipeRegistry|field|nl.naxanria.nlib.NMod|recipeRegistry|
+   @|nl\naxanria\nlib\NMod.java|1799|1813|RecipeRegistry|class|nl.naxanria.nlib.Registy.RecipeRegistry
    Method Start: preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|1818|1823|event|param|nl.naxanria.nlib.NMod|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
-      @|nl\naxanria\nlib\NMod.java|1747|1763|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler
-      @|nl\naxanria\nlib\NMod.java|1784|1791|preInit|method|nl.naxanria.nlib.NMod|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|1792|1817|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent
-      @|nl\naxanria\nlib\NMod.java|1833|1846|PacketHandler|class|nl.naxanria.nlib.network.PacketHandler
-      @|nl\naxanria\nlib\NMod.java|1847|1851|init|method|nl.naxanria.nlib.network.PacketHandler|init|()V
-      @|nl\naxanria\nlib\NMod.java|1864|1873|onPreInit|method|nl.naxanria.nlib.NMod|onPreInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|1874|1879|event|param|nl.naxanria.nlib.NMod|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|nl\naxanria\nlib\NMod.java|2058|2063|event|param|nl.naxanria.nlib.NMod|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|nl\naxanria\nlib\NMod.java|1987|2003|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler
+      @|nl\naxanria\nlib\NMod.java|2024|2031|preInit|method|nl.naxanria.nlib.NMod|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|nl\naxanria\nlib\NMod.java|2032|2057|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent
+      @|nl\naxanria\nlib\NMod.java|2073|2086|PacketHandler|class|nl.naxanria.nlib.network.PacketHandler
+      @|nl\naxanria\nlib\NMod.java|2087|2091|init|method|nl.naxanria.nlib.network.PacketHandler|init|()V
+      @|nl\naxanria\nlib\NMod.java|2104|2113|onPreInit|method|nl.naxanria.nlib.NMod|onPreInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|nl\naxanria\nlib\NMod.java|2114|2119|event|param|nl.naxanria.nlib.NMod|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
    Method End: preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
    Method Start: onPreInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|1942|1947|event|param|nl.naxanria.nlib.NMod|onPreInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
-      @|nl\naxanria\nlib\NMod.java|1906|1915|onPreInit|method|nl.naxanria.nlib.NMod|onPreInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|1916|1941|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent
+      @|nl\naxanria\nlib\NMod.java|2182|2187|event|param|nl.naxanria.nlib.NMod|onPreInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|nl\naxanria\nlib\NMod.java|2146|2155|onPreInit|method|nl.naxanria.nlib.NMod|onPreInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|nl\naxanria\nlib\NMod.java|2156|2181|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent
    Method End: onPreInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
    Method Start: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|2105|2110|event|param|nl.naxanria.nlib.NMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
-      @|nl\naxanria\nlib\NMod.java|2040|2056|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler
-      @|nl\naxanria\nlib\NMod.java|2077|2081|init|method|nl.naxanria.nlib.NMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|2082|2104|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent
-      @|nl\naxanria\nlib\NMod.java|2120|2135|initRecipeClass|method|nl.naxanria.nlib.NMod|initRecipeClass|()V
-      @|nl\naxanria\nlib\NMod.java|2148|2154|onInit|method|nl.naxanria.nlib.NMod|onInit|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|2155|2160|event|param|nl.naxanria.nlib.NMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
+      @|nl\naxanria\nlib\NMod.java|2345|2350|event|param|nl.naxanria.nlib.NMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
+      @|nl\naxanria\nlib\NMod.java|2280|2296|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler
+      @|nl\naxanria\nlib\NMod.java|2317|2321|init|method|nl.naxanria.nlib.NMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|nl\naxanria\nlib\NMod.java|2322|2344|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent
+      @|nl\naxanria\nlib\NMod.java|2360|2375|initRecipeClass|method|nl.naxanria.nlib.NMod|initRecipeClass|()V
+      @|nl\naxanria\nlib\NMod.java|2388|2394|onInit|method|nl.naxanria.nlib.NMod|onInit|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|nl\naxanria\nlib\NMod.java|2395|2400|event|param|nl.naxanria.nlib.NMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
    Method End: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
    Method Start: onInit(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|2217|2222|event|param|nl.naxanria.nlib.NMod|onInit|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
-      @|nl\naxanria\nlib\NMod.java|2187|2193|onInit|method|nl.naxanria.nlib.NMod|onInit|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|2194|2216|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent
+      @|nl\naxanria\nlib\NMod.java|2457|2462|event|param|nl.naxanria.nlib.NMod|onInit|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
+      @|nl\naxanria\nlib\NMod.java|2427|2433|onInit|method|nl.naxanria.nlib.NMod|onInit|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|nl\naxanria\nlib\NMod.java|2434|2456|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent
    Method End: onInit(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
    Method Start: postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|2404|2409|event|param|nl.naxanria.nlib.NMod|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
-      @|nl\naxanria\nlib\NMod.java|2331|2347|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler
-      @|nl\naxanria\nlib\NMod.java|2368|2376|postInit|method|nl.naxanria.nlib.NMod|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|2377|2403|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent
-      @|nl\naxanria\nlib\NMod.java|2419|2429|onPostInit|method|nl.naxanria.nlib.NMod|onPostInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|2430|2435|event|param|nl.naxanria.nlib.NMod|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
+      @|nl\naxanria\nlib\NMod.java|2644|2649|event|param|nl.naxanria.nlib.NMod|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
+      @|nl\naxanria\nlib\NMod.java|2571|2587|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler
+      @|nl\naxanria\nlib\NMod.java|2608|2616|postInit|method|nl.naxanria.nlib.NMod|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|nl\naxanria\nlib\NMod.java|2617|2643|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent
+      @|nl\naxanria\nlib\NMod.java|2659|2669|onPostInit|method|nl.naxanria.nlib.NMod|onPostInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|nl\naxanria\nlib\NMod.java|2670|2675|event|param|nl.naxanria.nlib.NMod|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
    Method End: postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
    Method Start: onPostInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|2500|2505|event|param|nl.naxanria.nlib.NMod|onPostInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
-      @|nl\naxanria\nlib\NMod.java|2462|2472|onPostInit|method|nl.naxanria.nlib.NMod|onPostInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|nl\naxanria\nlib\NMod.java|2473|2499|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent
+      @|nl\naxanria\nlib\NMod.java|2740|2745|event|param|nl.naxanria.nlib.NMod|onPostInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
+      @|nl\naxanria\nlib\NMod.java|2702|2712|onPostInit|method|nl.naxanria.nlib.NMod|onPostInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|nl\naxanria\nlib\NMod.java|2713|2739|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent
    Method End: onPostInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
    Method Start: initClass(Ljava/lang/Class;)V
-      @|nl\naxanria\nlib\NMod.java|2557|2558|c|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;)V|c|0
-      @|nl\naxanria\nlib\NMod.java|2538|2547|initClass|method|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;)V
-      @|nl\naxanria\nlib\NMod.java|2548|2553|Class|class|java.lang.Class
-      @|nl\naxanria\nlib\NMod.java|2584|2590|Method|class|java.lang.reflect.Method
-      @|nl\naxanria\nlib\NMod.java|2600|2601|c|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;)V|c|0
-      @|nl\naxanria\nlib\NMod.java|2602|2611|getMethod|method|java.lang.Class|getMethod|(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-      @|nl\naxanria\nlib\NMod.java|2634|2640|invoke|method|java.lang.reflect.Method|invoke|(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-      @|nl\naxanria\nlib\NMod.java|2665|2686|NoSuchMethodException|class|java.lang.NoSuchMethodException
-      @|nl\naxanria\nlib\NMod.java|2689|2711|IllegalAccessException|class|java.lang.IllegalAccessException
-      @|nl\naxanria\nlib\NMod.java|2714|2739|InvocationTargetException|class|java.lang.reflect.InvocationTargetException
-      @|nl\naxanria\nlib\NMod.java|2755|2761|LOGGER|field|nl.naxanria.nlib.NMod|LOGGER
-      @|nl\naxanria\nlib\NMod.java|2762|2767|error|method|org.apache.logging.log4j.Logger|error|(Ljava/lang/String;)V
-      @|nl\naxanria\nlib\NMod.java|2768|2769|c|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;)V|c|0
-      @|nl\naxanria\nlib\NMod.java|2770|2777|getName|method|java.lang.Class|getName|()Ljava/lang/String;
-      @|nl\naxanria\nlib\NMod.java|2815|2830|printStackTrace|method|java.lang.Throwable|printStackTrace|()V
-      @|nl\naxanria\nlib\NMod.java|2842|2857|printStackTrace|method|java.lang.Throwable|printStackTrace|()V
+      @|nl\naxanria\nlib\NMod.java|2797|2798|c|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;)V|c|0
+      @|nl\naxanria\nlib\NMod.java|2778|2787|initClass|method|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;)V
+      @|nl\naxanria\nlib\NMod.java|2788|2793|Class|class|java.lang.Class
+      @|nl\naxanria\nlib\NMod.java|2808|2817|initClass|method|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V
+      @|nl\naxanria\nlib\NMod.java|2818|2819|c|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;)V|c|0
    Method End: initClass(Ljava/lang/Class;)V
+   Method Start: initClass(Ljava/lang/Class;Ljava/lang/Object;)V
+      @|nl\naxanria\nlib\NMod.java|2880|2881|c|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V|c|0
+      @|nl\naxanria\nlib\NMod.java|2885|2888|arg|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V|arg|1
+      @|nl\naxanria\nlib\NMod.java|2861|2870|initClass|method|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V
+      @|nl\naxanria\nlib\NMod.java|2871|2876|Class|class|java.lang.Class
+      @|nl\naxanria\nlib\NMod.java|2914|2919|Class|class|java.lang.Class
+      @|nl\naxanria\nlib\NMod.java|2932|2935|arg|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V|arg|1
+      @|nl\naxanria\nlib\NMod.java|2947|2950|arg|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V|arg|1
+      @|nl\naxanria\nlib\NMod.java|2951|2959|getClass|method|java.lang.Object|getClass|()Ljava/lang/Class;
+      @|nl\naxanria\nlib\NMod.java|2976|2982|Method|class|java.lang.reflect.Method
+      @|nl\naxanria\nlib\NMod.java|2992|2993|c|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V|c|0
+      @|nl\naxanria\nlib\NMod.java|2994|3003|getMethod|method|java.lang.Class|getMethod|(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+      @|nl\naxanria\nlib\NMod.java|3036|3042|invoke|method|java.lang.reflect.Method|invoke|(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+      @|nl\naxanria\nlib\NMod.java|3049|3052|arg|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V|arg|1
+      @|nl\naxanria\nlib\NMod.java|3072|3093|NoSuchMethodException|class|java.lang.NoSuchMethodException
+      @|nl\naxanria\nlib\NMod.java|3096|3118|IllegalAccessException|class|java.lang.IllegalAccessException
+      @|nl\naxanria\nlib\NMod.java|3121|3146|InvocationTargetException|class|java.lang.reflect.InvocationTargetException
+      @|nl\naxanria\nlib\NMod.java|3162|3168|LOGGER|field|nl.naxanria.nlib.NMod|LOGGER
+      @|nl\naxanria\nlib\NMod.java|3169|3174|error|method|org.apache.logging.log4j.Logger|error|(Ljava/lang/String;)V
+      @|nl\naxanria\nlib\NMod.java|3175|3176|c|param|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V|c|0
+      @|nl\naxanria\nlib\NMod.java|3177|3184|getName|method|java.lang.Class|getName|()Ljava/lang/String;
+      @|nl\naxanria\nlib\NMod.java|3222|3237|printStackTrace|method|java.lang.Throwable|printStackTrace|()V
+      @|nl\naxanria\nlib\NMod.java|3249|3264|printStackTrace|method|java.lang.Throwable|printStackTrace|()V
+   Method End: initClass(Ljava/lang/Class;Ljava/lang/Object;)V
    Method Start: initItemClass()V
-      @|nl\naxanria\nlib\NMod.java|2896|2909|initItemClass|method|nl.naxanria.nlib.NMod|initItemClass|()V
-      @|nl\naxanria\nlib\NMod.java|2920|2929|initClass|method|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;)V
-      @|nl\naxanria\nlib\NMod.java|2930|2938|instance|field|nl.naxanria.nlib.NMod|instance
-      @|nl\naxanria\nlib\NMod.java|2939|2951|getItemClass|method|nl.naxanria.nlib.NMod|getItemClass|()Ljava/lang/Class;
+      @|nl\naxanria\nlib\NMod.java|3303|3316|initItemClass|method|nl.naxanria.nlib.NMod|initItemClass|()V
+      @|nl\naxanria\nlib\NMod.java|3327|3336|initClass|method|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V
+      @|nl\naxanria\nlib\NMod.java|3337|3345|instance|field|nl.naxanria.nlib.NMod|instance
+      @|nl\naxanria\nlib\NMod.java|3346|3358|getItemClass|method|nl.naxanria.nlib.NMod|getItemClass|()Ljava/lang/Class;
+      @|nl\naxanria\nlib\NMod.java|3362|3370|instance|field|nl.naxanria.nlib.NMod|instance
+      @|nl\naxanria\nlib\NMod.java|3371|3383|itemRegistry|field|nl.naxanria.nlib.NMod|itemRegistry
    Method End: initItemClass()V
    Method Start: initBlockClass()V
-      @|nl\naxanria\nlib\NMod.java|2985|2999|initBlockClass|method|nl.naxanria.nlib.NMod|initBlockClass|()V
-      @|nl\naxanria\nlib\NMod.java|3010|3019|initClass|method|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;)V
-      @|nl\naxanria\nlib\NMod.java|3020|3028|instance|field|nl.naxanria.nlib.NMod|instance
-      @|nl\naxanria\nlib\NMod.java|3029|3042|getBlockClass|method|nl.naxanria.nlib.NMod|getBlockClass|()Ljava/lang/Class;
+      @|nl\naxanria\nlib\NMod.java|3415|3429|initBlockClass|method|nl.naxanria.nlib.NMod|initBlockClass|()V
+      @|nl\naxanria\nlib\NMod.java|3440|3449|initClass|method|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V
+      @|nl\naxanria\nlib\NMod.java|3450|3458|instance|field|nl.naxanria.nlib.NMod|instance
+      @|nl\naxanria\nlib\NMod.java|3459|3472|getBlockClass|method|nl.naxanria.nlib.NMod|getBlockClass|()Ljava/lang/Class;
+      @|nl\naxanria\nlib\NMod.java|3476|3484|instance|field|nl.naxanria.nlib.NMod|instance
+      @|nl\naxanria\nlib\NMod.java|3485|3498|blockRegistry|field|nl.naxanria.nlib.NMod|blockRegistry
    Method End: initBlockClass()V
    Method Start: initRecipeClass()V
-      @|nl\naxanria\nlib\NMod.java|3076|3091|initRecipeClass|method|nl.naxanria.nlib.NMod|initRecipeClass|()V
-      @|nl\naxanria\nlib\NMod.java|3102|3111|initClass|method|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;)V
-      @|nl\naxanria\nlib\NMod.java|3112|3120|instance|field|nl.naxanria.nlib.NMod|instance
-      @|nl\naxanria\nlib\NMod.java|3121|3135|getRecipeClass|method|nl.naxanria.nlib.NMod|getRecipeClass|()Ljava/lang/Class;
+      @|nl\naxanria\nlib\NMod.java|3530|3545|initRecipeClass|method|nl.naxanria.nlib.NMod|initRecipeClass|()V
+      @|nl\naxanria\nlib\NMod.java|3556|3565|initClass|method|nl.naxanria.nlib.NMod|initClass|(Ljava/lang/Class;Ljava/lang/Object;)V
+      @|nl\naxanria\nlib\NMod.java|3566|3574|instance|field|nl.naxanria.nlib.NMod|instance
+      @|nl\naxanria\nlib\NMod.java|3575|3589|getRecipeClass|method|nl.naxanria.nlib.NMod|getRecipeClass|()Ljava/lang/Class;
+      @|nl\naxanria\nlib\NMod.java|3593|3601|instance|field|nl.naxanria.nlib.NMod|instance
+      @|nl\naxanria\nlib\NMod.java|3602|3616|recipeRegistry|field|nl.naxanria.nlib.NMod|recipeRegistry
    Method End: initRecipeClass()V
    Class Start: nl.naxanria.nlib.NMod.ObjectRegistryHandler
-      @|nl\naxanria\nlib\NMod.java|3150|3172|Mod.EventBusSubscriber|class|net.minecraftforge.fml.common.Mod.EventBusSubscriber
-      @|nl\naxanria\nlib\NMod.java|3195|3216|ObjectRegistryHandler|class|nl.naxanria.nlib.NMod.ObjectRegistryHandler
+      @|nl\naxanria\nlib\NMod.java|3629|3651|Mod.EventBusSubscriber|class|net.minecraftforge.fml.common.Mod.EventBusSubscriber
+      @|nl\naxanria\nlib\NMod.java|3674|3695|ObjectRegistryHandler|class|nl.naxanria.nlib.NMod.ObjectRegistryHandler
       Method Start: registerItems(Lnet/minecraftforge/event/RegistryEvent$Register;)V
-         @|nl\naxanria\nlib\NMod.java|3307|3312|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerItems|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
-         @|nl\naxanria\nlib\NMod.java|3226|3240|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent
-         @|nl\naxanria\nlib\NMod.java|3264|3277|registerItems|method|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerItems|(Lnet/minecraftforge/event/RegistryEvent$Register;)V
-         @|nl\naxanria\nlib\NMod.java|3278|3300|RegistryEvent.Register|class|net.minecraftforge.event.RegistryEvent.Register
-         @|nl\naxanria\nlib\NMod.java|3301|3305|Item|class|net.minecraft.item.Item
-         @|nl\naxanria\nlib\NMod.java|3326|3339|initItemClass|method|nl.naxanria.nlib.NMod|initItemClass|()V
-         @|nl\naxanria\nlib\NMod.java|3356|3368|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
-         @|nl\naxanria\nlib\NMod.java|3369|3382|registerItems|method|nl.naxanria.nlib.Registy.ItemRegistry|registerItems|(Lnet/minecraftforge/registries/IForgeRegistry;)V
-         @|nl\naxanria\nlib\NMod.java|3383|3388|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerItems|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
-         @|nl\naxanria\nlib\NMod.java|3389|3400|getRegistry|method|net.minecraftforge.event.RegistryEvent.Register|getRegistry|()Lnet/minecraftforge/registries/IForgeRegistry;
-         @|nl\naxanria\nlib\NMod.java|3411|3424|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
-         @|nl\naxanria\nlib\NMod.java|3425|3443|registerItemBlocks|method|nl.naxanria.nlib.Registy.BlockRegistry|registerItemBlocks|(Lnet/minecraftforge/registries/IForgeRegistry;)V
-         @|nl\naxanria\nlib\NMod.java|3444|3449|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerItems|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
-         @|nl\naxanria\nlib\NMod.java|3450|3461|getRegistry|method|net.minecraftforge.event.RegistryEvent.Register|getRegistry|()Lnet/minecraftforge/registries/IForgeRegistry;
+         @|nl\naxanria\nlib\NMod.java|3786|3791|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerItems|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
+         @|nl\naxanria\nlib\NMod.java|3705|3719|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+         @|nl\naxanria\nlib\NMod.java|3743|3756|registerItems|method|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerItems|(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+         @|nl\naxanria\nlib\NMod.java|3757|3779|RegistryEvent.Register|class|net.minecraftforge.event.RegistryEvent.Register
+         @|nl\naxanria\nlib\NMod.java|3780|3784|Item|class|net.minecraft.item.Item
+         @|nl\naxanria\nlib\NMod.java|3805|3818|initItemClass|method|nl.naxanria.nlib.NMod|initItemClass|()V
+         @|nl\naxanria\nlib\NMod.java|3835|3847|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
+         @|nl\naxanria\nlib\NMod.java|3848|3861|registerItems|method|nl.naxanria.nlib.Registy.ItemRegistry|registerItems|(Lnet/minecraftforge/registries/IForgeRegistry;)V
+         @|nl\naxanria\nlib\NMod.java|3862|3867|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerItems|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
+         @|nl\naxanria\nlib\NMod.java|3868|3879|getRegistry|method|net.minecraftforge.event.RegistryEvent.Register|getRegistry|()Lnet/minecraftforge/registries/IForgeRegistry;
+         @|nl\naxanria\nlib\NMod.java|3890|3898|instance|field|nl.naxanria.nlib.NMod|instance
+         @|nl\naxanria\nlib\NMod.java|3899|3912|blockRegistry|field|nl.naxanria.nlib.NMod|blockRegistry
+         @|nl\naxanria\nlib\NMod.java|3913|3931|registerItemBlocks|method|nl.naxanria.nlib.Registy.BlockRegistry|registerItemBlocks|(Lnet/minecraftforge/registries/IForgeRegistry;)V
+         @|nl\naxanria\nlib\NMod.java|3932|3937|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerItems|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
+         @|nl\naxanria\nlib\NMod.java|3938|3949|getRegistry|method|net.minecraftforge.event.RegistryEvent.Register|getRegistry|()Lnet/minecraftforge/registries/IForgeRegistry;
       Method End: registerItems(Lnet/minecraftforge/event/RegistryEvent$Register;)V
       Method Start: registerBlocks(Lnet/minecraftforge/event/RegistryEvent$Register;)V
-         @|nl\naxanria\nlib\NMod.java|3565|3570|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerBlocks|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
-         @|nl\naxanria\nlib\NMod.java|3482|3496|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent
-         @|nl\naxanria\nlib\NMod.java|3520|3534|registerBlocks|method|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerBlocks|(Lnet/minecraftforge/event/RegistryEvent$Register;)V
-         @|nl\naxanria\nlib\NMod.java|3535|3557|RegistryEvent.Register|class|net.minecraftforge.event.RegistryEvent.Register
-         @|nl\naxanria\nlib\NMod.java|3558|3563|Block|class|net.minecraft.block.Block
-         @|nl\naxanria\nlib\NMod.java|3584|3598|initBlockClass|method|nl.naxanria.nlib.NMod|initBlockClass|()V
-         @|nl\naxanria\nlib\NMod.java|3608|3621|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
-         @|nl\naxanria\nlib\NMod.java|3622|3630|register|method|nl.naxanria.nlib.Registy.BlockRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistry;)V
-         @|nl\naxanria\nlib\NMod.java|3631|3636|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerBlocks|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
-         @|nl\naxanria\nlib\NMod.java|3637|3648|getRegistry|method|net.minecraftforge.event.RegistryEvent.Register|getRegistry|()Lnet/minecraftforge/registries/IForgeRegistry;
+         @|nl\naxanria\nlib\NMod.java|4053|4058|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerBlocks|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
+         @|nl\naxanria\nlib\NMod.java|3970|3984|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+         @|nl\naxanria\nlib\NMod.java|4008|4022|registerBlocks|method|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerBlocks|(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+         @|nl\naxanria\nlib\NMod.java|4023|4045|RegistryEvent.Register|class|net.minecraftforge.event.RegistryEvent.Register
+         @|nl\naxanria\nlib\NMod.java|4046|4051|Block|class|net.minecraft.block.Block
+         @|nl\naxanria\nlib\NMod.java|4072|4086|initBlockClass|method|nl.naxanria.nlib.NMod|initBlockClass|()V
+         @|nl\naxanria\nlib\NMod.java|4096|4104|instance|field|nl.naxanria.nlib.NMod|instance
+         @|nl\naxanria\nlib\NMod.java|4105|4118|blockRegistry|field|nl.naxanria.nlib.NMod|blockRegistry
+         @|nl\naxanria\nlib\NMod.java|4119|4130|registerAll|method|nl.naxanria.nlib.Registy.Registry|registerAll|(Lnet/minecraftforge/registries/IForgeRegistry;)Lnl/naxanria/nlib/Registy/Registry;
+         @|nl\naxanria\nlib\NMod.java|4131|4136|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerBlocks|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
+         @|nl\naxanria\nlib\NMod.java|4137|4148|getRegistry|method|net.minecraftforge.event.RegistryEvent.Register|getRegistry|()Lnet/minecraftforge/registries/IForgeRegistry;
       Method End: registerBlocks(Lnet/minecraftforge/event/RegistryEvent$Register;)V
       Method Start: registerModels(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V
-         @|nl\naxanria\nlib\NMod.java|3741|3746|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerModels|(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V|event|0
-         @|nl\naxanria\nlib\NMod.java|3669|3683|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent
-         @|nl\naxanria\nlib\NMod.java|3707|3721|registerModels|method|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerModels|(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V
-         @|nl\naxanria\nlib\NMod.java|3722|3740|ModelRegistryEvent|class|net.minecraftforge.client.event.ModelRegistryEvent
-         @|nl\naxanria\nlib\NMod.java|3760|3772|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
-         @|nl\naxanria\nlib\NMod.java|3773|3787|registerModels|method|nl.naxanria.nlib.Registy.ItemRegistry|registerModels|()V
-         @|nl\naxanria\nlib\NMod.java|3797|3810|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
-         @|nl\naxanria\nlib\NMod.java|3811|3825|registerModels|method|nl.naxanria.nlib.Registy.BlockRegistry|registerModels|()V
+         @|nl\naxanria\nlib\NMod.java|4241|4246|event|param|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerModels|(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V|event|0
+         @|nl\naxanria\nlib\NMod.java|4169|4183|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+         @|nl\naxanria\nlib\NMod.java|4207|4221|registerModels|method|nl.naxanria.nlib.NMod.ObjectRegistryHandler|registerModels|(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V
+         @|nl\naxanria\nlib\NMod.java|4222|4240|ModelRegistryEvent|class|net.minecraftforge.client.event.ModelRegistryEvent
+         @|nl\naxanria\nlib\NMod.java|4260|4272|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
+         @|nl\naxanria\nlib\NMod.java|4273|4287|registerModels|method|nl.naxanria.nlib.Registy.ItemRegistry|registerModels|()V
+         @|nl\naxanria\nlib\NMod.java|4297|4305|instance|field|nl.naxanria.nlib.NMod|instance
+         @|nl\naxanria\nlib\NMod.java|4306|4319|blockRegistry|field|nl.naxanria.nlib.NMod|blockRegistry
+         @|nl\naxanria\nlib\NMod.java|4320|4334|registerModels|method|nl.naxanria.nlib.Registy.BlockRegistry|registerModels|()V
       Method End: registerModels(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V
    Class End  : nl.naxanria.nlib.NMod.ObjectRegistryHandler
 Class End  : nl.naxanria.nlib.NMod
 endProcessing "nl\naxanria\nlib\NMod.java"
 
-startProcessing "nl\naxanria\nlib\Registy\BlockRegistry.java" md5: d88e56bcde437b250f9e663cb0d5d7ea
+startProcessing "nl\naxanria\nlib\Registy\BlockRegistry.java" md5: 3d81941de3cf5c195397e04dbc58aa06
 Cache Hit!
 @|nl\naxanria\nlib\Registy\BlockRegistry.java|8|32|nl.naxanria.nlib.Registy|package|nl.naxanria.nlib.Registy|(file)
 Class Start: nl.naxanria.nlib.Registy.BlockRegistry
-   @|nl\naxanria\nlib\Registy\BlockRegistry.java|284|297|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
-   @|nl\naxanria\nlib\Registy\BlockRegistry.java|327|337|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
-   @|nl\naxanria\nlib\Registy\BlockRegistry.java|317|326|ArrayList|class|java.util.ArrayList
-   @|nl\naxanria\nlib\Registy\BlockRegistry.java|317|326|ArrayList|class|java.util.ArrayList
-   @|nl\naxanria\nlib\Registy\BlockRegistry.java|327|337|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
-   @|nl\naxanria\nlib\Registy\BlockRegistry.java|339|349|toRegister|field|nl.naxanria.nlib.Registy.BlockRegistry|toRegister|
-   @|nl\naxanria\nlib\Registy\BlockRegistry.java|356|365|ArrayList|class|java.util.ArrayList
-   Method Start: addBlock(Lnl/naxanria/nlib/block/IBlockBase;)V
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|415|420|block|param|nl.naxanria.nlib.Registy.BlockRegistry|addBlock|(Lnl/naxanria/nlib/block/IBlockBase;)V|block|0
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|395|403|addBlock|method|nl.naxanria.nlib.Registy.BlockRegistry|addBlock|(Lnl/naxanria/nlib/block/IBlockBase;)V
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|404|414|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|430|440|toRegister|field|nl.naxanria.nlib.Registy.BlockRegistry|toRegister
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|441|444|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|445|450|block|param|nl.naxanria.nlib.Registy.BlockRegistry|addBlock|(Lnl/naxanria/nlib/block/IBlockBase;)V|block|0
-   Method End: addBlock(Lnl/naxanria/nlib/block/IBlockBase;)V
-   Method Start: register(Lnet/minecraftforge/registries/IForgeRegistry;)V
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|512|520|registry|param|nl.naxanria.nlib.Registy.BlockRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistry;)V|registry|0
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|481|489|register|method|nl.naxanria.nlib.Registy.BlockRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistry;)V
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|490|504|IForgeRegistry|class|net.minecraftforge.registries.IForgeRegistry
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|505|510|Block|class|net.minecraft.block.Block
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|535|545|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|556|566|toRegister|field|nl.naxanria.nlib.Registy.BlockRegistry|toRegister
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|580|588|registry|param|nl.naxanria.nlib.Registy.BlockRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistry;)V|registry|0
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|589|597|register|method|net.minecraftforge.registries.IForgeRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistryEntry;)V
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|600|608|getBlock|method|nl.naxanria.nlib.block.IBlockBase|getBlock|()Lnet/minecraft/block/Block;
-   Method End: register(Lnet/minecraftforge/registries/IForgeRegistry;)V
+   @|nl\naxanria\nlib\Registy\BlockRegistry.java|321|334|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
+   @|nl\naxanria\nlib\Registy\BlockRegistry.java|343|351|Registry|class|nl.naxanria.nlib.Registy.Registry
+   @|nl\naxanria\nlib\Registy\BlockRegistry.java|352|362|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
+   @|nl\naxanria\nlib\Registy\BlockRegistry.java|364|378|IForgeRegistry|class|net.minecraftforge.registries.IForgeRegistry
+   @|nl\naxanria\nlib\Registy\BlockRegistry.java|379|384|Block|class|net.minecraft.block.Block
+   Method Start: register(Lnet/minecraftforge/registries/IForgeRegistry;Lnl/naxanria/nlib/block/IBlockBase;)V
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|446|454|registry|param|nl.naxanria.nlib.Registy.BlockRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Lnl/naxanria/nlib/block/IBlockBase;)V|registry|0
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|467|477|iBlockBase|param|nl.naxanria.nlib.Registy.BlockRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Lnl/naxanria/nlib/block/IBlockBase;)V|iBlockBase|1
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|392|400|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|415|423|register|method|nl.naxanria.nlib.Registy.Registry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Ljava/lang/Object;)V
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|424|438|IForgeRegistry|class|net.minecraftforge.registries.IForgeRegistry
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|439|444|Block|class|net.minecraft.block.Block
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|456|466|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|487|495|registry|param|nl.naxanria.nlib.Registy.BlockRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Lnl/naxanria/nlib/block/IBlockBase;)V|registry|0
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|496|504|register|method|net.minecraftforge.registries.IForgeRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistryEntry;)V
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|505|515|iBlockBase|param|nl.naxanria.nlib.Registy.BlockRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Lnl/naxanria/nlib/block/IBlockBase;)V|iBlockBase|1
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|516|524|getBlock|method|nl.naxanria.nlib.block.IBlockBase|getBlock|()Lnet/minecraft/block/Block;
+   Method End: register(Lnet/minecraftforge/registries/IForgeRegistry;Lnl/naxanria/nlib/block/IBlockBase;)V
    Method Start: registerItemBlocks(Lnet/minecraftforge/registries/IForgeRegistry;)V
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|685|693|registry|param|nl.naxanria.nlib.Registy.BlockRegistry|registerItemBlocks|(Lnet/minecraftforge/registries/IForgeRegistry;)V|registry|0
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|645|663|registerItemBlocks|method|nl.naxanria.nlib.Registy.BlockRegistry|registerItemBlocks|(Lnet/minecraftforge/registries/IForgeRegistry;)V
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|664|678|IForgeRegistry|class|net.minecraftforge.registries.IForgeRegistry
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|679|683|Item|class|net.minecraft.item.Item
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|708|718|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|729|739|toRegister|field|nl.naxanria.nlib.Registy.BlockRegistry|toRegister
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|753|761|registry|param|nl.naxanria.nlib.Registy.BlockRegistry|registerItemBlocks|(Lnet/minecraftforge/registries/IForgeRegistry;)V|registry|0
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|762|770|register|method|net.minecraftforge.registries.IForgeRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistryEntry;)V
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|773|788|createItemBlock|method|nl.naxanria.nlib.block.IBlockBase|createItemBlock|()Lnet/minecraft/item/Item;
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|823|836|BlockTileBase|class|nl.naxanria.nlib.block.BlockTileBase
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|856|869|BlockTileBase|class|nl.naxanria.nlib.block.BlockTileBase
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|874|892|registerTileEntity|method|nl.naxanria.nlib.block.BlockTileBase|registerTileEntity|()V
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|590|598|registry|param|nl.naxanria.nlib.Registy.BlockRegistry|registerItemBlocks|(Lnet/minecraftforge/registries/IForgeRegistry;)V|registry|0
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|550|568|registerItemBlocks|method|nl.naxanria.nlib.Registy.BlockRegistry|registerItemBlocks|(Lnet/minecraftforge/registries/IForgeRegistry;)V
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|569|583|IForgeRegistry|class|net.minecraftforge.registries.IForgeRegistry
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|584|588|Item|class|net.minecraft.item.Item
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|613|623|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|634|644|toRegister|field|nl.naxanria.nlib.Registy.Registry|toRegister
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|658|666|registry|param|nl.naxanria.nlib.Registy.BlockRegistry|registerItemBlocks|(Lnet/minecraftforge/registries/IForgeRegistry;)V|registry|0
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|667|675|register|method|net.minecraftforge.registries.IForgeRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistryEntry;)V
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|678|693|createItemBlock|method|nl.naxanria.nlib.block.IBlockBase|createItemBlock|()Lnet/minecraft/item/Item;
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|722|735|BlockTileBase|class|nl.naxanria.nlib.block.BlockTileBase
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|755|768|BlockTileBase|class|nl.naxanria.nlib.block.BlockTileBase
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|773|791|registerTileEntity|method|nl.naxanria.nlib.block.BlockTileBase|registerTileEntity|()V
    Method End: registerItemBlocks(Lnet/minecraftforge/registries/IForgeRegistry;)V
    Method Start: registerModels()V
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|936|950|registerModels|method|nl.naxanria.nlib.Registy.BlockRegistry|registerModels|()V
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|966|976|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|987|997|toRegister|field|nl.naxanria.nlib.Registy.BlockRegistry|toRegister
-      @|nl\naxanria\nlib\Registy\BlockRegistry.java|1013|1030|registerItemModel|method|nl.naxanria.nlib.block.IBlockBase|registerItemModel|()V
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|830|844|registerModels|method|nl.naxanria.nlib.Registy.BlockRegistry|registerModels|()V
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|860|870|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|881|891|toRegister|field|nl.naxanria.nlib.Registy.Registry|toRegister
+      @|nl\naxanria\nlib\Registy\BlockRegistry.java|907|924|registerItemModel|method|nl.naxanria.nlib.block.IBlockBase|registerItemModel|()V
    Method End: registerModels()V
 Class End  : nl.naxanria.nlib.Registy.BlockRegistry
 endProcessing "nl\naxanria\nlib\Registy\BlockRegistry.java"
 
-startProcessing "nl\naxanria\nlib\Registy\ItemRegistry.java" md5: f14f90a11dca327c063bc90d784523d4
+startProcessing "nl\naxanria\nlib\Registy\ItemRegistry.java" md5: 5d06b2889f3578c59780abc246768e15
 Cache Hit!
 @|nl\naxanria\nlib\Registy\ItemRegistry.java|8|32|nl.naxanria.nlib.Registy|package|nl.naxanria.nlib.Registy|(file)
 Class Start: nl.naxanria.nlib.Registy.ItemRegistry
@@ -260,25 +286,102 @@ Class Start: nl.naxanria.nlib.Registy.ItemRegistry
       @|nl\naxanria\nlib\Registy\ItemRegistry.java|355|358|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
       @|nl\naxanria\nlib\Registy\ItemRegistry.java|359|363|item|param|nl.naxanria.nlib.Registy.ItemRegistry|addItem|(Lnl/naxanria/nlib/item/IItemBase;)V|item|0
    Method End: addItem(Lnl/naxanria/nlib/item/IItemBase;)V
+   Method Start: addItems([Lnl/naxanria/nlib/item/IItemBase;)V
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|416|421|items|param|nl.naxanria.nlib.Registy.ItemRegistry|addItems|([Lnl/naxanria/nlib/item/IItemBase;)V|items|0
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|394|402|addItems|method|nl.naxanria.nlib.Registy.ItemRegistry|addItems|([Lnl/naxanria/nlib/item/IItemBase;)V
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|403|412|IItemBase|class|nl.naxanria.nlib.item.IItemBase
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|436|445|IItemBase|class|nl.naxanria.nlib.item.IItemBase
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|461|466|items|param|nl.naxanria.nlib.Registy.ItemRegistry|addItems|([Lnl/naxanria/nlib/item/IItemBase;)V|items|0
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|480|487|addItem|method|nl.naxanria.nlib.Registy.ItemRegistry|addItem|(Lnl/naxanria/nlib/item/IItemBase;)V
+   Method End: addItems([Lnl/naxanria/nlib/item/IItemBase;)V
    Method Start: registerItems(Lnet/minecraftforge/registries/IForgeRegistry;)V
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|429|437|registry|param|nl.naxanria.nlib.Registy.ItemRegistry|registerItems|(Lnet/minecraftforge/registries/IForgeRegistry;)V|registry|0
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|394|407|registerItems|method|nl.naxanria.nlib.Registy.ItemRegistry|registerItems|(Lnet/minecraftforge/registries/IForgeRegistry;)V
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|408|422|IForgeRegistry|class|net.minecraftforge.registries.IForgeRegistry
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|423|427|Item|class|net.minecraft.item.Item
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|452|461|IItemBase|class|nl.naxanria.nlib.item.IItemBase
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|475|485|toRegister|field|nl.naxanria.nlib.Registy.ItemRegistry|toRegister
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|499|507|registry|param|nl.naxanria.nlib.Registy.ItemRegistry|registerItems|(Lnet/minecraftforge/registries/IForgeRegistry;)V|registry|0
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|508|516|register|method|net.minecraftforge.registries.IForgeRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistryEntry;)V
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|522|529|getItem|method|nl.naxanria.nlib.item.IItemBase|getItem|()Lnet/minecraft/item/Item;
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|564|572|registry|param|nl.naxanria.nlib.Registy.ItemRegistry|registerItems|(Lnet/minecraftforge/registries/IForgeRegistry;)V|registry|0
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|529|542|registerItems|method|nl.naxanria.nlib.Registy.ItemRegistry|registerItems|(Lnet/minecraftforge/registries/IForgeRegistry;)V
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|543|557|IForgeRegistry|class|net.minecraftforge.registries.IForgeRegistry
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|558|562|Item|class|net.minecraft.item.Item
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|587|596|IItemBase|class|nl.naxanria.nlib.item.IItemBase
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|610|620|toRegister|field|nl.naxanria.nlib.Registy.ItemRegistry|toRegister
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|634|642|registry|param|nl.naxanria.nlib.Registy.ItemRegistry|registerItems|(Lnet/minecraftforge/registries/IForgeRegistry;)V|registry|0
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|643|651|register|method|net.minecraftforge.registries.IForgeRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistryEntry;)V
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|657|664|getItem|method|nl.naxanria.nlib.item.IItemBase|getItem|()Lnet/minecraft/item/Item;
    Method End: registerItems(Lnet/minecraftforge/registries/IForgeRegistry;)V
    Method Start: registerModels()V
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|568|582|registerModels|method|nl.naxanria.nlib.Registy.ItemRegistry|registerModels|()V
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|598|607|IItemBase|class|nl.naxanria.nlib.item.IItemBase
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|621|631|toRegister|field|nl.naxanria.nlib.Registy.ItemRegistry|toRegister
-      @|nl\naxanria\nlib\Registy\ItemRegistry.java|650|667|registerItemModel|method|nl.naxanria.nlib.item.IItemBase|registerItemModel|()V
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|703|717|registerModels|method|nl.naxanria.nlib.Registy.ItemRegistry|registerModels|()V
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|733|742|IItemBase|class|nl.naxanria.nlib.item.IItemBase
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|756|766|toRegister|field|nl.naxanria.nlib.Registy.ItemRegistry|toRegister
+      @|nl\naxanria\nlib\Registy\ItemRegistry.java|785|802|registerItemModel|method|nl.naxanria.nlib.item.IItemBase|registerItemModel|()V
    Method End: registerModels()V
 Class End  : nl.naxanria.nlib.Registy.ItemRegistry
 endProcessing "nl\naxanria\nlib\Registy\ItemRegistry.java"
+
+startProcessing "nl\naxanria\nlib\Registy\RecipeRegistry.java" md5: d51ca4359971840726626d6625d4d09f
+Cache Hit!
+@|nl\naxanria\nlib\Registy\RecipeRegistry.java|8|32|nl.naxanria.nlib.Registy|package|nl.naxanria.nlib.Registy|(file)
+Class Start: nl.naxanria.nlib.Registy.RecipeRegistry
+   @|nl\naxanria\nlib\Registy\RecipeRegistry.java|146|160|RecipeRegistry|class|nl.naxanria.nlib.Registy.RecipeRegistry
+   @|nl\naxanria\nlib\Registy\RecipeRegistry.java|169|177|Registry|class|nl.naxanria.nlib.Registy.Registry
+   @|nl\naxanria\nlib\Registy\RecipeRegistry.java|178|185|IRecipe|class|net.minecraft.item.crafting.IRecipe
+   @|nl\naxanria\nlib\Registy\RecipeRegistry.java|187|201|IForgeRegistry|class|net.minecraftforge.registries.IForgeRegistry
+   @|nl\naxanria\nlib\Registy\RecipeRegistry.java|202|209|IRecipe|class|net.minecraft.item.crafting.IRecipe
+   @|nl\naxanria\nlib\Registy\RecipeRegistry.java|230|244|RecipeRegistry|class|nl.naxanria.nlib.Registy.RecipeRegistry
+   @|nl\naxanria\nlib\Registy\RecipeRegistry.java|230|244|RecipeRegistry|class|nl.naxanria.nlib.Registy.RecipeRegistry
+   @|nl\naxanria\nlib\Registy\RecipeRegistry.java|245|253|instance|field|nl.naxanria.nlib.Registy.RecipeRegistry|instance|
+   Method Start: RecipeRegistry()V
+      @|nl\naxanria\nlib\Registy\RecipeRegistry.java|267|281|RecipeRegistry|method|nl.naxanria.nlib.Registy.RecipeRegistry|RecipeRegistry|()V
+      @|nl\naxanria\nlib\Registy\RecipeRegistry.java|292|300|instance|field|nl.naxanria.nlib.Registy.RecipeRegistry|instance
+   Method End: RecipeRegistry()V
+   Method Start: register(Lnet/minecraftforge/registries/IForgeRegistry;Lnet/minecraft/item/crafting/IRecipe;)V
+      @|nl\naxanria\nlib\Registy\RecipeRegistry.java|375|383|registry|param|nl.naxanria.nlib.Registy.RecipeRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Lnet/minecraft/item/crafting/IRecipe;)V|registry|0
+      @|nl\naxanria\nlib\Registy\RecipeRegistry.java|393|399|recipe|param|nl.naxanria.nlib.Registy.RecipeRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Lnet/minecraft/item/crafting/IRecipe;)V|recipe|1
+      @|nl\naxanria\nlib\Registy\RecipeRegistry.java|319|327|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\Registy\RecipeRegistry.java|342|350|register|method|nl.naxanria.nlib.Registy.Registry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Ljava/lang/Object;)V
+      @|nl\naxanria\nlib\Registy\RecipeRegistry.java|351|365|IForgeRegistry|class|net.minecraftforge.registries.IForgeRegistry
+      @|nl\naxanria\nlib\Registy\RecipeRegistry.java|366|373|IRecipe|class|net.minecraft.item.crafting.IRecipe
+      @|nl\naxanria\nlib\Registy\RecipeRegistry.java|385|392|IRecipe|class|net.minecraft.item.crafting.IRecipe
+   Method End: register(Lnet/minecraftforge/registries/IForgeRegistry;Lnet/minecraft/item/crafting/IRecipe;)V
+Class End  : nl.naxanria.nlib.Registy.RecipeRegistry
+endProcessing "nl\naxanria\nlib\Registy\RecipeRegistry.java"
+
+startProcessing "nl\naxanria\nlib\Registy\Registry.java" md5: 180669f235ddda7e93bf06814799075f
+Cache Hit!
+@|nl\naxanria\nlib\Registy\Registry.java|8|32|nl.naxanria.nlib.Registy|package|nl.naxanria.nlib.Registy|(file)
+Class Start: nl.naxanria.nlib.Registy.Registry
+   @|nl\naxanria\nlib\Registy\Registry.java|140|148|Registry|class|nl.naxanria.nlib.Registy.Registry
+   @|nl\naxanria\nlib\Registy\Registry.java|174|188|IForgeRegistry|class|net.minecraftforge.registries.IForgeRegistry
+   @|nl\naxanria\nlib\Registy\Registry.java|207|216|ArrayList|class|java.util.ArrayList
+   @|nl\naxanria\nlib\Registy\Registry.java|207|216|ArrayList|class|java.util.ArrayList
+   @|nl\naxanria\nlib\Registy\Registry.java|224|234|toRegister|field|nl.naxanria.nlib.Registy.Registry|toRegister|
+   @|nl\naxanria\nlib\Registy\Registry.java|241|250|ArrayList|class|java.util.ArrayList
+   Method Start: add(Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+      @|nl\naxanria\nlib\Registy\Registry.java|305|309|item|param|nl.naxanria.nlib.Registy.Registry|add|(Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;|item|0
+      @|nl\naxanria\nlib\Registy\Registry.java|268|276|Registry|class|nl.naxanria.nlib.Registy.Registry
+      @|nl\naxanria\nlib\Registy\Registry.java|295|298|add|method|nl.naxanria.nlib.Registy.Registry|add|(Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+      @|nl\naxanria\nlib\Registy\Registry.java|319|329|toRegister|field|nl.naxanria.nlib.Registy.Registry|toRegister
+      @|nl\naxanria\nlib\Registy\Registry.java|330|333|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|nl\naxanria\nlib\Registy\Registry.java|334|338|item|param|nl.naxanria.nlib.Registy.Registry|add|(Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;|item|0
+   Method End: add(Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+   Method Start: addAll([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+      @|nl\naxanria\nlib\Registy\Registry.java|424|429|items|param|nl.naxanria.nlib.Registy.Registry|addAll|([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;|items|0
+      @|nl\naxanria\nlib\Registy\Registry.java|381|389|Registry|class|nl.naxanria.nlib.Registy.Registry
+      @|nl\naxanria\nlib\Registy\Registry.java|408|414|addAll|method|nl.naxanria.nlib.Registy.Registry|addAll|([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+      @|nl\naxanria\nlib\Registy\Registry.java|457|462|items|param|nl.naxanria.nlib.Registy.Registry|addAll|([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;|items|0
+      @|nl\naxanria\nlib\Registy\Registry.java|476|479|add|method|nl.naxanria.nlib.Registy.Registry|add|(Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+   Method End: addAll([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+   Method Start: registerAll(Lnet/minecraftforge/registries/IForgeRegistry;)Lnl/naxanria/nlib/Registy/Registry;
+      @|nl\naxanria\nlib\Registy\Registry.java|580|588|registry|param|nl.naxanria.nlib.Registy.Registry|registerAll|(Lnet/minecraftforge/registries/IForgeRegistry;)Lnl/naxanria/nlib/Registy/Registry;|registry|0
+      @|nl\naxanria\nlib\Registy\Registry.java|531|539|Registry|class|nl.naxanria.nlib.Registy.Registry
+      @|nl\naxanria\nlib\Registy\Registry.java|558|569|registerAll|method|nl.naxanria.nlib.Registy.Registry|registerAll|(Lnet/minecraftforge/registries/IForgeRegistry;)Lnl/naxanria/nlib/Registy/Registry;
+      @|nl\naxanria\nlib\Registy\Registry.java|622|632|toRegister|field|nl.naxanria.nlib.Registy.Registry|toRegister
+      @|nl\naxanria\nlib\Registy\Registry.java|646|654|register|method|nl.naxanria.nlib.Registy.Registry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Ljava/lang/Object;)V
+      @|nl\naxanria\nlib\Registy\Registry.java|655|663|registry|param|nl.naxanria.nlib.Registy.Registry|registerAll|(Lnet/minecraftforge/registries/IForgeRegistry;)Lnl/naxanria/nlib/Registy/Registry;|registry|0
+   Method End: registerAll(Lnet/minecraftforge/registries/IForgeRegistry;)Lnl/naxanria/nlib/Registy/Registry;
+   Method Start: register(Lnet/minecraftforge/registries/IForgeRegistry;Ljava/lang/Object;)V
+      @|nl\naxanria\nlib\Registy\Registry.java|749|757|registry|param|nl.naxanria.nlib.Registy.Registry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Ljava/lang/Object;)V|registry|0
+      @|nl\naxanria\nlib\Registy\Registry.java|765|769|item|param|nl.naxanria.nlib.Registy.Registry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Ljava/lang/Object;)V|item|1
+      @|nl\naxanria\nlib\Registy\Registry.java|730|738|register|method|nl.naxanria.nlib.Registy.Registry|register|(Lnet/minecraftforge/registries/IForgeRegistry;Ljava/lang/Object;)V
+   Method End: register(Lnet/minecraftforge/registries/IForgeRegistry;Ljava/lang/Object;)V
+Class End  : nl.naxanria.nlib.Registy.Registry
+endProcessing "nl\naxanria\nlib\Registy\Registry.java"
 
 startProcessing "nl\naxanria\nlib\block\BlockBase.java" md5: 003981b5d63d48bbc351c361d3363974
 Cache Hit!
@@ -942,6 +1045,7 @@ Class End  : nl.naxanria.nlib.proxy.ServerProxy
 endProcessing "nl\naxanria\nlib\proxy\ServerProxy.java"
 
 startProcessing "nl\naxanria\nlib\tile\TileEntityBase.java" md5: 5583f85169806e49794e18167c2f1772
+Cache Hit!
 @|nl\naxanria\nlib\tile\TileEntityBase.java|8|29|nl.naxanria.nlib.tile|package|nl.naxanria.nlib.tile|(file)
 Class Start: nl.naxanria.nlib.tile.TileEntityBase
    @|nl\naxanria\nlib\tile\TileEntityBase.java|1001|1015|TileEntityBase|class|nl.naxanria.nlib.tile.TileEntityBase
@@ -1220,6 +1324,7 @@ Class End  : nl.naxanria.nlib.tile.TileEntityBase
 endProcessing "nl\naxanria\nlib\tile\TileEntityBase.java"
 
 startProcessing "nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java" md5: 06dc4db2a3b2453661c75bd7ee86395b
+Cache Hit!
 @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|8|35|nl.naxanria.nlib.tile.power|package|nl.naxanria.nlib.tile.power|(file)
 Class Start: nl.naxanria.nlib.tile.power.BaseEnergyAcceptor
    @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|270|288|BaseEnergyAcceptor|class|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor
@@ -1266,6 +1371,7 @@ Class End  : nl.naxanria.nlib.tile.power.BaseEnergyAcceptor
 endProcessing "nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java"
 
 startProcessing "nl\naxanria\nlib\tile\power\BaseEnergyStorage.java" md5: d2fb883d6896a65725f5693d3d001ec2
+Cache Hit!
 @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|8|35|nl.naxanria.nlib.tile.power|package|nl.naxanria.nlib.tile.power|(file)
 Class Start: nl.naxanria.nlib.tile.power.BaseEnergyStorage
    @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|100|117|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
@@ -1370,6 +1476,7 @@ Class End  : nl.naxanria.nlib.tile.power.BaseEnergyStorage
 endProcessing "nl\naxanria\nlib\tile\power\BaseEnergyStorage.java"
 
 startProcessing "nl\naxanria\nlib\tile\power\BatteryEntity.java" md5: 704a12c2e9ef884fb1877fa3f8733064
+Cache Hit!
 @|nl\naxanria\nlib\tile\power\BatteryEntity.java|8|35|nl.naxanria.nlib.tile.power|package|nl.naxanria.nlib.tile.power|(file)
 Class Start: nl.naxanria.nlib.tile.power.BatteryEntity
    @|nl\naxanria\nlib\tile\power\BatteryEntity.java|269|282|BatteryEntity|class|nl.naxanria.nlib.tile.power.BatteryEntity
@@ -1420,6 +1527,7 @@ Class End  : nl.naxanria.nlib.tile.power.BatteryEntity
 endProcessing "nl\naxanria\nlib\tile\power\BatteryEntity.java"
 
 startProcessing "nl\naxanria\nlib\tile\power\GeneratorEntity.java" md5: e19aee6bb83e5e9504837d0da3de17d2
+Cache Hit!
 @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|8|35|nl.naxanria.nlib.tile.power|package|nl.naxanria.nlib.tile.power|(file)
 Class Start: nl.naxanria.nlib.tile.power.GeneratorEntity
    @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|238|253|GeneratorEntity|class|nl.naxanria.nlib.tile.power.GeneratorEntity
@@ -1478,6 +1586,7 @@ Class End  : nl.naxanria.nlib.tile.power.GeneratorEntity
 endProcessing "nl\naxanria\nlib\tile\power\GeneratorEntity.java"
 
 startProcessing "nl\naxanria\nlib\tile\power\IEnergySharingProvider.java" md5: 0f301a5c73af9cea3af785a0e48227ec
+Cache Hit!
 @|nl\naxanria\nlib\tile\power\IEnergySharingProvider.java|8|35|nl.naxanria.nlib.tile.power|package|nl.naxanria.nlib.tile.power|(file)
 Class Start: nl.naxanria.nlib.tile.power.IEnergySharingProvider
    @|nl\naxanria\nlib\tile\power\IEnergySharingProvider.java|138|160|IEnergySharingProvider|class|nl.naxanria.nlib.tile.power.IEnergySharingProvider
@@ -1592,6 +1701,7 @@ Class End  : nl.naxanria.nlib.util.WorldUtil
 endProcessing "nl\naxanria\nlib\util\WorldUtil.java"
 
 startProcessing "nl\naxanria\researchpower\ResearchPower.java" md5: 47ed7448c51f910ea460e862de08e8a9
+Cache Hit!
 @|nl\naxanria\researchpower\ResearchPower.java|8|33|nl.naxanria.researchpower|package|nl.naxanria.researchpower|(file)
 Class Start: nl.naxanria.researchpower.ResearchPower
    @|nl\naxanria\researchpower\ResearchPower.java|453|456|Mod|class|net.minecraftforge.fml.common.Mod
@@ -1680,7 +1790,7 @@ Class Start: nl.naxanria.researchpower.ResearchPower
 Class End  : nl.naxanria.researchpower.ResearchPower
 endProcessing "nl\naxanria\researchpower\ResearchPower.java"
 
-startProcessing "nl\naxanria\researchpower\block\Blocks.java" md5: 009bd30beb16cf31746e39434eecff0a
+startProcessing "nl\naxanria\researchpower\block\Blocks.java" md5: e69d9352be93718e5a5b50a0f12ca0cb
 Cache Hit!
 @|nl\naxanria\researchpower\block\Blocks.java|8|39|nl.naxanria.researchpower.block|package|nl.naxanria.researchpower.block|(file)
 Class Start: nl.naxanria.researchpower.block.Blocks
@@ -1701,25 +1811,19 @@ Class Start: nl.naxanria.researchpower.block.Blocks
       @|nl\naxanria\researchpower\block\Blocks.java|662|677|vacuumGenerator|field|nl.naxanria.researchpower.block.Blocks.Machines|vacuumGenerator|
       @|nl\naxanria\researchpower\block\Blocks.java|684|704|BlockVacuumGenerator|class|nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator
    Class End  : nl.naxanria.researchpower.block.Blocks.Machines
-   Method Start: init()V
-      @|nl\naxanria\researchpower\block\Blocks.java|736|740|init|method|nl.naxanria.researchpower.block.Blocks|init|()V
-      @|nl\naxanria\researchpower\block\Blocks.java|751|760|addBlocks|method|nl.naxanria.researchpower.block.Blocks|addBlocks|([Lnl/naxanria/nlib/block/IBlockBase;)V
-      @|nl\naxanria\researchpower\block\Blocks.java|773|781|Machines|class|nl.naxanria.researchpower.block.Blocks.Machines
-      @|nl\naxanria\researchpower\block\Blocks.java|782|789|battery|field|nl.naxanria.researchpower.block.Blocks.Machines|battery
-      @|nl\naxanria\researchpower\block\Blocks.java|797|805|Machines|class|nl.naxanria.researchpower.block.Blocks.Machines
-      @|nl\naxanria\researchpower\block\Blocks.java|806|821|researchStation|field|nl.naxanria.researchpower.block.Blocks.Machines|researchStation
-      @|nl\naxanria\researchpower\block\Blocks.java|829|837|Machines|class|nl.naxanria.researchpower.block.Blocks.Machines
-      @|nl\naxanria\researchpower\block\Blocks.java|838|853|vacuumGenerator|field|nl.naxanria.researchpower.block.Blocks.Machines|vacuumGenerator
-   Method End: init()V
-   Method Start: addBlocks([Lnl/naxanria/nlib/block/IBlockBase;)V
-      @|nl\naxanria\researchpower\block\Blocks.java|914|920|blocks|param|nl.naxanria.researchpower.block.Blocks|addBlocks|([Lnl/naxanria/nlib/block/IBlockBase;)V|blocks|0
-      @|nl\naxanria\researchpower\block\Blocks.java|890|899|addBlocks|method|nl.naxanria.researchpower.block.Blocks|addBlocks|([Lnl/naxanria/nlib/block/IBlockBase;)V
-      @|nl\naxanria\researchpower\block\Blocks.java|900|910|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
-      @|nl\naxanria\researchpower\block\Blocks.java|935|945|IBlockBase|class|nl.naxanria.nlib.block.IBlockBase
-      @|nl\naxanria\researchpower\block\Blocks.java|956|962|blocks|param|nl.naxanria.researchpower.block.Blocks|addBlocks|([Lnl/naxanria/nlib/block/IBlockBase;)V|blocks|0
-      @|nl\naxanria\researchpower\block\Blocks.java|976|989|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
-      @|nl\naxanria\researchpower\block\Blocks.java|990|998|addBlock|method|nl.naxanria.nlib.Registy.BlockRegistry|addBlock|(Lnl/naxanria/nlib/block/IBlockBase;)V
-   Method End: addBlocks([Lnl/naxanria/nlib/block/IBlockBase;)V
+   Method Start: init(Lnl/naxanria/nlib/Registy/BlockRegistry;)V
+      @|nl\naxanria\researchpower\block\Blocks.java|755|763|registry|param|nl.naxanria.researchpower.block.Blocks|init|(Lnl/naxanria/nlib/Registy/BlockRegistry;)V|registry|0
+      @|nl\naxanria\researchpower\block\Blocks.java|736|740|init|method|nl.naxanria.researchpower.block.Blocks|init|(Lnl/naxanria/nlib/Registy/BlockRegistry;)V
+      @|nl\naxanria\researchpower\block\Blocks.java|741|754|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
+      @|nl\naxanria\researchpower\block\Blocks.java|773|781|registry|param|nl.naxanria.researchpower.block.Blocks|init|(Lnl/naxanria/nlib/Registy/BlockRegistry;)V|registry|0
+      @|nl\naxanria\researchpower\block\Blocks.java|782|788|addAll|method|nl.naxanria.nlib.Registy.Registry|addAll|([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+      @|nl\naxanria\researchpower\block\Blocks.java|801|809|Machines|class|nl.naxanria.researchpower.block.Blocks.Machines
+      @|nl\naxanria\researchpower\block\Blocks.java|810|817|battery|field|nl.naxanria.researchpower.block.Blocks.Machines|battery
+      @|nl\naxanria\researchpower\block\Blocks.java|825|833|Machines|class|nl.naxanria.researchpower.block.Blocks.Machines
+      @|nl\naxanria\researchpower\block\Blocks.java|834|849|researchStation|field|nl.naxanria.researchpower.block.Blocks.Machines|researchStation
+      @|nl\naxanria\researchpower\block\Blocks.java|857|865|Machines|class|nl.naxanria.researchpower.block.Blocks.Machines
+      @|nl\naxanria\researchpower\block\Blocks.java|866|881|vacuumGenerator|field|nl.naxanria.researchpower.block.Blocks.Machines|vacuumGenerator
+   Method End: init(Lnl/naxanria/nlib/Registy/BlockRegistry;)V
 Class End  : nl.naxanria.researchpower.block.Blocks
 endProcessing "nl\naxanria\researchpower\block\Blocks.java"
 
@@ -1866,6 +1970,7 @@ Class End  : nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVac
 endProcessing "nl\naxanria\researchpower\block\machines\generators\vacuum\BlockVacuumGenerator.java"
 
 startProcessing "nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java" md5: 58997e4c1e7331c5792dcbc1d48ae14c
+Cache Hit!
 @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|8|56|nl.naxanria.researchpower.block.machines.station|package|nl.naxanria.researchpower.block.machines.station|(file)
 Class Start: nl.naxanria.researchpower.block.machines.station.BlockResearchStation
    @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|560|580|BlockResearchStation|class|nl.naxanria.researchpower.block.machines.station.BlockResearchStation
@@ -1933,41 +2038,40 @@ Class Start: nl.naxanria.researchpower.block.machines.station.BlockResearchStati
 Class End  : nl.naxanria.researchpower.block.machines.station.BlockResearchStation
 endProcessing "nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java"
 
-startProcessing "nl\naxanria\researchpower\item\Items.java" md5: 3444e2bc8f5ec7180b712be7431ea595
-Cache Hit!
+startProcessing "nl\naxanria\researchpower\item\Items.java" md5: ef21c44c60b6f94e6d687ddebfc249c9
 @|nl\naxanria\researchpower\item\Items.java|8|38|nl.naxanria.researchpower.item|package|nl.naxanria.researchpower.item|(file)
 Class Start: nl.naxanria.researchpower.item.Items
    @|nl\naxanria\researchpower\item\Items.java|141|146|Items|class|nl.naxanria.researchpower.item.Items
    Class Start: nl.naxanria.researchpower.item.Items.MachineParts
       @|nl\naxanria\researchpower\item\Items.java|171|183|MachineParts|class|nl.naxanria.researchpower.item.Items.MachineParts
    Class End  : nl.naxanria.researchpower.item.Items.MachineParts
-   Method Start: init()V
-      @|nl\naxanria\researchpower\item\Items.java|219|223|init|method|nl.naxanria.researchpower.item.Items|init|()V
-   Method End: init()V
-   Method Start: addItems([Lnl/naxanria/nlib/item/IItemBase;)V
-      @|nl\naxanria\researchpower\item\Items.java|284|289|items|param|nl.naxanria.researchpower.item.Items|addItems|([Lnl/naxanria/nlib/item/IItemBase;)V|items|0
-      @|nl\naxanria\researchpower\item\Items.java|262|270|addItems|method|nl.naxanria.researchpower.item.Items|addItems|([Lnl/naxanria/nlib/item/IItemBase;)V
-      @|nl\naxanria\researchpower\item\Items.java|271|280|IItemBase|class|nl.naxanria.nlib.item.IItemBase
-      @|nl\naxanria\researchpower\item\Items.java|304|313|IItemBase|class|nl.naxanria.nlib.item.IItemBase
-      @|nl\naxanria\researchpower\item\Items.java|327|332|items|param|nl.naxanria.researchpower.item.Items|addItems|([Lnl/naxanria/nlib/item/IItemBase;)V|items|0
-      @|nl\naxanria\researchpower\item\Items.java|346|358|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
-      @|nl\naxanria\researchpower\item\Items.java|359|366|addItem|method|nl.naxanria.nlib.Registy.ItemRegistry|addItem|(Lnl/naxanria/nlib/item/IItemBase;)V
-   Method End: addItems([Lnl/naxanria/nlib/item/IItemBase;)V
+   Method Start: init(Lnl/naxanria/nlib/Registy/ItemRegistry;)V
+      @|nl\naxanria\researchpower\item\Items.java|237|245|registry|param|nl.naxanria.researchpower.item.Items|init|(Lnl/naxanria/nlib/Registy/ItemRegistry;)V|registry|0
+      @|nl\naxanria\researchpower\item\Items.java|219|223|init|method|nl.naxanria.researchpower.item.Items|init|(Lnl/naxanria/nlib/Registy/ItemRegistry;)V
+      @|nl\naxanria\researchpower\item\Items.java|224|236|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
+      @|nl\naxanria\researchpower\item\Items.java|255|267|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
+      @|nl\naxanria\researchpower\item\Items.java|268|276|addItems|method|nl.naxanria.nlib.Registy.ItemRegistry|addItems|([Lnl/naxanria/nlib/item/IItemBase;)V
+   Method End: init(Lnl/naxanria/nlib/Registy/ItemRegistry;)V
 Class End  : nl.naxanria.researchpower.item.Items
 endProcessing "nl\naxanria\researchpower\item\Items.java"
 
-startProcessing "nl\naxanria\researchpower\recipe\Recipes.java" md5: 7448485e38bb14057653f59f7a2f5a5e
-Cache Hit!
+startProcessing "nl\naxanria\researchpower\recipe\Recipes.java" md5: 41329883648340cc8572711cf7a58e22
 @|nl\naxanria\researchpower\recipe\Recipes.java|8|40|nl.naxanria.researchpower.recipe|package|nl.naxanria.researchpower.recipe|(file)
 Class Start: nl.naxanria.researchpower.recipe.Recipes
-   @|nl\naxanria\researchpower\recipe\Recipes.java|56|63|Recipes|class|nl.naxanria.researchpower.recipe.Recipes
-   Method Start: init()V
-      @|nl\naxanria\researchpower\recipe\Recipes.java|87|91|init|method|nl.naxanria.researchpower.recipe.Recipes|init|()V
-   Method End: init()V
+   @|nl\naxanria\researchpower\recipe\Recipes.java|105|112|Recipes|class|nl.naxanria.researchpower.recipe.Recipes
+   Method Start: init(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V
+      @|nl\naxanria\researchpower\recipe\Recipes.java|156|164|registry|param|nl.naxanria.researchpower.recipe.Recipes|init|(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V|registry|0
+      @|nl\naxanria\researchpower\recipe\Recipes.java|136|140|init|method|nl.naxanria.researchpower.recipe.Recipes|init|(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V
+      @|nl\naxanria\researchpower\recipe\Recipes.java|141|155|RecipeRegistry|class|nl.naxanria.nlib.Registy.RecipeRegistry
+      @|nl\naxanria\researchpower\recipe\Recipes.java|174|188|RecipeRegistry|class|nl.naxanria.nlib.Registy.RecipeRegistry
+      @|nl\naxanria\researchpower\recipe\Recipes.java|189|197|instance|field|nl.naxanria.nlib.Registy.RecipeRegistry|instance
+      @|nl\naxanria\researchpower\recipe\Recipes.java|198|204|addAll|method|nl.naxanria.nlib.Registy.Registry|addAll|([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+   Method End: init(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V
 Class End  : nl.naxanria.researchpower.recipe.Recipes
 endProcessing "nl\naxanria\researchpower\recipe\Recipes.java"
 
 startProcessing "nl\naxanria\researchpower\tile\BlockBatteryEntity.java" md5: 83ecbb526ac967d64f4323d14611e7ef
+Cache Hit!
 @|nl\naxanria\researchpower\tile\BlockBatteryEntity.java|8|38|nl.naxanria.researchpower.tile|package|nl.naxanria.researchpower.tile|(file)
 Class Start: nl.naxanria.researchpower.tile.BlockBatteryEntity
    @|nl\naxanria\researchpower\tile\BlockBatteryEntity.java|159|177|BlockBatteryEntity|class|nl.naxanria.researchpower.tile.BlockBatteryEntity
@@ -1980,6 +2084,7 @@ Class End  : nl.naxanria.researchpower.tile.BlockBatteryEntity
 endProcessing "nl\naxanria\researchpower\tile\BlockBatteryEntity.java"
 
 startProcessing "nl\naxanria\researchpower\tile\ResearchStationTileEntity.java" md5: 111280c8462ceb077efe8b5a1b35ee3a
+Cache Hit!
 @|nl\naxanria\researchpower\tile\ResearchStationTileEntity.java|8|38|nl.naxanria.researchpower.tile|package|nl.naxanria.researchpower.tile|(file)
 Class Start: nl.naxanria.researchpower.tile.ResearchStationTileEntity
    @|nl\naxanria\researchpower\tile\ResearchStationTileEntity.java|110|135|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
@@ -1991,6 +2096,7 @@ Class End  : nl.naxanria.researchpower.tile.ResearchStationTileEntity
 endProcessing "nl\naxanria\researchpower\tile\ResearchStationTileEntity.java"
 
 startProcessing "nl\naxanria\researchpower\tile\VacuumGenerator.java" md5: eb5a87795863403cc27dab276d2055cf
+Cache Hit!
 @|nl\naxanria\researchpower\tile\VacuumGenerator.java|8|38|nl.naxanria.researchpower.tile|package|nl.naxanria.researchpower.tile|(file)
 Class Start: nl.naxanria.researchpower.tile.VacuumGenerator
    @|nl\naxanria\researchpower\tile\VacuumGenerator.java|284|299|VacuumGenerator|class|nl.naxanria.researchpower.tile.VacuumGenerator
