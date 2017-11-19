@@ -1,7 +1,8 @@
-package nl.naxanria.nlib.tile;
+package nl.naxanria.nlib.tile.power;
 
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.energy.IEnergyStorage;
+import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.nlib.util.CollectionUtil;
 
 public abstract class GeneratorEntity extends TileEntityBase implements IEnergySharingProvider

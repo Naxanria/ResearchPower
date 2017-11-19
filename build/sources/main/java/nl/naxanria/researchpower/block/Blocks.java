@@ -1,5 +1,7 @@
 package nl.naxanria.researchpower.block;
 
+import nl.naxanria.nlib.Registy.BlockRegistry;
+import nl.naxanria.nlib.block.IBlockBase;
 import nl.naxanria.researchpower.block.machines.battery.BlockBattery;
 import nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator;
 import nl.naxanria.researchpower.block.machines.station.BlockResearchStation;
@@ -29,7 +31,7 @@ public class Blocks
     for (IBlockBase b :
       blocks)
     {
-      BlocksRegistry.addBlock(b);
+      BlockRegistry.addBlock(b);
     }
   }
 }

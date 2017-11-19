@@ -1,4 +1,4 @@
-package nl.naxanria.nlib.tile;
+package nl.naxanria.nlib.tile.power;
 
 import net.minecraftforge.energy.EnergyStorage;
 

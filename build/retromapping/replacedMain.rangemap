@@ -1,6 +1,7 @@
 Symbol range map extraction starting
-Processing 34 files
+Processing 35 files
 startProcessing "nl\naxanria\nlib\NMod.java" md5: d5e089ec451982cea9f46017f23e78ef
+Cache Hit!
 @|nl\naxanria\nlib\NMod.java|8|24|nl.naxanria.nlib|package|nl.naxanria.nlib|(file)
 Class Start: nl.naxanria.nlib.NMod
    @|nl\naxanria\nlib\NMod.java|848|852|NMod|class|nl.naxanria.nlib.NMod
@@ -940,522 +941,563 @@ Class Start: nl.naxanria.nlib.proxy.ServerProxy
 Class End  : nl.naxanria.nlib.proxy.ServerProxy
 endProcessing "nl\naxanria\nlib\proxy\ServerProxy.java"
 
-startProcessing "nl\naxanria\nlib\tile\BaseEnergyStorage.java" md5: b484935aba704a8430f590c38471e865
-Cache Hit!
-@|nl\naxanria\nlib\tile\BaseEnergyStorage.java|8|29|nl.naxanria.nlib.tile|package|nl.naxanria.nlib.tile|(file)
-Class Start: nl.naxanria.nlib.tile.BaseEnergyStorage
-   @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|94|111|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
-   @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|120|133|EnergyStorage|class|net.minecraftforge.energy.EnergyStorage
-   @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|156|175|internalStorageOnly|field|nl.naxanria.nlib.tile.BaseEnergyStorage|internalStorageOnly|
-   Method Start: BaseEnergyStorage(III)V
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|219|227|capacity|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(III)V|capacity|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|233|243|maxReceive|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(III)V|maxReceive|1
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|249|259|maxExtract|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(III)V|maxExtract|2
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|197|214|BaseEnergyStorage|method|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(III)V
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|275|283|capacity|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(III)V|capacity|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|285|295|maxReceive|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(III)V|maxReceive|1
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|297|307|maxExtract|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(III)V|maxExtract|2
-   Method End: BaseEnergyStorage(III)V
-   Method Start: BaseEnergyStorage(IIIZ)V
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|348|356|capacity|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|capacity|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|362|372|maxReceive|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|maxReceive|1
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|378|388|maxExtract|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|maxExtract|2
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|398|417|internalStorageOnly|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|internalStorageOnly|3
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|326|343|BaseEnergyStorage|method|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|433|441|capacity|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|capacity|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|443|453|maxReceive|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|maxReceive|1
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|455|465|maxExtract|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|maxExtract|2
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|482|501|internalStorageOnly|field|nl.naxanria.nlib.tile.BaseEnergyStorage|internalStorageOnly
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|504|523|internalStorageOnly|param|nl.naxanria.nlib.tile.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|internalStorageOnly|3
-   Method End: BaseEnergyStorage(IIIZ)V
-   Method Start: setMaxReceive(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|577|580|max|param|nl.naxanria.nlib.tile.BaseEnergyStorage|setMaxReceive|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;|max|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|541|558|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|559|572|setMaxReceive|method|nl.naxanria.nlib.tile.BaseEnergyStorage|setMaxReceive|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|590|600|maxReceive|field|net.minecraftforge.energy.EnergyStorage|maxReceive
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|603|606|max|param|nl.naxanria.nlib.tile.BaseEnergyStorage|setMaxReceive|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;|max|0
-   Method End: setMaxReceive(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;
-   Method Start: setMaxExtract(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|682|685|max|param|nl.naxanria.nlib.tile.BaseEnergyStorage|setMaxExtract|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;|max|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|646|663|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|664|677|setMaxExtract|method|nl.naxanria.nlib.tile.BaseEnergyStorage|setMaxExtract|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|695|705|maxExtract|field|net.minecraftforge.energy.EnergyStorage|maxExtract
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|708|711|max|param|nl.naxanria.nlib.tile.BaseEnergyStorage|setMaxExtract|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;|max|0
-   Method End: setMaxExtract(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;
-   Method Start: setCapacity(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|785|793|capacity|param|nl.naxanria.nlib.tile.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;|capacity|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|751|768|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|769|780|setCapacity|method|nl.naxanria.nlib.tile.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|807|815|capacity|param|nl.naxanria.nlib.tile.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;|capacity|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|823|831|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|849|855|energy|field|net.minecraftforge.energy.EnergyStorage|energy
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|858|866|capacity|param|nl.naxanria.nlib.tile.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;|capacity|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|884|890|energy|field|net.minecraftforge.energy.EnergyStorage|energy
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|893|901|capacity|param|nl.naxanria.nlib.tile.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;|capacity|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|926|934|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|937|945|capacity|param|nl.naxanria.nlib.tile.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;|capacity|0
-   Method End: setCapacity(I)Lnl/naxanria/nlib/tile/BaseEnergyStorage;
-   Method Start: getStoredPercentage()F
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|991|1010|getStoredPercentage|method|nl.naxanria.nlib.tile.BaseEnergyStorage|getStoredPercentage|()F
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1028|1047|getStoredPercentage|method|nl.naxanria.nlib.tile.BaseEnergyStorage|getStoredPercentage|(I)F
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1048|1054|energy|field|net.minecraftforge.energy.EnergyStorage|energy
-   Method End: getStoredPercentage()F
-   Method Start: getStoredPercentage(I)F
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1103|1110|storage|param|nl.naxanria.nlib.tile.BaseEnergyStorage|getStoredPercentage|(I)F|storage|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1079|1098|getStoredPercentage|method|nl.naxanria.nlib.tile.BaseEnergyStorage|getStoredPercentage|(I)F
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1127|1134|storage|param|nl.naxanria.nlib.tile.BaseEnergyStorage|getStoredPercentage|(I)F|storage|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1145|1153|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
-   Method End: getStoredPercentage(I)F
-   Method Start: getCapacity()I
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1175|1186|getCapacity|method|nl.naxanria.nlib.tile.BaseEnergyStorage|getCapacity|()I
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1204|1212|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
-   Method End: getCapacity()I
-   Method Start: isFull()Z
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1238|1244|isFull|method|nl.naxanria.nlib.tile.BaseEnergyStorage|isFull|()Z
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1262|1268|energy|field|net.minecraftforge.energy.EnergyStorage|energy
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1272|1280|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
-   Method End: isFull()Z
-   Method Start: receiveEnergy(IZ)I
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1332|1342|maxReceive|param|nl.naxanria.nlib.tile.BaseEnergyStorage|receiveEnergy|(IZ)I|maxReceive|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1352|1360|simulate|param|nl.naxanria.nlib.tile.BaseEnergyStorage|receiveEnergy|(IZ)I|simulate|1
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1292|1300|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1314|1327|receiveEnergy|method|net.minecraftforge.energy.IEnergyStorage|receiveEnergy|(IZ)I
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1374|1393|internalStorageOnly|field|nl.naxanria.nlib.tile.BaseEnergyStorage|internalStorageOnly
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1422|1426|Math|class|java.lang.Math
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1427|1430|min|method|java.lang.Math|min|(II)I
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1431|1439|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1442|1448|energy|field|net.minecraftforge.energy.EnergyStorage|energy
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1450|1460|maxReceive|param|nl.naxanria.nlib.tile.BaseEnergyStorage|receiveEnergy|(IZ)I|maxReceive|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1474|1482|simulate|param|nl.naxanria.nlib.tile.BaseEnergyStorage|receiveEnergy|(IZ)I|simulate|1
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1500|1506|energy|field|net.minecraftforge.energy.EnergyStorage|energy
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1598|1611|receiveEnergy|method|net.minecraftforge.energy.IEnergyStorage|receiveEnergy|(IZ)I
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1612|1622|maxReceive|param|nl.naxanria.nlib.tile.BaseEnergyStorage|receiveEnergy|(IZ)I|maxReceive|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1624|1632|simulate|param|nl.naxanria.nlib.tile.BaseEnergyStorage|receiveEnergy|(IZ)I|simulate|1
-   Method End: receiveEnergy(IZ)I
-   Method Start: isInternalStorageOnly()Z
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1665|1686|isInternalStorageOnly|method|nl.naxanria.nlib.tile.BaseEnergyStorage|isInternalStorageOnly|()Z
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1704|1723|internalStorageOnly|field|nl.naxanria.nlib.tile.BaseEnergyStorage|internalStorageOnly
-   Method End: isInternalStorageOnly()Z
-   Method Start: setInternalStorageOnly(Z)V
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1777|1796|internalStorageOnly|param|nl.naxanria.nlib.tile.BaseEnergyStorage|setInternalStorageOnly|(Z)V|internalStorageOnly|0
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1746|1768|setInternalStorageOnly|method|nl.naxanria.nlib.tile.BaseEnergyStorage|setInternalStorageOnly|(Z)V
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1811|1830|internalStorageOnly|field|nl.naxanria.nlib.tile.BaseEnergyStorage|internalStorageOnly
-      @|nl\naxanria\nlib\tile\BaseEnergyStorage.java|1833|1852|internalStorageOnly|param|nl.naxanria.nlib.tile.BaseEnergyStorage|setInternalStorageOnly|(Z)V|internalStorageOnly|0
-   Method End: setInternalStorageOnly(Z)V
-Class End  : nl.naxanria.nlib.tile.BaseEnergyStorage
-endProcessing "nl\naxanria\nlib\tile\BaseEnergyStorage.java"
-
-startProcessing "nl\naxanria\nlib\tile\BatteryEntity.java" md5: aaa8ebb769f6306bd0fb6403c6a7728d
-Cache Hit!
-@|nl\naxanria\nlib\tile\BatteryEntity.java|8|29|nl.naxanria.nlib.tile|package|nl.naxanria.nlib.tile|(file)
-Class Start: nl.naxanria.nlib.tile.BatteryEntity
-   @|nl\naxanria\nlib\tile\BatteryEntity.java|218|231|BatteryEntity|class|nl.naxanria.nlib.tile.BatteryEntity
-   @|nl\naxanria\nlib\tile\BatteryEntity.java|240|254|TileEntityBase|class|nl.naxanria.nlib.tile.TileEntityBase
-   @|nl\naxanria\nlib\tile\BatteryEntity.java|266|288|IEnergySharingProvider|class|nl.naxanria.nlib.tile.IEnergySharingProvider
-   @|nl\naxanria\nlib\tile\BatteryEntity.java|300|317|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
-   @|nl\naxanria\nlib\tile\BatteryEntity.java|300|317|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
-   @|nl\naxanria\nlib\tile\BatteryEntity.java|318|325|storage|field|nl.naxanria.nlib.tile.BatteryEntity|storage|
-   Method Start: BatteryEntity(Lnl/naxanria/nlib/tile/BaseEnergyStorage;)V
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|371|378|storage|param|nl.naxanria.nlib.tile.BatteryEntity|BatteryEntity|(Lnl/naxanria/nlib/tile/BaseEnergyStorage;)V|storage|0
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|339|352|BatteryEntity|method|nl.naxanria.nlib.tile.BatteryEntity|BatteryEntity|(Lnl/naxanria/nlib/tile/BaseEnergyStorage;)V
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|353|370|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|393|400|storage|field|nl.naxanria.nlib.tile.BatteryEntity|storage
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|403|410|storage|param|nl.naxanria.nlib.tile.BatteryEntity|BatteryEntity|(Lnl/naxanria/nlib/tile/BaseEnergyStorage;)V|storage|0
-   Method End: BatteryEntity(Lnl/naxanria/nlib/tile/BaseEnergyStorage;)V
-   Method Start: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|483|489|facing|param|nl.naxanria.nlib.tile.BatteryEntity|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|422|430|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|440|454|IEnergyStorage|class|net.minecraftforge.energy.IEnergyStorage
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|455|471|getEnergyStorage|method|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|472|482|EnumFacing|class|net.minecraft.util.EnumFacing
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|506|513|storage|field|nl.naxanria.nlib.tile.BatteryEntity|storage
-   Method End: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
-   Method Start: getEnergyToShare()I
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|525|533|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|547|563|getEnergyToShare|method|nl.naxanria.nlib.tile.IEnergySharingProvider|getEnergyToShare|()I
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|581|588|storage|field|nl.naxanria.nlib.tile.BatteryEntity|storage
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|589|604|getEnergyStored|method|net.minecraftforge.energy.IEnergyStorage|getEnergyStored|()I
-   Method End: getEnergyToShare()I
-   Method Start: doesShare()Z
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|618|626|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|644|653|doesShare|method|nl.naxanria.nlib.tile.IEnergySharingProvider|doesShare|()Z
-   Method End: doesShare()Z
-   Method Start: getProvidingSides()[Lnet/minecraft/util/EnumFacing;
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|687|695|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|705|715|EnumFacing|class|net.minecraft.util.EnumFacing
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|718|735|getProvidingSides|method|nl.naxanria.nlib.tile.IEnergySharingProvider|getProvidingSides|()[Lnet/minecraft/util/EnumFacing;
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|753|770|EnumHelper.Facing|class|nl.naxanria.nlib.util.EnumHelper.Facing
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|771|774|ALL|field|nl.naxanria.nlib.util.EnumHelper.Facing|ALL
-   Method End: getProvidingSides()[Lnet/minecraft/util/EnumFacing;
-   Method Start: canShareTo(Lnet/minecraft/tileentity/TileEntity;)Z
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|834|838|tile|param|nl.naxanria.nlib.tile.BatteryEntity|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z|tile|0
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|786|794|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|812|822|canShareTo|method|nl.naxanria.nlib.tile.IEnergySharingProvider|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z
-      @|nl\naxanria\nlib\tile\BatteryEntity.java|823|833|TileEntity|class|net.minecraft.tileentity.TileEntity
-   Method End: canShareTo(Lnet/minecraft/tileentity/TileEntity;)Z
-Class End  : nl.naxanria.nlib.tile.BatteryEntity
-endProcessing "nl\naxanria\nlib\tile\BatteryEntity.java"
-
-startProcessing "nl\naxanria\nlib\tile\GeneratorEntity.java" md5: 119945d5a498323d67f00d50c156074a
-Cache Hit!
-@|nl\naxanria\nlib\tile\GeneratorEntity.java|8|29|nl.naxanria.nlib.tile|package|nl.naxanria.nlib.tile|(file)
-Class Start: nl.naxanria.nlib.tile.GeneratorEntity
-   @|nl\naxanria\nlib\tile\GeneratorEntity.java|187|202|GeneratorEntity|class|nl.naxanria.nlib.tile.GeneratorEntity
-   @|nl\naxanria\nlib\tile\GeneratorEntity.java|211|225|TileEntityBase|class|nl.naxanria.nlib.tile.TileEntityBase
-   @|nl\naxanria\nlib\tile\GeneratorEntity.java|237|259|IEnergySharingProvider|class|nl.naxanria.nlib.tile.IEnergySharingProvider
-   @|nl\naxanria\nlib\tile\GeneratorEntity.java|275|282|produce|field|nl.naxanria.nlib.tile.GeneratorEntity|produce|
-   @|nl\naxanria\nlib\tile\GeneratorEntity.java|296|313|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
-   @|nl\naxanria\nlib\tile\GeneratorEntity.java|296|313|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
-   @|nl\naxanria\nlib\tile\GeneratorEntity.java|314|321|storage|field|nl.naxanria.nlib.tile.GeneratorEntity|storage|
-   Method Start: GeneratorEntity(I)V
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|355|362|produce|param|nl.naxanria.nlib.tile.GeneratorEntity|GeneratorEntity|(I)V|produce|0
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|335|350|GeneratorEntity|method|nl.naxanria.nlib.tile.GeneratorEntity|GeneratorEntity|(I)V
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|377|384|produce|field|nl.naxanria.nlib.tile.GeneratorEntity|produce
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|387|394|produce|param|nl.naxanria.nlib.tile.GeneratorEntity|GeneratorEntity|(I)V|produce|0
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|400|407|storage|field|nl.naxanria.nlib.tile.GeneratorEntity|storage
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|414|431|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
-   Method End: GeneratorEntity(I)V
-   Method Start: GeneratorEntity(ILnl/naxanria/nlib/tile/BaseEnergyStorage;)V
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|489|496|produce|param|nl.naxanria.nlib.tile.GeneratorEntity|GeneratorEntity|(ILnl/naxanria/nlib/tile/BaseEnergyStorage;)V|produce|0
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|516|523|storage|param|nl.naxanria.nlib.tile.GeneratorEntity|GeneratorEntity|(ILnl/naxanria/nlib/tile/BaseEnergyStorage;)V|storage|1
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|469|484|GeneratorEntity|method|nl.naxanria.nlib.tile.GeneratorEntity|GeneratorEntity|(ILnl/naxanria/nlib/tile/BaseEnergyStorage;)V
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|498|515|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|538|545|produce|field|nl.naxanria.nlib.tile.GeneratorEntity|produce
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|548|555|produce|param|nl.naxanria.nlib.tile.GeneratorEntity|GeneratorEntity|(ILnl/naxanria/nlib/tile/BaseEnergyStorage;)V|produce|0
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|566|573|storage|field|nl.naxanria.nlib.tile.GeneratorEntity|storage
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|576|583|storage|param|nl.naxanria.nlib.tile.GeneratorEntity|GeneratorEntity|(ILnl/naxanria/nlib/tile/BaseEnergyStorage;)V|storage|1
-   Method End: GeneratorEntity(ILnl/naxanria/nlib/tile/BaseEnergyStorage;)V
-   Method Start: canGenerate()Z
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|618|629|canGenerate|method|nl.naxanria.nlib.tile.GeneratorEntity|canGenerate|()Z
-   Method End: canGenerate()Z
-   Method Start: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|700|706|facing|param|nl.naxanria.nlib.tile.GeneratorEntity|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|639|647|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|657|671|IEnergyStorage|class|net.minecraftforge.energy.IEnergyStorage
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|672|688|getEnergyStorage|method|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|689|699|EnumFacing|class|net.minecraft.util.EnumFacing
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|720|734|CollectionUtil|class|nl.naxanria.nlib.util.CollectionUtil
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|735|743|contains|method|nl.naxanria.nlib.util.CollectionUtil|contains|([Ljava/lang/Object;Ljava/lang/Object;)Z
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|744|761|getProvidingSides|method|nl.naxanria.nlib.tile.IEnergySharingProvider|getProvidingSides|()[Lnet/minecraft/util/EnumFacing;
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|765|771|facing|param|nl.naxanria.nlib.tile.GeneratorEntity|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|793|800|storage|field|nl.naxanria.nlib.tile.GeneratorEntity|storage
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|830|846|getEnergyStorage|method|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|847|853|facing|param|nl.naxanria.nlib.tile.GeneratorEntity|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
-   Method End: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
-   Method Start: entityUpdate()V
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|866|874|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|892|904|entityUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|entityUpdate|()V
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|921|933|entityUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|entityUpdate|()V
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|946|951|world|field|net.minecraft.tileentity.TileEntity|world
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|952|960|isRemote|field|net.minecraft.world.World|isRemote
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|974|981|storage|field|nl.naxanria.nlib.tile.GeneratorEntity|storage
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|982|995|receiveEnergy|method|net.minecraftforge.energy.IEnergyStorage|receiveEnergy|(IZ)I
-      @|nl\naxanria\nlib\tile\GeneratorEntity.java|996|1003|produce|field|nl.naxanria.nlib.tile.GeneratorEntity|produce
-   Method End: entityUpdate()V
-Class End  : nl.naxanria.nlib.tile.GeneratorEntity
-endProcessing "nl\naxanria\nlib\tile\GeneratorEntity.java"
-
-startProcessing "nl\naxanria\nlib\tile\IEnergySharingProvider.java" md5: 8f264d49f0c8368f205a30290b0a0fff
-Cache Hit!
-@|nl\naxanria\nlib\tile\IEnergySharingProvider.java|8|29|nl.naxanria.nlib.tile|package|nl.naxanria.nlib.tile|(file)
-Class Start: nl.naxanria.nlib.tile.IEnergySharingProvider
-   @|nl\naxanria\nlib\tile\IEnergySharingProvider.java|132|154|IEnergySharingProvider|class|nl.naxanria.nlib.tile.IEnergySharingProvider
-   Method Start: getEnergyToShare()I
-      @|nl\naxanria\nlib\tile\IEnergySharingProvider.java|170|186|getEnergyToShare|method|nl.naxanria.nlib.tile.IEnergySharingProvider|getEnergyToShare|()I
-   Method End: getEnergyToShare()I
-   Method Start: doesShare()Z
-      @|nl\naxanria\nlib\tile\IEnergySharingProvider.java|210|219|doesShare|method|nl.naxanria.nlib.tile.IEnergySharingProvider|doesShare|()Z
-   Method End: doesShare()Z
-   Method Start: getProvidingSides()[Lnet/minecraft/util/EnumFacing;
-      @|nl\naxanria\nlib\tile\IEnergySharingProvider.java|235|245|EnumFacing|class|net.minecraft.util.EnumFacing
-      @|nl\naxanria\nlib\tile\IEnergySharingProvider.java|248|265|getProvidingSides|method|nl.naxanria.nlib.tile.IEnergySharingProvider|getProvidingSides|()[Lnet/minecraft/util/EnumFacing;
-   Method End: getProvidingSides()[Lnet/minecraft/util/EnumFacing;
-   Method Start: canShareTo(Lnet/minecraft/tileentity/TileEntity;)Z
-      @|nl\naxanria\nlib\tile\IEnergySharingProvider.java|304|308|tile|param|nl.naxanria.nlib.tile.IEnergySharingProvider|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z|tile|0
-      @|nl\naxanria\nlib\tile\IEnergySharingProvider.java|282|292|canShareTo|method|nl.naxanria.nlib.tile.IEnergySharingProvider|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z
-      @|nl\naxanria\nlib\tile\IEnergySharingProvider.java|293|303|TileEntity|class|net.minecraft.tileentity.TileEntity
-   Method End: canShareTo(Lnet/minecraft/tileentity/TileEntity;)Z
-Class End  : nl.naxanria.nlib.tile.IEnergySharingProvider
-endProcessing "nl\naxanria\nlib\tile\IEnergySharingProvider.java"
-
-startProcessing "nl\naxanria\nlib\tile\TileEntityBase.java" md5: d23e61ad98fe18ccaa51e8983eb6533f
-Cache Hit!
+startProcessing "nl\naxanria\nlib\tile\TileEntityBase.java" md5: 5583f85169806e49794e18167c2f1772
 @|nl\naxanria\nlib\tile\TileEntityBase.java|8|29|nl.naxanria.nlib.tile|package|nl.naxanria.nlib.tile|(file)
 Class Start: nl.naxanria.nlib.tile.TileEntityBase
-   @|nl\naxanria\nlib\tile\TileEntityBase.java|942|956|TileEntityBase|class|nl.naxanria.nlib.tile.TileEntityBase
-   @|nl\naxanria\nlib\tile\TileEntityBase.java|965|975|TileEntity|class|net.minecraft.tileentity.TileEntity
-   @|nl\naxanria\nlib\tile\TileEntityBase.java|987|996|ITickable|class|net.minecraft.util.ITickable
-   @|nl\naxanria\nlib\tile\TileEntityBase.java|1011|1021|TileEntity|class|net.minecraft.tileentity.TileEntity
-   @|nl\naxanria\nlib\tile\TileEntityBase.java|1011|1021|TileEntity|class|net.minecraft.tileentity.TileEntity
-   @|nl\naxanria\nlib\tile\TileEntityBase.java|1024|1035|tilesAround|field|nl.naxanria.nlib.tile.TileEntityBase|tilesAround|
-   @|nl\naxanria\nlib\tile\TileEntityBase.java|1042|1052|TileEntity|class|net.minecraft.tileentity.TileEntity
-   @|nl\naxanria\nlib\tile\TileEntityBase.java|1078|1101|isEnergySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|isEnergySharingProvider|
-   @|nl\naxanria\nlib\tile\TileEntityBase.java|1113|1135|IEnergySharingProvider|class|nl.naxanria.nlib.tile.IEnergySharingProvider
-   @|nl\naxanria\nlib\tile\TileEntityBase.java|1113|1135|IEnergySharingProvider|class|nl.naxanria.nlib.tile.IEnergySharingProvider
-   @|nl\naxanria\nlib\tile\TileEntityBase.java|1136|1157|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider|
+   @|nl\naxanria\nlib\tile\TileEntityBase.java|1001|1015|TileEntityBase|class|nl.naxanria.nlib.tile.TileEntityBase
+   @|nl\naxanria\nlib\tile\TileEntityBase.java|1024|1034|TileEntity|class|net.minecraft.tileentity.TileEntity
+   @|nl\naxanria\nlib\tile\TileEntityBase.java|1046|1055|ITickable|class|net.minecraft.util.ITickable
+   @|nl\naxanria\nlib\tile\TileEntityBase.java|1070|1080|TileEntity|class|net.minecraft.tileentity.TileEntity
+   @|nl\naxanria\nlib\tile\TileEntityBase.java|1070|1080|TileEntity|class|net.minecraft.tileentity.TileEntity
+   @|nl\naxanria\nlib\tile\TileEntityBase.java|1083|1094|tilesAround|field|nl.naxanria.nlib.tile.TileEntityBase|tilesAround|
+   @|nl\naxanria\nlib\tile\TileEntityBase.java|1101|1111|TileEntity|class|net.minecraft.tileentity.TileEntity
+   @|nl\naxanria\nlib\tile\TileEntityBase.java|1137|1160|isEnergySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|isEnergySharingProvider|
+   @|nl\naxanria\nlib\tile\TileEntityBase.java|1172|1194|IEnergySharingProvider|class|nl.naxanria.nlib.tile.power.IEnergySharingProvider
+   @|nl\naxanria\nlib\tile\TileEntityBase.java|1172|1194|IEnergySharingProvider|class|nl.naxanria.nlib.tile.power.IEnergySharingProvider
+   @|nl\naxanria\nlib\tile\TileEntityBase.java|1195|1216|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider|
    Method Start: TileEntityBase()V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1171|1185|TileEntityBase|method|nl.naxanria.nlib.tile.TileEntityBase|TileEntityBase|()V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1196|1219|isEnergySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|isEnergySharingProvider
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1238|1260|IEnergySharingProvider|class|nl.naxanria.nlib.tile.IEnergySharingProvider
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1270|1293|isEnergySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|isEnergySharingProvider
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1307|1328|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1332|1354|IEnergySharingProvider|class|nl.naxanria.nlib.tile.IEnergySharingProvider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1230|1244|TileEntityBase|method|nl.naxanria.nlib.tile.TileEntityBase|TileEntityBase|()V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1255|1278|isEnergySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|isEnergySharingProvider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1297|1319|IEnergySharingProvider|class|nl.naxanria.nlib.tile.power.IEnergySharingProvider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1329|1352|isEnergySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|isEnergySharingProvider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1366|1387|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1391|1413|IEnergySharingProvider|class|nl.naxanria.nlib.tile.power.IEnergySharingProvider
    Method End: TileEntityBase()V
    Method Start: canUpdate()Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1392|1401|canUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|canUpdate|()Z
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1451|1460|canUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|canUpdate|()Z
    Method End: canUpdate()Z
    Method Start: update()V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1435|1443|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1458|1464|update|method|net.minecraft.util.ITickable|update|()V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1479|1488|canUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|canUpdate|()Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1504|1516|entityUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|entityUpdate|()V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1494|1502|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1517|1523|update|method|net.minecraft.util.ITickable|update|()V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1538|1547|canUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|canUpdate|()Z
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1563|1575|entityUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|entityUpdate|()V
    Method End: update()V
    Method Start: entityUpdate()V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1550|1562|entityUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|entityUpdate|()V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1578|1583|world|field|net.minecraft.tileentity.TileEntity|world
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1584|1592|isRemote|field|net.minecraft.world.World|isRemote
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1610|1633|isEnergySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|isEnergySharingProvider
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1655|1676|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1677|1686|doesShare|method|nl.naxanria.nlib.tile.IEnergySharingProvider|doesShare|()Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1722|1743|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1744|1760|getEnergyToShare|method|nl.naxanria.nlib.tile.IEnergySharingProvider|getEnergyToShare|()I
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1813|1823|EnumFacing|class|net.minecraft.util.EnumFacing
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1839|1860|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|1861|1878|getProvidingSides|method|nl.naxanria.nlib.tile.IEnergySharingProvider|getProvidingSides|()[Lnet/minecraft/util/EnumFacing;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1609|1621|entityUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|entityUpdate|()V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1637|1642|world|field|net.minecraft.tileentity.TileEntity|world
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1643|1651|isRemote|field|net.minecraft.world.World|isRemote
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1669|1692|isEnergySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|isEnergySharingProvider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1714|1735|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1736|1745|doesShare|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|doesShare|()Z
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1781|1802|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1803|1819|getEnergyToShare|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|getEnergyToShare|()I
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1872|1882|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1898|1919|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|1920|1937|getProvidingSides|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|getProvidingSides|()[Lnet/minecraft/util/EnumFacing;
       Field: Array Length, skipping
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2054|2064|EnumFacing|class|net.minecraft.util.EnumFacing
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2126|2136|TileEntity|class|net.minecraft.tileentity.TileEntity
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2144|2155|tilesAround|field|nl.naxanria.nlib.tile.TileEntityBase|tilesAround
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2161|2168|ordinal|method|java.lang.Enum|ordinal|()I
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2281|2302|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2303|2313|canShareTo|method|nl.naxanria.nlib.tile.IEnergySharingProvider|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2353|2362|WorldUtil|class|nl.naxanria.nlib.util.WorldUtil
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2363|2382|doEnergyInteraction|method|nl.naxanria.nlib.util.WorldUtil|doEnergyInteraction|(Lnet/minecraft/tileentity/TileEntity;Lnet/minecraft/tileentity/TileEntity;Lnet/minecraft/util/EnumFacing;I)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2113|2123|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2185|2195|TileEntity|class|net.minecraft.tileentity.TileEntity
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2203|2214|tilesAround|field|nl.naxanria.nlib.tile.TileEntityBase|tilesAround
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2220|2227|ordinal|method|java.lang.Enum|ordinal|()I
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2340|2361|energySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|energySharingProvider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2362|2372|canShareTo|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2412|2421|WorldUtil|class|nl.naxanria.nlib.util.WorldUtil
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2422|2441|doEnergyInteraction|method|nl.naxanria.nlib.util.WorldUtil|doEnergyInteraction|(Lnet/minecraft/tileentity/TileEntity;Lnet/minecraft/tileentity/TileEntity;Lnet/minecraft/util/EnumFacing;I)V
    Method End: entityUpdate()V
    Method Start: getDisplayName()Lnet/minecraft/util/text/ITextComponent;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2486|2494|Nullable|class|javax.annotation.Nullable
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2498|2506|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2516|2530|ITextComponent|class|net.minecraft.util.text.ITextComponent
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2531|2545|getDisplayName|method|net.minecraft.tileentity.TileEntity|getDisplayName|()Lnet/minecraft/util/text/ITextComponent;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2567|2586|TextComponentString|class|net.minecraft.util.text.TextComponentString
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2587|2595|getClass|method|java.lang.Object|getClass|()Ljava/lang/Class;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2598|2605|getName|method|java.lang.Class|getName|()Ljava/lang/String;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2545|2553|Nullable|class|javax.annotation.Nullable
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2557|2565|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2575|2589|ITextComponent|class|net.minecraft.util.text.ITextComponent
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2590|2604|getDisplayName|method|net.minecraft.tileentity.TileEntity|getDisplayName|()Lnet/minecraft/util/text/ITextComponent;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2626|2645|TextComponentString|class|net.minecraft.util.text.TextComponentString
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2646|2654|getClass|method|java.lang.Object|getClass|()Ljava/lang/Class;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2657|2664|getName|method|java.lang.Class|getName|()Ljava/lang/String;
    Method End: getDisplayName()Lnet/minecraft/util/text/ITextComponent;
    Method Start: saveDataOnChangeOrWorldStart()V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2631|2659|saveDataOnChangeOrWorldStart|method|nl.naxanria.nlib.tile.TileEntityBase|saveDataOnChangeOrWorldStart|()V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2675|2685|EnumFacing|class|net.minecraft.util.EnumFacing
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2693|2703|EnumFacing|class|net.minecraft.util.EnumFacing
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2704|2710|values|method|net.minecraft.util.EnumFacing|values|()[Lnet/minecraft/util/EnumFacing;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2726|2734|BlockPos|class|net.minecraft.util.math.BlockPos
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2746|2749|pos|field|net.minecraft.tileentity.TileEntity|pos
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2750|2756|offset|method|net.minecraft.util.math.BlockPos|offset|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/math/BlockPos;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2779|2784|world|field|net.minecraft.tileentity.TileEntity|world
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2785|2798|isBlockLoaded|method|net.minecraft.world.World|isBlockLoaded|(Lnet/minecraft/util/math/BlockPos;)Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2826|2837|tilesAround|field|nl.naxanria.nlib.tile.TileEntityBase|tilesAround
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2843|2850|ordinal|method|java.lang.Enum|ordinal|()I
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2861|2866|world|field|net.minecraft.tileentity.TileEntity|world
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2867|2880|getTileEntity|method|net.minecraft.world.IBlockAccess|getTileEntity|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/tileentity/TileEntity;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2690|2718|saveDataOnChangeOrWorldStart|method|nl.naxanria.nlib.tile.TileEntityBase|saveDataOnChangeOrWorldStart|()V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2734|2744|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2752|2762|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2763|2769|values|method|net.minecraft.util.EnumFacing|values|()[Lnet/minecraft/util/EnumFacing;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2785|2793|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2805|2808|pos|field|net.minecraft.tileentity.TileEntity|pos
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2809|2815|offset|method|net.minecraft.util.math.BlockPos|offset|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/math/BlockPos;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2838|2843|world|field|net.minecraft.tileentity.TileEntity|world
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2844|2857|isBlockLoaded|method|net.minecraft.world.World|isBlockLoaded|(Lnet/minecraft/util/math/BlockPos;)Z
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2885|2896|tilesAround|field|nl.naxanria.nlib.tile.TileEntityBase|tilesAround
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2902|2909|ordinal|method|java.lang.Enum|ordinal|()I
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2920|2925|world|field|net.minecraft.tileentity.TileEntity|world
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2926|2939|getTileEntity|method|net.minecraft.world.IBlockAccess|getTileEntity|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/tileentity/TileEntity;
    Method End: saveDataOnChangeOrWorldStart()V
    Method Start: shouldSaveDataOnChangeOrWorldStart()Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2925|2959|shouldSaveDataOnChangeOrWorldStart|method|nl.naxanria.nlib.tile.TileEntityBase|shouldSaveDataOnChangeOrWorldStart|()Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|2977|3000|isEnergySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|isEnergySharingProvider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|2984|3018|shouldSaveDataOnChangeOrWorldStart|method|nl.naxanria.nlib.tile.TileEntityBase|shouldSaveDataOnChangeOrWorldStart|()Z
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3036|3059|isEnergySharingProvider|field|nl.naxanria.nlib.tile.TileEntityBase|isEnergySharingProvider
    Method End: shouldSaveDataOnChangeOrWorldStart()Z
    Method Start: hasCapability(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3066|3076|capability|param|nl.naxanria.nlib.tile.TileEntityBase|hasCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z|capability|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3099|3105|facing|param|nl.naxanria.nlib.tile.TileEntityBase|hasCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z|facing|1
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3012|3020|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3038|3051|hasCapability|method|net.minecraftforge.common.capabilities.ICapabilityProvider|hasCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3052|3062|Capability|class|net.minecraftforge.common.capabilities.Capability
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3079|3087|Nullable|class|javax.annotation.Nullable
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3088|3098|EnumFacing|class|net.minecraft.util.EnumFacing
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3122|3135|getCapability|method|net.minecraftforge.common.capabilities.ICapabilityProvider|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3136|3146|capability|param|nl.naxanria.nlib.tile.TileEntityBase|hasCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z|capability|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3148|3154|facing|param|nl.naxanria.nlib.tile.TileEntityBase|hasCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z|facing|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3125|3135|capability|param|nl.naxanria.nlib.tile.TileEntityBase|hasCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z|capability|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3158|3164|facing|param|nl.naxanria.nlib.tile.TileEntityBase|hasCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z|facing|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3071|3079|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3097|3110|hasCapability|method|net.minecraftforge.common.capabilities.ICapabilityProvider|hasCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3111|3121|Capability|class|net.minecraftforge.common.capabilities.Capability
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3138|3146|Nullable|class|javax.annotation.Nullable
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3147|3157|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3181|3194|getCapability|method|net.minecraftforge.common.capabilities.ICapabilityProvider|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3195|3205|capability|param|nl.naxanria.nlib.tile.TileEntityBase|hasCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z|capability|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3207|3213|facing|param|nl.naxanria.nlib.tile.TileEntityBase|hasCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z|facing|1
    Method End: hasCapability(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z
    Method Start: getCapability(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3272|3282|capability|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|capability|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3305|3311|facing|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|facing|1
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3175|3191|SuppressWarnings|class|java.lang.SuppressWarnings
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3208|3216|Nullable|class|javax.annotation.Nullable
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3220|3228|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3244|3257|getCapability|method|net.minecraftforge.common.capabilities.ICapabilityProvider|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3258|3268|Capability|class|net.minecraftforge.common.capabilities.Capability
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3285|3293|Nullable|class|javax.annotation.Nullable
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3294|3304|EnumFacing|class|net.minecraft.util.EnumFacing
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3325|3335|capability|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|capability|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3339|3355|CapabilityEnergy|class|net.minecraftforge.energy.CapabilityEnergy
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3356|3362|ENERGY|field|net.minecraftforge.energy.CapabilityEnergy|ENERGY
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3376|3390|IEnergyStorage|class|net.minecraftforge.energy.IEnergyStorage
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3401|3417|getEnergyStorage|method|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3418|3424|facing|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|facing|1
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3526|3539|getCapability|method|net.minecraftforge.common.capabilities.ICapabilityProvider|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3540|3550|capability|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|capability|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3552|3558|facing|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|facing|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3331|3341|capability|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|capability|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3364|3370|facing|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|facing|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3234|3250|SuppressWarnings|class|java.lang.SuppressWarnings
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3267|3275|Nullable|class|javax.annotation.Nullable
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3279|3287|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3303|3316|getCapability|method|net.minecraftforge.common.capabilities.ICapabilityProvider|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3317|3327|Capability|class|net.minecraftforge.common.capabilities.Capability
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3344|3352|Nullable|class|javax.annotation.Nullable
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3353|3363|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3384|3394|capability|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|capability|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3398|3414|CapabilityEnergy|class|net.minecraftforge.energy.CapabilityEnergy
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3415|3421|ENERGY|field|net.minecraftforge.energy.CapabilityEnergy|ENERGY
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3435|3449|IEnergyStorage|class|net.minecraftforge.energy.IEnergyStorage
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3460|3476|getEnergyStorage|method|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3477|3483|facing|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|facing|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3585|3598|getCapability|method|net.minecraftforge.common.capabilities.ICapabilityProvider|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3599|3609|capability|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|capability|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3611|3617|facing|param|nl.naxanria.nlib.tile.TileEntityBase|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;|facing|1
    Method End: getCapability(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;
    Method Start: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3620|3626|facing|param|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3577|3591|IEnergyStorage|class|net.minecraftforge.energy.IEnergyStorage
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3592|3608|getEnergyStorage|method|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3609|3619|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3679|3685|facing|param|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3636|3650|IEnergyStorage|class|net.minecraftforge.energy.IEnergyStorage
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3651|3667|getEnergyStorage|method|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3668|3678|EnumFacing|class|net.minecraft.util.EnumFacing
    Method End: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
    Method Start: getComparatorStrength()I
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3669|3690|getComparatorStrength|method|nl.naxanria.nlib.tile.TileEntityBase|getComparatorStrength|()I
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3728|3749|getComparatorStrength|method|nl.naxanria.nlib.tile.TileEntityBase|getComparatorStrength|()I
    Method End: getComparatorStrength()I
    Method Start: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3786|3794|compound|param|nl.naxanria.nlib.tile.TileEntityBase|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;|compound|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3721|3729|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3745|3759|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3760|3770|writeToNBT|method|net.minecraft.tileentity.TileEntity|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3771|3785|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3809|3825|writeSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3826|3834|compound|param|nl.naxanria.nlib.tile.TileEntityBase|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;|compound|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3836|3843|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3844|3853|SAVE_TILE|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_TILE
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3867|3875|compound|param|nl.naxanria.nlib.tile.TileEntityBase|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;|compound|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3845|3853|compound|param|nl.naxanria.nlib.tile.TileEntityBase|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;|compound|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3780|3788|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3804|3818|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3819|3829|writeToNBT|method|net.minecraft.tileentity.TileEntity|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3830|3844|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3868|3884|writeSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3885|3893|compound|param|nl.naxanria.nlib.tile.TileEntityBase|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;|compound|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3895|3902|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3903|3912|SAVE_TILE|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_TILE
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3926|3934|compound|param|nl.naxanria.nlib.tile.TileEntityBase|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;|compound|0
    Method End: writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;
    Method Start: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3943|3951|compound|param|nl.naxanria.nlib.tile.TileEntityBase|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)V|compound|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3887|3895|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3916|3927|readFromNBT|method|net.minecraft.tileentity.TileEntity|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3928|3942|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3966|3981|readSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3982|3990|compound|param|nl.naxanria.nlib.tile.TileEntityBase|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)V|compound|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|3992|3999|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4000|4009|SAVE_TILE|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_TILE
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4002|4010|compound|param|nl.naxanria.nlib.tile.TileEntityBase|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)V|compound|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3946|3954|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3975|3986|readFromNBT|method|net.minecraft.tileentity.TileEntity|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|3987|4001|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4025|4040|readSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4041|4049|compound|param|nl.naxanria.nlib.tile.TileEntityBase|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)V|compound|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4051|4058|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4059|4068|SAVE_TILE|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_TILE
    Method End: readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)V
    Method Start: getUpdatePacket()Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4022|4030|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4046|4069|SPacketUpdateTileEntity|class|net.minecraft.network.play.server.SPacketUpdateTileEntity
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4070|4085|getUpdatePacket|method|net.minecraft.tileentity.TileEntity|getUpdatePacket|()Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4096|4110|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4126|4140|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4153|4169|writeSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4180|4187|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4188|4192|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4210|4233|SPacketUpdateTileEntity|class|net.minecraft.network.play.server.SPacketUpdateTileEntity
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4239|4242|pos|field|net.minecraft.tileentity.TileEntity|pos
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4081|4089|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4105|4128|SPacketUpdateTileEntity|class|net.minecraft.network.play.server.SPacketUpdateTileEntity
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4129|4144|getUpdatePacket|method|net.minecraft.tileentity.TileEntity|getUpdatePacket|()Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4155|4169|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4185|4199|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4212|4228|writeSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4239|4246|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4247|4251|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4269|4292|SPacketUpdateTileEntity|class|net.minecraft.network.play.server.SPacketUpdateTileEntity
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4298|4301|pos|field|net.minecraft.tileentity.TileEntity|pos
    Method End: getUpdatePacket()Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;
    Method Start: onDataPacket(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4326|4329|net|param|nl.naxanria.nlib.tile.TileEntityBase|onDataPacket|(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;)V|net|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4355|4358|pkt|param|nl.naxanria.nlib.tile.TileEntityBase|onDataPacket|(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;)V|pkt|1
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4269|4277|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4298|4310|onDataPacket|method|net.minecraft.tileentity.TileEntity|onDataPacket|(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4311|4325|NetworkManager|class|net.minecraft.network.NetworkManager
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4331|4354|SPacketUpdateTileEntity|class|net.minecraft.network.play.server.SPacketUpdateTileEntity
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4373|4388|readSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4389|4392|pkt|param|nl.naxanria.nlib.tile.TileEntityBase|onDataPacket|(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;)V|pkt|1
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4393|4407|getNbtCompound|method|net.minecraft.network.play.server.SPacketUpdateTileEntity|getNbtCompound|()Lnet/minecraft/nbt/NBTTagCompound;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4411|4418|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4419|4423|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4385|4388|net|param|nl.naxanria.nlib.tile.TileEntityBase|onDataPacket|(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;)V|net|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4414|4417|pkt|param|nl.naxanria.nlib.tile.TileEntityBase|onDataPacket|(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;)V|pkt|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4328|4336|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4357|4369|onDataPacket|method|net.minecraft.tileentity.TileEntity|onDataPacket|(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4370|4384|NetworkManager|class|net.minecraft.network.NetworkManager
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4390|4413|SPacketUpdateTileEntity|class|net.minecraft.network.play.server.SPacketUpdateTileEntity
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4432|4447|readSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4448|4451|pkt|param|nl.naxanria.nlib.tile.TileEntityBase|onDataPacket|(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;)V|pkt|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4452|4466|getNbtCompound|method|net.minecraft.network.play.server.SPacketUpdateTileEntity|getNbtCompound|()Lnet/minecraft/nbt/NBTTagCompound;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4470|4477|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4478|4482|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
    Method End: onDataPacket(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/network/play/server/SPacketUpdateTileEntity;)V
    Method Start: getUpdateTag()Lnet/minecraft/nbt/NBTTagCompound;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4436|4444|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4460|4474|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4475|4487|getUpdateTag|method|net.minecraft.tileentity.TileEntity|getUpdateTag|()Lnet/minecraft/nbt/NBTTagCompound;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4498|4512|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4528|4542|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4555|4571|writeSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4582|4589|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4590|4594|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4495|4503|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4519|4533|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4534|4546|getUpdateTag|method|net.minecraft.tileentity.TileEntity|getUpdateTag|()Lnet/minecraft/nbt/NBTTagCompound;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4557|4571|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4587|4601|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4614|4630|writeSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4641|4648|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4649|4653|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
    Method End: getUpdateTag()Lnet/minecraft/nbt/NBTTagCompound;
    Method Start: handleUpdateTag(Lnet/minecraft/nbt/NBTTagCompound;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4688|4696|compound|param|nl.naxanria.nlib.tile.TileEntityBase|handleUpdateTag|(Lnet/minecraft/nbt/NBTTagCompound;)V|compound|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4628|4636|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4657|4672|handleUpdateTag|method|net.minecraft.tileentity.TileEntity|handleUpdateTag|(Lnet/minecraft/nbt/NBTTagCompound;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4673|4687|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4711|4726|readSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4727|4735|compound|param|nl.naxanria.nlib.tile.TileEntityBase|handleUpdateTag|(Lnet/minecraft/nbt/NBTTagCompound;)V|compound|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4737|4744|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4745|4749|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4747|4755|compound|param|nl.naxanria.nlib.tile.TileEntityBase|handleUpdateTag|(Lnet/minecraft/nbt/NBTTagCompound;)V|compound|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4687|4695|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4716|4731|handleUpdateTag|method|net.minecraft.tileentity.TileEntity|handleUpdateTag|(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4732|4746|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4770|4785|readSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4786|4794|compound|param|nl.naxanria.nlib.tile.TileEntityBase|handleUpdateTag|(Lnet/minecraft/nbt/NBTTagCompound;)V|compound|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4796|4803|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4804|4808|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
    Method End: handleUpdateTag(Lnet/minecraft/nbt/NBTTagCompound;)V
    Method Start: sendUpdate()V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4779|4789|sendUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|sendUpdate|()V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4808|4813|world|field|net.minecraft.tileentity.TileEntity|world
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4831|4836|world|field|net.minecraft.tileentity.TileEntity|world
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4837|4845|isRemote|field|net.minecraft.world.World|isRemote
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4859|4873|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4889|4903|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4918|4934|writeSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4945|4952|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4953|4957|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4973|4987|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|4999|5013|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5028|5034|setTag|method|net.minecraft.nbt.NBTTagCompound|setTag|(Ljava/lang/String;Lnet/minecraft/nbt/NBTBase;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5065|5075|setInteger|method|net.minecraft.nbt.NBTTagCompound|setInteger|(Ljava/lang/String;I)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5081|5084|pos|field|net.minecraft.tileentity.TileEntity|pos
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5085|5089|getX|method|net.minecraft.util.math.Vec3i|getX|()I
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5105|5115|setInteger|method|net.minecraft.nbt.NBTTagCompound|setInteger|(Ljava/lang/String;I)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5121|5124|pos|field|net.minecraft.tileentity.TileEntity|pos
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5125|5129|getY|method|net.minecraft.util.math.Vec3i|getY|()I
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5145|5155|setInteger|method|net.minecraft.nbt.NBTTagCompound|setInteger|(Ljava/lang/String;I)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5161|5164|pos|field|net.minecraft.tileentity.TileEntity|pos
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5165|5169|getZ|method|net.minecraft.util.math.Vec3i|getZ|()I
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5180|5193|PacketHandler|class|nl.naxanria.nlib.network.PacketHandler
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5194|5208|networkWrapper|field|nl.naxanria.nlib.network.PacketHandler|networkWrapper
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5209|5224|sendToAllAround|method|net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper|sendToAllAround|(Lnet/minecraftforge/fml/common/network/simpleimpl/IMessage;Lnet/minecraftforge/fml/common/network/NetworkRegistry$TargetPoint;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5245|5265|PacketServerToClient|class|nl.naxanria.nlib.network.PacketServerToClient
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5272|5285|PacketHandler|class|nl.naxanria.nlib.network.PacketHandler
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5286|5305|TILE_ENTITY_HANDLER|field|nl.naxanria.nlib.network.PacketHandler|TILE_ENTITY_HANDLER
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5320|5347|NetworkRegistry.TargetPoint|class|net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5373|5378|world|field|net.minecraft.tileentity.TileEntity|world
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5379|5387|provider|field|net.minecraft.world.World|provider
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5388|5400|getDimension|method|net.minecraft.world.WorldProvider|getDimension|()I
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5419|5425|getPos|method|net.minecraft.tileentity.TileEntity|getPos|()Lnet/minecraft/util/math/BlockPos;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5428|5432|getX|method|net.minecraft.util.math.Vec3i|getX|()I
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5451|5457|getPos|method|net.minecraft.tileentity.TileEntity|getPos|()Lnet/minecraft/util/math/BlockPos;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5460|5464|getY|method|net.minecraft.util.math.Vec3i|getY|()I
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5483|5489|getPos|method|net.minecraft.tileentity.TileEntity|getPos|()Lnet/minecraft/util/math/BlockPos;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5492|5496|getZ|method|net.minecraft.util.math.Vec3i|getZ|()I
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4838|4848|sendUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|sendUpdate|()V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4867|4872|world|field|net.minecraft.tileentity.TileEntity|world
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4890|4895|world|field|net.minecraft.tileentity.TileEntity|world
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4896|4904|isRemote|field|net.minecraft.world.World|isRemote
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4918|4932|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4948|4962|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|4977|4993|writeSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5004|5011|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5012|5016|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5032|5046|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5058|5072|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5087|5093|setTag|method|net.minecraft.nbt.NBTTagCompound|setTag|(Ljava/lang/String;Lnet/minecraft/nbt/NBTBase;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5124|5134|setInteger|method|net.minecraft.nbt.NBTTagCompound|setInteger|(Ljava/lang/String;I)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5140|5143|pos|field|net.minecraft.tileentity.TileEntity|pos
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5144|5148|getX|method|net.minecraft.util.math.Vec3i|getX|()I
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5164|5174|setInteger|method|net.minecraft.nbt.NBTTagCompound|setInteger|(Ljava/lang/String;I)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5180|5183|pos|field|net.minecraft.tileentity.TileEntity|pos
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5184|5188|getY|method|net.minecraft.util.math.Vec3i|getY|()I
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5204|5214|setInteger|method|net.minecraft.nbt.NBTTagCompound|setInteger|(Ljava/lang/String;I)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5220|5223|pos|field|net.minecraft.tileentity.TileEntity|pos
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5224|5228|getZ|method|net.minecraft.util.math.Vec3i|getZ|()I
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5239|5252|PacketHandler|class|nl.naxanria.nlib.network.PacketHandler
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5253|5267|networkWrapper|field|nl.naxanria.nlib.network.PacketHandler|networkWrapper
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5268|5283|sendToAllAround|method|net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper|sendToAllAround|(Lnet/minecraftforge/fml/common/network/simpleimpl/IMessage;Lnet/minecraftforge/fml/common/network/NetworkRegistry$TargetPoint;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5304|5324|PacketServerToClient|class|nl.naxanria.nlib.network.PacketServerToClient
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5331|5344|PacketHandler|class|nl.naxanria.nlib.network.PacketHandler
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5345|5364|TILE_ENTITY_HANDLER|field|nl.naxanria.nlib.network.PacketHandler|TILE_ENTITY_HANDLER
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5379|5406|NetworkRegistry.TargetPoint|class|net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5432|5437|world|field|net.minecraft.tileentity.TileEntity|world
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5438|5446|provider|field|net.minecraft.world.World|provider
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5447|5459|getDimension|method|net.minecraft.world.WorldProvider|getDimension|()I
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5478|5484|getPos|method|net.minecraft.tileentity.TileEntity|getPos|()Lnet/minecraft/util/math/BlockPos;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5487|5491|getX|method|net.minecraft.util.math.Vec3i|getX|()I
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5510|5516|getPos|method|net.minecraft.tileentity.TileEntity|getPos|()Lnet/minecraft/util/math/BlockPos;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5519|5523|getY|method|net.minecraft.util.math.Vec3i|getY|()I
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5542|5548|getPos|method|net.minecraft.tileentity.TileEntity|getPos|()Lnet/minecraft/util/math/BlockPos;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5551|5555|getZ|method|net.minecraft.util.math.Vec3i|getZ|()I
    Method End: sendUpdate()V
    Method Start: writeSyncableNBT(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5591|5599|compound|param|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|compound|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5609|5613|type|param|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|type|1
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5559|5575|writeSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5576|5590|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5601|5608|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5626|5630|type|param|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|type|1
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5634|5641|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5642|5652|SAVE_BLOCK|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_BLOCK
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5672|5682|writeToNBT|method|net.minecraft.tileentity.TileEntity|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|5683|5691|compound|param|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|compound|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5650|5658|compound|param|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|compound|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5668|5672|type|param|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|type|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5618|5634|writeSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5635|5649|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5660|5667|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5685|5689|type|param|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|type|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5693|5700|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5701|5711|SAVE_BLOCK|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_BLOCK
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5731|5741|writeToNBT|method|net.minecraft.tileentity.TileEntity|writeToNBT|(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|5742|5750|compound|param|nl.naxanria.nlib.tile.TileEntityBase|writeSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|compound|0
    Method End: writeSyncableNBT(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
    Method Start: readSyncableNBT(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6164|6172|compound|param|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|compound|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6182|6186|type|param|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|type|1
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6133|6148|readSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6149|6163|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6174|6181|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6199|6203|type|param|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|type|1
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6207|6214|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6215|6225|SAVE_BLOCK|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_BLOCK
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6245|6256|readFromNBT|method|net.minecraft.tileentity.TileEntity|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)V
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6257|6265|compound|param|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|compound|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6223|6231|compound|param|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|compound|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6241|6245|type|param|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|type|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6192|6207|readSyncableNBT|method|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6208|6222|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6233|6240|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6258|6262|type|param|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|type|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6266|6273|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6274|6284|SAVE_BLOCK|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_BLOCK
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6304|6315|readFromNBT|method|net.minecraft.tileentity.TileEntity|readFromNBT|(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6316|6324|compound|param|nl.naxanria.nlib.tile.TileEntityBase|readSyncableNBT|(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V|compound|0
    Method End: readSyncableNBT(Lnet/minecraft/nbt/NBTTagCompound;Lnl/naxanria/nlib/tile/TileEntityBase$NBTType;)V
    Method Start: shouldRefresh(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6682|6687|world|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|world|0
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6698|6701|pos|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|pos|1
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6715|6723|oldState|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|oldState|2
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6737|6745|newState|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|newState|3
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6636|6644|Override|class|java.lang.Override
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6662|6675|shouldRefresh|method|net.minecraft.tileentity.TileEntity|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6676|6681|World|class|net.minecraft.world.World
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6689|6697|BlockPos|class|net.minecraft.util.math.BlockPos
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6703|6714|IBlockState|class|net.minecraft.block.state.IBlockState
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6725|6736|IBlockState|class|net.minecraft.block.state.IBlockState
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6763|6771|oldState|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|oldState|2
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6772|6780|getBlock|method|net.minecraft.block.state.IBlockState|getBlock|()Lnet/minecraft/block/Block;
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6783|6800|isAssociatedBlock|method|net.minecraft.block.Block|isAssociatedBlock|(Lnet/minecraft/block/Block;)Z
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6801|6809|newState|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|newState|3
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6810|6818|getBlock|method|net.minecraft.block.state.IBlockState|getBlock|()Lnet/minecraft/block/Block;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6741|6746|world|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|world|0
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6757|6760|pos|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|pos|1
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6774|6782|oldState|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|oldState|2
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6796|6804|newState|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|newState|3
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6695|6703|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6721|6734|shouldRefresh|method|net.minecraft.tileentity.TileEntity|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6735|6740|World|class|net.minecraft.world.World
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6748|6756|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6762|6773|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6784|6795|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6822|6830|oldState|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|oldState|2
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6831|6839|getBlock|method|net.minecraft.block.state.IBlockState|getBlock|()Lnet/minecraft/block/Block;
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6842|6859|isAssociatedBlock|method|net.minecraft.block.Block|isAssociatedBlock|(Lnet/minecraft/block/Block;)Z
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6860|6868|newState|param|nl.naxanria.nlib.tile.TileEntityBase|shouldRefresh|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z|newState|3
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6869|6877|getBlock|method|net.minecraft.block.state.IBlockState|getBlock|()Lnet/minecraft/block/Block;
    Method End: shouldRefresh(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/block/state/IBlockState;)Z
    Enum Start: nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6844|6851|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6860|6869|SAVE_TILE|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_TILE
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6875|6879|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
-      @|nl\naxanria\nlib\tile\TileEntityBase.java|6885|6895|SAVE_BLOCK|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_BLOCK
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6903|6910|NBTType|class|nl.naxanria.nlib.tile.TileEntityBase.NBTType
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6919|6928|SAVE_TILE|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_TILE
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6934|6938|SYNC|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SYNC
+      @|nl\naxanria\nlib\tile\TileEntityBase.java|6944|6954|SAVE_BLOCK|field|nl.naxanria.nlib.tile.TileEntityBase.NBTType|SAVE_BLOCK
    Enum End  : nl.naxanria.nlib.tile.TileEntityBase.NBTType
 Class End  : nl.naxanria.nlib.tile.TileEntityBase
 endProcessing "nl\naxanria\nlib\tile\TileEntityBase.java"
+
+startProcessing "nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java" md5: 06dc4db2a3b2453661c75bd7ee86395b
+@|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|8|35|nl.naxanria.nlib.tile.power|package|nl.naxanria.nlib.tile.power|(file)
+Class Start: nl.naxanria.nlib.tile.power.BaseEnergyAcceptor
+   @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|270|288|BaseEnergyAcceptor|class|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor
+   @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|297|311|TileEntityBase|class|nl.naxanria.nlib.tile.TileEntityBase
+   @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|323|340|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+   @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|323|340|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+   @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|341|348|storage|field|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|storage|
+   Method Start: BaseEnergyAcceptor(II)V
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|385|393|capacity|param|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|BaseEnergyAcceptor|(II)V|capacity|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|399|405|maxUse|param|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|BaseEnergyAcceptor|(II)V|maxUse|1
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|362|380|BaseEnergyAcceptor|method|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|BaseEnergyAcceptor|(II)V
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|415|422|storage|field|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|storage
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|429|446|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|447|455|capacity|param|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|BaseEnergyAcceptor|(II)V|capacity|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|457|463|maxUse|param|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|BaseEnergyAcceptor|(II)V|maxUse|1
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|465|471|maxUse|param|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|BaseEnergyAcceptor|(II)V|maxUse|1
+   Method End: BaseEnergyAcceptor(II)V
+   Method Start: BaseEnergyAcceptor(Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|534|541|storage|param|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|BaseEnergyAcceptor|(Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V|storage|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|497|515|BaseEnergyAcceptor|method|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|BaseEnergyAcceptor|(Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|516|533|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|556|563|storage|field|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|storage
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|566|573|storage|param|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|BaseEnergyAcceptor|(Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V|storage|0
+   Method End: BaseEnergyAcceptor(Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V
+   Method Start: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|646|652|facing|param|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|585|593|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|603|617|IEnergyStorage|class|net.minecraftforge.energy.IEnergyStorage
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|618|634|getEnergyStorage|method|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|635|645|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|666|680|CollectionUtil|class|nl.naxanria.nlib.util.CollectionUtil
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|681|689|contains|method|nl.naxanria.nlib.util.CollectionUtil|contains|([Ljava/lang/Object;Ljava/lang/Object;)Z
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|690|707|getAcceptingSides|method|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|getAcceptingSides|()[Lnet/minecraft/util/EnumFacing;
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|711|717|facing|param|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|739|746|storage|field|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|storage
+   Method End: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+   Method Start: getAcceptingSides()[Lnet/minecraft/util/EnumFacing;
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|792|802|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|805|822|getAcceptingSides|method|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|getAcceptingSides|()[Lnet/minecraft/util/EnumFacing;
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|840|857|EnumHelper.Facing|class|nl.naxanria.nlib.util.EnumHelper.Facing
+      @|nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java|858|861|ALL|field|nl.naxanria.nlib.util.EnumHelper.Facing|ALL
+   Method End: getAcceptingSides()[Lnet/minecraft/util/EnumFacing;
+Class End  : nl.naxanria.nlib.tile.power.BaseEnergyAcceptor
+endProcessing "nl\naxanria\nlib\tile\power\BaseEnergyAcceptor.java"
+
+startProcessing "nl\naxanria\nlib\tile\power\BaseEnergyStorage.java" md5: d2fb883d6896a65725f5693d3d001ec2
+@|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|8|35|nl.naxanria.nlib.tile.power|package|nl.naxanria.nlib.tile.power|(file)
+Class Start: nl.naxanria.nlib.tile.power.BaseEnergyStorage
+   @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|100|117|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+   @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|126|139|EnergyStorage|class|net.minecraftforge.energy.EnergyStorage
+   @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|162|181|internalStorageOnly|field|nl.naxanria.nlib.tile.power.BaseEnergyStorage|internalStorageOnly|
+   Method Start: BaseEnergyStorage(III)V
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|225|233|capacity|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(III)V|capacity|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|239|249|maxReceive|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(III)V|maxReceive|1
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|255|265|maxExtract|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(III)V|maxExtract|2
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|203|220|BaseEnergyStorage|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(III)V
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|281|289|capacity|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(III)V|capacity|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|291|301|maxReceive|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(III)V|maxReceive|1
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|303|313|maxExtract|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(III)V|maxExtract|2
+   Method End: BaseEnergyStorage(III)V
+   Method Start: BaseEnergyStorage(IIIZ)V
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|354|362|capacity|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|capacity|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|368|378|maxReceive|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|maxReceive|1
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|384|394|maxExtract|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|maxExtract|2
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|404|423|internalStorageOnly|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|internalStorageOnly|3
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|332|349|BaseEnergyStorage|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|439|447|capacity|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|capacity|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|449|459|maxReceive|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|maxReceive|1
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|461|471|maxExtract|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|maxExtract|2
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|488|507|internalStorageOnly|field|nl.naxanria.nlib.tile.power.BaseEnergyStorage|internalStorageOnly
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|510|529|internalStorageOnly|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|BaseEnergyStorage|(IIIZ)V|internalStorageOnly|3
+   Method End: BaseEnergyStorage(IIIZ)V
+   Method Start: setMaxReceive(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|583|586|max|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setMaxReceive|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;|max|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|547|564|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|565|578|setMaxReceive|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setMaxReceive|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|596|606|maxReceive|field|net.minecraftforge.energy.EnergyStorage|maxReceive
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|609|612|max|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setMaxReceive|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;|max|0
+   Method End: setMaxReceive(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;
+   Method Start: setMaxExtract(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|688|691|max|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setMaxExtract|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;|max|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|652|669|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|670|683|setMaxExtract|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setMaxExtract|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|701|711|maxExtract|field|net.minecraftforge.energy.EnergyStorage|maxExtract
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|714|717|max|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setMaxExtract|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;|max|0
+   Method End: setMaxExtract(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;
+   Method Start: setCapacity(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|791|799|capacity|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;|capacity|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|757|774|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|775|786|setCapacity|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|813|821|capacity|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;|capacity|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|829|837|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|855|861|energy|field|net.minecraftforge.energy.EnergyStorage|energy
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|864|872|capacity|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;|capacity|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|890|896|energy|field|net.minecraftforge.energy.EnergyStorage|energy
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|899|907|capacity|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;|capacity|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|932|940|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|943|951|capacity|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setCapacity|(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;|capacity|0
+   Method End: setCapacity(I)Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;
+   Method Start: getStoredPercentage()F
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|997|1016|getStoredPercentage|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|getStoredPercentage|()F
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1034|1053|getStoredPercentage|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|getStoredPercentage|(I)F
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1054|1060|energy|field|net.minecraftforge.energy.EnergyStorage|energy
+   Method End: getStoredPercentage()F
+   Method Start: getStoredPercentage(I)F
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1109|1116|storage|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|getStoredPercentage|(I)F|storage|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1085|1104|getStoredPercentage|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|getStoredPercentage|(I)F
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1133|1140|storage|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|getStoredPercentage|(I)F|storage|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1151|1159|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
+   Method End: getStoredPercentage(I)F
+   Method Start: getCapacity()I
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1181|1192|getCapacity|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|getCapacity|()I
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1210|1218|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
+   Method End: getCapacity()I
+   Method Start: isFull()Z
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1244|1250|isFull|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|isFull|()Z
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1268|1274|energy|field|net.minecraftforge.energy.EnergyStorage|energy
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1278|1286|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
+   Method End: isFull()Z
+   Method Start: receiveEnergy(IZ)I
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1338|1348|maxReceive|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|receiveEnergy|(IZ)I|maxReceive|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1358|1366|simulate|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|receiveEnergy|(IZ)I|simulate|1
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1298|1306|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1320|1333|receiveEnergy|method|net.minecraftforge.energy.IEnergyStorage|receiveEnergy|(IZ)I
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1380|1399|internalStorageOnly|field|nl.naxanria.nlib.tile.power.BaseEnergyStorage|internalStorageOnly
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1428|1432|Math|class|java.lang.Math
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1433|1436|min|method|java.lang.Math|min|(II)I
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1437|1445|capacity|field|net.minecraftforge.energy.EnergyStorage|capacity
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1448|1454|energy|field|net.minecraftforge.energy.EnergyStorage|energy
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1456|1466|maxReceive|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|receiveEnergy|(IZ)I|maxReceive|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1480|1488|simulate|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|receiveEnergy|(IZ)I|simulate|1
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1506|1512|energy|field|net.minecraftforge.energy.EnergyStorage|energy
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1604|1617|receiveEnergy|method|net.minecraftforge.energy.IEnergyStorage|receiveEnergy|(IZ)I
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1618|1628|maxReceive|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|receiveEnergy|(IZ)I|maxReceive|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1630|1638|simulate|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|receiveEnergy|(IZ)I|simulate|1
+   Method End: receiveEnergy(IZ)I
+   Method Start: isInternalStorageOnly()Z
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1671|1692|isInternalStorageOnly|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|isInternalStorageOnly|()Z
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1710|1729|internalStorageOnly|field|nl.naxanria.nlib.tile.power.BaseEnergyStorage|internalStorageOnly
+   Method End: isInternalStorageOnly()Z
+   Method Start: setInternalStorageOnly(Z)V
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1783|1802|internalStorageOnly|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setInternalStorageOnly|(Z)V|internalStorageOnly|0
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1752|1774|setInternalStorageOnly|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setInternalStorageOnly|(Z)V
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1817|1836|internalStorageOnly|field|nl.naxanria.nlib.tile.power.BaseEnergyStorage|internalStorageOnly
+      @|nl\naxanria\nlib\tile\power\BaseEnergyStorage.java|1839|1858|internalStorageOnly|param|nl.naxanria.nlib.tile.power.BaseEnergyStorage|setInternalStorageOnly|(Z)V|internalStorageOnly|0
+   Method End: setInternalStorageOnly(Z)V
+Class End  : nl.naxanria.nlib.tile.power.BaseEnergyStorage
+endProcessing "nl\naxanria\nlib\tile\power\BaseEnergyStorage.java"
+
+startProcessing "nl\naxanria\nlib\tile\power\BatteryEntity.java" md5: 704a12c2e9ef884fb1877fa3f8733064
+@|nl\naxanria\nlib\tile\power\BatteryEntity.java|8|35|nl.naxanria.nlib.tile.power|package|nl.naxanria.nlib.tile.power|(file)
+Class Start: nl.naxanria.nlib.tile.power.BatteryEntity
+   @|nl\naxanria\nlib\tile\power\BatteryEntity.java|269|282|BatteryEntity|class|nl.naxanria.nlib.tile.power.BatteryEntity
+   @|nl\naxanria\nlib\tile\power\BatteryEntity.java|291|305|TileEntityBase|class|nl.naxanria.nlib.tile.TileEntityBase
+   @|nl\naxanria\nlib\tile\power\BatteryEntity.java|317|339|IEnergySharingProvider|class|nl.naxanria.nlib.tile.power.IEnergySharingProvider
+   @|nl\naxanria\nlib\tile\power\BatteryEntity.java|351|368|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+   @|nl\naxanria\nlib\tile\power\BatteryEntity.java|351|368|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+   @|nl\naxanria\nlib\tile\power\BatteryEntity.java|369|376|storage|field|nl.naxanria.nlib.tile.power.BatteryEntity|storage|
+   Method Start: BatteryEntity(Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|422|429|storage|param|nl.naxanria.nlib.tile.power.BatteryEntity|BatteryEntity|(Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V|storage|0
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|390|403|BatteryEntity|method|nl.naxanria.nlib.tile.power.BatteryEntity|BatteryEntity|(Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|404|421|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|444|451|storage|field|nl.naxanria.nlib.tile.power.BatteryEntity|storage
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|454|461|storage|param|nl.naxanria.nlib.tile.power.BatteryEntity|BatteryEntity|(Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V|storage|0
+   Method End: BatteryEntity(Lnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V
+   Method Start: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|534|540|facing|param|nl.naxanria.nlib.tile.power.BatteryEntity|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|473|481|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|491|505|IEnergyStorage|class|net.minecraftforge.energy.IEnergyStorage
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|506|522|getEnergyStorage|method|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|523|533|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|557|564|storage|field|nl.naxanria.nlib.tile.power.BatteryEntity|storage
+   Method End: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+   Method Start: getEnergyToShare()I
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|576|584|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|598|614|getEnergyToShare|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|getEnergyToShare|()I
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|632|639|storage|field|nl.naxanria.nlib.tile.power.BatteryEntity|storage
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|640|655|getEnergyStored|method|net.minecraftforge.energy.IEnergyStorage|getEnergyStored|()I
+   Method End: getEnergyToShare()I
+   Method Start: doesShare()Z
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|669|677|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|695|704|doesShare|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|doesShare|()Z
+   Method End: doesShare()Z
+   Method Start: getProvidingSides()[Lnet/minecraft/util/EnumFacing;
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|738|746|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|756|766|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|769|786|getProvidingSides|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|getProvidingSides|()[Lnet/minecraft/util/EnumFacing;
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|804|821|EnumHelper.Facing|class|nl.naxanria.nlib.util.EnumHelper.Facing
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|822|825|ALL|field|nl.naxanria.nlib.util.EnumHelper.Facing|ALL
+   Method End: getProvidingSides()[Lnet/minecraft/util/EnumFacing;
+   Method Start: canShareTo(Lnet/minecraft/tileentity/TileEntity;)Z
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|885|889|tile|param|nl.naxanria.nlib.tile.power.BatteryEntity|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z|tile|0
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|837|845|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|863|873|canShareTo|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z
+      @|nl\naxanria\nlib\tile\power\BatteryEntity.java|874|884|TileEntity|class|net.minecraft.tileentity.TileEntity
+   Method End: canShareTo(Lnet/minecraft/tileentity/TileEntity;)Z
+Class End  : nl.naxanria.nlib.tile.power.BatteryEntity
+endProcessing "nl\naxanria\nlib\tile\power\BatteryEntity.java"
+
+startProcessing "nl\naxanria\nlib\tile\power\GeneratorEntity.java" md5: e19aee6bb83e5e9504837d0da3de17d2
+@|nl\naxanria\nlib\tile\power\GeneratorEntity.java|8|35|nl.naxanria.nlib.tile.power|package|nl.naxanria.nlib.tile.power|(file)
+Class Start: nl.naxanria.nlib.tile.power.GeneratorEntity
+   @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|238|253|GeneratorEntity|class|nl.naxanria.nlib.tile.power.GeneratorEntity
+   @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|262|276|TileEntityBase|class|nl.naxanria.nlib.tile.TileEntityBase
+   @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|288|310|IEnergySharingProvider|class|nl.naxanria.nlib.tile.power.IEnergySharingProvider
+   @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|326|333|produce|field|nl.naxanria.nlib.tile.power.GeneratorEntity|produce|
+   @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|347|364|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+   @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|347|364|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+   @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|365|372|storage|field|nl.naxanria.nlib.tile.power.GeneratorEntity|storage|
+   Method Start: GeneratorEntity(I)V
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|406|413|produce|param|nl.naxanria.nlib.tile.power.GeneratorEntity|GeneratorEntity|(I)V|produce|0
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|386|401|GeneratorEntity|method|nl.naxanria.nlib.tile.power.GeneratorEntity|GeneratorEntity|(I)V
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|428|435|produce|field|nl.naxanria.nlib.tile.power.GeneratorEntity|produce
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|438|445|produce|param|nl.naxanria.nlib.tile.power.GeneratorEntity|GeneratorEntity|(I)V|produce|0
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|451|458|storage|field|nl.naxanria.nlib.tile.power.GeneratorEntity|storage
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|465|482|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+   Method End: GeneratorEntity(I)V
+   Method Start: GeneratorEntity(ILnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|540|547|produce|param|nl.naxanria.nlib.tile.power.GeneratorEntity|GeneratorEntity|(ILnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V|produce|0
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|567|574|storage|param|nl.naxanria.nlib.tile.power.GeneratorEntity|GeneratorEntity|(ILnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V|storage|1
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|520|535|GeneratorEntity|method|nl.naxanria.nlib.tile.power.GeneratorEntity|GeneratorEntity|(ILnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|549|566|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|589|596|produce|field|nl.naxanria.nlib.tile.power.GeneratorEntity|produce
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|599|606|produce|param|nl.naxanria.nlib.tile.power.GeneratorEntity|GeneratorEntity|(ILnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V|produce|0
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|617|624|storage|field|nl.naxanria.nlib.tile.power.GeneratorEntity|storage
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|627|634|storage|param|nl.naxanria.nlib.tile.power.GeneratorEntity|GeneratorEntity|(ILnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V|storage|1
+   Method End: GeneratorEntity(ILnl/naxanria/nlib/tile/power/BaseEnergyStorage;)V
+   Method Start: canGenerate()Z
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|669|680|canGenerate|method|nl.naxanria.nlib.tile.power.GeneratorEntity|canGenerate|()Z
+   Method End: canGenerate()Z
+   Method Start: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|751|757|facing|param|nl.naxanria.nlib.tile.power.GeneratorEntity|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|690|698|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|708|722|IEnergyStorage|class|net.minecraftforge.energy.IEnergyStorage
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|723|739|getEnergyStorage|method|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|740|750|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|771|785|CollectionUtil|class|nl.naxanria.nlib.util.CollectionUtil
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|786|794|contains|method|nl.naxanria.nlib.util.CollectionUtil|contains|([Ljava/lang/Object;Ljava/lang/Object;)Z
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|795|812|getProvidingSides|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|getProvidingSides|()[Lnet/minecraft/util/EnumFacing;
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|816|822|facing|param|nl.naxanria.nlib.tile.power.GeneratorEntity|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|844|851|storage|field|nl.naxanria.nlib.tile.power.GeneratorEntity|storage
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|881|897|getEnergyStorage|method|nl.naxanria.nlib.tile.TileEntityBase|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|898|904|facing|param|nl.naxanria.nlib.tile.power.GeneratorEntity|getEnergyStorage|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;|facing|0
+   Method End: getEnergyStorage(Lnet/minecraft/util/EnumFacing;)Lnet/minecraftforge/energy/IEnergyStorage;
+   Method Start: entityUpdate()V
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|917|925|Override|class|java.lang.Override
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|943|955|entityUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|entityUpdate|()V
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|972|984|entityUpdate|method|nl.naxanria.nlib.tile.TileEntityBase|entityUpdate|()V
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|997|1002|world|field|net.minecraft.tileentity.TileEntity|world
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|1003|1011|isRemote|field|net.minecraft.world.World|isRemote
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|1025|1032|storage|field|nl.naxanria.nlib.tile.power.GeneratorEntity|storage
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|1033|1046|receiveEnergy|method|net.minecraftforge.energy.IEnergyStorage|receiveEnergy|(IZ)I
+      @|nl\naxanria\nlib\tile\power\GeneratorEntity.java|1047|1054|produce|field|nl.naxanria.nlib.tile.power.GeneratorEntity|produce
+   Method End: entityUpdate()V
+Class End  : nl.naxanria.nlib.tile.power.GeneratorEntity
+endProcessing "nl\naxanria\nlib\tile\power\GeneratorEntity.java"
+
+startProcessing "nl\naxanria\nlib\tile\power\IEnergySharingProvider.java" md5: 0f301a5c73af9cea3af785a0e48227ec
+@|nl\naxanria\nlib\tile\power\IEnergySharingProvider.java|8|35|nl.naxanria.nlib.tile.power|package|nl.naxanria.nlib.tile.power|(file)
+Class Start: nl.naxanria.nlib.tile.power.IEnergySharingProvider
+   @|nl\naxanria\nlib\tile\power\IEnergySharingProvider.java|138|160|IEnergySharingProvider|class|nl.naxanria.nlib.tile.power.IEnergySharingProvider
+   Method Start: getEnergyToShare()I
+      @|nl\naxanria\nlib\tile\power\IEnergySharingProvider.java|176|192|getEnergyToShare|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|getEnergyToShare|()I
+   Method End: getEnergyToShare()I
+   Method Start: doesShare()Z
+      @|nl\naxanria\nlib\tile\power\IEnergySharingProvider.java|216|225|doesShare|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|doesShare|()Z
+   Method End: doesShare()Z
+   Method Start: getProvidingSides()[Lnet/minecraft/util/EnumFacing;
+      @|nl\naxanria\nlib\tile\power\IEnergySharingProvider.java|241|251|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\nlib\tile\power\IEnergySharingProvider.java|254|271|getProvidingSides|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|getProvidingSides|()[Lnet/minecraft/util/EnumFacing;
+   Method End: getProvidingSides()[Lnet/minecraft/util/EnumFacing;
+   Method Start: canShareTo(Lnet/minecraft/tileentity/TileEntity;)Z
+      @|nl\naxanria\nlib\tile\power\IEnergySharingProvider.java|310|314|tile|param|nl.naxanria.nlib.tile.power.IEnergySharingProvider|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z|tile|0
+      @|nl\naxanria\nlib\tile\power\IEnergySharingProvider.java|288|298|canShareTo|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z
+      @|nl\naxanria\nlib\tile\power\IEnergySharingProvider.java|299|309|TileEntity|class|net.minecraft.tileentity.TileEntity
+   Method End: canShareTo(Lnet/minecraft/tileentity/TileEntity;)Z
+Class End  : nl.naxanria.nlib.tile.power.IEnergySharingProvider
+endProcessing "nl\naxanria\nlib\tile\power\IEnergySharingProvider.java"
 
 startProcessing "nl\naxanria\nlib\util\CollectionUtil.java" md5: a308afaf9524d6b681fc90116a95efd8
 Cache Hit!
@@ -1549,8 +1591,7 @@ Class Start: nl.naxanria.nlib.util.WorldUtil
 Class End  : nl.naxanria.nlib.util.WorldUtil
 endProcessing "nl\naxanria\nlib\util\WorldUtil.java"
 
-startProcessing "nl\naxanria\researchpower\ResearchPower.java" md5: b857f90c65981cff54629d313b1ebd7b
-Cache Hit!
+startProcessing "nl\naxanria\researchpower\ResearchPower.java" md5: 47ed7448c51f910ea460e862de08e8a9
 @|nl\naxanria\researchpower\ResearchPower.java|8|33|nl.naxanria.researchpower|package|nl.naxanria.researchpower|(file)
 Class Start: nl.naxanria.researchpower.ResearchPower
    @|nl\naxanria\researchpower\ResearchPower.java|453|456|Mod|class|net.minecraftforge.fml.common.Mod
@@ -1574,71 +1615,66 @@ Class Start: nl.naxanria.researchpower.ResearchPower
    @|nl\naxanria\researchpower\ResearchPower.java|743|749|String|class|java.lang.String
    @|nl\naxanria\researchpower\ResearchPower.java|743|749|String|class|java.lang.String
    @|nl\naxanria\researchpower\ResearchPower.java|750|757|VERSION|field|nl.naxanria.researchpower.ResearchPower|VERSION|
-   @|nl\naxanria\researchpower\ResearchPower.java|921|934|ResearchPower|class|nl.naxanria.researchpower.ResearchPower
-   @|nl\naxanria\researchpower\ResearchPower.java|882|894|Mod.Instance|class|net.minecraftforge.fml.common.Mod.Instance
-   @|nl\naxanria\researchpower\ResearchPower.java|895|901|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID
-   @|nl\naxanria\researchpower\ResearchPower.java|921|934|ResearchPower|class|nl.naxanria.researchpower.ResearchPower
-   @|nl\naxanria\researchpower\ResearchPower.java|935|943|INSTANCE|field|nl.naxanria.researchpower.ResearchPower|INSTANCE|
-   @|nl\naxanria\researchpower\ResearchPower.java|1082|1087|Proxy|class|nl.naxanria.nlib.proxy.Proxy
-   @|nl\naxanria\researchpower\ResearchPower.java|951|961|SidedProxy|class|net.minecraftforge.fml.common.SidedProxy
-   @|nl\naxanria\researchpower\ResearchPower.java|962|972|clientSide|method|net.minecraftforge.fml.common.SidedProxy|clientSide|()Ljava/lang/String;
-   @|nl\naxanria\researchpower\ResearchPower.java|1013|1023|serverSide|method|net.minecraftforge.fml.common.SidedProxy|serverSide|()Ljava/lang/String;
-   @|nl\naxanria\researchpower\ResearchPower.java|1082|1087|Proxy|class|nl.naxanria.nlib.proxy.Proxy
-   @|nl\naxanria\researchpower\ResearchPower.java|1088|1093|proxy|field|nl.naxanria.researchpower.ResearchPower|proxy|
-   @|nl\naxanria\researchpower\ResearchPower.java|1114|1130|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
-   @|nl\naxanria\researchpower\ResearchPower.java|1114|1130|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
-   @|nl\naxanria\researchpower\ResearchPower.java|1131|1134|tab|field|nl.naxanria.researchpower.ResearchPower|tab|
-   @|nl\naxanria\researchpower\ResearchPower.java|1141|1157|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
+   @|nl\naxanria\researchpower\ResearchPower.java|913|918|Proxy|class|nl.naxanria.nlib.proxy.Proxy
+   @|nl\naxanria\researchpower\ResearchPower.java|782|792|SidedProxy|class|net.minecraftforge.fml.common.SidedProxy
+   @|nl\naxanria\researchpower\ResearchPower.java|793|803|clientSide|method|net.minecraftforge.fml.common.SidedProxy|clientSide|()Ljava/lang/String;
+   @|nl\naxanria\researchpower\ResearchPower.java|844|854|serverSide|method|net.minecraftforge.fml.common.SidedProxy|serverSide|()Ljava/lang/String;
+   @|nl\naxanria\researchpower\ResearchPower.java|913|918|Proxy|class|nl.naxanria.nlib.proxy.Proxy
+   @|nl\naxanria\researchpower\ResearchPower.java|919|924|proxy|field|nl.naxanria.researchpower.ResearchPower|proxy|
+   @|nl\naxanria\researchpower\ResearchPower.java|945|961|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
+   @|nl\naxanria\researchpower\ResearchPower.java|945|961|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
+   @|nl\naxanria\researchpower\ResearchPower.java|962|965|tab|field|nl.naxanria.researchpower.ResearchPower|tab|
+   @|nl\naxanria\researchpower\ResearchPower.java|972|988|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
    Method Start: getBlockClass()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1171|1179|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1194|1199|Class|class|java.lang.Class
-      @|nl\naxanria\researchpower\ResearchPower.java|1200|1213|getBlockClass|method|nl.naxanria.nlib.NMod|getBlockClass|()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1237|1243|Blocks|class|nl.naxanria.researchpower.block.Blocks
+      @|nl\naxanria\researchpower\ResearchPower.java|1002|1010|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1025|1030|Class|class|java.lang.Class
+      @|nl\naxanria\researchpower\ResearchPower.java|1031|1044|getBlockClass|method|nl.naxanria.nlib.NMod|getBlockClass|()Ljava/lang/Class;
+      @|nl\naxanria\researchpower\ResearchPower.java|1068|1074|Blocks|class|nl.naxanria.researchpower.block.Blocks
    Method End: getBlockClass()Ljava/lang/Class;
    Method Start: getItemClass()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1267|1275|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1290|1295|Class|class|java.lang.Class
-      @|nl\naxanria\researchpower\ResearchPower.java|1296|1308|getItemClass|method|nl.naxanria.nlib.NMod|getItemClass|()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1332|1337|Items|class|nl.naxanria.researchpower.item.Items
+      @|nl\naxanria\researchpower\ResearchPower.java|1098|1106|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1121|1126|Class|class|java.lang.Class
+      @|nl\naxanria\researchpower\ResearchPower.java|1127|1139|getItemClass|method|nl.naxanria.nlib.NMod|getItemClass|()Ljava/lang/Class;
+      @|nl\naxanria\researchpower\ResearchPower.java|1163|1168|Items|class|nl.naxanria.researchpower.item.Items
    Method End: getItemClass()Ljava/lang/Class;
    Method Start: getRecipeClass()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1361|1369|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1384|1389|Class|class|java.lang.Class
-      @|nl\naxanria\researchpower\ResearchPower.java|1390|1404|getRecipeClass|method|nl.naxanria.nlib.NMod|getRecipeClass|()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1428|1435|Recipes|class|nl.naxanria.researchpower.recipe.Recipes
+      @|nl\naxanria\researchpower\ResearchPower.java|1192|1200|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1215|1220|Class|class|java.lang.Class
+      @|nl\naxanria\researchpower\ResearchPower.java|1221|1235|getRecipeClass|method|nl.naxanria.nlib.NMod|getRecipeClass|()Ljava/lang/Class;
+      @|nl\naxanria\researchpower\ResearchPower.java|1259|1266|Recipes|class|nl.naxanria.researchpower.recipe.Recipes
    Method End: getRecipeClass()Ljava/lang/Class;
    Method Start: modId()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1459|1467|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1479|1485|String|class|java.lang.String
-      @|nl\naxanria\researchpower\ResearchPower.java|1486|1491|modId|method|nl.naxanria.nlib.NMod|modId|()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1515|1521|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID
+      @|nl\naxanria\researchpower\ResearchPower.java|1290|1298|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1310|1316|String|class|java.lang.String
+      @|nl\naxanria\researchpower\ResearchPower.java|1317|1322|modId|method|nl.naxanria.nlib.NMod|modId|()Ljava/lang/String;
+      @|nl\naxanria\researchpower\ResearchPower.java|1346|1352|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID
    Method End: modId()Ljava/lang/String;
    Method Start: modName()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1539|1547|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1559|1565|String|class|java.lang.String
-      @|nl\naxanria\researchpower\ResearchPower.java|1566|1573|modName|method|nl.naxanria.nlib.NMod|modName|()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1597|1605|MOD_NAME|field|nl.naxanria.researchpower.ResearchPower|MOD_NAME
+      @|nl\naxanria\researchpower\ResearchPower.java|1370|1378|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1390|1396|String|class|java.lang.String
+      @|nl\naxanria\researchpower\ResearchPower.java|1397|1404|modName|method|nl.naxanria.nlib.NMod|modName|()Ljava/lang/String;
+      @|nl\naxanria\researchpower\ResearchPower.java|1428|1436|MOD_NAME|field|nl.naxanria.researchpower.ResearchPower|MOD_NAME
    Method End: modName()Ljava/lang/String;
    Method Start: modVersion()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1623|1631|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1643|1649|String|class|java.lang.String
-      @|nl\naxanria\researchpower\ResearchPower.java|1650|1660|modVersion|method|nl.naxanria.nlib.NMod|modVersion|()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1684|1691|VERSION|field|nl.naxanria.researchpower.ResearchPower|VERSION
+      @|nl\naxanria\researchpower\ResearchPower.java|1454|1462|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1474|1480|String|class|java.lang.String
+      @|nl\naxanria\researchpower\ResearchPower.java|1481|1491|modVersion|method|nl.naxanria.nlib.NMod|modVersion|()Ljava/lang/String;
+      @|nl\naxanria\researchpower\ResearchPower.java|1515|1522|VERSION|field|nl.naxanria.researchpower.ResearchPower|VERSION
    Method End: modVersion()Ljava/lang/String;
    Class Start: nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
-      @|nl\naxanria\researchpower\ResearchPower.java|3423|3439|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
-      @|nl\naxanria\researchpower\ResearchPower.java|3448|3460|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
+      @|nl\naxanria\researchpower\ResearchPower.java|3254|3270|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
+      @|nl\naxanria\researchpower\ResearchPower.java|3279|3291|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
       Method Start: ResearchPowerTab()V
-         @|nl\naxanria\researchpower\ResearchPower.java|3482|3498|ResearchPowerTab|method|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab|ResearchPowerTab|()V
-         @|nl\naxanria\researchpower\ResearchPower.java|3529|3535|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID
+         @|nl\naxanria\researchpower\ResearchPower.java|3313|3329|ResearchPowerTab|method|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab|ResearchPowerTab|()V
+         @|nl\naxanria\researchpower\ResearchPower.java|3360|3366|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID
       Method End: ResearchPowerTab()V
       Method Start: getTabIconItem()Lnet/minecraft/item/ItemStack;
-         @|nl\naxanria\researchpower\ResearchPower.java|3558|3566|Override|class|java.lang.Override
-         @|nl\naxanria\researchpower\ResearchPower.java|3582|3591|ItemStack|class|net.minecraft.item.ItemStack
-         @|nl\naxanria\researchpower\ResearchPower.java|3592|3606|getTabIconItem|method|net.minecraft.creativetab.CreativeTabs|getTabIconItem|()Lnet/minecraft/item/ItemStack;
-         @|nl\naxanria\researchpower\ResearchPower.java|3642|3651|ItemStack|class|net.minecraft.item.ItemStack
-         @|nl\naxanria\researchpower\ResearchPower.java|3652|3656|Item|class|net.minecraft.item.Item
-         @|nl\naxanria\researchpower\ResearchPower.java|3657|3670|getByNameOrId|method|net.minecraft.item.Item|getByNameOrId|(Ljava/lang/String;)Lnet/minecraft/item/Item;
+         @|nl\naxanria\researchpower\ResearchPower.java|3389|3397|Override|class|java.lang.Override
+         @|nl\naxanria\researchpower\ResearchPower.java|3413|3422|ItemStack|class|net.minecraft.item.ItemStack
+         @|nl\naxanria\researchpower\ResearchPower.java|3423|3437|getTabIconItem|method|net.minecraft.creativetab.CreativeTabs|getTabIconItem|()Lnet/minecraft/item/ItemStack;
+         @|nl\naxanria\researchpower\ResearchPower.java|3473|3482|ItemStack|class|net.minecraft.item.ItemStack
+         @|nl\naxanria\researchpower\ResearchPower.java|3483|3487|Item|class|net.minecraft.item.Item
+         @|nl\naxanria\researchpower\ResearchPower.java|3488|3501|getByNameOrId|method|net.minecraft.item.Item|getByNameOrId|(Ljava/lang/String;)Lnet/minecraft/item/Item;
       Method End: getTabIconItem()Lnet/minecraft/item/ItemStack;
    Class End  : nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
 Class End  : nl.naxanria.researchpower.ResearchPower
@@ -1829,36 +1865,71 @@ Class Start: nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVac
 Class End  : nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator
 endProcessing "nl\naxanria\researchpower\block\machines\generators\vacuum\BlockVacuumGenerator.java"
 
-startProcessing "nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java" md5: 91858622450bf55c9cffc0b8f2a92354
-Cache Hit!
+startProcessing "nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java" md5: 58997e4c1e7331c5792dcbc1d48ae14c
 @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|8|56|nl.naxanria.researchpower.block.machines.station|package|nl.naxanria.researchpower.block.machines.station|(file)
 Class Start: nl.naxanria.researchpower.block.machines.station.BlockResearchStation
-   @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|344|364|BlockResearchStation|class|nl.naxanria.researchpower.block.machines.station.BlockResearchStation
-   @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|373|386|BlockTileBase|class|nl.naxanria.nlib.block.BlockTileBase
-   @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|387|412|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
+   @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|560|580|BlockResearchStation|class|nl.naxanria.researchpower.block.machines.station.BlockResearchStation
+   @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|589|602|BlockTileBase|class|nl.naxanria.nlib.block.BlockTileBase
+   @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|603|628|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
    Method Start: BlockResearchStation()V
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|425|445|BlockResearchStation|method|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|BlockResearchStation|()V
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|462|470|Material|class|net.minecraft.block.material.Material
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|471|475|IRON|field|net.minecraft.block.material.Material|IRON
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|641|661|BlockResearchStation|method|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|BlockResearchStation|()V
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|678|686|Material|class|net.minecraft.block.material.Material
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|687|691|IRON|field|net.minecraft.block.material.Material|IRON
    Method End: BlockResearchStation()V
    Method Start: createTileEntity(Lnet/minecraft/world/World;Lnet/minecraft/block/state/IBlockState;)Lnl/naxanria/researchpower/tile/ResearchStationTileEntity;
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|587|592|world|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|createTileEntity|(Lnet/minecraft/world/World;Lnet/minecraft/block/state/IBlockState;)Lnl/naxanria/researchpower/tile/ResearchStationTileEntity;|world|0
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|606|611|state|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|createTileEntity|(Lnet/minecraft/world/World;Lnet/minecraft/block/state/IBlockState;)Lnl/naxanria/researchpower/tile/ResearchStationTileEntity;|state|1
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|508|516|Nullable|class|javax.annotation.Nullable
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|520|528|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|538|563|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|564|580|createTileEntity|method|net.minecraft.block.Block|createTileEntity|(Lnet/minecraft/world/World;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/tileentity/TileEntity;
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|581|586|World|class|net.minecraft.world.World
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|594|605|IBlockState|class|net.minecraft.block.state.IBlockState
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|632|657|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|803|808|world|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|createTileEntity|(Lnet/minecraft/world/World;Lnet/minecraft/block/state/IBlockState;)Lnl/naxanria/researchpower/tile/ResearchStationTileEntity;|world|0
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|822|827|state|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|createTileEntity|(Lnet/minecraft/world/World;Lnet/minecraft/block/state/IBlockState;)Lnl/naxanria/researchpower/tile/ResearchStationTileEntity;|state|1
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|724|732|Nullable|class|javax.annotation.Nullable
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|736|744|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|754|779|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|780|796|createTileEntity|method|net.minecraft.block.Block|createTileEntity|(Lnet/minecraft/world/World;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/tileentity/TileEntity;
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|797|802|World|class|net.minecraft.world.World
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|810|821|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|848|873|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
    Method End: createTileEntity(Lnet/minecraft/world/World;Lnet/minecraft/block/state/IBlockState;)Lnl/naxanria/researchpower/tile/ResearchStationTileEntity;
    Method Start: getTileEntityClass()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|671|679|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|689|694|Class|class|java.lang.Class
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|695|720|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|722|740|getTileEntityClass|method|nl.naxanria.nlib.block.BlockTileBase|getTileEntityClass|()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|758|783|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|887|895|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|905|910|Class|class|java.lang.Class
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|911|936|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|938|956|getTileEntityClass|method|nl.naxanria.nlib.block.BlockTileBase|getTileEntityClass|()Ljava/lang/Class;
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|974|999|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
    Method End: getTileEntityClass()Ljava/lang/Class;
+   Method Start: onBlockActivated(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1066|1071|world|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|world|0
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1082|1085|pos|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1099|1104|state|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1119|1125|player|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|player|3
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1136|1140|hand|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|hand|4
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1153|1159|facing|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|facing|5
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1167|1171|hitX|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|hitX|6
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1179|1183|hitY|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|hitY|7
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1191|1195|hitZ|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|hitZ|8
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1017|1025|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1043|1059|onBlockActivated|method|net.minecraft.block.Block|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1060|1065|World|class|net.minecraft.world.World
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1073|1081|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1087|1098|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1106|1118|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1127|1135|EnumHand|class|net.minecraft.util.EnumHand
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1142|1152|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1205|1230|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1238|1251|getTileEntity|method|nl.naxanria.nlib.block.BlockTileBase|getTileEntity|(Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnl/naxanria/nlib/tile/TileEntityBase;
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1252|1257|world|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|world|0
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1259|1262|pos|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1278|1284|player|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|player|3
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1285|1295|isSneaking|method|net.minecraft.entity.Entity|isSneaking|()Z
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1316|1323|storage|field|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|storage
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1324|1337|extractEnergy|method|net.minecraftforge.energy.IEnergyStorage|extractEnergy|(IZ)I
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1343|1350|storage|field|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|storage
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1351|1362|getCapacity|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|getCapacity|()I
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1389|1395|player|param|nl.naxanria.researchpower.block.machines.station.BlockResearchStation|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|player|3
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1396|1413|sendStatusMessage|method|net.minecraft.entity.player.EntityPlayer|sendStatusMessage|(Lnet/minecraft/util/text/ITextComponent;Z)V
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1418|1437|TextComponentString|class|net.minecraft.util.text.TextComponentString
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1455|1462|storage|field|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|storage
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1463|1478|getEnergyStored|method|net.minecraftforge.energy.IEnergyStorage|getEnergyStored|()I
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1495|1502|storage|field|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor|storage
+      @|nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java|1503|1522|getStoredPercentage|method|nl.naxanria.nlib.tile.power.BaseEnergyStorage|getStoredPercentage|()F
+   Method End: onBlockActivated(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z
 Class End  : nl.naxanria.researchpower.block.machines.station.BlockResearchStation
 endProcessing "nl\naxanria\researchpower\block\machines\station\BlockResearchStation.java"
 
@@ -1896,64 +1967,64 @@ Class Start: nl.naxanria.researchpower.recipe.Recipes
 Class End  : nl.naxanria.researchpower.recipe.Recipes
 endProcessing "nl\naxanria\researchpower\recipe\Recipes.java"
 
-startProcessing "nl\naxanria\researchpower\tile\BlockBatteryEntity.java" md5: 2d66e03bdf2972637c58907d5c9bf8bf
-Cache Hit!
+startProcessing "nl\naxanria\researchpower\tile\BlockBatteryEntity.java" md5: 83ecbb526ac967d64f4323d14611e7ef
 @|nl\naxanria\researchpower\tile\BlockBatteryEntity.java|8|38|nl.naxanria.researchpower.tile|package|nl.naxanria.researchpower.tile|(file)
 Class Start: nl.naxanria.researchpower.tile.BlockBatteryEntity
-   @|nl\naxanria\researchpower\tile\BlockBatteryEntity.java|147|165|BlockBatteryEntity|class|nl.naxanria.researchpower.tile.BlockBatteryEntity
-   @|nl\naxanria\researchpower\tile\BlockBatteryEntity.java|174|187|BatteryEntity|class|nl.naxanria.nlib.tile.BatteryEntity
+   @|nl\naxanria\researchpower\tile\BlockBatteryEntity.java|159|177|BlockBatteryEntity|class|nl.naxanria.researchpower.tile.BlockBatteryEntity
+   @|nl\naxanria\researchpower\tile\BlockBatteryEntity.java|186|199|BatteryEntity|class|nl.naxanria.nlib.tile.power.BatteryEntity
    Method Start: BlockBatteryEntity()V
-      @|nl\naxanria\researchpower\tile\BlockBatteryEntity.java|199|217|BlockBatteryEntity|method|nl.naxanria.researchpower.tile.BlockBatteryEntity|BlockBatteryEntity|()V
-      @|nl\naxanria\researchpower\tile\BlockBatteryEntity.java|238|255|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
+      @|nl\naxanria\researchpower\tile\BlockBatteryEntity.java|211|229|BlockBatteryEntity|method|nl.naxanria.researchpower.tile.BlockBatteryEntity|BlockBatteryEntity|()V
+      @|nl\naxanria\researchpower\tile\BlockBatteryEntity.java|250|267|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
    Method End: BlockBatteryEntity()V
 Class End  : nl.naxanria.researchpower.tile.BlockBatteryEntity
 endProcessing "nl\naxanria\researchpower\tile\BlockBatteryEntity.java"
 
-startProcessing "nl\naxanria\researchpower\tile\ResearchStationTileEntity.java" md5: cadd328c94e05ee2dbdfd398f6fa28f3
-Cache Hit!
+startProcessing "nl\naxanria\researchpower\tile\ResearchStationTileEntity.java" md5: 111280c8462ceb077efe8b5a1b35ee3a
 @|nl\naxanria\researchpower\tile\ResearchStationTileEntity.java|8|38|nl.naxanria.researchpower.tile|package|nl.naxanria.researchpower.tile|(file)
 Class Start: nl.naxanria.researchpower.tile.ResearchStationTileEntity
-   @|nl\naxanria\researchpower\tile\ResearchStationTileEntity.java|100|125|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
-   @|nl\naxanria\researchpower\tile\ResearchStationTileEntity.java|134|148|TileEntityBase|class|nl.naxanria.nlib.tile.TileEntityBase
+   @|nl\naxanria\researchpower\tile\ResearchStationTileEntity.java|110|135|ResearchStationTileEntity|class|nl.naxanria.researchpower.tile.ResearchStationTileEntity
+   @|nl\naxanria\researchpower\tile\ResearchStationTileEntity.java|144|162|BaseEnergyAcceptor|class|nl.naxanria.nlib.tile.power.BaseEnergyAcceptor
+   Method Start: ResearchStationTileEntity()V
+      @|nl\naxanria\researchpower\tile\ResearchStationTileEntity.java|174|199|ResearchStationTileEntity|method|nl.naxanria.researchpower.tile.ResearchStationTileEntity|ResearchStationTileEntity|()V
+   Method End: ResearchStationTileEntity()V
 Class End  : nl.naxanria.researchpower.tile.ResearchStationTileEntity
 endProcessing "nl\naxanria\researchpower\tile\ResearchStationTileEntity.java"
 
-startProcessing "nl\naxanria\researchpower\tile\VacuumGenerator.java" md5: 973466950728d89f34dbac927072b2b8
-Cache Hit!
+startProcessing "nl\naxanria\researchpower\tile\VacuumGenerator.java" md5: eb5a87795863403cc27dab276d2055cf
 @|nl\naxanria\researchpower\tile\VacuumGenerator.java|8|38|nl.naxanria.researchpower.tile|package|nl.naxanria.researchpower.tile|(file)
 Class Start: nl.naxanria.researchpower.tile.VacuumGenerator
-   @|nl\naxanria\researchpower\tile\VacuumGenerator.java|272|287|VacuumGenerator|class|nl.naxanria.researchpower.tile.VacuumGenerator
-   @|nl\naxanria\researchpower\tile\VacuumGenerator.java|296|311|GeneratorEntity|class|nl.naxanria.nlib.tile.GeneratorEntity
+   @|nl\naxanria\researchpower\tile\VacuumGenerator.java|284|299|VacuumGenerator|class|nl.naxanria.researchpower.tile.VacuumGenerator
+   @|nl\naxanria\researchpower\tile\VacuumGenerator.java|308|323|GeneratorEntity|class|nl.naxanria.nlib.tile.power.GeneratorEntity
    Method Start: VacuumGenerator()V
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|323|338|VacuumGenerator|method|nl.naxanria.researchpower.tile.VacuumGenerator|VacuumGenerator|()V
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|363|380|BaseEnergyStorage|class|nl.naxanria.nlib.tile.BaseEnergyStorage
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|335|350|VacuumGenerator|method|nl.naxanria.researchpower.tile.VacuumGenerator|VacuumGenerator|()V
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|375|392|BaseEnergyStorage|class|nl.naxanria.nlib.tile.power.BaseEnergyStorage
    Method End: VacuumGenerator()V
    Method Start: canGenerate()Z
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|413|421|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|439|450|canGenerate|method|nl.naxanria.nlib.tile.GeneratorEntity|canGenerate|()Z
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|425|433|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|451|462|canGenerate|method|nl.naxanria.nlib.tile.power.GeneratorEntity|canGenerate|()Z
    Method End: canGenerate()Z
    Method Start: getEnergyToShare()I
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|484|492|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|506|522|getEnergyToShare|method|nl.naxanria.nlib.tile.IEnergySharingProvider|getEnergyToShare|()I
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|540|547|storage|field|nl.naxanria.nlib.tile.GeneratorEntity|storage
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|548|563|getEnergyStored|method|net.minecraftforge.energy.IEnergyStorage|getEnergyStored|()I
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|496|504|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|518|534|getEnergyToShare|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|getEnergyToShare|()I
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|552|559|storage|field|nl.naxanria.nlib.tile.power.GeneratorEntity|storage
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|560|575|getEnergyStored|method|net.minecraftforge.energy.IEnergyStorage|getEnergyStored|()I
    Method End: getEnergyToShare()I
    Method Start: doesShare()Z
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|577|585|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|603|612|doesShare|method|nl.naxanria.nlib.tile.IEnergySharingProvider|doesShare|()Z
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|589|597|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|615|624|doesShare|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|doesShare|()Z
    Method End: doesShare()Z
    Method Start: getProvidingSides()[Lnet/minecraft/util/EnumFacing;
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|646|654|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|664|674|EnumFacing|class|net.minecraft.util.EnumFacing
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|677|694|getProvidingSides|method|nl.naxanria.nlib.tile.IEnergySharingProvider|getProvidingSides|()[Lnet/minecraft/util/EnumFacing;
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|712|729|EnumHelper.Facing|class|nl.naxanria.nlib.util.EnumHelper.Facing
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|730|733|ALL|field|nl.naxanria.nlib.util.EnumHelper.Facing|ALL
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|658|666|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|676|686|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|689|706|getProvidingSides|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|getProvidingSides|()[Lnet/minecraft/util/EnumFacing;
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|724|741|EnumHelper.Facing|class|nl.naxanria.nlib.util.EnumHelper.Facing
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|742|745|ALL|field|nl.naxanria.nlib.util.EnumHelper.Facing|ALL
    Method End: getProvidingSides()[Lnet/minecraft/util/EnumFacing;
    Method Start: canShareTo(Lnet/minecraft/tileentity/TileEntity;)Z
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|793|797|tile|param|nl.naxanria.researchpower.tile.VacuumGenerator|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z|tile|0
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|745|753|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|771|781|canShareTo|method|nl.naxanria.nlib.tile.IEnergySharingProvider|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z
-      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|782|792|TileEntity|class|net.minecraft.tileentity.TileEntity
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|805|809|tile|param|nl.naxanria.researchpower.tile.VacuumGenerator|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z|tile|0
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|757|765|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|783|793|canShareTo|method|nl.naxanria.nlib.tile.power.IEnergySharingProvider|canShareTo|(Lnet/minecraft/tileentity/TileEntity;)Z
+      @|nl\naxanria\researchpower\tile\VacuumGenerator.java|794|804|TileEntity|class|net.minecraft.tileentity.TileEntity
    Method End: canShareTo(Lnet/minecraft/tileentity/TileEntity;)Z
 Class End  : nl.naxanria.researchpower.tile.VacuumGenerator
 endProcessing "nl\naxanria\researchpower\tile\VacuumGenerator.java"

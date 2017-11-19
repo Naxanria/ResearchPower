@@ -17,6 +17,7 @@ import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import nl.naxanria.nlib.network.PacketHandler;
 import nl.naxanria.nlib.network.PacketServerToClient;
+import nl.naxanria.nlib.tile.power.IEnergySharingProvider;
 import nl.naxanria.nlib.util.WorldUtil;
 
 import javax.annotation.Nullable;

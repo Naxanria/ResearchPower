@@ -8,7 +8,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
-import nl.naxanria.researchpower.block.BlockTileBase;
+import nl.naxanria.nlib.block.BlockTileBase;
 import nl.naxanria.researchpower.tile.BlockBatteryEntity;
 
 import javax.annotation.Nullable;

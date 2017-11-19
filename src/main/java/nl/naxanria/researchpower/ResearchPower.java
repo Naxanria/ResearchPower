@@ -23,12 +23,6 @@ public class ResearchPower extends NMod
     public static final String MOD_NAME = "Research Power";
     public static final String VERSION = "1.0-SNAPSHOT";
 
-//    /**
-//     * This is the instance of your mod as created by Forge. It will never be null.
-//     */
-//    @Mod.Instance(MOD_ID)
-//    public static ResearchPower INSTANCE;
-
     @SidedProxy(clientSide = "nl.naxanria.nlib.proxy.ClientProxy", serverSide = "nl.naxanria.nlib.proxy.ServerProxy")
     public static Proxy proxy;
 
