@@ -1,6 +1,6 @@
 package nl.naxanria.researchpower.tile;
 
-import net.minecraft.tileentity.TileEntity;
+import nl.naxanria.nlib.tile.TileEntityBase;
 
 public class ResearchStationTileEntity extends TileEntityBase
 {

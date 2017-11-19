@@ -1,5 +1,8 @@
 package nl.naxanria.researchpower.item;
 
+import nl.naxanria.nlib.Registy.ItemRegistry;
+import nl.naxanria.nlib.item.IItemBase;
+
 public class Items
 {
   public static class MachineParts
@@ -17,7 +20,7 @@ public class Items
     for (IItemBase item :
       items)
     {
-      ItemsRegistry.addItem(item);
+      ItemRegistry.addItem(item);
     }
   }
 }

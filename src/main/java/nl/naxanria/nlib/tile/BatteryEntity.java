@@ -1,22 +1,23 @@
-package nl.naxanria.researchpower.tile;
+package nl.naxanria.nlib.tile;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
-import nl.naxanria.nlib.tile.BaseEnergyStorage;
-import nl.naxanria.nlib.tile.GeneratorEntity;
+import net.minecraftforge.energy.IEnergyStorage;
 import nl.naxanria.nlib.util.EnumHelper;
 
-public class VacuumGenerator extends GeneratorEntity
+public class BatteryEntity extends TileEntityBase implements IEnergySharingProvider
 {
-  public VacuumGenerator()
+  public BaseEnergyStorage storage;
+  
+  public BatteryEntity(BaseEnergyStorage storage)
   {
-    super(20, new BaseEnergyStorage(20000, 0, 80, true));
+    this.storage = storage;
   }
   
   @Override
-  public boolean canGenerate()
+  public IEnergyStorage getEnergyStorage(EnumFacing facing)
   {
-    return true;
+    return storage;
   }
   
   @Override

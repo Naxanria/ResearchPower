@@ -3,7 +3,7 @@ package nl.naxanria.researchpower.block.machines.station;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.world.World;
-import nl.naxanria.researchpower.block.BlockTileBase;
+import nl.naxanria.nlib.block.BlockTileBase;
 import nl.naxanria.researchpower.tile.ResearchStationTileEntity;
 
 import javax.annotation.Nullable;

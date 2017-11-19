@@ -1,5 +1,8 @@
 package nl.naxanria.researchpower.tile;
 
+import nl.naxanria.nlib.tile.BaseEnergyStorage;
+import nl.naxanria.nlib.tile.BatteryEntity;
+
 public class BlockBatteryEntity extends BatteryEntity
 {
   public BlockBatteryEntity()
