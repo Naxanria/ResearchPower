@@ -1,7 +1,6 @@
 package nl.naxanria.researchpower;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -11,10 +10,10 @@ import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.util.Log;
 import nl.naxanria.nlib.util.ores.OreBuilder;
 import nl.naxanria.nlib.util.ores.OreHelper;
-import nl.naxanria.researchpower.block.Blocks;
-import nl.naxanria.researchpower.item.Items;
+import nl.naxanria.researchpower.block.BlocksInit;
+import nl.naxanria.researchpower.item.ItemsInit;
 import nl.naxanria.nlib.proxy.Proxy;
-import nl.naxanria.researchpower.recipe.Recipes;
+import nl.naxanria.researchpower.recipe.RecipesInit;
 import nl.naxanria.researchpower.research.ResearchDatabase;
 
 @Mod
@@ -43,19 +42,19 @@ public class ResearchPower extends NMod
   @Override
   protected Class getBlockClass()
   {
-    return Blocks.class;
+    return BlocksInit.class;
   }
   
   @Override
   protected Class getItemClass()
   {
-    return Items.class;
+    return ItemsInit.class;
   }
   
   @Override
   protected Class getRecipeClass()
   {
-    return Recipes.class;
+    return RecipesInit.class;
   }
   
   @Override
@@ -82,9 +81,9 @@ public class ResearchPower extends NMod
     OreHelper.registerInOreDict
       (
         new OreBuilder("Copper")
-        .ore(Blocks.Ores.copperOre)
-        .ingot(Items.Metals.ingotCopper)
-        .fullBlock(Blocks.Metals.copperBlock)
+        .ore(BlocksInit.Ores.copperOre)
+        .ingot(ItemsInit.Metals.ingotCopper)
+        .fullBlock(BlocksInit.Metals.copperBlock)
       );
   }
   

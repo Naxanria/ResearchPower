@@ -11,7 +11,7 @@ import nl.naxanria.researchpower.block.machines.station.BlockResearchStation;
 import nl.naxanria.researchpower.block.ores.BlockCopperOre;
 
 @SuppressWarnings("WeakerAccess")
-public class Blocks
+public class BlocksInit
 {
   public static class Ores
   {

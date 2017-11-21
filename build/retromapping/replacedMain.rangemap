@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 54 files
+Processing 55 files
 startProcessing "nl\naxanria\nlib\NMod.java" md5: af73f40df09e98df0e838af3ffb06ea0
 Cache Hit!
 @|nl\naxanria\nlib\NMod.java|8|24|nl.naxanria.nlib|package|nl.naxanria.nlib|(file)
@@ -2178,6 +2178,25 @@ Class Start: nl.naxanria.nlib.util.CollectionUtil
 Class End  : nl.naxanria.nlib.util.CollectionUtil
 endProcessing "nl\naxanria\nlib\util\CollectionUtil.java"
 
+startProcessing "nl\naxanria\nlib\util\Dye.java" md5: 9a3f4a45f4855d4de863cd08a8fe0f84
+@|nl\naxanria\nlib\util\Dye.java|8|29|nl.naxanria.nlib.util|package|nl.naxanria.nlib.util|(file)
+Class Start: nl.naxanria.nlib.util.Dye
+   @|nl\naxanria\nlib\util\Dye.java|188|191|Dye|class|nl.naxanria.nlib.util.Dye
+   Method Start: getDyeItem(Lnet/minecraft/item/EnumDyeColor;)Lnet/minecraft/item/Item;
+      @|nl\naxanria\nlib\util\Dye.java|239|244|color|param|nl.naxanria.nlib.util.Dye|getDyeItem|(Lnet/minecraft/item/EnumDyeColor;)Lnet/minecraft/item/Item;|color|0
+      @|nl\naxanria\nlib\util\Dye.java|210|214|Item|class|net.minecraft.item.Item
+      @|nl\naxanria\nlib\util\Dye.java|215|225|getDyeItem|method|nl.naxanria.nlib.util.Dye|getDyeItem|(Lnet/minecraft/item/EnumDyeColor;)Lnet/minecraft/item/Item;
+      @|nl\naxanria\nlib\util\Dye.java|226|238|EnumDyeColor|class|net.minecraft.item.EnumDyeColor
+      @|nl\naxanria\nlib\util\Dye.java|265|274|ItemStack|class|net.minecraft.item.ItemStack
+      @|nl\naxanria\nlib\util\Dye.java|275|280|Items|class|net.minecraft.init.Items
+      @|nl\naxanria\nlib\util\Dye.java|281|284|DYE|field|net.minecraft.init.Items|DYE
+      @|nl\naxanria\nlib\util\Dye.java|289|294|color|param|nl.naxanria.nlib.util.Dye|getDyeItem|(Lnet/minecraft/item/EnumDyeColor;)Lnet/minecraft/item/Item;|color|0
+      @|nl\naxanria\nlib\util\Dye.java|295|306|getMetadata|method|net.minecraft.item.EnumDyeColor|getMetadata|()I
+      @|nl\naxanria\nlib\util\Dye.java|310|317|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
+   Method End: getDyeItem(Lnet/minecraft/item/EnumDyeColor;)Lnet/minecraft/item/Item;
+Class End  : nl.naxanria.nlib.util.Dye
+endProcessing "nl\naxanria\nlib\util\Dye.java"
+
 startProcessing "nl\naxanria\nlib\util\EnumHelper.java" md5: 3bd6d8984567825ddc2916edfa14cc94
 Cache Hit!
 @|nl\naxanria\nlib\util\EnumHelper.java|8|29|nl.naxanria.nlib.util|package|nl.naxanria.nlib.util|(file)
@@ -2783,231 +2802,229 @@ Class Start: nl.naxanria.nlib.util.ores.OreHelper
 Class End  : nl.naxanria.nlib.util.ores.OreHelper
 endProcessing "nl\naxanria\nlib\util\ores\OreHelper.java"
 
-startProcessing "nl\naxanria\researchpower\ResearchPower.java" md5: fa798d32d9404453cb2f47923b7ad190
-Cache Hit!
+startProcessing "nl\naxanria\researchpower\ResearchPower.java" md5: 34be0dddfe2be84ac216597995c214dd
 @|nl\naxanria\researchpower\ResearchPower.java|8|33|nl.naxanria.researchpower|package|nl.naxanria.researchpower|(file)
 Class Start: nl.naxanria.researchpower.ResearchPower
-   @|nl\naxanria\researchpower\ResearchPower.java|779|782|Mod|class|net.minecraftforge.fml.common.Mod
-   @|nl\naxanria\researchpower\ResearchPower.java|787|792|modid|method|net.minecraftforge.fml.common.Mod|modid|()Ljava/lang/String;
-   @|nl\naxanria\researchpower\ResearchPower.java|795|808|ResearchPower|class|nl.naxanria.researchpower.ResearchPower
-   @|nl\naxanria\researchpower\ResearchPower.java|809|815|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID
-   @|nl\naxanria\researchpower\ResearchPower.java|819|823|name|method|net.minecraftforge.fml.common.Mod|name|()Ljava/lang/String;
-   @|nl\naxanria\researchpower\ResearchPower.java|826|839|ResearchPower|class|nl.naxanria.researchpower.ResearchPower
-   @|nl\naxanria\researchpower\ResearchPower.java|840|848|MOD_NAME|field|nl.naxanria.researchpower.ResearchPower|MOD_NAME
-   @|nl\naxanria\researchpower\ResearchPower.java|852|859|version|method|net.minecraftforge.fml.common.Mod|version|()Ljava/lang/String;
-   @|nl\naxanria\researchpower\ResearchPower.java|862|875|ResearchPower|class|nl.naxanria.researchpower.ResearchPower
-   @|nl\naxanria\researchpower\ResearchPower.java|876|883|VERSION|field|nl.naxanria.researchpower.ResearchPower|VERSION
-   @|nl\naxanria\researchpower\ResearchPower.java|899|912|ResearchPower|class|nl.naxanria.researchpower.ResearchPower
-   @|nl\naxanria\researchpower\ResearchPower.java|921|925|NMod|class|nl.naxanria.nlib.NMod
-   @|nl\naxanria\researchpower\ResearchPower.java|950|956|String|class|java.lang.String
-   @|nl\naxanria\researchpower\ResearchPower.java|950|956|String|class|java.lang.String
-   @|nl\naxanria\researchpower\ResearchPower.java|957|963|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID|
-   @|nl\naxanria\researchpower\ResearchPower.java|1005|1011|String|class|java.lang.String
-   @|nl\naxanria\researchpower\ResearchPower.java|1005|1011|String|class|java.lang.String
-   @|nl\naxanria\researchpower\ResearchPower.java|1012|1020|MOD_NAME|field|nl.naxanria.researchpower.ResearchPower|MOD_NAME|
-   @|nl\naxanria\researchpower\ResearchPower.java|1063|1069|String|class|java.lang.String
-   @|nl\naxanria\researchpower\ResearchPower.java|1063|1069|String|class|java.lang.String
-   @|nl\naxanria\researchpower\ResearchPower.java|1070|1077|VERSION|field|nl.naxanria.researchpower.ResearchPower|VERSION|
+   @|nl\naxanria\researchpower\ResearchPower.java|759|762|Mod|class|net.minecraftforge.fml.common.Mod
+   @|nl\naxanria\researchpower\ResearchPower.java|767|772|modid|method|net.minecraftforge.fml.common.Mod|modid|()Ljava/lang/String;
+   @|nl\naxanria\researchpower\ResearchPower.java|775|788|ResearchPower|class|nl.naxanria.researchpower.ResearchPower
+   @|nl\naxanria\researchpower\ResearchPower.java|789|795|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID
+   @|nl\naxanria\researchpower\ResearchPower.java|799|803|name|method|net.minecraftforge.fml.common.Mod|name|()Ljava/lang/String;
+   @|nl\naxanria\researchpower\ResearchPower.java|806|819|ResearchPower|class|nl.naxanria.researchpower.ResearchPower
+   @|nl\naxanria\researchpower\ResearchPower.java|820|828|MOD_NAME|field|nl.naxanria.researchpower.ResearchPower|MOD_NAME
+   @|nl\naxanria\researchpower\ResearchPower.java|832|839|version|method|net.minecraftforge.fml.common.Mod|version|()Ljava/lang/String;
+   @|nl\naxanria\researchpower\ResearchPower.java|842|855|ResearchPower|class|nl.naxanria.researchpower.ResearchPower
+   @|nl\naxanria\researchpower\ResearchPower.java|856|863|VERSION|field|nl.naxanria.researchpower.ResearchPower|VERSION
+   @|nl\naxanria\researchpower\ResearchPower.java|879|892|ResearchPower|class|nl.naxanria.researchpower.ResearchPower
+   @|nl\naxanria\researchpower\ResearchPower.java|901|905|NMod|class|nl.naxanria.nlib.NMod
+   @|nl\naxanria\researchpower\ResearchPower.java|930|936|String|class|java.lang.String
+   @|nl\naxanria\researchpower\ResearchPower.java|930|936|String|class|java.lang.String
+   @|nl\naxanria\researchpower\ResearchPower.java|937|943|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID|
+   @|nl\naxanria\researchpower\ResearchPower.java|985|991|String|class|java.lang.String
+   @|nl\naxanria\researchpower\ResearchPower.java|985|991|String|class|java.lang.String
+   @|nl\naxanria\researchpower\ResearchPower.java|992|1000|MOD_NAME|field|nl.naxanria.researchpower.ResearchPower|MOD_NAME|
+   @|nl\naxanria\researchpower\ResearchPower.java|1043|1049|String|class|java.lang.String
+   @|nl\naxanria\researchpower\ResearchPower.java|1043|1049|String|class|java.lang.String
+   @|nl\naxanria\researchpower\ResearchPower.java|1050|1057|VERSION|field|nl.naxanria.researchpower.ResearchPower|VERSION|
    Method Start: defaultTab()Lnet/minecraft/creativetab/CreativeTabs;
-      @|nl\naxanria\researchpower\ResearchPower.java|1102|1110|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1120|1132|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
-      @|nl\naxanria\researchpower\ResearchPower.java|1133|1143|defaultTab|method|nl.naxanria.nlib.NMod|defaultTab|()Lnet/minecraft/creativetab/CreativeTabs;
-      @|nl\naxanria\researchpower\ResearchPower.java|1161|1164|tab|field|nl.naxanria.researchpower.ResearchPower|tab
+      @|nl\naxanria\researchpower\ResearchPower.java|1082|1090|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1100|1112|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
+      @|nl\naxanria\researchpower\ResearchPower.java|1113|1123|defaultTab|method|nl.naxanria.nlib.NMod|defaultTab|()Lnet/minecraft/creativetab/CreativeTabs;
+      @|nl\naxanria\researchpower\ResearchPower.java|1141|1144|tab|field|nl.naxanria.researchpower.ResearchPower|tab
    Method End: defaultTab()Lnet/minecraft/creativetab/CreativeTabs;
-   @|nl\naxanria\researchpower\ResearchPower.java|1305|1310|Proxy|class|nl.naxanria.nlib.proxy.Proxy
-   @|nl\naxanria\researchpower\ResearchPower.java|1176|1186|SidedProxy|class|net.minecraftforge.fml.common.SidedProxy
-   @|nl\naxanria\researchpower\ResearchPower.java|1187|1197|clientSide|method|net.minecraftforge.fml.common.SidedProxy|clientSide|()Ljava/lang/String;
-   @|nl\naxanria\researchpower\ResearchPower.java|1238|1248|serverSide|method|net.minecraftforge.fml.common.SidedProxy|serverSide|()Ljava/lang/String;
-   @|nl\naxanria\researchpower\ResearchPower.java|1305|1310|Proxy|class|nl.naxanria.nlib.proxy.Proxy
-   @|nl\naxanria\researchpower\ResearchPower.java|1311|1316|proxy|field|nl.naxanria.researchpower.ResearchPower|proxy|
-   @|nl\naxanria\researchpower\ResearchPower.java|1337|1353|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
-   @|nl\naxanria\researchpower\ResearchPower.java|1337|1353|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
-   @|nl\naxanria\researchpower\ResearchPower.java|1354|1357|tab|field|nl.naxanria.researchpower.ResearchPower|tab|
-   @|nl\naxanria\researchpower\ResearchPower.java|1364|1380|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
+   @|nl\naxanria\researchpower\ResearchPower.java|1285|1290|Proxy|class|nl.naxanria.nlib.proxy.Proxy
+   @|nl\naxanria\researchpower\ResearchPower.java|1156|1166|SidedProxy|class|net.minecraftforge.fml.common.SidedProxy
+   @|nl\naxanria\researchpower\ResearchPower.java|1167|1177|clientSide|method|net.minecraftforge.fml.common.SidedProxy|clientSide|()Ljava/lang/String;
+   @|nl\naxanria\researchpower\ResearchPower.java|1218|1228|serverSide|method|net.minecraftforge.fml.common.SidedProxy|serverSide|()Ljava/lang/String;
+   @|nl\naxanria\researchpower\ResearchPower.java|1285|1290|Proxy|class|nl.naxanria.nlib.proxy.Proxy
+   @|nl\naxanria\researchpower\ResearchPower.java|1291|1296|proxy|field|nl.naxanria.researchpower.ResearchPower|proxy|
+   @|nl\naxanria\researchpower\ResearchPower.java|1317|1333|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
+   @|nl\naxanria\researchpower\ResearchPower.java|1317|1333|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
+   @|nl\naxanria\researchpower\ResearchPower.java|1334|1337|tab|field|nl.naxanria.researchpower.ResearchPower|tab|
+   @|nl\naxanria\researchpower\ResearchPower.java|1344|1360|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
    Method Start: getBlockClass()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1390|1398|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1411|1416|Class|class|java.lang.Class
-      @|nl\naxanria\researchpower\ResearchPower.java|1417|1430|getBlockClass|method|nl.naxanria.nlib.NMod|getBlockClass|()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1448|1454|Blocks|class|nl.naxanria.researchpower.block.Blocks
+      @|nl\naxanria\researchpower\ResearchPower.java|1370|1378|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1391|1396|Class|class|java.lang.Class
+      @|nl\naxanria\researchpower\ResearchPower.java|1397|1410|getBlockClass|method|nl.naxanria.nlib.NMod|getBlockClass|()Ljava/lang/Class;
+      @|nl\naxanria\researchpower\ResearchPower.java|1428|1438|BlocksInit|class|nl.naxanria.researchpower.block.BlocksInit
    Method End: getBlockClass()Ljava/lang/Class;
    Method Start: getItemClass()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1472|1480|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1493|1498|Class|class|java.lang.Class
-      @|nl\naxanria\researchpower\ResearchPower.java|1499|1511|getItemClass|method|nl.naxanria.nlib.NMod|getItemClass|()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1529|1534|Items|class|nl.naxanria.researchpower.item.Items
+      @|nl\naxanria\researchpower\ResearchPower.java|1456|1464|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1477|1482|Class|class|java.lang.Class
+      @|nl\naxanria\researchpower\ResearchPower.java|1483|1495|getItemClass|method|nl.naxanria.nlib.NMod|getItemClass|()Ljava/lang/Class;
+      @|nl\naxanria\researchpower\ResearchPower.java|1513|1522|ItemsInit|class|nl.naxanria.researchpower.item.ItemsInit
    Method End: getItemClass()Ljava/lang/Class;
    Method Start: getRecipeClass()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1552|1560|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1573|1578|Class|class|java.lang.Class
-      @|nl\naxanria\researchpower\ResearchPower.java|1579|1593|getRecipeClass|method|nl.naxanria.nlib.NMod|getRecipeClass|()Ljava/lang/Class;
-      @|nl\naxanria\researchpower\ResearchPower.java|1611|1618|Recipes|class|nl.naxanria.researchpower.recipe.Recipes
+      @|nl\naxanria\researchpower\ResearchPower.java|1540|1548|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1561|1566|Class|class|java.lang.Class
+      @|nl\naxanria\researchpower\ResearchPower.java|1567|1581|getRecipeClass|method|nl.naxanria.nlib.NMod|getRecipeClass|()Ljava/lang/Class;
+      @|nl\naxanria\researchpower\ResearchPower.java|1599|1610|RecipesInit|class|nl.naxanria.researchpower.recipe.RecipesInit
    Method End: getRecipeClass()Ljava/lang/Class;
    Method Start: modId()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1636|1644|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1654|1660|String|class|java.lang.String
-      @|nl\naxanria\researchpower\ResearchPower.java|1661|1666|modId|method|nl.naxanria.nlib.NMod|modId|()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1684|1690|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID
+      @|nl\naxanria\researchpower\ResearchPower.java|1628|1636|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1646|1652|String|class|java.lang.String
+      @|nl\naxanria\researchpower\ResearchPower.java|1653|1658|modId|method|nl.naxanria.nlib.NMod|modId|()Ljava/lang/String;
+      @|nl\naxanria\researchpower\ResearchPower.java|1676|1682|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID
    Method End: modId()Ljava/lang/String;
    Method Start: modName()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1702|1710|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1720|1726|String|class|java.lang.String
-      @|nl\naxanria\researchpower\ResearchPower.java|1727|1734|modName|method|nl.naxanria.nlib.NMod|modName|()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1752|1760|MOD_NAME|field|nl.naxanria.researchpower.ResearchPower|MOD_NAME
+      @|nl\naxanria\researchpower\ResearchPower.java|1694|1702|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1712|1718|String|class|java.lang.String
+      @|nl\naxanria\researchpower\ResearchPower.java|1719|1726|modName|method|nl.naxanria.nlib.NMod|modName|()Ljava/lang/String;
+      @|nl\naxanria\researchpower\ResearchPower.java|1744|1752|MOD_NAME|field|nl.naxanria.researchpower.ResearchPower|MOD_NAME
    Method End: modName()Ljava/lang/String;
    Method Start: modVersion()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1772|1780|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1790|1796|String|class|java.lang.String
-      @|nl\naxanria\researchpower\ResearchPower.java|1797|1807|modVersion|method|nl.naxanria.nlib.NMod|modVersion|()Ljava/lang/String;
-      @|nl\naxanria\researchpower\ResearchPower.java|1825|1832|VERSION|field|nl.naxanria.researchpower.ResearchPower|VERSION
+      @|nl\naxanria\researchpower\ResearchPower.java|1764|1772|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1782|1788|String|class|java.lang.String
+      @|nl\naxanria\researchpower\ResearchPower.java|1789|1799|modVersion|method|nl.naxanria.nlib.NMod|modVersion|()Ljava/lang/String;
+      @|nl\naxanria\researchpower\ResearchPower.java|1817|1824|VERSION|field|nl.naxanria.researchpower.ResearchPower|VERSION
    Method End: modVersion()Ljava/lang/String;
    Method Start: onPreInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|nl\naxanria\researchpower\ResearchPower.java|1906|1911|event|param|nl.naxanria.researchpower.ResearchPower|onPreInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
-      @|nl\naxanria\researchpower\ResearchPower.java|1844|1852|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|1870|1879|onPreInit|method|nl.naxanria.nlib.NMod|onPreInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
-      @|nl\naxanria\researchpower\ResearchPower.java|1880|1905|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent
-      @|nl\naxanria\researchpower\ResearchPower.java|1921|1930|OreHelper|class|nl.naxanria.nlib.util.ores.OreHelper
-      @|nl\naxanria\researchpower\ResearchPower.java|1931|1948|registerInOreDict|method|nl.naxanria.nlib.util.ores.OreHelper|registerInOreDict|(Lnl/naxanria/nlib/util/ores/OreBuilder;)V
-      @|nl\naxanria\researchpower\ResearchPower.java|1969|1979|OreBuilder|class|nl.naxanria.nlib.util.ores.OreBuilder
-      @|nl\naxanria\researchpower\ResearchPower.java|1999|2002|ore|method|nl.naxanria.nlib.util.ores.OreBuilder|ore|(Lnl/naxanria/nlib/block/BlockBase;)Lnl/naxanria/nlib/util/ores/OreBuilder;
-      @|nl\naxanria\researchpower\ResearchPower.java|2003|2014|Blocks.Ores|class|nl.naxanria.researchpower.block.Blocks.Ores
-      @|nl\naxanria\researchpower\ResearchPower.java|2015|2024|copperOre|field|nl.naxanria.researchpower.block.Blocks.Ores|copperOre
-      @|nl\naxanria\researchpower\ResearchPower.java|2035|2040|ingot|method|nl.naxanria.nlib.util.ores.OreBuilder|ingot|(Lnl/naxanria/nlib/item/ItemBase;)Lnl/naxanria/nlib/util/ores/OreBuilder;
-      @|nl\naxanria\researchpower\ResearchPower.java|2041|2053|Items.Metals|class|nl.naxanria.researchpower.item.Items.Metals
-      @|nl\naxanria\researchpower\ResearchPower.java|2054|2065|ingotCopper|field|nl.naxanria.researchpower.item.Items.Metals|ingotCopper
+      @|nl\naxanria\researchpower\ResearchPower.java|1898|1903|event|param|nl.naxanria.researchpower.ResearchPower|onPreInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|nl\naxanria\researchpower\ResearchPower.java|1836|1844|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|1862|1871|onPreInit|method|nl.naxanria.nlib.NMod|onPreInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|nl\naxanria\researchpower\ResearchPower.java|1872|1897|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent
+      @|nl\naxanria\researchpower\ResearchPower.java|1913|1922|OreHelper|class|nl.naxanria.nlib.util.ores.OreHelper
+      @|nl\naxanria\researchpower\ResearchPower.java|1923|1940|registerInOreDict|method|nl.naxanria.nlib.util.ores.OreHelper|registerInOreDict|(Lnl/naxanria/nlib/util/ores/OreBuilder;)V
+      @|nl\naxanria\researchpower\ResearchPower.java|1961|1971|OreBuilder|class|nl.naxanria.nlib.util.ores.OreBuilder
+      @|nl\naxanria\researchpower\ResearchPower.java|1991|1994|ore|method|nl.naxanria.nlib.util.ores.OreBuilder|ore|(Lnl/naxanria/nlib/block/BlockBase;)Lnl/naxanria/nlib/util/ores/OreBuilder;
+      @|nl\naxanria\researchpower\ResearchPower.java|1995|2010|BlocksInit.Ores|class|nl.naxanria.researchpower.block.BlocksInit.Ores
+      @|nl\naxanria\researchpower\ResearchPower.java|2011|2020|copperOre|field|nl.naxanria.researchpower.block.BlocksInit.Ores|copperOre
+      @|nl\naxanria\researchpower\ResearchPower.java|2031|2036|ingot|method|nl.naxanria.nlib.util.ores.OreBuilder|ingot|(Lnl/naxanria/nlib/item/ItemBase;)Lnl/naxanria/nlib/util/ores/OreBuilder;
+      @|nl\naxanria\researchpower\ResearchPower.java|2037|2053|ItemsInit.Metals|class|nl.naxanria.researchpower.item.ItemsInit.Metals
+      @|nl\naxanria\researchpower\ResearchPower.java|2054|2065|ingotCopper|field|nl.naxanria.researchpower.item.ItemsInit.Metals|ingotCopper
       @|nl\naxanria\researchpower\ResearchPower.java|2076|2085|fullBlock|method|nl.naxanria.nlib.util.ores.OreBuilder|fullBlock|(Lnl/naxanria/nlib/block/BlockBase;)Lnl/naxanria/nlib/util/ores/OreBuilder;
-      @|nl\naxanria\researchpower\ResearchPower.java|2086|2099|Blocks.Metals|class|nl.naxanria.researchpower.block.Blocks.Metals
-      @|nl\naxanria\researchpower\ResearchPower.java|2100|2111|copperBlock|field|nl.naxanria.researchpower.block.Blocks.Metals|copperBlock
+      @|nl\naxanria\researchpower\ResearchPower.java|2086|2103|BlocksInit.Metals|class|nl.naxanria.researchpower.block.BlocksInit.Metals
+      @|nl\naxanria\researchpower\ResearchPower.java|2104|2115|copperBlock|field|nl.naxanria.researchpower.block.BlocksInit.Metals|copperBlock
    Method End: onPreInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
    Method Start: onPostInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|nl\naxanria\researchpower\ResearchPower.java|2196|2201|event|param|nl.naxanria.researchpower.ResearchPower|onPostInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
-      @|nl\naxanria\researchpower\ResearchPower.java|2132|2140|Override|class|java.lang.Override
-      @|nl\naxanria\researchpower\ResearchPower.java|2158|2168|onPostInit|method|nl.naxanria.nlib.NMod|onPostInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
-      @|nl\naxanria\researchpower\ResearchPower.java|2169|2195|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent
-      @|nl\naxanria\researchpower\ResearchPower.java|2211|2214|Log|class|nl.naxanria.nlib.util.Log
-      @|nl\naxanria\researchpower\ResearchPower.java|2215|2219|info|method|nl.naxanria.nlib.util.Log|info|(Ljava/lang/String;)V
-      @|nl\naxanria\researchpower\ResearchPower.java|2248|2264|ResearchDatabase|class|nl.naxanria.researchpower.research.ResearchDatabase
-      @|nl\naxanria\researchpower\ResearchPower.java|2265|2272|initAll|method|nl.naxanria.researchpower.research.ResearchDatabase|initAll|()V
+      @|nl\naxanria\researchpower\ResearchPower.java|2200|2205|event|param|nl.naxanria.researchpower.ResearchPower|onPostInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
+      @|nl\naxanria\researchpower\ResearchPower.java|2136|2144|Override|class|java.lang.Override
+      @|nl\naxanria\researchpower\ResearchPower.java|2162|2172|onPostInit|method|nl.naxanria.nlib.NMod|onPostInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|nl\naxanria\researchpower\ResearchPower.java|2173|2199|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent
+      @|nl\naxanria\researchpower\ResearchPower.java|2215|2218|Log|class|nl.naxanria.nlib.util.Log
+      @|nl\naxanria\researchpower\ResearchPower.java|2219|2223|info|method|nl.naxanria.nlib.util.Log|info|(Ljava/lang/String;)V
+      @|nl\naxanria\researchpower\ResearchPower.java|2252|2268|ResearchDatabase|class|nl.naxanria.researchpower.research.ResearchDatabase
+      @|nl\naxanria\researchpower\ResearchPower.java|2269|2276|initAll|method|nl.naxanria.researchpower.research.ResearchDatabase|initAll|()V
    Method End: onPostInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
    Class Start: nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
-      @|nl\naxanria\researchpower\ResearchPower.java|2305|2321|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
-      @|nl\naxanria\researchpower\ResearchPower.java|2330|2342|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
+      @|nl\naxanria\researchpower\ResearchPower.java|2309|2325|ResearchPowerTab|class|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
+      @|nl\naxanria\researchpower\ResearchPower.java|2334|2346|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
       Method Start: ResearchPowerTab()V
-         @|nl\naxanria\researchpower\ResearchPower.java|2358|2374|ResearchPowerTab|method|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab|ResearchPowerTab|()V
-         @|nl\naxanria\researchpower\ResearchPower.java|2395|2401|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID
+         @|nl\naxanria\researchpower\ResearchPower.java|2362|2378|ResearchPowerTab|method|nl.naxanria.researchpower.ResearchPower.ResearchPowerTab|ResearchPowerTab|()V
+         @|nl\naxanria\researchpower\ResearchPower.java|2399|2405|MOD_ID|field|nl.naxanria.researchpower.ResearchPower|MOD_ID
       Method End: ResearchPowerTab()V
       Method Start: getTabIconItem()Lnet/minecraft/item/ItemStack;
-         @|nl\naxanria\researchpower\ResearchPower.java|2418|2426|Override|class|java.lang.Override
-         @|nl\naxanria\researchpower\ResearchPower.java|2438|2447|ItemStack|class|net.minecraft.item.ItemStack
-         @|nl\naxanria\researchpower\ResearchPower.java|2448|2462|getTabIconItem|method|net.minecraft.creativetab.CreativeTabs|getTabIconItem|()Lnet/minecraft/item/ItemStack;
-         @|nl\naxanria\researchpower\ResearchPower.java|2488|2497|ItemStack|class|net.minecraft.item.ItemStack
-         @|nl\naxanria\researchpower\ResearchPower.java|2498|2522|net.minecraft.init.Items|class|net.minecraft.init.Items
-         @|nl\naxanria\researchpower\ResearchPower.java|2523|2533|IRON_INGOT|field|net.minecraft.init.Items|IRON_INGOT
+         @|nl\naxanria\researchpower\ResearchPower.java|2422|2430|Override|class|java.lang.Override
+         @|nl\naxanria\researchpower\ResearchPower.java|2442|2451|ItemStack|class|net.minecraft.item.ItemStack
+         @|nl\naxanria\researchpower\ResearchPower.java|2452|2466|getTabIconItem|method|net.minecraft.creativetab.CreativeTabs|getTabIconItem|()Lnet/minecraft/item/ItemStack;
+         @|nl\naxanria\researchpower\ResearchPower.java|2492|2501|ItemStack|class|net.minecraft.item.ItemStack
+         @|nl\naxanria\researchpower\ResearchPower.java|2502|2526|net.minecraft.init.Items|class|net.minecraft.init.Items
+         @|nl\naxanria\researchpower\ResearchPower.java|2527|2537|IRON_INGOT|field|net.minecraft.init.Items|IRON_INGOT
       Method End: getTabIconItem()Lnet/minecraft/item/ItemStack;
    Class End  : nl.naxanria.researchpower.ResearchPower.ResearchPowerTab
 Class End  : nl.naxanria.researchpower.ResearchPower
 endProcessing "nl\naxanria\researchpower\ResearchPower.java"
 
-startProcessing "nl\naxanria\researchpower\block\Blocks.java" md5: 937f0ace9c71e670b0439f88cdd62e19
-Cache Hit!
-@|nl\naxanria\researchpower\block\Blocks.java|8|39|nl.naxanria.researchpower.block|package|nl.naxanria.researchpower.block|(file)
-Class Start: nl.naxanria.researchpower.block.Blocks
-   @|nl\naxanria\researchpower\block\Blocks.java|597|613|SuppressWarnings|class|java.lang.SuppressWarnings
-   @|nl\naxanria\researchpower\block\Blocks.java|643|649|Blocks|class|nl.naxanria.researchpower.block.Blocks
-   Class Start: nl.naxanria.researchpower.block.Blocks.Ores
-      @|nl\naxanria\researchpower\block\Blocks.java|674|678|Ores|class|nl.naxanria.researchpower.block.Blocks.Ores
-      @|nl\naxanria\researchpower\block\Blocks.java|707|721|BlockCopperOre|class|nl.naxanria.researchpower.block.ores.BlockCopperOre
-      @|nl\naxanria\researchpower\block\Blocks.java|707|721|BlockCopperOre|class|nl.naxanria.researchpower.block.ores.BlockCopperOre
-      @|nl\naxanria\researchpower\block\Blocks.java|722|731|copperOre|field|nl.naxanria.researchpower.block.Blocks.Ores|copperOre|
-      @|nl\naxanria\researchpower\block\Blocks.java|738|752|BlockCopperOre|class|nl.naxanria.researchpower.block.ores.BlockCopperOre
-   Class End  : nl.naxanria.researchpower.block.Blocks.Ores
-   Class Start: nl.naxanria.researchpower.block.Blocks.Metals
-      @|nl\naxanria\researchpower\block\Blocks.java|785|791|Metals|class|nl.naxanria.researchpower.block.Blocks.Metals
-      @|nl\naxanria\researchpower\block\Blocks.java|820|829|BlockBase|class|nl.naxanria.nlib.block.BlockBase
-      @|nl\naxanria\researchpower\block\Blocks.java|820|829|BlockBase|class|nl.naxanria.nlib.block.BlockBase
-      @|nl\naxanria\researchpower\block\Blocks.java|830|841|copperBlock|field|nl.naxanria.researchpower.block.Blocks.Metals|copperBlock|
-      @|nl\naxanria\researchpower\block\Blocks.java|848|857|BlockBase|class|nl.naxanria.nlib.block.BlockBase
-      @|nl\naxanria\researchpower\block\Blocks.java|858|866|Material|class|net.minecraft.block.material.Material
-      @|nl\naxanria\researchpower\block\Blocks.java|867|871|IRON|field|net.minecraft.block.material.Material|IRON
-   Class End  : nl.naxanria.researchpower.block.Blocks.Metals
-   Class Start: nl.naxanria.researchpower.block.Blocks.Machines
-      @|nl\naxanria\researchpower\block\Blocks.java|919|927|Machines|class|nl.naxanria.researchpower.block.Blocks.Machines
-      @|nl\naxanria\researchpower\block\Blocks.java|956|976|BlockResearchStation|class|nl.naxanria.researchpower.block.machines.station.BlockResearchStation
-      @|nl\naxanria\researchpower\block\Blocks.java|956|976|BlockResearchStation|class|nl.naxanria.researchpower.block.machines.station.BlockResearchStation
-      @|nl\naxanria\researchpower\block\Blocks.java|977|992|researchStation|field|nl.naxanria.researchpower.block.Blocks.Machines|researchStation|
-      @|nl\naxanria\researchpower\block\Blocks.java|999|1019|BlockResearchStation|class|nl.naxanria.researchpower.block.machines.station.BlockResearchStation
-      @|nl\naxanria\researchpower\block\Blocks.java|1047|1059|BlockBattery|class|nl.naxanria.researchpower.block.machines.battery.BlockBattery
-      @|nl\naxanria\researchpower\block\Blocks.java|1047|1059|BlockBattery|class|nl.naxanria.researchpower.block.machines.battery.BlockBattery
-      @|nl\naxanria\researchpower\block\Blocks.java|1060|1067|battery|field|nl.naxanria.researchpower.block.Blocks.Machines|battery|
-      @|nl\naxanria\researchpower\block\Blocks.java|1074|1086|BlockBattery|class|nl.naxanria.researchpower.block.machines.battery.BlockBattery
-      @|nl\naxanria\researchpower\block\Blocks.java|1114|1134|BlockVacuumGenerator|class|nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator
-      @|nl\naxanria\researchpower\block\Blocks.java|1114|1134|BlockVacuumGenerator|class|nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator
-      @|nl\naxanria\researchpower\block\Blocks.java|1135|1150|vacuumGenerator|field|nl.naxanria.researchpower.block.Blocks.Machines|vacuumGenerator|
-      @|nl\naxanria\researchpower\block\Blocks.java|1157|1177|BlockVacuumGenerator|class|nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator
-      Class Start: nl.naxanria.researchpower.block.Blocks.Machines.Solar
-         @|nl\naxanria\researchpower\block\Blocks.java|1210|1215|Solar|class|nl.naxanria.researchpower.block.Blocks.Machines.Solar
-         @|nl\naxanria\researchpower\block\Blocks.java|1248|1262|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1248|1262|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1263|1269|tier_1|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_1|
-         @|nl\naxanria\researchpower\block\Blocks.java|1276|1290|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1321|1335|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1321|1335|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1336|1342|tier_2|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_2|
-         @|nl\naxanria\researchpower\block\Blocks.java|1349|1363|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1394|1408|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1394|1408|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1409|1415|tier_3|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_3|
-         @|nl\naxanria\researchpower\block\Blocks.java|1422|1436|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1467|1481|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1467|1481|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1482|1488|tier_4|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_4|
-         @|nl\naxanria\researchpower\block\Blocks.java|1495|1509|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1540|1554|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1540|1554|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1555|1561|tier_5|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_5|
-         @|nl\naxanria\researchpower\block\Blocks.java|1568|1582|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1613|1627|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1613|1627|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1628|1634|tier_6|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_6|
-         @|nl\naxanria\researchpower\block\Blocks.java|1641|1655|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1686|1700|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1686|1700|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-         @|nl\naxanria\researchpower\block\Blocks.java|1701|1707|tier_7|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_7|
-         @|nl\naxanria\researchpower\block\Blocks.java|1714|1728|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
-      Class End  : nl.naxanria.researchpower.block.Blocks.Machines.Solar
-   Class End  : nl.naxanria.researchpower.block.Blocks.Machines
+startProcessing "nl\naxanria\researchpower\block\BlocksInit.java" md5: a92286e6c933848b25d99864e7f411e2
+@|nl\naxanria\researchpower\block\BlocksInit.java|8|39|nl.naxanria.researchpower.block|package|nl.naxanria.researchpower.block|(file)
+Class Start: nl.naxanria.researchpower.block.BlocksInit
+   @|nl\naxanria\researchpower\block\BlocksInit.java|597|613|SuppressWarnings|class|java.lang.SuppressWarnings
+   @|nl\naxanria\researchpower\block\BlocksInit.java|643|653|BlocksInit|class|nl.naxanria.researchpower.block.BlocksInit
+   Class Start: nl.naxanria.researchpower.block.BlocksInit.Ores
+      @|nl\naxanria\researchpower\block\BlocksInit.java|678|682|Ores|class|nl.naxanria.researchpower.block.BlocksInit.Ores
+      @|nl\naxanria\researchpower\block\BlocksInit.java|711|725|BlockCopperOre|class|nl.naxanria.researchpower.block.ores.BlockCopperOre
+      @|nl\naxanria\researchpower\block\BlocksInit.java|711|725|BlockCopperOre|class|nl.naxanria.researchpower.block.ores.BlockCopperOre
+      @|nl\naxanria\researchpower\block\BlocksInit.java|726|735|copperOre|field|nl.naxanria.researchpower.block.BlocksInit.Ores|copperOre|
+      @|nl\naxanria\researchpower\block\BlocksInit.java|742|756|BlockCopperOre|class|nl.naxanria.researchpower.block.ores.BlockCopperOre
+   Class End  : nl.naxanria.researchpower.block.BlocksInit.Ores
+   Class Start: nl.naxanria.researchpower.block.BlocksInit.Metals
+      @|nl\naxanria\researchpower\block\BlocksInit.java|789|795|Metals|class|nl.naxanria.researchpower.block.BlocksInit.Metals
+      @|nl\naxanria\researchpower\block\BlocksInit.java|824|833|BlockBase|class|nl.naxanria.nlib.block.BlockBase
+      @|nl\naxanria\researchpower\block\BlocksInit.java|824|833|BlockBase|class|nl.naxanria.nlib.block.BlockBase
+      @|nl\naxanria\researchpower\block\BlocksInit.java|834|845|copperBlock|field|nl.naxanria.researchpower.block.BlocksInit.Metals|copperBlock|
+      @|nl\naxanria\researchpower\block\BlocksInit.java|852|861|BlockBase|class|nl.naxanria.nlib.block.BlockBase
+      @|nl\naxanria\researchpower\block\BlocksInit.java|862|870|Material|class|net.minecraft.block.material.Material
+      @|nl\naxanria\researchpower\block\BlocksInit.java|871|875|IRON|field|net.minecraft.block.material.Material|IRON
+   Class End  : nl.naxanria.researchpower.block.BlocksInit.Metals
+   Class Start: nl.naxanria.researchpower.block.BlocksInit.Machines
+      @|nl\naxanria\researchpower\block\BlocksInit.java|923|931|Machines|class|nl.naxanria.researchpower.block.BlocksInit.Machines
+      @|nl\naxanria\researchpower\block\BlocksInit.java|960|980|BlockResearchStation|class|nl.naxanria.researchpower.block.machines.station.BlockResearchStation
+      @|nl\naxanria\researchpower\block\BlocksInit.java|960|980|BlockResearchStation|class|nl.naxanria.researchpower.block.machines.station.BlockResearchStation
+      @|nl\naxanria\researchpower\block\BlocksInit.java|981|996|researchStation|field|nl.naxanria.researchpower.block.BlocksInit.Machines|researchStation|
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1003|1023|BlockResearchStation|class|nl.naxanria.researchpower.block.machines.station.BlockResearchStation
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1051|1063|BlockBattery|class|nl.naxanria.researchpower.block.machines.battery.BlockBattery
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1051|1063|BlockBattery|class|nl.naxanria.researchpower.block.machines.battery.BlockBattery
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1064|1071|battery|field|nl.naxanria.researchpower.block.BlocksInit.Machines|battery|
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1078|1090|BlockBattery|class|nl.naxanria.researchpower.block.machines.battery.BlockBattery
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1118|1138|BlockVacuumGenerator|class|nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1118|1138|BlockVacuumGenerator|class|nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1139|1154|vacuumGenerator|field|nl.naxanria.researchpower.block.BlocksInit.Machines|vacuumGenerator|
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1161|1181|BlockVacuumGenerator|class|nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator
+      Class Start: nl.naxanria.researchpower.block.BlocksInit.Machines.Solar
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1214|1219|Solar|class|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1252|1266|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1252|1266|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1267|1273|tier_1|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_1|
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1280|1294|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1325|1339|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1325|1339|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1340|1346|tier_2|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_2|
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1353|1367|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1398|1412|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1398|1412|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1413|1419|tier_3|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_3|
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1426|1440|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1471|1485|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1471|1485|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1486|1492|tier_4|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_4|
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1499|1513|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1544|1558|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1544|1558|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1559|1565|tier_5|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_5|
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1572|1586|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1617|1631|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1617|1631|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1632|1638|tier_6|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_6|
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1645|1659|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1690|1704|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1690|1704|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1705|1711|tier_7|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_7|
+         @|nl\naxanria\researchpower\block\BlocksInit.java|1718|1732|SolarGenerator|class|nl.naxanria.researchpower.block.machines.generators.solar.SolarGenerator
+      Class End  : nl.naxanria.researchpower.block.BlocksInit.Machines.Solar
+   Class End  : nl.naxanria.researchpower.block.BlocksInit.Machines
    Method Start: init(Lnl/naxanria/nlib/Registy/BlockRegistry;)V
-      @|nl\naxanria\researchpower\block\Blocks.java|1786|1794|registry|param|nl.naxanria.researchpower.block.Blocks|init|(Lnl/naxanria/nlib/Registy/BlockRegistry;)V|registry|0
-      @|nl\naxanria\researchpower\block\Blocks.java|1767|1771|init|method|nl.naxanria.researchpower.block.Blocks|init|(Lnl/naxanria/nlib/Registy/BlockRegistry;)V
-      @|nl\naxanria\researchpower\block\Blocks.java|1772|1785|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
-      @|nl\naxanria\researchpower\block\Blocks.java|1804|1812|registry|param|nl.naxanria.researchpower.block.Blocks|init|(Lnl/naxanria/nlib/Registy/BlockRegistry;)V|registry|0
-      @|nl\naxanria\researchpower\block\Blocks.java|1813|1819|addAll|method|nl.naxanria.nlib.Registy.Registry|addAll|([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
-      @|nl\naxanria\researchpower\block\Blocks.java|1846|1850|Ores|class|nl.naxanria.researchpower.block.Blocks.Ores
-      @|nl\naxanria\researchpower\block\Blocks.java|1851|1860|copperOre|field|nl.naxanria.researchpower.block.Blocks.Ores|copperOre
-      @|nl\naxanria\researchpower\block\Blocks.java|1891|1897|Metals|class|nl.naxanria.researchpower.block.Blocks.Metals
-      @|nl\naxanria\researchpower\block\Blocks.java|1898|1909|copperBlock|field|nl.naxanria.researchpower.block.Blocks.Metals|copperBlock
-      @|nl\naxanria\researchpower\block\Blocks.java|1942|1950|Machines|class|nl.naxanria.researchpower.block.Blocks.Machines
-      @|nl\naxanria\researchpower\block\Blocks.java|1951|1958|battery|field|nl.naxanria.researchpower.block.Blocks.Machines|battery
-      @|nl\naxanria\researchpower\block\Blocks.java|1966|1974|Machines|class|nl.naxanria.researchpower.block.Blocks.Machines
-      @|nl\naxanria\researchpower\block\Blocks.java|1975|1990|researchStation|field|nl.naxanria.researchpower.block.Blocks.Machines|researchStation
-      @|nl\naxanria\researchpower\block\Blocks.java|1998|2006|Machines|class|nl.naxanria.researchpower.block.Blocks.Machines
-      @|nl\naxanria\researchpower\block\Blocks.java|2007|2022|vacuumGenerator|field|nl.naxanria.researchpower.block.Blocks.Machines|vacuumGenerator
-      @|nl\naxanria\researchpower\block\Blocks.java|2052|2066|Machines.Solar|class|nl.naxanria.researchpower.block.Blocks.Machines.Solar
-      @|nl\naxanria\researchpower\block\Blocks.java|2067|2073|tier_1|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_1
-      @|nl\naxanria\researchpower\block\Blocks.java|2081|2095|Machines.Solar|class|nl.naxanria.researchpower.block.Blocks.Machines.Solar
-      @|nl\naxanria\researchpower\block\Blocks.java|2096|2102|tier_2|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_2
-      @|nl\naxanria\researchpower\block\Blocks.java|2110|2124|Machines.Solar|class|nl.naxanria.researchpower.block.Blocks.Machines.Solar
-      @|nl\naxanria\researchpower\block\Blocks.java|2125|2131|tier_3|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_3
-      @|nl\naxanria\researchpower\block\Blocks.java|2139|2153|Machines.Solar|class|nl.naxanria.researchpower.block.Blocks.Machines.Solar
-      @|nl\naxanria\researchpower\block\Blocks.java|2154|2160|tier_4|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_4
-      @|nl\naxanria\researchpower\block\Blocks.java|2168|2182|Machines.Solar|class|nl.naxanria.researchpower.block.Blocks.Machines.Solar
-      @|nl\naxanria\researchpower\block\Blocks.java|2183|2189|tier_5|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_5
-      @|nl\naxanria\researchpower\block\Blocks.java|2197|2211|Machines.Solar|class|nl.naxanria.researchpower.block.Blocks.Machines.Solar
-      @|nl\naxanria\researchpower\block\Blocks.java|2212|2218|tier_6|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_6
-      @|nl\naxanria\researchpower\block\Blocks.java|2226|2240|Machines.Solar|class|nl.naxanria.researchpower.block.Blocks.Machines.Solar
-      @|nl\naxanria\researchpower\block\Blocks.java|2241|2247|tier_7|field|nl.naxanria.researchpower.block.Blocks.Machines.Solar|tier_7
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1790|1798|registry|param|nl.naxanria.researchpower.block.BlocksInit|init|(Lnl/naxanria/nlib/Registy/BlockRegistry;)V|registry|0
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1771|1775|init|method|nl.naxanria.researchpower.block.BlocksInit|init|(Lnl/naxanria/nlib/Registy/BlockRegistry;)V
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1776|1789|BlockRegistry|class|nl.naxanria.nlib.Registy.BlockRegistry
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1808|1816|registry|param|nl.naxanria.researchpower.block.BlocksInit|init|(Lnl/naxanria/nlib/Registy/BlockRegistry;)V|registry|0
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1817|1823|addAll|method|nl.naxanria.nlib.Registy.Registry|addAll|([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1850|1854|Ores|class|nl.naxanria.researchpower.block.BlocksInit.Ores
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1855|1864|copperOre|field|nl.naxanria.researchpower.block.BlocksInit.Ores|copperOre
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1895|1901|Metals|class|nl.naxanria.researchpower.block.BlocksInit.Metals
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1902|1913|copperBlock|field|nl.naxanria.researchpower.block.BlocksInit.Metals|copperBlock
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1946|1954|Machines|class|nl.naxanria.researchpower.block.BlocksInit.Machines
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1955|1962|battery|field|nl.naxanria.researchpower.block.BlocksInit.Machines|battery
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1970|1978|Machines|class|nl.naxanria.researchpower.block.BlocksInit.Machines
+      @|nl\naxanria\researchpower\block\BlocksInit.java|1979|1994|researchStation|field|nl.naxanria.researchpower.block.BlocksInit.Machines|researchStation
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2002|2010|Machines|class|nl.naxanria.researchpower.block.BlocksInit.Machines
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2011|2026|vacuumGenerator|field|nl.naxanria.researchpower.block.BlocksInit.Machines|vacuumGenerator
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2056|2070|Machines.Solar|class|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2071|2077|tier_1|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_1
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2085|2099|Machines.Solar|class|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2100|2106|tier_2|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_2
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2114|2128|Machines.Solar|class|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2129|2135|tier_3|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_3
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2143|2157|Machines.Solar|class|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2158|2164|tier_4|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_4
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2172|2186|Machines.Solar|class|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2187|2193|tier_5|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_5
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2201|2215|Machines.Solar|class|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2216|2222|tier_6|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_6
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2230|2244|Machines.Solar|class|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar
+      @|nl\naxanria\researchpower\block\BlocksInit.java|2245|2251|tier_7|field|nl.naxanria.researchpower.block.BlocksInit.Machines.Solar|tier_7
    Method End: init(Lnl/naxanria/nlib/Registy/BlockRegistry;)V
-Class End  : nl.naxanria.researchpower.block.Blocks
-endProcessing "nl\naxanria\researchpower\block\Blocks.java"
+Class End  : nl.naxanria.researchpower.block.BlocksInit
+endProcessing "nl\naxanria\researchpower\block\BlocksInit.java"
 
 startProcessing "nl\naxanria\researchpower\block\machines\battery\BlockBattery.java" md5: e2123b9161f4605d2b7783c9c4eb07ff
 Cache Hit!
@@ -3325,32 +3342,49 @@ Class Start: nl.naxanria.researchpower.block.ores.BlockCopperOre
 Class End  : nl.naxanria.researchpower.block.ores.BlockCopperOre
 endProcessing "nl\naxanria\researchpower\block\ores\BlockCopperOre.java"
 
-startProcessing "nl\naxanria\researchpower\item\Items.java" md5: 4482e63510a6444a9d0e3fe89989f546
-Cache Hit!
-@|nl\naxanria\researchpower\item\Items.java|8|38|nl.naxanria.researchpower.item|package|nl.naxanria.researchpower.item|(file)
-Class Start: nl.naxanria.researchpower.item.Items
-   @|nl\naxanria\researchpower\item\Items.java|203|208|Items|class|nl.naxanria.researchpower.item.Items
-   Class Start: nl.naxanria.researchpower.item.Items.Metals
-      @|nl\naxanria\researchpower\item\Items.java|233|239|Metals|class|nl.naxanria.researchpower.item.Items.Metals
-      @|nl\naxanria\researchpower\item\Items.java|268|283|ItemCopperIngot|class|nl.naxanria.researchpower.item.metals.ItemCopperIngot
-      @|nl\naxanria\researchpower\item\Items.java|268|283|ItemCopperIngot|class|nl.naxanria.researchpower.item.metals.ItemCopperIngot
-      @|nl\naxanria\researchpower\item\Items.java|284|295|ingotCopper|field|nl.naxanria.researchpower.item.Items.Metals|ingotCopper|
-      @|nl\naxanria\researchpower\item\Items.java|302|317|ItemCopperIngot|class|nl.naxanria.researchpower.item.metals.ItemCopperIngot
-   Class End  : nl.naxanria.researchpower.item.Items.Metals
-   Class Start: nl.naxanria.researchpower.item.Items.MachineParts
-      @|nl\naxanria\researchpower\item\Items.java|350|362|MachineParts|class|nl.naxanria.researchpower.item.Items.MachineParts
-   Class End  : nl.naxanria.researchpower.item.Items.MachineParts
+startProcessing "nl\naxanria\researchpower\item\ItemsInit.java" md5: 18e5d82cacfe4bfc768a26f14eccd514
+@|nl\naxanria\researchpower\item\ItemsInit.java|8|38|nl.naxanria.researchpower.item|package|nl.naxanria.researchpower.item|(file)
+Class Start: nl.naxanria.researchpower.item.ItemsInit
+   @|nl\naxanria\researchpower\item\ItemsInit.java|242|251|ItemsInit|class|nl.naxanria.researchpower.item.ItemsInit
+   Class Start: nl.naxanria.researchpower.item.ItemsInit.Metals
+      @|nl\naxanria\researchpower\item\ItemsInit.java|276|282|Metals|class|nl.naxanria.researchpower.item.ItemsInit.Metals
+      @|nl\naxanria\researchpower\item\ItemsInit.java|311|326|ItemCopperIngot|class|nl.naxanria.researchpower.item.metals.ItemCopperIngot
+      @|nl\naxanria\researchpower\item\ItemsInit.java|311|326|ItemCopperIngot|class|nl.naxanria.researchpower.item.metals.ItemCopperIngot
+      @|nl\naxanria\researchpower\item\ItemsInit.java|327|338|ingotCopper|field|nl.naxanria.researchpower.item.ItemsInit.Metals|ingotCopper|
+      @|nl\naxanria\researchpower\item\ItemsInit.java|345|360|ItemCopperIngot|class|nl.naxanria.researchpower.item.metals.ItemCopperIngot
+   Class End  : nl.naxanria.researchpower.item.ItemsInit.Metals
+   Class Start: nl.naxanria.researchpower.item.ItemsInit.MachineParts
+      @|nl\naxanria\researchpower\item\ItemsInit.java|393|405|MachineParts|class|nl.naxanria.researchpower.item.ItemsInit.MachineParts
+      @|nl\naxanria\researchpower\item\ItemsInit.java|434|442|ItemBase|class|nl.naxanria.nlib.item.ItemBase
+      @|nl\naxanria\researchpower\item\ItemsInit.java|434|442|ItemBase|class|nl.naxanria.nlib.item.ItemBase
+      @|nl\naxanria\researchpower\item\ItemsInit.java|443|470|redstoneConnectorHorizontal|field|nl.naxanria.researchpower.item.ItemsInit.MachineParts|redstoneConnectorHorizontal|
+      @|nl\naxanria\researchpower\item\ItemsInit.java|477|485|ItemBase|class|nl.naxanria.nlib.item.ItemBase
+      @|nl\naxanria\researchpower\item\ItemsInit.java|544|552|ItemBase|class|nl.naxanria.nlib.item.ItemBase
+      @|nl\naxanria\researchpower\item\ItemsInit.java|544|552|ItemBase|class|nl.naxanria.nlib.item.ItemBase
+      @|nl\naxanria\researchpower\item\ItemsInit.java|553|578|redstoneConnectorVertical|field|nl.naxanria.researchpower.item.ItemsInit.MachineParts|redstoneConnectorVertical|
+      @|nl\naxanria\researchpower\item\ItemsInit.java|585|593|ItemBase|class|nl.naxanria.nlib.item.ItemBase
+      @|nl\naxanria\researchpower\item\ItemsInit.java|650|658|ItemBase|class|nl.naxanria.nlib.item.ItemBase
+      @|nl\naxanria\researchpower\item\ItemsInit.java|650|658|ItemBase|class|nl.naxanria.nlib.item.ItemBase
+      @|nl\naxanria\researchpower\item\ItemsInit.java|659|671|redstoneRing|field|nl.naxanria.researchpower.item.ItemsInit.MachineParts|redstoneRing|
+      @|nl\naxanria\researchpower\item\ItemsInit.java|678|686|ItemBase|class|nl.naxanria.nlib.item.ItemBase
+   Class End  : nl.naxanria.researchpower.item.ItemsInit.MachineParts
    Method Start: init(Lnl/naxanria/nlib/Registy/ItemRegistry;)V
-      @|nl\naxanria\researchpower\item\Items.java|416|424|registry|param|nl.naxanria.researchpower.item.Items|init|(Lnl/naxanria/nlib/Registy/ItemRegistry;)V|registry|0
-      @|nl\naxanria\researchpower\item\Items.java|398|402|init|method|nl.naxanria.researchpower.item.Items|init|(Lnl/naxanria/nlib/Registy/ItemRegistry;)V
-      @|nl\naxanria\researchpower\item\Items.java|403|415|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
-      @|nl\naxanria\researchpower\item\Items.java|434|442|registry|param|nl.naxanria.researchpower.item.Items|init|(Lnl/naxanria/nlib/Registy/ItemRegistry;)V|registry|0
-      @|nl\naxanria\researchpower\item\Items.java|443|449|addAll|method|nl.naxanria.nlib.Registy.Registry|addAll|([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
-      @|nl\naxanria\researchpower\item\Items.java|462|468|Metals|class|nl.naxanria.researchpower.item.Items.Metals
-      @|nl\naxanria\researchpower\item\Items.java|469|480|ingotCopper|field|nl.naxanria.researchpower.item.Items.Metals|ingotCopper
+      @|nl\naxanria\researchpower\item\ItemsInit.java|751|759|registry|param|nl.naxanria.researchpower.item.ItemsInit|init|(Lnl/naxanria/nlib/Registy/ItemRegistry;)V|registry|0
+      @|nl\naxanria\researchpower\item\ItemsInit.java|733|737|init|method|nl.naxanria.researchpower.item.ItemsInit|init|(Lnl/naxanria/nlib/Registy/ItemRegistry;)V
+      @|nl\naxanria\researchpower\item\ItemsInit.java|738|750|ItemRegistry|class|nl.naxanria.nlib.Registy.ItemRegistry
+      @|nl\naxanria\researchpower\item\ItemsInit.java|769|777|registry|param|nl.naxanria.researchpower.item.ItemsInit|init|(Lnl/naxanria/nlib/Registy/ItemRegistry;)V|registry|0
+      @|nl\naxanria\researchpower\item\ItemsInit.java|778|784|addAll|method|nl.naxanria.nlib.Registy.Registry|addAll|([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+      @|nl\naxanria\researchpower\item\ItemsInit.java|797|803|Metals|class|nl.naxanria.researchpower.item.ItemsInit.Metals
+      @|nl\naxanria\researchpower\item\ItemsInit.java|804|815|ingotCopper|field|nl.naxanria.researchpower.item.ItemsInit.Metals|ingotCopper
+      @|nl\naxanria\researchpower\item\ItemsInit.java|830|842|MachineParts|class|nl.naxanria.researchpower.item.ItemsInit.MachineParts
+      @|nl\naxanria\researchpower\item\ItemsInit.java|843|870|redstoneConnectorHorizontal|field|nl.naxanria.researchpower.item.ItemsInit.MachineParts|redstoneConnectorHorizontal
+      @|nl\naxanria\researchpower\item\ItemsInit.java|878|890|MachineParts|class|nl.naxanria.researchpower.item.ItemsInit.MachineParts
+      @|nl\naxanria\researchpower\item\ItemsInit.java|891|916|redstoneConnectorVertical|field|nl.naxanria.researchpower.item.ItemsInit.MachineParts|redstoneConnectorVertical
+      @|nl\naxanria\researchpower\item\ItemsInit.java|924|936|MachineParts|class|nl.naxanria.researchpower.item.ItemsInit.MachineParts
+      @|nl\naxanria\researchpower\item\ItemsInit.java|937|949|redstoneRing|field|nl.naxanria.researchpower.item.ItemsInit.MachineParts|redstoneRing
    Method End: init(Lnl/naxanria/nlib/Registy/ItemRegistry;)V
-Class End  : nl.naxanria.researchpower.item.Items
-endProcessing "nl\naxanria\researchpower\item\Items.java"
+Class End  : nl.naxanria.researchpower.item.ItemsInit
+endProcessing "nl\naxanria\researchpower\item\ItemsInit.java"
 
 startProcessing "nl\naxanria\researchpower\item\metals\ItemCopperIngot.java" md5: c2998b2b213bc758e4b2c2ba89c5c43e
 Cache Hit!
@@ -3410,56 +3444,108 @@ Class Start: nl.naxanria.researchpower.recipe.BaseResearchPowerRecipe
 Class End  : nl.naxanria.researchpower.recipe.BaseResearchPowerRecipe
 endProcessing "nl\naxanria\researchpower\recipe\BaseResearchPowerRecipe.java"
 
-startProcessing "nl\naxanria\researchpower\recipe\Recipes.java" md5: db99c66ba20b5b75cdf5f8691e1f1a45
-@|nl\naxanria\researchpower\recipe\Recipes.java|8|40|nl.naxanria.researchpower.recipe|package|nl.naxanria.researchpower.recipe|(file)
-Class Start: nl.naxanria.researchpower.recipe.Recipes
-   @|nl\naxanria\researchpower\recipe\Recipes.java|415|422|Recipes|class|nl.naxanria.researchpower.recipe.Recipes
+startProcessing "nl\naxanria\researchpower\recipe\RecipesInit.java" md5: 315296c0abfe7d4cb97dd7d1b668dc87
+@|nl\naxanria\researchpower\recipe\RecipesInit.java|8|40|nl.naxanria.researchpower.recipe|package|nl.naxanria.researchpower.recipe|(file)
+Class Start: nl.naxanria.researchpower.recipe.RecipesInit
+   @|nl\naxanria\researchpower\recipe\RecipesInit.java|562|573|RecipesInit|class|nl.naxanria.researchpower.recipe.RecipesInit
+   @|nl\naxanria\researchpower\recipe\RecipesInit.java|597|598|r|field|nl.naxanria.researchpower.recipe.RecipesInit|r|
    Method Start: init(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V
-      @|nl\naxanria\researchpower\recipe\Recipes.java|466|474|registry|param|nl.naxanria.researchpower.recipe.Recipes|init|(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V|registry|0
-      @|nl\naxanria\researchpower\recipe\Recipes.java|446|450|init|method|nl.naxanria.researchpower.recipe.Recipes|init|(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V
-      @|nl\naxanria\researchpower\recipe\Recipes.java|451|465|RecipeRegistry|class|nl.naxanria.nlib.Registy.RecipeRegistry
-      @|nl\naxanria\researchpower\recipe\Recipes.java|484|496|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
-      @|nl\naxanria\researchpower\recipe\Recipes.java|497|508|addSmelting|method|net.minecraftforge.fml.common.registry.GameRegistry|addSmelting|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemStack;F)V
-      @|nl\naxanria\researchpower\recipe\Recipes.java|521|532|Blocks.Ores|class|nl.naxanria.researchpower.block.Blocks.Ores
-      @|nl\naxanria\researchpower\recipe\Recipes.java|533|542|copperOre|field|nl.naxanria.researchpower.block.Blocks.Ores|copperOre
-      @|nl\naxanria\researchpower\recipe\Recipes.java|554|563|ItemStack|class|net.minecraft.item.ItemStack
-      @|nl\naxanria\researchpower\recipe\Recipes.java|564|576|Items.Metals|class|nl.naxanria.researchpower.item.Items.Metals
-      @|nl\naxanria\researchpower\recipe\Recipes.java|577|588|ingotCopper|field|nl.naxanria.researchpower.item.Items.Metals|ingotCopper
-      @|nl\naxanria\researchpower\recipe\Recipes.java|618|630|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
-      @|nl\naxanria\researchpower\recipe\Recipes.java|631|649|addShapelessRecipe|method|net.minecraftforge.fml.common.registry.GameRegistry|addShapelessRecipe|(Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/crafting/Ingredient;)V
-      @|nl\naxanria\researchpower\recipe\Recipes.java|661|677|ResourceLocation|class|net.minecraft.util.ResourceLocation
-      @|nl\naxanria\researchpower\recipe\Recipes.java|678|682|NMod|class|nl.naxanria.nlib.NMod
-      @|nl\naxanria\researchpower\recipe\Recipes.java|683|691|getModId|method|nl.naxanria.nlib.NMod|getModId|()Ljava/lang/String;
-      @|nl\naxanria\researchpower\recipe\Recipes.java|706|722|ResourceLocation|class|net.minecraft.util.ResourceLocation
-      @|nl\naxanria\researchpower\recipe\Recipes.java|723|727|NMod|class|nl.naxanria.nlib.NMod
-      @|nl\naxanria\researchpower\recipe\Recipes.java|728|736|getModId|method|nl.naxanria.nlib.NMod|getModId|()Ljava/lang/String;
-      @|nl\naxanria\researchpower\recipe\Recipes.java|751|760|ItemStack|class|net.minecraft.item.ItemStack
-      @|nl\naxanria\researchpower\recipe\Recipes.java|761|774|Blocks.Metals|class|nl.naxanria.researchpower.block.Blocks.Metals
-      @|nl\naxanria\researchpower\recipe\Recipes.java|775|786|copperBlock|field|nl.naxanria.researchpower.block.Blocks.Metals|copperBlock
-      @|nl\naxanria\researchpower\recipe\Recipes.java|795|805|Ingredient|class|net.minecraft.item.crafting.Ingredient
-      @|nl\naxanria\researchpower\recipe\Recipes.java|806|816|fromStacks|method|net.minecraft.item.crafting.Ingredient|fromStacks|([Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/crafting/Ingredient;
-      @|nl\naxanria\researchpower\recipe\Recipes.java|821|830|ItemStack|class|net.minecraft.item.ItemStack
-      @|nl\naxanria\researchpower\recipe\Recipes.java|831|843|Items.Metals|class|nl.naxanria.researchpower.item.Items.Metals
-      @|nl\naxanria\researchpower\recipe\Recipes.java|844|855|ingotCopper|field|nl.naxanria.researchpower.item.Items.Metals|ingotCopper
-      @|nl\naxanria\researchpower\recipe\Recipes.java|877|889|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
-      @|nl\naxanria\researchpower\recipe\Recipes.java|890|905|addShapedRecipe|method|net.minecraftforge.fml.common.registry.GameRegistry|addShapedRecipe|(Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V
-      @|nl\naxanria\researchpower\recipe\Recipes.java|917|933|ResourceLocation|class|net.minecraft.util.ResourceLocation
-      @|nl\naxanria\researchpower\recipe\Recipes.java|934|938|NMod|class|nl.naxanria.nlib.NMod
-      @|nl\naxanria\researchpower\recipe\Recipes.java|939|947|getModId|method|nl.naxanria.nlib.NMod|getModId|()Ljava/lang/String;
-      @|nl\naxanria\researchpower\recipe\Recipes.java|962|978|ResourceLocation|class|net.minecraft.util.ResourceLocation
-      @|nl\naxanria\researchpower\recipe\Recipes.java|979|983|NMod|class|nl.naxanria.nlib.NMod
-      @|nl\naxanria\researchpower\recipe\Recipes.java|984|992|getModId|method|nl.naxanria.nlib.NMod|getModId|()Ljava/lang/String;
-      @|nl\naxanria\researchpower\recipe\Recipes.java|1007|1016|ItemStack|class|net.minecraft.item.ItemStack
-      @|nl\naxanria\researchpower\recipe\Recipes.java|1017|1030|Blocks.Metals|class|nl.naxanria.researchpower.block.Blocks.Metals
-      @|nl\naxanria\researchpower\recipe\Recipes.java|1031|1042|copperBlock|field|nl.naxanria.researchpower.block.Blocks.Metals|copperBlock
-      @|nl\naxanria\researchpower\recipe\Recipes.java|1099|1108|ItemStack|class|net.minecraft.item.ItemStack
-      @|nl\naxanria\researchpower\recipe\Recipes.java|1109|1121|Items.Metals|class|nl.naxanria.researchpower.item.Items.Metals
-      @|nl\naxanria\researchpower\recipe\Recipes.java|1122|1133|ingotCopper|field|nl.naxanria.researchpower.item.Items.Metals|ingotCopper
-      @|nl\naxanria\researchpower\recipe\Recipes.java|1147|1155|registry|param|nl.naxanria.researchpower.recipe.Recipes|init|(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V|registry|0
-      @|nl\naxanria\researchpower\recipe\Recipes.java|1156|1162|addAll|method|nl.naxanria.nlib.Registy.Registry|addAll|([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|648|656|registry|param|nl.naxanria.researchpower.recipe.RecipesInit|init|(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V|registry|0
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|628|632|init|method|nl.naxanria.researchpower.recipe.RecipesInit|init|(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|633|647|RecipeRegistry|class|nl.naxanria.nlib.Registy.RecipeRegistry
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|672|676|Item|class|net.minecraft.item.Item
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|685|688|Dye|class|nl.naxanria.nlib.util.Dye
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|689|699|getDyeItem|method|nl.naxanria.nlib.util.Dye|getDyeItem|(Lnet/minecraft/item/EnumDyeColor;)Lnet/minecraft/item/Item;
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|700|712|EnumDyeColor|class|net.minecraft.item.EnumDyeColor
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|713|717|BLUE|field|net.minecraft.item.EnumDyeColor|BLUE
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|725|737|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|738|749|addSmelting|method|net.minecraftforge.fml.common.registry.GameRegistry|addSmelting|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemStack;F)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|762|777|BlocksInit.Ores|class|nl.naxanria.researchpower.block.BlocksInit.Ores
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|778|787|copperOre|field|nl.naxanria.researchpower.block.BlocksInit.Ores|copperOre
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|799|808|ItemStack|class|net.minecraft.item.ItemStack
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|809|825|ItemsInit.Metals|class|nl.naxanria.researchpower.item.ItemsInit.Metals
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|826|837|ingotCopper|field|nl.naxanria.researchpower.item.ItemsInit.Metals|ingotCopper
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|867|879|addShapeless|method|nl.naxanria.researchpower.recipe.RecipesInit|addShapeless|(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/crafting/Ingredient;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|891|900|ItemStack|class|net.minecraft.item.ItemStack
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|901|918|BlocksInit.Metals|class|nl.naxanria.researchpower.block.BlocksInit.Metals
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|919|930|copperBlock|field|nl.naxanria.researchpower.block.BlocksInit.Metals|copperBlock
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|939|949|Ingredient|class|net.minecraft.item.crafting.Ingredient
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|950|960|fromStacks|method|net.minecraft.item.crafting.Ingredient|fromStacks|([Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/crafting/Ingredient;
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|965|974|ItemStack|class|net.minecraft.item.ItemStack
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|975|991|ItemsInit.Metals|class|nl.naxanria.researchpower.item.ItemsInit.Metals
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|992|1003|ingotCopper|field|nl.naxanria.researchpower.item.ItemsInit.Metals|ingotCopper
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1025|1034|addShaped|method|nl.naxanria.researchpower.recipe.RecipesInit|addShaped|(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1046|1055|ItemStack|class|net.minecraft.item.ItemStack
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1056|1073|BlocksInit.Metals|class|nl.naxanria.researchpower.block.BlocksInit.Metals
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1074|1085|copperBlock|field|nl.naxanria.researchpower.block.BlocksInit.Metals|copperBlock
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1142|1151|ItemStack|class|net.minecraft.item.ItemStack
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1152|1168|ItemsInit.Metals|class|nl.naxanria.researchpower.item.ItemsInit.Metals
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1169|1180|ingotCopper|field|nl.naxanria.researchpower.item.ItemsInit.Metals|ingotCopper
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1196|1205|addShaped|method|nl.naxanria.researchpower.recipe.RecipesInit|addShaped|(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1217|1226|ItemStack|class|net.minecraft.item.ItemStack
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1227|1249|ItemsInit.MachineParts|class|nl.naxanria.researchpower.item.ItemsInit.MachineParts
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1250|1277|redstoneConnectorHorizontal|field|nl.naxanria.researchpower.item.ItemsInit.MachineParts|redstoneConnectorHorizontal
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1334|1339|Items|class|net.minecraft.init.Items
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1340|1348|REDSTONE|field|net.minecraft.init.Items|REDSTONE
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1379|1384|Items|class|net.minecraft.init.Items
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1385|1395|IRON_INGOT|field|net.minecraft.init.Items|IRON_INGOT
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1410|1419|addShaped|method|nl.naxanria.researchpower.recipe.RecipesInit|addShaped|(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1431|1440|ItemStack|class|net.minecraft.item.ItemStack
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1441|1463|ItemsInit.MachineParts|class|nl.naxanria.researchpower.item.ItemsInit.MachineParts
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1464|1489|redstoneConnectorVertical|field|nl.naxanria.researchpower.item.ItemsInit.MachineParts|redstoneConnectorVertical
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1546|1551|Items|class|net.minecraft.init.Items
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1552|1560|REDSTONE|field|net.minecraft.init.Items|REDSTONE
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1591|1596|Items|class|net.minecraft.init.Items
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1597|1607|IRON_INGOT|field|net.minecraft.init.Items|IRON_INGOT
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1624|1633|addShaped|method|nl.naxanria.researchpower.recipe.RecipesInit|addShaped|(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1645|1654|ItemStack|class|net.minecraft.item.ItemStack
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1655|1677|ItemsInit.MachineParts|class|nl.naxanria.researchpower.item.ItemsInit.MachineParts
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1678|1690|redstoneRing|field|nl.naxanria.researchpower.item.ItemsInit.MachineParts|redstoneRing
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1743|1768|net.minecraft.init.Blocks|class|net.minecraft.init.Blocks
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1769|1783|REDSTONE_BLOCK|field|net.minecraft.init.Blocks|REDSTONE_BLOCK
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1796|1818|ItemsInit.MachineParts|class|nl.naxanria.researchpower.item.ItemsInit.MachineParts
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1819|1846|redstoneConnectorHorizontal|field|nl.naxanria.researchpower.item.ItemsInit.MachineParts|redstoneConnectorHorizontal
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1859|1881|ItemsInit.MachineParts|class|nl.naxanria.researchpower.item.ItemsInit.MachineParts
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1882|1907|redstoneConnectorVertical|field|nl.naxanria.researchpower.item.ItemsInit.MachineParts|redstoneConnectorVertical
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1920|1928|registry|param|nl.naxanria.researchpower.recipe.RecipesInit|init|(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V|registry|0
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1929|1935|addAll|method|nl.naxanria.nlib.Registy.Registry|addAll|([Ljava/lang/Object;)Lnl/naxanria/nlib/Registy/Registry;
    Method End: init(Lnl/naxanria/nlib/Registy/RecipeRegistry;)V
-Class End  : nl.naxanria.researchpower.recipe.Recipes
-endProcessing "nl\naxanria\researchpower\recipe\Recipes.java"
+   Method Start: addShapeless(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/crafting/Ingredient;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2006|2012|result|param|nl.naxanria.researchpower.recipe.RecipesInit|addShapeless|(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/crafting/Ingredient;)V|result|0
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2028|2039|ingredients|param|nl.naxanria.researchpower.recipe.RecipesInit|addShapeless|(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/crafting/Ingredient;)V|ingredients|1
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1983|1995|addShapeless|method|nl.naxanria.researchpower.recipe.RecipesInit|addShapeless|(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/crafting/Ingredient;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|1996|2005|ItemStack|class|net.minecraft.item.ItemStack
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2014|2024|Ingredient|class|net.minecraft.item.crafting.Ingredient
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2049|2055|String|class|java.lang.String
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2063|2067|NMod|class|nl.naxanria.nlib.NMod
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2068|2076|getModId|method|nl.naxanria.nlib.NMod|getModId|()Ljava/lang/String;
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2094|2095|r|field|nl.naxanria.researchpower.recipe.RecipesInit|r
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2103|2115|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2116|2134|addShapelessRecipe|method|net.minecraftforge.fml.common.registry.GameRegistry|addShapelessRecipe|(Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/crafting/Ingredient;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2151|2167|ResourceLocation|class|net.minecraft.util.ResourceLocation
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2185|2201|ResourceLocation|class|net.minecraft.util.ResourceLocation
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2215|2221|result|param|nl.naxanria.researchpower.recipe.RecipesInit|addShapeless|(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/crafting/Ingredient;)V|result|0
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2229|2240|ingredients|param|nl.naxanria.researchpower.recipe.RecipesInit|addShapeless|(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/crafting/Ingredient;)V|ingredients|1
+   Method End: addShapeless(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/crafting/Ingredient;)V
+   Method Start: addShaped(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2297|2303|result|param|nl.naxanria.researchpower.recipe.RecipesInit|addShaped|(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V|result|0
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2315|2321|params|param|nl.naxanria.researchpower.recipe.RecipesInit|addShaped|(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V|params|1
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2277|2286|addShaped|method|nl.naxanria.researchpower.recipe.RecipesInit|addShaped|(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2287|2296|ItemStack|class|net.minecraft.item.ItemStack
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2305|2311|Object|class|java.lang.Object
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2331|2337|String|class|java.lang.String
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2345|2349|NMod|class|nl.naxanria.nlib.NMod
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2350|2358|getModId|method|nl.naxanria.nlib.NMod|getModId|()Ljava/lang/String;
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2376|2377|r|field|nl.naxanria.researchpower.recipe.RecipesInit|r
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2385|2397|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2398|2413|addShapedRecipe|method|net.minecraftforge.fml.common.registry.GameRegistry|addShapedRecipe|(Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2430|2446|ResourceLocation|class|net.minecraft.util.ResourceLocation
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2464|2480|ResourceLocation|class|net.minecraft.util.ResourceLocation
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2494|2500|result|param|nl.naxanria.researchpower.recipe.RecipesInit|addShaped|(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V|result|0
+      @|nl\naxanria\researchpower\recipe\RecipesInit.java|2508|2514|params|param|nl.naxanria.researchpower.recipe.RecipesInit|addShaped|(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V|params|1
+   Method End: addShaped(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V
+Class End  : nl.naxanria.researchpower.recipe.RecipesInit
+endProcessing "nl\naxanria\researchpower\recipe\RecipesInit.java"
 
 startProcessing "nl\naxanria\researchpower\research\Research.java" md5: 0579617f1e33eb81c9103a8c499a5dea
 Cache Hit!
