@@ -5,11 +5,11 @@ import net.minecraft.util.EnumFacing;
 
 public interface IEnergySharingProvider
 {
-  public int getEnergyToShare();
+  int getEnergyToShare();
   
-  public boolean doesShare();
+  boolean doesShareEnergy();
   
-  public EnumFacing[] getProvidingSides();
+  EnumFacing[] getEnergyProvidingSides();
   
-  boolean canShareTo(TileEntity tile);
+  boolean canShareEnergyTo(TileEntity tile);
 }

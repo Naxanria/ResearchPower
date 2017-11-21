@@ -1,9 +1,12 @@
 package nl.naxanria.nlib.tile.power;
 
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.energy.EnergyStorage;
 
 public class BaseEnergyStorage extends EnergyStorage
 {
+  public static final String NBT_ENERGY = "ENERGY";
+  
   protected boolean internalStorageOnly = false;
   
   public BaseEnergyStorage(int capacity, int maxReceive, int maxExtract)
@@ -85,6 +88,18 @@ public class BaseEnergyStorage extends EnergyStorage
     }
   }
   
+  public void setEnergyStored(int amount)
+  {
+    if (amount > capacity)
+    {
+      energy = capacity;
+    }
+    else
+    {
+      energy = amount;
+    }
+  }
+  
   public boolean isInternalStorageOnly()
   {
     return internalStorageOnly;
@@ -93,5 +108,15 @@ public class BaseEnergyStorage extends EnergyStorage
   public void setInternalStorageOnly(boolean internalStorageOnly)
   {
     this.internalStorageOnly = internalStorageOnly;
+  }
+  
+  public void writeToNBT(NBTTagCompound compound)
+  {
+    compound.setInteger(NBT_ENERGY, energy);
+  }
+  
+  public void readFromNbt(NBTTagCompound compound)
+  {
+    setEnergyStored(compound.getInteger(NBT_ENERGY));
   }
 }

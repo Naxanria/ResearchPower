@@ -1,5 +1,6 @@
 package nl.naxanria.nlib.tile.power;
 
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.energy.IEnergyStorage;
 import nl.naxanria.nlib.tile.TileEntityBase;
@@ -28,7 +29,7 @@ public abstract class GeneratorEntity extends TileEntityBase implements IEnergyS
   @Override
   public IEnergyStorage getEnergyStorage(EnumFacing facing)
   {
-    if (CollectionUtil.contains(getProvidingSides(), facing))
+    if (CollectionUtil.contains(getEnergyProvidingSides(), facing))
     {
       return storage;
     }
@@ -42,7 +43,24 @@ public abstract class GeneratorEntity extends TileEntityBase implements IEnergyS
     super.entityUpdate();
     if (!world.isRemote)
     {
-      storage.receiveEnergy(produce, false);
+      if (storage != null)
+      {
+        storage.receiveEnergy(produce, false);
+      }
     }
+  }
+  
+  @Override
+  public void writeSyncableNBT(NBTTagCompound compound, NBTType type)
+  {
+    storage.writeToNBT(compound);
+    super.writeSyncableNBT(compound, type);
+  }
+  
+  @Override
+  public void readSyncableNBT(NBTTagCompound compound, NBTType type)
+  {
+    storage.readFromNbt(compound);
+    super.readSyncableNBT(compound, type);
   }
 }

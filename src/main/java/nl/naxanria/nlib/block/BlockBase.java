@@ -5,6 +5,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraftforge.oredict.OreDictionary;
+import nl.naxanria.nlib.NMod;
 import nl.naxanria.researchpower.ResearchPower;
 import nl.naxanria.nlib.proxy.Proxy;
 
@@ -21,7 +24,24 @@ public class BlockBase extends Block implements IBlockBase
     setUnlocalizedName(name);
     setRegistryName(name);
     
-    setCreativeTab(ResearchPower.tab);
+    setCreativeTab(NMod.getInstance().defaultTab());
+  }
+  
+  public Item getAsItem()
+  {
+    return Item.getItemFromBlock(this);
+  }
+  
+  public Ingredient getAsIngredient()
+  {
+    return Ingredient.fromItem(getAsItem());
+  }
+  
+  public BlockBase registerOreDict(String ore)
+  {
+    OreDictionary.registerOre(ore, this);
+    
+    return this;
   }
   
   @Override

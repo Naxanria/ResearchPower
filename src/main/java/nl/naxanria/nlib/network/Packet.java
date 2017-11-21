@@ -5,6 +5,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import nl.naxanria.nlib.NMod;
+import nl.naxanria.nlib.util.Log;
 
 import java.io.IOException;
 
@@ -40,7 +41,7 @@ public abstract class Packet implements IMessage
     }
     catch (IOException e)
     {
-      NMod.LOGGER.error("Something went wrong with trying to receive a server packet.");
+      Log.error("Something went wrong with trying to receive a server packet.");
     }
   }
   

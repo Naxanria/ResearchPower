@@ -1,5 +1,6 @@
 package nl.naxanria.nlib.tile.power;
 
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.energy.IEnergyStorage;
 import nl.naxanria.nlib.tile.TileEntityBase;
@@ -34,5 +35,19 @@ public class BaseEnergyAcceptor extends TileEntityBase
   public EnumFacing[] getAcceptingSides()
   {
     return EnumHelper.Facing.ALL;
+  }
+  
+  @Override
+  public void writeSyncableNBT(NBTTagCompound compound, NBTType type)
+  {
+    storage.writeToNBT(compound);
+    super.writeSyncableNBT(compound, type);
+  }
+  
+  @Override
+  public void readSyncableNBT(NBTTagCompound compound, NBTType type)
+  {
+    storage.readFromNbt(compound);
+    super.readSyncableNBT(compound, type);
   }
 }

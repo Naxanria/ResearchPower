@@ -2,6 +2,9 @@ package nl.naxanria.nlib.util;
 
 import net.minecraft.util.EnumFacing;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class EnumHelper
 {
   public static class Facing
@@ -9,5 +12,73 @@ public class EnumHelper
     public final static EnumFacing[] ALL = EnumFacing.VALUES;
     public final static EnumFacing[] SIDES = EnumFacing.HORIZONTALS;
     public final static EnumFacing[] TOP_BOTTOM = { EnumFacing.UP, EnumFacing.DOWN };
+    
+    public final static long FLAGS_ALL        = getAsFlags(ALL);
+    public final static long FLAGS_SIDES      = getAsFlags(SIDES);
+    public final static long FLAGS_TOP_BOTTOM = getAsFlags(TOP_BOTTOM);
+    
+    public static EnumFacing[] combine(EnumFacing[] array, EnumFacing... faces)
+    {
+      ArrayList<EnumFacing> arrayList = new ArrayList<>();
+      arrayList.addAll(Arrays.asList(array));
+  
+      for (EnumFacing f :
+        faces)
+      {
+        if (!arrayList.contains(f))
+        {
+          arrayList.add(f);
+        }
+      }
+      
+      EnumFacing[] out = new EnumFacing[arrayList.size()];
+      return arrayList.toArray(out);
+    }
+  }
+  
+  public static long getAsFlag(Enum<?> e)
+  {
+    return 1 << e.ordinal();
+  }
+  
+  public static long getAsFlags(Enum<?>... e)
+  {
+    long val = 0;
+    for (Enum<?> f:
+      e)
+    {
+      val |= 1 << f.ordinal();
+    }
+    
+    return val;
+  }
+  
+  public static boolean hasFlags(long input, long flags)
+  {
+    return (input & flags) != 1;
+  }
+  
+  public static boolean hasFlags(long input, Enum<?>... flags)
+  {
+    return hasFlags(input, getAsFlags(flags));
+  }
+  
+  public static Enum<?>[] getFromFlags(Class<Enum<?>> e, long flags)
+  {
+    ArrayList<Enum<?>> output = new ArrayList<>();
+    for (Enum<?> c :
+      e.getEnumConstants())
+    {
+      if ((flags & (1 << c.ordinal())) != 0)
+      {
+        output.add(c);
+      }
+    }
+  
+    Enum<?>[] array = new Enum[output.size()];
+    
+    output.toArray(array);
+    
+    return array;
   }
 }

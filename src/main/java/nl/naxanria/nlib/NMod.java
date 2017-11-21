@@ -1,7 +1,9 @@
 package nl.naxanria.nlib;
 
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -13,8 +15,10 @@ import nl.naxanria.nlib.Registy.BlockRegistry;
 import nl.naxanria.nlib.Registy.ItemRegistry;
 import nl.naxanria.nlib.Registy.RecipeRegistry;
 import nl.naxanria.nlib.network.PacketHandler;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import nl.naxanria.nlib.util.Log;
+import nl.naxanria.nlib.util.LogColor;
+import nl.naxanria.nlib.util.ores.OreBuilder;
+import nl.naxanria.nlib.util.ores.OreHelper;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -22,14 +26,23 @@ import java.lang.reflect.Method;
 public abstract class NMod
 {
   protected static NMod instance;
-  public static Logger LOGGER;
+  
+  public static NMod getInstance()
+  {
+    return instance;
+  }
+  
+  public static <T extends NMod> T getInstanceAs()
+  {
+    return (T) instance;
+  }
   
   public NMod()
   {
     instance = this;
-    LOGGER = LogManager.getLogger(modId());
     
-    LOGGER.info("Created mod instance - " + getModName() + " " + getVersion());
+    new Log();
+    Log.info(LogColor.GREEN, "Created mod instance - " + LogColor.CYAN + getModName() + " " + LogColor.PURPLE + getVersion());
   }
   
   public static String getModId()
@@ -45,6 +58,11 @@ public abstract class NMod
   public static String getVersion()
   {
     return instance.modVersion();
+  }
+  
+  public CreativeTabs defaultTab()
+  {
+    return CreativeTabs.MISC;
   }
   
   protected abstract Class getBlockClass();
@@ -66,6 +84,7 @@ public abstract class NMod
   @Mod.EventHandler
   public final void preInit(FMLPreInitializationEvent event)
   {
+    Log.info("PRE_INIT");
     PacketHandler.init();
     
     onPreInit(event);
@@ -73,12 +92,15 @@ public abstract class NMod
   
   protected void onPreInit(FMLPreInitializationEvent event)
   { }
+  
   /**
    * This is the second initialization event. Register custom recipes
    */
   @Mod.EventHandler
   public final void init(FMLInitializationEvent event)
   {
+    Log.info("INIT");
+    
     initRecipeClass();
     
     onInit(event);
@@ -93,6 +115,8 @@ public abstract class NMod
   @Mod.EventHandler
   public final void postInit(FMLPostInitializationEvent event)
   {
+    Log.info("POST_INIT");
+    
     onPostInit(event);
   }
   
@@ -114,7 +138,7 @@ public abstract class NMod
     }
     catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e)
     {
-      LOGGER.error(c.getName() + " has no init method!");
+      Log.error(c.getName() + " has no init method!");
       e.printStackTrace();
       e.printStackTrace();
     }
@@ -152,6 +176,13 @@ public abstract class NMod
     {
       initBlockClass();
       instance.blockRegistry.registerAll(event.getRegistry());
+    }
+    
+    @SubscribeEvent
+    public static void registerrecipes(RegistryEvent.Register<IRecipe> event)
+    {
+      initRecipeClass();
+      instance.recipeRegistry.registerAll(event.getRegistry());
     }
     
     @SubscribeEvent

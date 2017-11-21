@@ -1,7 +1,5 @@
 package nl.naxanria.nlib.Registy;
 
-import net.minecraftforge.registries.IForgeRegistry;
-
 import java.util.ArrayList;
 
 public abstract class Registry<TItem, TRegistry>

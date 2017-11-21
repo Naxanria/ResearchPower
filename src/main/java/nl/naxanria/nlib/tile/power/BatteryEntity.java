@@ -1,5 +1,6 @@
 package nl.naxanria.nlib.tile.power;
 
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.energy.IEnergyStorage;
@@ -28,20 +29,34 @@ public class BatteryEntity extends TileEntityBase implements IEnergySharingProvi
   }
   
   @Override
-  public boolean doesShare()
+  public boolean doesShareEnergy()
   {
     return true;
   }
   
   @Override
-  public EnumFacing[] getProvidingSides()
+  public EnumFacing[] getEnergyProvidingSides()
   {
     return EnumHelper.Facing.ALL;
   }
   
   @Override
-  public boolean canShareTo(TileEntity tile)
+  public boolean canShareEnergyTo(TileEntity tile)
   {
     return true;
+  }
+  
+  @Override
+  public void writeSyncableNBT(NBTTagCompound compound, NBTType type)
+  {
+    storage.writeToNBT(compound);
+    super.writeSyncableNBT(compound, type);
+  }
+  
+  @Override
+  public void readSyncableNBT(NBTTagCompound compound, NBTType type)
+  {
+    storage.readFromNbt(compound);
+    super.readSyncableNBT(compound, type);
   }
 }

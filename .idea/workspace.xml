@@ -2,20 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f8680f3-b02a-4daa-807f-2b64d5119795" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/RecipeRegistry.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/Registry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/recipe/RecipeBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/fluid/BaseFluidTank.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/fluid/IFluidSharingProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/Log.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/LogColor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ReflectionUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ores/OreBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ores/OreHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/machines/generators/solar/SolarGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/ores/BlockCopperOre.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/metals/ItemCopperIngot.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/recipe/BaseResearchPowerRecipe.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/research/Research.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/research/ResearchDatabase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/research/ResearchEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/research/ResearchStatus.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/TileEntitySolarGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/copper_block.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/copper_ore.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_1.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_2.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_3.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_4.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_5.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_6.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_7.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/assets/researchpower/models/item/copper_ingot.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" afterPath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sources/main/java/nl/naxanria/researchpower/ResearchPower.java" afterPath="$PROJECT_DIR$/build/sources/main/java/nl/naxanria/researchpower/ResearchPower.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sources/main/java/nl/naxanria/researchpower/block/Blocks.java" afterPath="$PROJECT_DIR$/build/sources/main/java/nl/naxanria/researchpower/block/Blocks.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sources/main/java/nl/naxanria/researchpower/item/Items.java" afterPath="$PROJECT_DIR$/build/sources/main/java/nl/naxanria/researchpower/item/Items.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sources/main/java/nl/naxanria/researchpower/recipe/Recipes.java" afterPath="$PROJECT_DIR$/build/sources/main/java/nl/naxanria/researchpower/recipe/Recipes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sources/main/java/nl/naxanria/researchpower/tile/VacuumGenerator.java" afterPath="$PROJECT_DIR$/build/sources/main/java/nl/naxanria/researchpower/tile/VacuumGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/NMod.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/NMod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/BlockRegistry.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/BlockRegistry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/ItemRegistry.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/ItemRegistry.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/Registry.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/Registry.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/BlockBase.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/BlockBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/BlockTileBase.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/BlockTileBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/item/ItemBase.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/item/ItemBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/network/Packet.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/network/Packet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/TileEntityBase.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/TileEntityBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BaseEnergyAcceptor.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BaseEnergyAcceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BaseEnergyStorage.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BaseEnergyStorage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BatteryEntity.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BatteryEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/GeneratorEntity.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/GeneratorEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/IEnergySharingProvider.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/IEnergySharingProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/EnumHelper.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/EnumHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/WorldUtil.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/WorldUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/ResearchPower.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/ResearchPower.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/Blocks.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/Blocks.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/Items.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/Items.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/recipe/Recipes.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/recipe/Recipes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/VacuumGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/VacuumGenerator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -41,124 +80,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BlockRegistry.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/BlockRegistry.java">
+      <file leaf-file-name="Recipes.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/recipe/Recipes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="40" column="3" lean-forward="false" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+            <state relative-caret-position="382">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameRegistry.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraftforge/fml/common/registry/GameRegistry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="205" column="23" lean-forward="false" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemRegistry.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/ItemRegistry.java">
+      <file leaf-file-name="IItemBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/item/IItemBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#323#324#0" expanded="true" />
-                <element signature="e#366#367#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Registry.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/Registry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-77">
-              <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecipeRegistry.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/RecipeRegistry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#311#312#0" expanded="true" />
-                <element signature="e#403#404#0" expanded="true" />
-                <element signature="e#438#439#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResearchPower.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/ResearchPower.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1530#1532#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnumHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/EnumHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorldUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/WorldUtil.java">
+      <file leaf-file-name="ItemBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/item/ItemBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="37" column="1" lean-forward="false" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+            <state relative-caret-position="569">
+              <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TileEntityBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/TileEntityBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NMod.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/NMod.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2737">
-              <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1184#1185#0" expanded="true" />
-                <element signature="e#1217#1218#0" expanded="true" />
-                <element signature="e#1260#1261#0" expanded="true" />
-                <element signature="e#1295#1296#0" expanded="true" />
-                <element signature="e#1338#1339#0" expanded="true" />
-                <element signature="e#1376#1377#0" expanded="true" />
-                <element signature="e#2802#2803#0" expanded="true" />
-                <element signature="e#2830#2831#0" expanded="true" />
-                <element signature="e#3321#3322#0" expanded="true" />
-                <element signature="e#3388#3389#0" expanded="true" />
-                <element signature="e#3434#3435#0" expanded="true" />
-                <element signature="e#3503#3504#0" expanded="true" />
-                <element signature="e#3550#3551#0" expanded="true" />
-                <element signature="e#3621#3622#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#904#905#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,8 +128,65 @@
       <file leaf-file-name="Blocks.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/Blocks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+            <state relative-caret-position="722">
+              <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="copper_block.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/copper_block.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Items.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/Items.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlockCopperOre.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/ores/BlockCopperOre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <folding>
+                <element signature="e#211#212#0" expanded="true" />
+                <element signature="e#255#256#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NMod.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/NMod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4023#4024#0" expanded="true" />
+                <element signature="e#4094#4095#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResearchPower.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/ResearchPower.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="88" column="3" lean-forward="true" selection-start-line="88" selection-start-column="3" selection-end-line="88" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -179,6 +197,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -775,57 +794,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/IItemBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/ItemBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/ItemsRegistry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/machines/generators/GeneratorEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/IEnergySharingProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/BlockVacuumGeneratorEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/util/CollectionUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/util/EnumHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/machines/generators/vacuum/BlockVacuumGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/util/ModUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/util/WorldUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/GeneratorEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/BaseEnergyStorage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/BlockBatteryEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/BlockTileBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/machines/battery/BlockBattery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/VacuumGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/network/IDataHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/network/DataHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/network/Packet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/network/PacketHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/network/PacketServerToClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/network/PacketClientToServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/BatteryEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/TileEntityBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/proxy/ServerProxy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/INMod.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Mod.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Mod_.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/BlocksRegistry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/ItemsRegistry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/IBlockBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/item/ItemBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/BatteryEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/BaseEnergyStorage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ModUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/proxy/Proxy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/network/Packet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/ResearchPower.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/IEnergySharingProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BaseEnergyAcceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/ResearchStationTileEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/machines/station/BlockResearchStation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/recipe/Recipes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/Items.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/Registry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/BlockRegistry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/ItemRegistry.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/RecipeRegistry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/Blocks.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/FlagEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/research/ResearchStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/RecipeBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/reflactionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/reflectionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ReflectionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/recipe/RecipeBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/recipe/BaseResearchPowerRecipe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/research/ResearchEntry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/research/Research.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/LoggerColor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/Logger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/Log.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/research/ResearchDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/network/Packet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/LogColor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/IEnergySharingProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/fluid/IFluidSharingProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/fluid/BaseFluidTank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/WorldUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/TileEntityBase.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_1.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_2.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_3.json" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/BlockTileBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/EnumHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/machines/generators/solar/SolarGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BaseEnergyStorage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/GeneratorEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BatteryEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BaseEnergyAcceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/TileEntitySolarGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/BlockOre.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/OreHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/OreBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ores/OreBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ores/OreEntry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ores/OreHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/ores/BlockCopperOre.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/Items.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/copper_ore.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/researchpower/models/item/copper_ingot.json" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/metals/ItemCopperIngot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/BlockBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/NMod.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/Blocks.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/copper_block.json" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/ResearchPower.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/item/ItemBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/recipe/Recipes.java" />
       </list>
     </option>
   </component>
@@ -853,7 +872,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -904,6 +924,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="naxanria" type="462c0819:PsiDirectoryNode" />
               <item name="nlib" type="462c0819:PsiDirectoryNode" />
+              <item name="block" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="nlib" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="nlib" type="462c0819:PsiDirectoryNode" />
               <item name="Registy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -914,7 +954,50 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="naxanria" type="462c0819:PsiDirectoryNode" />
               <item name="nlib" type="462c0819:PsiDirectoryNode" />
+              <item name="tile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="nlib" type="462c0819:PsiDirectoryNode" />
+              <item name="tile" type="462c0819:PsiDirectoryNode" />
+              <item name="fluid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="nlib" type="462c0819:PsiDirectoryNode" />
+              <item name="tile" type="462c0819:PsiDirectoryNode" />
+              <item name="power" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="nlib" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="nlib" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="ores" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
@@ -954,7 +1037,66 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="naxanria" type="462c0819:PsiDirectoryNode" />
               <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="block" type="462c0819:PsiDirectoryNode" />
+              <item name="machines" type="462c0819:PsiDirectoryNode" />
+              <item name="generators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="block" type="462c0819:PsiDirectoryNode" />
+              <item name="machines" type="462c0819:PsiDirectoryNode" />
+              <item name="generators" type="462c0819:PsiDirectoryNode" />
+              <item name="solar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="block" type="462c0819:PsiDirectoryNode" />
+              <item name="machines" type="462c0819:PsiDirectoryNode" />
+              <item name="station" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="block" type="462c0819:PsiDirectoryNode" />
+              <item name="ores" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
               <item name="item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+              <item name="metals" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
@@ -966,18 +1108,111 @@
               <item name="researchpower" type="462c0819:PsiDirectoryNode" />
               <item name="recipe" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="research" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="naxanria" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="tile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="blockstates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="textures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="textures" type="462c0819:PsiDirectoryNode" />
+              <item name="blocks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResearchPower" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResearchPower" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="researchpower" type="462c0819:PsiDirectoryNode" />
+              <item name="textures" type="462c0819:PsiDirectoryNode" />
+              <item name="items" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ActuallyAdditions-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_2.json" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_2.json" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -1175,6 +1410,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1084" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1185,11 +1421,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955715" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32955715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32955715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1216,269 +1452,205 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraftforge/energy/EnergyStorage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/network/PacketServerToClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#502#503#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/network/PacketClientToServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/network/DataHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraft/tileentity/TileEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="327" column="5" lean-forward="true" selection-start-line="327" selection-start-column="5" selection-end-line="327" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7832">
-          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/proxy/ServerProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/proxy/ClientProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/INMod.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraftforge/fml/common/Mod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="279" column="22" lean-forward="false" selection-start-line="279" selection-start-column="22" selection-end-line="279" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="105" column="13" lean-forward="false" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+        <state relative-caret-position="340">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/NMod.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Mod_.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/network/PacketHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraftforge/fml/common/event/FMLPreInitializationEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1100">
-          <caret line="53" column="13" lean-forward="false" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/BlockBase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_4.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_5.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_6.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_7.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/solar_generator_tier_3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/BlockTileBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="391">
+          <caret line="47" column="2" lean-forward="false" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
+          <folding>
+            <element signature="e#1307#1308#0" expanded="false" />
+            <element signature="e#1328#1329#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/IBlockBase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/EnumHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/machines/battery/BlockBattery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/item/IItemBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/item/ItemBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/CollectionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ModUtil.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/proxy/Proxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/network/Packet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="518">
+          <caret line="36" column="3" lean-forward="false" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/BlockBatteryEntity.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraft/tileentity/TileEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="153">
+          <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraftforge/energy/EnergyStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraftforge/energy/IEnergyStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/WorldUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="36" column="7" lean-forward="false" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/machines/generators/solar/SolarGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="47" column="48" lean-forward="false" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
           <folding>
-            <element signature="e#234#235#0" expanded="false" />
-            <element signature="e#293#294#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2041#2042#0" expanded="false" />
+            <element signature="e#2088#2089#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/VacuumGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/TileEntityBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        <state relative-caret-position="-311">
+          <caret line="285" column="2" lean-forward="false" selection-start-line="285" selection-start-column="2" selection-end-line="285" selection-end-column="2" />
           <folding>
-            <element signature="e#488#489#0" expanded="false" />
+            <element signature="e#6919#6920#0" expanded="false" />
+            <element signature="e#6978#6979#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/IEnergySharingProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BaseEnergyStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="433">
+          <caret line="118" column="3" lean-forward="false" selection-start-line="118" selection-start-column="3" selection-end-line="118" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2176#2177#0" expanded="false" />
+            <element signature="e#2225#2226#0" expanded="false" />
+            <element signature="e#2341#2342#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraft/nbt/NBTTagCompound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/GeneratorEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BatteryEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BaseEnergyAcceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#577#578#0" expanded="false" />
-            <element signature="e#827#828#0" expanded="false" />
-            <element signature="e#865#866#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/BlockBatteryEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/ResearchStationTileEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#204#205#0" expanded="false" />
-            <element signature="e#232#233#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/machines/generators/vacuum/BlockVacuumGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="48" column="3" lean-forward="false" selection-start-line="35" selection-start-column="2" selection-end-line="48" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/machines/station/BlockResearchStation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/GeneratorEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BatteryEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/VacuumGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -1486,174 +1658,267 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/BaseEnergyStorage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/tile/TileEntitySolarGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraft/item/crafting/IRecipe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraftforge/registries/IForgeRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="54" column="58" lean-forward="true" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraftforge/registries/IForgeRegistryEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-437">
-          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraftforge/event/RegistryEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552">
-          <caret line="74" column="33" lean-forward="false" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+        <state relative-caret-position="-383">
+          <caret line="40" column="2" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
           <folding>
-            <element signature="e#2675#2676#0" expanded="true" />
-            <element signature="e#2714#2715#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1231#1232#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/recipe/Recipes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/power/IEnergySharingProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/Items.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/Registry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        <state relative-caret-position="595">
+          <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/IBlockBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraft/init/Blocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3515">
+          <caret line="87" column="41" lean-forward="true" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraftforge/oredict/OreDictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="603" column="23" lean-forward="false" selection-start-line="603" selection-start-column="23" selection-end-line="603" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ores/OreEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ores/OreBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/ores/OreHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/BlockOre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraft/item/crafting/FurnaceRecipes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="e#966#967#0" expanded="false" />
+            <element signature="e#1002#1003#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/battery.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/copper_ore.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/models/item/copper_ingot.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/metals/ItemCopperIngot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraft/item/crafting/Ingredient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-451">
+          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/BlockRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="40" column="3" lean-forward="false" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+        <state relative-caret-position="408">
+          <caret line="31" column="3" lean-forward="false" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/ItemRegistry.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/block/BlockBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        <state relative-caret-position="493">
+          <caret line="38" column="2" lean-forward="false" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/Registy/RecipeRegistry.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/ores/BlockCopperOre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        <state relative-caret-position="153">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/block/Blocks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        <state relative-caret-position="722">
+          <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/researchpower/blockstates/copper_block.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/item/Items.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/ResearchPower.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1530#1532#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/EnumHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="88" column="3" lean-forward="true" selection-start-line="88" selection-start-column="3" selection-end-line="88" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/util/WorldUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/item/IItemBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="37" column="1" lean-forward="false" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        <state relative-caret-position="68">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/item/ItemBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/tile/TileEntityBase.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2387/snapshot/20171114/forgeSrc-1.12-14.21.1.2387-sources.jar!/net/minecraftforge/fml/common/registry/GameRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+        <state relative-caret-position="208">
+          <caret line="205" column="23" lean-forward="false" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/nlib/NMod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2737">
-          <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+        <state relative-caret-position="297">
+          <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1217#1218#0" expanded="true" />
-            <element signature="e#1260#1261#0" expanded="true" />
-            <element signature="e#1295#1296#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-            <element signature="e#1376#1377#0" expanded="true" />
-            <element signature="e#2802#2803#0" expanded="true" />
-            <element signature="e#2830#2831#0" expanded="true" />
-            <element signature="e#3321#3322#0" expanded="true" />
-            <element signature="e#3388#3389#0" expanded="true" />
-            <element signature="e#3434#3435#0" expanded="true" />
-            <element signature="e#3503#3504#0" expanded="true" />
-            <element signature="e#3550#3551#0" expanded="true" />
-            <element signature="e#3621#3622#0" expanded="true" />
+            <element signature="e#4023#4024#0" expanded="true" />
+            <element signature="e#4094#4095#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/naxanria/researchpower/recipe/Recipes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

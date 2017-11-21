@@ -26,19 +26,19 @@ public class VacuumGenerator extends GeneratorEntity
   }
   
   @Override
-  public boolean doesShare()
+  public boolean doesShareEnergy()
   {
     return true;
   }
   
   @Override
-  public EnumFacing[] getProvidingSides()
+  public EnumFacing[] getEnergyProvidingSides()
   {
     return EnumHelper.Facing.ALL;
   }
   
   @Override
-  public boolean canShareTo(TileEntity tile)
+  public boolean canShareEnergyTo(TileEntity tile)
   {
     return true;
   }

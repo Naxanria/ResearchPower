@@ -40,7 +40,15 @@ public abstract class BlockTileBase<TE extends TileEntityBase> extends BlockBase
   @SuppressWarnings("ConstantConditions")
   public void registerTileEntity()
   {
-    GameRegistry.registerTileEntity(getTileEntityClass(), getRegistryName().toString());
+    if (needTileEntityRegistration())
+    {
+      GameRegistry.registerTileEntity(getTileEntityClass(), getRegistryName().toString());
+    }
+  }
+  
+  protected boolean needTileEntityRegistration()
+  {
+    return true;
   }
   
   @Override
