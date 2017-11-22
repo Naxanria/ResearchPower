@@ -41,7 +41,7 @@ public class GuiPress extends GuiContainerBase
     drawString(fontRenderer, playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, Color.WHITE.color);
 
     float powerPercentage = ((ContainerPress) inventorySlots).entityPress.storage.getStoredPercentage();
-    drawProgressBar(11, 11, 29, 111, Color.BLACK.color, Color.RED.color, powerPercentage, BarDirection.Vertical);
+    drawProgressBar(8, 14, 22, 14 + 55, Color.BLACK.color, Color.RED.color, powerPercentage, BarDirection.Vertical);
 
   }
 }
