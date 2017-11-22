@@ -1,6 +1,5 @@
 package nl.naxanria.researchpower.gui;
 
-import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -8,6 +7,7 @@ import net.minecraft.util.ResourceLocation;
 import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.gui.GuiContainerBase;
 import nl.naxanria.nlib.proxy.Proxy;
+import nl.naxanria.nlib.util.Color;
 import nl.naxanria.researchpower.block.BlocksInit;
 import nl.naxanria.researchpower.containers.ContainerPress;
 
@@ -38,10 +38,10 @@ public class GuiPress extends GuiContainerBase
   {
     String name = Proxy.getLocal(BlocksInit.Machines.machinePress.getUnlocalizedName() + ".name");
     drawCenteredString(fontRenderer, name, xSize / 2, 6, 0xFFFFFFFF);
-    drawString(fontRenderer, playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0xFFFFFFFF);
+    drawString(fontRenderer, playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, Color.WHITE.color);
 
     float powerPercentage = ((ContainerPress) inventorySlots).entityPress.storage.getStoredPercentage();
-    drawProgressBar(8, 15, 8 + 14, 15 + 55, 0xFF000000, 0xFFAA0000, powerPercentage, BarDirection.Vertical);
+    drawProgressBar(11, 11, 29, 111, Color.BLACK.color, Color.RED.color, powerPercentage, BarDirection.Vertical);
 
   }
 }

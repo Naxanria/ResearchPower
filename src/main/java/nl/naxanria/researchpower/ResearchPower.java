@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
@@ -80,15 +81,19 @@ public class ResearchPower extends NMod
   @Override
   protected void onPreInit(FMLPreInitializationEvent event)
   {
+    NetworkRegistry.INSTANCE.registerGuiHandler(mod, new ModGuiHandler());
+  }
+  
+  @Override
+  protected void onInit(FMLInitializationEvent event)
+  {
     OreHelper.registerInOreDict
       (
         new OreBuilder("Copper")
-        .ore(BlocksInit.Ores.copperOre)
-        .ingot(ItemsInit.Metals.ingotCopper)
-        .fullBlock(BlocksInit.Metals.copperBlock)
+          .ore(BlocksInit.Ores.copperOre)
+          .ingot(ItemsInit.Metals.ingotCopper)
+          .fullBlock(BlocksInit.Metals.copperBlock)
       );
-  
-    NetworkRegistry.INSTANCE.registerGuiHandler(mod, new ModGuiHandler());
   }
   
   @Override
