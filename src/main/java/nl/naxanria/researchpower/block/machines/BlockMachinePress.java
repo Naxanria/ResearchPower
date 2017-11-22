@@ -52,11 +52,6 @@ public class BlockMachinePress extends BlockTileBase<TileEntityPress>
 
         player.openGui(ResearchPower.getMod(), ModGuiHandler.PRESS, world, pos.getX(), pos.getY(), pos.getZ());
 
-        player.sendMessage(new TextComponentString("Stuff and things"));
-
-        Log.info("--");
-        Log.warn("Gui stuff?");
-
       }
       return true;
     }

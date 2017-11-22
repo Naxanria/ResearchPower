@@ -3,6 +3,8 @@ package nl.naxanria.researchpower.containers;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.ContainerFurnace;
+import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
@@ -14,6 +16,8 @@ import nl.naxanria.researchpower.tile.machines.TileEntityPress;
 public class ContainerPress extends Container
 {
   public TileEntityPress entityPress;
+
+  private static final int ENERGY_SYNC = 0;
   
   public ContainerPress(InventoryPlayer playerInv, final TileEntityPress press)
   {
@@ -30,10 +34,40 @@ public class ContainerPress extends Container
     });
     
     createPlayerInventorySlots(playerInv);
-  
-    Log.warn("Container is created");
   }
-  
+
+  private int energyValue;
+
+  @Override
+  public void detectAndSendChanges()
+  {
+    super.detectAndSendChanges();
+
+    for (int i = 0; i < this.listeners.size(); ++i)
+    {
+      IContainerListener icontainerlistener = this.listeners.get(i);
+      if (this.energyValue != entityPress.storage.getEnergyStored())
+      {
+        icontainerlistener.sendWindowProperty(this, ENERGY_SYNC, entityPress.storage.getEnergyStored());
+      }
+    }
+
+    this.energyValue = entityPress.storage.getEnergyStored();
+  }
+
+  public void updateProgressBar(int id, int data)
+  {
+    switch(id){
+    case ENERGY_SYNC:
+      entityPress.storage.setEnergyStored(data);
+      break;
+    default:
+      break;
+    }
+
+
+  }
+
   @Override
   public ItemStack transferStackInSlot(EntityPlayer playerIn, int index)
   {
