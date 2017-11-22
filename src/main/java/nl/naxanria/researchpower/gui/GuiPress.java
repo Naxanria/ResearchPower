@@ -12,7 +12,7 @@ import nl.naxanria.researchpower.containers.ContainerPress;
 
 public class GuiPress extends GuiContainer
 {
-  private static final ResourceLocation BG_TEXTURE = new ResourceLocation(NMod.getModId(), "texture/gui/single_slot.png");
+  private static final ResourceLocation BG_TEXTURE = new ResourceLocation(NMod.getModId(), "textures/gui/single_slot.png");
   private InventoryPlayer playerInv;
   
   public GuiPress(Container container, InventoryPlayer playerInv)
@@ -36,13 +36,14 @@ public class GuiPress extends GuiContainer
   protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
   {
     String name = Proxy.getLocal(BlocksInit.Machines.machinePress.getUnlocalizedName() + ".name");
-    drawCenteredString(fontRenderer, name, xSize / 2, 6, 0x404040);
-    drawString(fontRenderer, playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0x404040);
+    drawCenteredString(fontRenderer, name, xSize / 2, 6, 0xFFFFFFFF);
+    drawString(fontRenderer, playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0xFFFFFFFF);
  
     // power bar
-    drawRect(100, 100, 120, 200, 0x000000);
+    drawRect(10, 10, 30, 110, 0xFF000000);
+
     float powerPercentage = ((ContainerPress) inventorySlots).entityPress.storage.getStoredPercentage();
-    drawRect(100, 100, 120, (int)(100 + 100 * powerPercentage), 0xCC0000);
+    drawRect(11, 11, 29, (int)(100 + 100 * powerPercentage), 0xFFFFFFFF);
   }
 }
 
