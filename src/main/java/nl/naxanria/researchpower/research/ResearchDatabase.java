@@ -21,8 +21,6 @@ public class ResearchDatabase
   
   public static boolean isUnlocked(IRecipe recipe, EntityPlayer player)
   {
-    
-    
     return true;
   }
   
@@ -34,28 +32,11 @@ public class ResearchDatabase
     {
       addEntry(recipe, recipe.getRegistryName());
     }
-    
-    /*
-    IForgeRegistry<IRecipe> registry = GameRegistry.findRegistry(IRecipe.class);
-    Set<Entry<ResourceLocation, IRecipe>> entries =  registry.getEntries();
-  
-    // research stuff
-    for (Entry<ResourceLocation, IRecipe> recipeEntry :
-      entries)
-    {
-      IRecipe recipe = recipeEntry.getValue();
-      ResourceLocation resourceLocation = recipeEntry.getKey();
-      
-      addEntry(recipe, resourceLocation);
-    }
-    */
   }
   
   protected static void addEntry(IRecipe recipe, ResourceLocation resourceLocation)
   {
     researchEntries.add(new ResearchEntry(Research.createOrUpdate(resourceLocation.getResourceDomain(), recipe), recipe));
-  
-    Log.info("Created a new research entry for " + resourceLocation.getResourceDomain());
   }
   
   

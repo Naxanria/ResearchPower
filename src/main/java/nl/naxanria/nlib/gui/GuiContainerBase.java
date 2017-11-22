@@ -2,7 +2,7 @@ package nl.naxanria.nlib.gui;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.inventory.Container;
-import nl.naxanria.researchpower.containers.ContainerPress;
+import nl.naxanria.nlib.util.Dye;
 
 public abstract class GuiContainerBase extends GuiContainer
 {
@@ -11,6 +11,8 @@ public abstract class GuiContainerBase extends GuiContainer
     Horizontal,
     Vertical
   }
+  
+ 
   
   public GuiContainerBase(Container inventorySlots)
   {
