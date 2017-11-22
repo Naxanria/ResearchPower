@@ -43,12 +43,13 @@ public abstract class GuiContainerBase extends GuiContainer
     
     // background
     drawRect(left, top, right, bottom, background);
-    
+
     drawRect
     (
-      left, top,
       (direction == BarDirection.Horizontal) ? left + ((int) ((right - left) * percentage)) : right,
-      (direction == BarDirection.Vertical) ? top + ((int) ((bottom - top) * percentage)) : bottom,
+      (direction == BarDirection.Vertical) ? bottom - ((int) ((bottom - top) * percentage)) : top,
+      left,
+      bottom,
       foreground
     );
   }
