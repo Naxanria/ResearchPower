@@ -39,6 +39,8 @@ public class GuiPress extends GuiContainerBase
     String name = Proxy.getLocal(BlocksInit.Machines.machinePress.getUnlocalizedName() + ".name");
     drawCenteredString(fontRenderer, name, xSize / 2, 6, 0xFFFFFFFF);
     drawString(fontRenderer, playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0xFFFFFFFF);
+
+    int powerBarHeight = 55;
  
     // power bar
     //drawRect(10, 10, 30, 110, 0xFF000000);

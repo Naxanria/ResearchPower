@@ -56,7 +56,7 @@ public class BaseEnergyStorage extends EnergyStorage
   
   public float getStoredPercentage(int storage)
   {
-    return (storage / (float) capacity) * 100;
+    return storage / (float) capacity;
   }
   
   public int getCapacity()
