@@ -80,15 +80,6 @@ public class ResearchPower extends NMod
   @Override
   protected void onPreInit(FMLPreInitializationEvent event)
   {
-    try
-    {
-      throw new Exception("pre_init?");
-    }
-    catch (Exception e)
-    {
-      e.printStackTrace();
-    }
-    
     OreHelper.registerInOreDict
       (
         new OreBuilder("Copper")

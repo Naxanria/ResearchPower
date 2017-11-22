@@ -20,10 +20,6 @@ public class ModInit
         NModInstance = new ResearchPower(this);
     }
 
-    /**
-     * This is the first initialization event. Register tile entities here.
-     * The registry events below will have fired prior to entry to this method.
-     */
     @Mod.EventHandler
     public final void preInit(FMLPreInitializationEvent event)
     {

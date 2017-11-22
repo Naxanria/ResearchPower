@@ -32,6 +32,11 @@ public abstract class NMod
   {
     return instance;
   }
+
+  public static Object getMod()
+  {
+    return mod;
+  }
   
   public static <T extends NMod> T getInstanceAs()
   {
@@ -86,14 +91,6 @@ public abstract class NMod
   public final void preInit(FMLPreInitializationEvent event)
   {
     Log.warn("PRE_INIT");
-    try
-    {
-      throw new Exception("Initialized?");
-    }
-    catch (Exception e)
-    {
-      e.printStackTrace();
-    }
     PacketHandler.init();
 
     onPreInit(event);

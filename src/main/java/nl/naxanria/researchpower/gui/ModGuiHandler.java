@@ -15,19 +15,6 @@ public class ModGuiHandler implements IGuiHandler
 {
   public static final int PRESS = 0;
   
-  public ModGuiHandler()
-  {
-    try
-    {
-      throw new Exception("Initialized?");
-    }
-    catch (Exception e)
-    {
-      e.printStackTrace();
-    }
-  
-  }
-  
   @Nullable
   @Override
   public Container getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)

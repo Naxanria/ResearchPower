@@ -50,7 +50,7 @@ public class BlockMachinePress extends BlockTileBase<TileEntityPress>
 
         // open crafting gui
 
-        player.openGui(ResearchPower.getInstance(), ModGuiHandler.PRESS, world, pos.getX(), pos.getY(), pos.getZ());
+        player.openGui(ResearchPower.getMod(), ModGuiHandler.PRESS, world, pos.getX(), pos.getY(), pos.getZ());
 
         player.sendMessage(new TextComponentString("Stuff and things"));
 

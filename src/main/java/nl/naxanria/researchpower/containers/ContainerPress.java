@@ -18,6 +18,7 @@ public class ContainerPress extends Container
   public ContainerPress(InventoryPlayer playerInv, final TileEntityPress press)
   {
     IItemHandler inventory = press.inventory;
+    entityPress = press;
     
     addSlotToContainer(new SlotItemHandler(inventory, 0, 80, 35)
     {
