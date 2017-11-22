@@ -38,12 +38,18 @@ public class GuiPress extends GuiContainer
     String name = Proxy.getLocal(BlocksInit.Machines.machinePress.getUnlocalizedName() + ".name");
     drawCenteredString(fontRenderer, name, xSize / 2, 6, 0xFFFFFFFF);
     drawString(fontRenderer, playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0xFFFFFFFF);
+
+    int powerBarHeight = 55;
  
     // power bar
-    drawRect(10, 10, 30, 110, 0xFF000000);
+    drawRect(5, 15, 25, 15 + powerBarHeight, 0xFF000000);
 
-    float powerPercentage = ((ContainerPress) inventorySlots).entityPress.storage.getStoredPercentage();
-    drawRect(11, 11, 29, (int)(100 + 100 * powerPercentage), 0xFFFFFFFF);
+    float powerPercentage = ((ContainerPress) inventorySlots).entityPress.storage.getStoredPercentage() * 100;
+
+    int test = (int)(powerPercentage / 100 * (powerBarHeight - 2));
+    System.out.println(test);
+
+    drawRect(6, 16 + powerBarHeight - 2 - test, 24, 16 + powerBarHeight - 2, 0xFFFFFFFF);
   }
 }
 
