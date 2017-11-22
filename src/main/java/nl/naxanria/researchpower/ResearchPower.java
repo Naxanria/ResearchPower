@@ -19,18 +19,17 @@ import nl.naxanria.nlib.proxy.Proxy;
 import nl.naxanria.researchpower.recipe.RecipesInit;
 import nl.naxanria.researchpower.research.ResearchDatabase;
 
-@Mod
-(
-  modid = ResearchPower.MOD_ID,
-  name = ResearchPower.MOD_NAME,
-  version = ResearchPower.VERSION
-)
 public class ResearchPower extends NMod
 {
   public static final String MOD_ID = "researchpower";
   public static final String MOD_NAME = "Research Power";
   public static final String VERSION = "1.0-SNAPSHOT";
-  
+
+  public ResearchPower(Object mod)
+  {
+    super(mod);
+  }
+
   @Override
   public CreativeTabs defaultTab()
   {
@@ -98,7 +97,7 @@ public class ResearchPower extends NMod
         .fullBlock(BlocksInit.Metals.copperBlock)
       );
   
-    NetworkRegistry.INSTANCE.registerGuiHandler(this, new ModGuiHandler());
+    NetworkRegistry.INSTANCE.registerGuiHandler(mod, new ModGuiHandler());
   }
   
   @Override

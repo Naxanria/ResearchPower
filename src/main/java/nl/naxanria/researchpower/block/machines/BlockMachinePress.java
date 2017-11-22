@@ -43,21 +43,22 @@ public class BlockMachinePress extends BlockTileBase<TileEntityPress>
   @Override
   public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
   {
-    if (!world.isRemote)
+    if (!player.isSneaking())
     {
-      if (!player.isSneaking())
+      if (!world.isRemote)
       {
+
         // open crafting gui
-        
+
         player.openGui(ResearchPower.getInstance(), ModGuiHandler.PRESS, world, pos.getX(), pos.getY(), pos.getZ());
-        
+
         player.sendMessage(new TextComponentString("Stuff and things"));
-  
+
         Log.info("--");
         Log.warn("Gui stuff?");
-    
-        return true;
+
       }
+      return true;
     }
     
     return super.onBlockActivated(world, pos, state, player, hand, facing, hitX, hitY, hitZ);

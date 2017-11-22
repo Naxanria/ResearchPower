@@ -26,6 +26,7 @@ import java.lang.reflect.Method;
 public abstract class NMod
 {
   protected static NMod instance;
+  protected static Object mod;
   
   public static NMod getInstance()
   {
@@ -37,9 +38,10 @@ public abstract class NMod
     return (T) instance;
   }
   
-  public NMod()
+  public NMod(Object mod)
   {
     instance = this;
+    this.mod = mod;
     
     new Log();
     Log.info(LogColor.GREEN, "Created mod instance - " + LogColor.CYAN + getModName() + " " + LogColor.PURPLE + getVersion());
@@ -81,7 +83,6 @@ public abstract class NMod
    * This is the first initialization event. Register tile entities here.
    * The registry events below will have fired prior to entry to this method.
    */
-  @Mod.EventHandler
   public final void preInit(FMLPreInitializationEvent event)
   {
     Log.warn("PRE_INIT");
@@ -94,10 +95,10 @@ public abstract class NMod
       e.printStackTrace();
     }
     PacketHandler.init();
-    
+
     onPreInit(event);
   }
-  
+
   protected void onPreInit(FMLPreInitializationEvent event)
   { }
   
