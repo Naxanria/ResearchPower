@@ -6,11 +6,12 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 import nl.naxanria.nlib.NMod;
+import nl.naxanria.nlib.gui.GuiContainerBase;
 import nl.naxanria.nlib.proxy.Proxy;
 import nl.naxanria.researchpower.block.BlocksInit;
 import nl.naxanria.researchpower.containers.ContainerPress;
 
-public class GuiPress extends GuiContainer
+public class GuiPress extends GuiContainerBase
 {
   private static final ResourceLocation BG_TEXTURE = new ResourceLocation(NMod.getModId(), "textures/gui/single_slot.png");
   private InventoryPlayer playerInv;
@@ -40,10 +41,11 @@ public class GuiPress extends GuiContainer
     drawString(fontRenderer, playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0xFFFFFFFF);
  
     // power bar
-    drawRect(10, 10, 30, 110, 0xFF000000);
+    //drawRect(10, 10, 30, 110, 0xFF000000);
 
-    float powerPercentage = ((ContainerPress) inventorySlots).entityPress.storage.getStoredPercentage();
-    drawRect(11, 11, 29, (int)(100 + 100 * powerPercentage), 0xFFFFFFFF);
+    float powerPercentage = ((ContainerPress) inventorySlots).entityPress.storage.getStoredPercentage() / 100.0f;
+    drawProgressBar(11, 11, 29, 111, 0xFF000000, 0xFFAA0000, powerPercentage, BarDirection.Vertical);
+    //drawRect(11, 11, 29, (int)(100 + 100 * powerPercentage), 0xFFFFFFFF);
   }
 }
 

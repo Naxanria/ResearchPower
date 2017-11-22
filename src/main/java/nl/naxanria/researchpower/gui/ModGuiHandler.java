@@ -19,7 +19,6 @@ public class ModGuiHandler implements IGuiHandler
   @Override
   public Container getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
   {
-    Log.warn("Server GUI Request: " + ID + " " + x + "," + y + "," + z);
     switch (ID)
     {
       case PRESS:
@@ -33,8 +32,6 @@ public class ModGuiHandler implements IGuiHandler
   @Override
   public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
   {
-    Log.warn("Client GUI Request: " + ID + " " + x + "," + y + "," + z);
-    
     switch (ID)
     {
       case PRESS:
