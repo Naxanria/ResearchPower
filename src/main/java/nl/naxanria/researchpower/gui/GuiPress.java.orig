@@ -40,9 +40,25 @@ public class GuiPress extends GuiContainerBase
     drawCenteredString(fontRenderer, name, xSize / 2, 6, 0xFFFFFFFF);
     drawString(fontRenderer, playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0xFFFFFFFF);
 
-    float powerPercentage = ((ContainerPress) inventorySlots).entityPress.storage.getStoredPercentage();
-    drawProgressBar(11, 11, 29, 111, 0xFF000000, 0xFFAA0000, powerPercentage, BarDirection.Vertical);
+    int powerBarHeight = 55;
+ 
+    // power bar
+<<<<<<< HEAD
+    //drawRect(10, 10, 30, 110, 0xFF000000);
 
+    float powerPercentage = ((ContainerPress) inventorySlots).entityPress.storage.getStoredPercentage() / 100.0f;
+    drawProgressBar(11, 11, 29, 111, 0xFF000000, 0xFFAA0000, powerPercentage, BarDirection.Vertical);
+    //drawRect(11, 11, 29, (int)(100 + 100 * powerPercentage), 0xFFFFFFFF);
+=======
+    drawRect(5, 15, 25, 15 + powerBarHeight, 0xFF000000);
+
+    float powerPercentage = ((ContainerPress) inventorySlots).entityPress.storage.getStoredPercentage() * 100;
+
+    int test = (int)(powerPercentage / 100 * (powerBarHeight - 2));
+    System.out.println(test);
+
+    drawRect(6, 16 + powerBarHeight - 2 - test, 24, 16 + powerBarHeight - 2, 0xFFFFFFFF);
+>>>>>>> ResearchPower/master
   }
 }
 
