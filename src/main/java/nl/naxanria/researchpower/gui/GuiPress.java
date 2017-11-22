@@ -41,7 +41,7 @@ public class GuiPress extends GuiContainerBase
     drawString(fontRenderer, playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0xFFFFFFFF);
 
     float powerPercentage = ((ContainerPress) inventorySlots).entityPress.storage.getStoredPercentage();
-    drawProgressBar(11, 11, 29, 111, 0xFF000000, 0xFFAA0000, powerPercentage, BarDirection.Vertical);
+    drawProgressBar(8, 15, 8 + 14, 15 + 55, 0xFF000000, 0xFFAA0000, powerPercentage, BarDirection.Vertical);
 
   }
 }
