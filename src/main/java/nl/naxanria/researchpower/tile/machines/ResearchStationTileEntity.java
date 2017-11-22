@@ -1,4 +1,4 @@
-package nl.naxanria.researchpower.tile;
+package nl.naxanria.researchpower.tile.machines;
 
 import nl.naxanria.nlib.tile.power.BaseEnergyAcceptor;
 

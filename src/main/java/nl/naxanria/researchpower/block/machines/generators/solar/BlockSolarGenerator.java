@@ -15,14 +15,14 @@ import nl.naxanria.researchpower.tile.TileEntitySolarGenerator;
 
 import javax.annotation.Nullable;
 
-public class SolarGenerator extends BlockTileBase<TileEntitySolarGenerator>
+public class BlockSolarGenerator extends BlockTileBase<TileEntitySolarGenerator>
 {
   protected int tier;
   protected int base = 2;
   
   protected static boolean needRegistration = true;
   
-  public SolarGenerator(int tier)
+  public BlockSolarGenerator(int tier)
   {
     super(Material.IRON, "solar_generator_tier_" + tier);
     

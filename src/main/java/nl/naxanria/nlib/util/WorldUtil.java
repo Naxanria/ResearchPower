@@ -1,7 +1,13 @@
 package nl.naxanria.nlib.util;
 
+import net.minecraft.block.Block;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.fluids.FluidStack;
@@ -60,5 +66,31 @@ public class WorldUtil
         }
       }
     }
+  }
+  
+  public static void dropItemInWorld(World world, BlockPos pos, Item item)
+  {
+    dropItemInWorld(world, pos, new ItemStack(item));
+  }
+  
+  public static void dropItemInWorld(World world, BlockPos pos, Item item, int amount)
+  {
+    dropItemInWorld(world, pos, new ItemStack(item, amount));
+  }
+  
+  public static void dropItemInWorld(World world, BlockPos pos, Block block)
+  {
+    dropItemInWorld(world, pos, new ItemStack(block));
+  }
+  
+  public static void dropItemInWorld(World world, BlockPos pos, Block block, int amount)
+  {
+    dropItemInWorld(world, pos, new ItemStack(block, amount));
+  }
+  
+  public static void dropItemInWorld(World world, BlockPos pos, ItemStack stack)
+  {
+    EntityItem toDrop = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack);
+    world.spawnEntity(toDrop);
   }
 }

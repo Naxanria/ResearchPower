@@ -2,15 +2,18 @@ package nl.naxanria.researchpower;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.util.Log;
 import nl.naxanria.nlib.util.ores.OreBuilder;
 import nl.naxanria.nlib.util.ores.OreHelper;
 import nl.naxanria.researchpower.block.BlocksInit;
+import nl.naxanria.researchpower.gui.ModGuiHandler;
 import nl.naxanria.researchpower.item.ItemsInit;
 import nl.naxanria.nlib.proxy.Proxy;
 import nl.naxanria.researchpower.recipe.RecipesInit;
@@ -78,6 +81,15 @@ public class ResearchPower extends NMod
   @Override
   protected void onPreInit(FMLPreInitializationEvent event)
   {
+    try
+    {
+      throw new Exception("pre_init?");
+    }
+    catch (Exception e)
+    {
+      e.printStackTrace();
+    }
+    
     OreHelper.registerInOreDict
       (
         new OreBuilder("Copper")
@@ -85,6 +97,8 @@ public class ResearchPower extends NMod
         .ingot(ItemsInit.Metals.ingotCopper)
         .fullBlock(BlocksInit.Metals.copperBlock)
       );
+  
+    NetworkRegistry.INSTANCE.registerGuiHandler(this, new ModGuiHandler());
   }
   
   @Override

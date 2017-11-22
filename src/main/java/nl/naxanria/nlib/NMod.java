@@ -84,7 +84,15 @@ public abstract class NMod
   @Mod.EventHandler
   public final void preInit(FMLPreInitializationEvent event)
   {
-    Log.info("PRE_INIT");
+    Log.warn("PRE_INIT");
+    try
+    {
+      throw new Exception("Initialized?");
+    }
+    catch (Exception e)
+    {
+      e.printStackTrace();
+    }
     PacketHandler.init();
     
     onPreInit(event);
@@ -99,7 +107,7 @@ public abstract class NMod
   @Mod.EventHandler
   public final void init(FMLInitializationEvent event)
   {
-    Log.info("INIT");
+    Log.warn("INIT");
     
     initRecipeClass();
     
@@ -115,7 +123,7 @@ public abstract class NMod
   @Mod.EventHandler
   public final void postInit(FMLPostInitializationEvent event)
   {
-    Log.info("POST_INIT");
+    Log.warn("POST_INIT");
     
     onPostInit(event);
   }

@@ -18,14 +18,22 @@ import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
 import nl.naxanria.nlib.network.PacketHandler;
 import nl.naxanria.nlib.network.PacketServerToClient;
 import nl.naxanria.nlib.tile.fluid.IFluidSharingProvider;
+import nl.naxanria.nlib.tile.inventory.IInventoryHolder;
 import nl.naxanria.nlib.tile.power.IEnergySharingProvider;
 import nl.naxanria.nlib.util.EnumHelper;
 import nl.naxanria.nlib.util.WorldUtil;
+import nl.naxanria.nlib.util.player.SerializableUUID;
 
 import javax.annotation.Nullable;
+import java.util.UUID;
+
+import static nl.naxanria.nlib.tile.TileEntityBase.Flags.HasOwner;
 
 public abstract class TileEntityBase extends TileEntity implements ITickable
 {
@@ -37,14 +45,18 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
   private boolean isFluidSharingProvider;
   private IFluidSharingProvider fluidSharingProvider;
   
+  private boolean isInventoryHolder;
+  private IInventoryHolder inventoryHolder;
+  
   private long flags;
   private boolean hasSavedDataOnChangeOrWorldStart = false;
+  private UUID ownerID;
   
   public TileEntityBase(boolean needsOwner)
   {
     this();
     
-    enableFlag(Flags.HasOwner);
+    enableFlag(HasOwner);
   }
   
   public TileEntityBase()
@@ -62,11 +74,27 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
       fluidSharingProvider = (IFluidSharingProvider) this;
       enableFlag(Flags.SaveOnWorldChange);
     }
+    
+    isInventoryHolder = this instanceof IInventoryHolder;
+    if (isInventoryHolder)
+    {
+      inventoryHolder = (IInventoryHolder) this;
+    }
   }
   
   public void setOwner(EntityPlayer owner)
   {
+    ownerID = owner.getUniqueID();
+  }
   
+  public UUID getOwnerID()
+  {
+    return ownerID;
+  }
+  
+  public boolean isOwner(EntityPlayer player)
+  {
+    return player.getUniqueID().equals(ownerID);
   }
   
   public void enableFlag(Flags flag)
@@ -262,6 +290,15 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
       }
     }
     
+    if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+    {
+      IItemHandler inventory = getInventory(facing);
+      if (inventory != null)
+      {
+        return (T) inventory;
+      }
+    }
+    
     return super.getCapability(capability, facing);
   }
   
@@ -270,7 +307,15 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     return null;
   }
   
-  public IFluidHandler getFluidHandler(EnumFacing facing) { return null; }
+  public IFluidHandler getFluidHandler(EnumFacing facing)
+  {
+    return null;
+  }
+  
+  public IItemHandler getInventory(EnumFacing facing)
+  {
+    return null;
+  }
   
   public int getComparatorStrength()
   {
@@ -351,6 +396,14 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     {
       super.writeToNBT(compound);
     }
+    
+    if (type == NBTType.SAVE_TILE)
+    {
+      if (ownerID != null)
+      {
+        compound.setUniqueId("owner", ownerID);
+      }
+    }
 //
 //    if(type == NBTType.SAVE_TILE)
 //    {
@@ -369,6 +422,11 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     if(type != NBTType.SAVE_BLOCK)
     {
       super.readFromNBT(compound);
+    }
+    
+    if (type == NBTType.SAVE_TILE)
+    {
+      ownerID = compound.getUniqueId("owner");
     }
     
 //    if(type == NBTType.SAVE_TILE){
