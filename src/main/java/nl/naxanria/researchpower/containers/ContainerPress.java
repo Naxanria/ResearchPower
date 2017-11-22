@@ -34,8 +34,6 @@ public class ContainerPress extends Container
     });
     
     createPlayerInventorySlots(playerInv);
-
-    Log.warn("Container is created");
   }
 
   private int energyValue;
