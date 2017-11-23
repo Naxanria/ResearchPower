@@ -1,4 +1,4 @@
-package nl.naxanria.researchpower.block.machines.miniture;
+package nl.naxanria.researchpower.block.machines.miniature;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

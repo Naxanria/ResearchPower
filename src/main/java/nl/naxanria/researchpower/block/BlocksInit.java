@@ -9,7 +9,7 @@ import nl.naxanria.researchpower.block.machines.BlockMachinePress;
 import nl.naxanria.researchpower.block.machines.battery.BlockBattery;
 import nl.naxanria.researchpower.block.machines.generators.solar.BlockSolarGenerator;
 import nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator;
-import nl.naxanria.researchpower.block.machines.miniture.BlockMiniatureController;
+import nl.naxanria.researchpower.block.machines.miniature.BlockMiniatureController;
 import nl.naxanria.researchpower.block.machines.station.BlockResearchStation;
 import nl.naxanria.researchpower.block.ores.BlockCopperOre;
 
