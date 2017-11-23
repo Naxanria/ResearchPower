@@ -23,7 +23,7 @@ public class RecipesInit
     (
       new ItemStack(LAPIS, 2),
       new ItemStack(ItemsInit.MachineParts.lapisWafer),
-      400
+      20
     );
   }
   
@@ -83,9 +83,11 @@ public class RecipesInit
       'V', ItemsInit.MachineParts.redstoneConnectorVertical
     );
 
-    registry.addAll
-    (
+    registry.addAll( );
     
+    PressRecipeRegistry.addAll
+    (
+      Press.lapisWafer
     );
   }
   
