@@ -111,21 +111,23 @@ public class BlockSolarGenerator extends BlockTileBase<TileEntitySolarGenerator>
     for (int i = 0; i <= 6; i++)
       items.add(new ItemStack(this, 1, i));
   }
-/*
-  public void registerItemModel(Item itemBlock)
+
+  @Override
+  public void registerItemModel()
   {
     for (int i = 0; i <= 6; i++)
     {
       StateMapperBase b = new DefaultStateMapper();
       BlockStateContainer bsc = getBlockState();
       ImmutableList<IBlockState> values = bsc.getValidStates();
+      System.out.println("penis");
       for(IBlockState state : values) {
         String str = b.getPropertyString(state.getProperties());
-        Proxy.registerItemRender(itemBlock, getMetaFromState(state), str); //TODO: Fix inventory display, this isn't the way to do it
+        System.out.println(str);
+        Proxy.registerItemRenderWithVariant(Item.getItemFromBlock(this), getMetaFromState(state), name, str); //TODO: Fix inventory display, this isn't the way to do it
       }
     }
-
-  }*/
+  }
 
   public Item createItemBlock()
   {

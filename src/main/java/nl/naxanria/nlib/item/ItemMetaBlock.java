@@ -9,7 +9,6 @@ public class ItemMetaBlock extends ItemBlock
   public ItemMetaBlock(Block block)
   {
     super(block);
-    setMaxDamage(0);
     setHasSubtypes(true);
   }
 
@@ -18,8 +17,8 @@ public class ItemMetaBlock extends ItemBlock
     return damage;
   }
 
-  public String getUnlocalizedName(ItemStack stack)
+/*  public String getUnlocalizedName(ItemStack stack)
   {
     return super.getUnlocalizedName() + "." + stack.getMetadata();
-  }
+  }*/ //TODO: See if neccessary
 }

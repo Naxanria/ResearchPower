@@ -20,7 +20,16 @@ public abstract class Proxy
   {
     getCurrent().registerItemRenderer(item, meta, id);
   }
-  
+
+  public static void registerItemRenderWithVariant(Item item, int meta, String id, String variant)
+  {
+    getCurrent().registerItemRendererWithVariant(item, meta, id, variant);
+  }
+
+  public void registerItemRendererWithVariant(Item item, int meta, String id, String variant)
+  {
+  }
+
   protected void registerItemRenderer(Item item, int meta, String id)
   {
   }

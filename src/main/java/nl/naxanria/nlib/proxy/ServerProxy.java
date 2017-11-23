@@ -1,8 +1,8 @@
 package nl.naxanria.nlib.proxy;
 
-
 import net.minecraft.util.text.translation.I18n;
 
+@SuppressWarnings("deprecation")
 public class ServerProxy extends Proxy
 {
     @Override
