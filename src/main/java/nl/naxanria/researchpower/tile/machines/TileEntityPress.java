@@ -16,7 +16,7 @@ public class TileEntityPress extends BaseEnergyAcceptor implements IInventoryHol
   public ItemStackHandler inventory = new ItemStackHandler(2);
   
   protected int progress = 0;
-  protected int total_time = 0;
+  protected int total_time = 100;
   
   public TileEntityPress()
   {
@@ -33,6 +33,32 @@ public class TileEntityPress extends BaseEnergyAcceptor implements IInventoryHol
   public IItemHandler getInventory(EnumFacing facing)
   {
     return inventory;
+  }
+  
+  public float getProgressPercentage()
+  {
+    return  (float) progress / (float) total_time;
+  }
+  
+  public int getProgress()
+  {
+    return progress;
+  }
+  
+  public void setProgress(int progress)
+  {
+    this.progress = progress;
+  }
+  
+  @Override
+  public void update()
+  {
+    super.update();
+    progress++;
+    if (progress > total_time)
+    {
+      progress = 0;
+    }
   }
   
   @Override

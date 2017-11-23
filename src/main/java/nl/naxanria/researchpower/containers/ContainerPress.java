@@ -18,13 +18,26 @@ public class ContainerPress extends Container
   public TileEntityPress entityPress;
 
   private static final int ENERGY_SYNC = 0;
+  private static final int PROGRESS_SYNC = 1;
+  
+  private int energyValue;
+  private int progress;
   
   public ContainerPress(InventoryPlayer playerInv, final TileEntityPress press)
   {
     IItemHandler inventory = press.inventory;
     entityPress = press;
-    
-    addSlotToContainer(new SlotItemHandler(inventory, 0, 80, 35)
+  
+    addSlotToContainer(new SlotItemHandler(inventory, 0, 45, 35)
+    {
+      @Override
+      public void onSlotChanged()
+      {
+        press.markDirty();
+      }
+    });
+  
+    addSlotToContainer(new SlotItemHandler(inventory, 1, 115, 35)
     {
       @Override
       public void onSlotChanged()
@@ -36,36 +49,46 @@ public class ContainerPress extends Container
     createPlayerInventorySlots(playerInv);
   }
 
-  private int energyValue;
 
   @Override
   public void detectAndSendChanges()
   {
     super.detectAndSendChanges();
 
-    for (int i = 0; i < this.listeners.size(); ++i)
+    for (int i = 0; i < listeners.size(); ++i)
     {
-      IContainerListener icontainerlistener = this.listeners.get(i);
-      if (this.energyValue != entityPress.storage.getEnergyStored())
+      IContainerListener containerListener = listeners.get(i);
+      if (energyValue != entityPress.storage.getEnergyStored())
       {
-        icontainerlistener.sendWindowProperty(this, ENERGY_SYNC, entityPress.storage.getEnergyStored());
+        containerListener.sendWindowProperty(this, ENERGY_SYNC, entityPress.storage.getEnergyStored());
       }
+      if (progress != entityPress.getProgress())
+      {
+        containerListener.sendWindowProperty(this, PROGRESS_SYNC, entityPress.getProgress());
+      }
+      
     }
 
-    this.energyValue = entityPress.storage.getEnergyStored();
+    energyValue = entityPress.storage.getEnergyStored();
+    progress = entityPress.getProgress();
   }
 
+  @Override
   public void updateProgressBar(int id, int data)
   {
-    switch(id){
-    case ENERGY_SYNC:
-      entityPress.storage.setEnergyStored(data);
-      break;
-    default:
-      break;
+    switch(id)
+    {
+      case ENERGY_SYNC:
+        entityPress.storage.setEnergyStored(data);
+        break;
+        
+      case PROGRESS_SYNC:
+        entityPress.setProgress(data);
+        break;
+        
+      default:
+        break;
     }
-
-
   }
 
   @Override
