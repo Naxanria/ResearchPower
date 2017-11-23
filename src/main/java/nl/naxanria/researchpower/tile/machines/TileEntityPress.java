@@ -7,6 +7,7 @@ import net.minecraftforge.items.ItemStackHandler;
 import nl.naxanria.nlib.tile.inventory.IInventoryHolder;
 import nl.naxanria.nlib.tile.power.BaseEnergyAcceptor;
 import nl.naxanria.nlib.util.EnumHelper;
+import nl.naxanria.researchpower.recipe.RecipePress;
 
 public class TileEntityPress extends BaseEnergyAcceptor implements IInventoryHolder
 {
@@ -17,6 +18,8 @@ public class TileEntityPress extends BaseEnergyAcceptor implements IInventoryHol
   
   protected int progress = 0;
   protected int total_time = 100;
+  
+  protected RecipePress currentRecipe;
   
   public TileEntityPress()
   {

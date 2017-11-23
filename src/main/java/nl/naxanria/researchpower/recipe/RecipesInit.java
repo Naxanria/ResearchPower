@@ -15,11 +15,23 @@ import nl.naxanria.researchpower.item.ItemsInit;
 
 public class RecipesInit
 {
+  private static final Item LAPIS = Dye.getDyeItem(EnumDyeColor.BLUE);
+  
+  public static class Press
+  {
+    public static final RecipePress lapisWafer = new RecipePress
+    (
+      new ItemStack(LAPIS, 2),
+      new ItemStack(ItemsInit.MachineParts.lapisWafer),
+      400
+    );
+  }
+  
   private static int r = 0;
   
   public static void init(RecipeRegistry registry)
   {
-    final Item LAPIS = Dye.getDyeItem(EnumDyeColor.BLUE);
+    
 
     GameRegistry.addSmelting
     (

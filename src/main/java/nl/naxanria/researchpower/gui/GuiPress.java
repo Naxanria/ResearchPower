@@ -10,7 +10,6 @@ import nl.naxanria.nlib.gui.Orientation;
 import nl.naxanria.nlib.gui.PropertiesFactory;
 import nl.naxanria.nlib.proxy.Proxy;
 import nl.naxanria.nlib.util.Color;
-import nl.naxanria.nlib.util.Log;
 import nl.naxanria.researchpower.block.BlocksInit;
 import nl.naxanria.researchpower.containers.ContainerPress;
 import nl.naxanria.researchpower.tile.machines.TileEntityPress;
