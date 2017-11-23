@@ -64,6 +64,9 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
       }
     }
 
-    System.out.println(valid);
+    if (valid)
+    {
+      // do stuff;
+    }
   }
 }

@@ -68,16 +68,7 @@ public class BlocksInit
       }
     }
 
-    public static class Solar
-    {
-      public static final BlockSolarGenerator tier_1 = new BlockSolarGenerator(1);
-      public static final BlockSolarGenerator tier_2 = new BlockSolarGenerator(2);
-      public static final BlockSolarGenerator tier_3 = new BlockSolarGenerator(3);
-      public static final BlockSolarGenerator tier_4 = new BlockSolarGenerator(4);
-      public static final BlockSolarGenerator tier_5 = new BlockSolarGenerator(5);
-      public static final BlockSolarGenerator tier_6 = new BlockSolarGenerator(6);
-      public static final BlockSolarGenerator tier_7 = new BlockSolarGenerator(7);
-    }
+    public static final BlockSolarGenerator solarGenerator = new BlockSolarGenerator();
   }
   
   public static void init(BlockRegistry registry)
@@ -104,13 +95,7 @@ public class BlocksInit
       Machines.Miniature.controller,
       
       // solar
-      Machines.Solar.tier_1,
-      Machines.Solar.tier_2,
-      Machines.Solar.tier_3,
-      Machines.Solar.tier_4,
-      Machines.Solar.tier_5,
-      Machines.Solar.tier_6,
-      Machines.Solar.tier_7
+      Machines.solarGenerator
     );
     
     init = true;
