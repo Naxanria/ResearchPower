@@ -14,6 +14,11 @@ public class ClientProxy extends Proxy
         ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(ResearchPower.MOD_ID + ":" + id, "inventory"));
     }
 
+    public void registerItemRendererWithVariant(Item item, int meta, String id, String variant)
+    {
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(ResearchPower.MOD_ID + ":" + id, variant));
+    }
+
     @Override
     public String getLocalization(String unlocalized, Object... args)
     {

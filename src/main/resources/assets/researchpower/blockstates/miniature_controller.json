@@ -4,7 +4,7 @@
   {
     "textures":
     {
-      "all" : "researchpower:blocks/solar/tier_3"
+      "all" : "researchpower:blocks/miniature/controller"
     }
   },
   "variants":
