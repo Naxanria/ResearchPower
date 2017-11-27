@@ -109,7 +109,9 @@ public class BlockSolarGenerator extends BlockTileBase<TileEntitySolarGenerator>
   public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
   {
     for (int i = 0; i <= 6; i++)
+    {
       items.add(new ItemStack(this, 1, i));
+    }
   }
 
   @Override
@@ -120,8 +122,11 @@ public class BlockSolarGenerator extends BlockTileBase<TileEntitySolarGenerator>
       StateMapperBase b = new DefaultStateMapper();
       BlockStateContainer bsc = getBlockState();
       ImmutableList<IBlockState> values = bsc.getValidStates();
+      
       System.out.println("penis");
-      for(IBlockState state : values) {
+      
+      for(IBlockState state : values)
+      {
         String str = b.getPropertyString(state.getProperties());
         System.out.println(str);
         Proxy.registerItemRenderWithVariant(Item.getItemFromBlock(this), getMetaFromState(state), name, str); //TODO: Fix inventory display, this isn't the way to do it

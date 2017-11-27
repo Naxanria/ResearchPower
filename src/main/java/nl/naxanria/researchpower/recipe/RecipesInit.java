@@ -1,5 +1,6 @@
 package nl.naxanria.researchpower.recipe;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
@@ -23,7 +24,14 @@ public class RecipesInit
     (
       new ItemStack(LAPIS, 2),
       new ItemStack(ItemsInit.MachineParts.lapisWafer),
-      20
+      120
+    );
+    
+    public static final RecipePress LapisWafer2 = new RecipePress
+    (
+      new ItemStack(Blocks.LAPIS_BLOCK),
+      new ItemStack(ItemsInit.MachineParts.lapisWafer, 5),
+      240
     );
   }
   
@@ -87,7 +95,8 @@ public class RecipesInit
     
     PressRecipeRegistry.addAll
     (
-      Press.lapisWafer
+      Press.lapisWafer,
+      Press.LapisWafer2
     );
   }
   

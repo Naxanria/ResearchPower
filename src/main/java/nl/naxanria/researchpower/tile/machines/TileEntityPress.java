@@ -14,8 +14,8 @@ import nl.naxanria.researchpower.recipe.RecipePress;
 
 public class TileEntityPress extends BaseEnergyAcceptor implements IInventoryHolder
 {
-  public static final int CAPACITY = 20000;
-  public static final int MAX_USE = 1500;
+  public static final int CAPACITY = 25000;
+  public static final int MAX_USE = 500;
   
   public static final int SLOT_INPUT = 0;
   public static final int SLOT_OUTPUT = 1;
@@ -72,50 +72,46 @@ public class TileEntityPress extends BaseEnergyAcceptor implements IInventoryHol
     // if we have a recipe, check if the stack hasn't changed
     if (currentRecipe != null)
     {
-      Log.info("Recipe is not null, checking validity");
-      if (inputStack != inventory.getStackInSlot(SLOT_INPUT))
+      if (!currentRecipe.matches(inputStack, null))
       {
-        // stack has changed, check if recipe is still valid
-        Log.info("Input stack changed");
-        if (!currentRecipe.matches(inputStack, null))
-        {
-          Log.info("Invalid recipe, resetting it");
-          // reset recipe to null, reset progress
-          progress = 0;
-          currentRecipe = null;
-  
-          inputStack = inventory.getStackInSlot(SLOT_INPUT);
-          outputStack = inventory.getStackInSlot(SLOT_OUTPUT);
-        }
+        progress = 0;
+        currentRecipe = null;
+        return;
       }
-      
-      if (currentRecipe != null)
+  
+      // check for enough power
+      int sim = storage.extractEnergy(MAX_USE, true);
+      if (sim != MAX_USE)
       {
-        Log.info("Updating progress");
-        progress++;
-        if (progress >= totalTime)
+        return;
+      }
+  
+      storage.extractEnergy(MAX_USE, false);
+  
+      progress++;
+      if (progress >= totalTime)
+      {
+    
+        progress = 0;
+        ItemStack result = currentRecipe.getRecipeOutput();
+    
+        inputStack.setCount(inputStack.getCount() - currentRecipe.input.getCount());
+    
+        if (outputStack.isEmpty())
         {
-          Log.info("Finished a product!");
-          progress = 0;
-          ItemStack result = currentRecipe.getCraftingResult();
+          outputStack = result;
+          inventory.setStackInSlot(SLOT_OUTPUT, outputStack);
+        } else
+        {
+          outputStack.setCount(result.getCount() + outputStack.getCount());
       
-          inputStack.setCount(inputStack.getCount() - currentRecipe.input.getCount());
-      
-          if (outputStack.isEmpty())
-          {
-            outputStack = result;
-            inventory.setStackInSlot(SLOT_OUTPUT, outputStack);
-          }
-          else
-          {
-            outputStack.setCount(result.getCount() + outputStack.getCount());
-          }
-          currentRecipe = null;
+          inventory.setStackInSlot(SLOT_OUTPUT, outputStack);
         }
+        currentRecipe = null;
       }
   
     }
-  
+    
     inputStack = inventory.getStackInSlot(SLOT_INPUT);
     outputStack = inventory.getStackInSlot(SLOT_OUTPUT);
     
@@ -125,11 +121,9 @@ public class TileEntityPress extends BaseEnergyAcceptor implements IInventoryHol
       RecipePress recipe = PressRecipeRegistry.getRecipeFromInput(inputStack);
       if (recipe != null)
       {
-        Log.info("Found a recipe!");
         ItemStack res = recipe.getRecipeOutput();
         if (outputStack.isEmpty() || outputStack.getItem() == res.getItem()  && res.getCount() + outputStack.getCount() <= outputStack.getMaxStackSize())
         {
-          Log.info("recipe started");
           currentRecipe = recipe;
           progress = 0;
           totalTime = recipe.duration;

@@ -10,39 +10,54 @@
   },
   "variants":
   {
-    "tier": {
-      "1": {
-        "textures": {
+    "tier":
+    {
+      "1":
+      {
+        "textures":
+        {
           "all": "researchpower:blocks/solar/tier_1"
         }
       },
-      "2": {
-        "textures": {
+      "2":
+      {
+        "textures":
+        {
           "all": "researchpower:blocks/solar/tier_2"
         }
       },
-      "3": {
-        "textures": {
+      "3":
+      {
+        "textures":
+        {
           "all": "researchpower:blocks/solar/tier_3"
         }
       },
-      "4": {
-        "textures": {
+      "4":
+      {
+        "textures":
+        {
           "all": "researchpower:blocks/solar/tier_3"
         }
       },
-      "5": {
-        "textures": {
+      "5":
+      {
+        "textures":
+        {
           "all": "researchpower:blocks/solar/tier_3"
         }
       },
-      "6": {
-        "textures": {
+      "6":
+      {
+        "textures":
+        {
           "all": "researchpower:blocks/solar/tier_3"
         }
       },
-      "7": {
-        "textures": {
+      "7":
+      {
+        "textures":
+        {
           "all": "researchpower:blocks/solar/tier_3"
         }
       }
