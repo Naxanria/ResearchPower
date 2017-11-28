@@ -4,6 +4,8 @@ package nl.naxanria.researchpower.tile.machines;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.effect.EntityLightningBolt;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import nl.naxanria.nlib.tile.power.BaseEnergyAcceptor;
@@ -34,7 +36,7 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
     super(CAPACITY, MAX_USE);
   }
   
-  public boolean makeOwnStructure()
+  public boolean makeOwnStructure() // TODO: eventually we store this and only invalidate, but for now this is good
   {
     if (world.getBlockState(pos.north()) == BlocksInit.Machines.MACHINE_FRAME_BASE.getDefaultState())
     {
@@ -75,12 +77,12 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
         for (int z = 0; z <= 4; z++)
         {
           BlockPos ourPos = curY.offset(dir, z);
-          if (world.getBlockState(ourPos) != BlocksInit.Machines.Miniature.miniatureStructure[x][y][z])
+          IBlockState state = BlocksInit.Machines.Miniature.miniatureStructure[x][y][z];
+          if (state != null && world.getBlockState(ourPos) != state)
           {
             valid = false;
             break outerloop;
           }
-
         }
       }
     }
@@ -98,17 +100,45 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
   public IBlockState[] getBlocksInside()
   {
     IBlockState[] blocks = new IBlockState[27];
+
+    BlockPos[] positions = getBlockPositions();
+
+    for (int i = 0; i <= 26; i++)
+    {
+        blocks[i] = world.getBlockState(positions[i]);
+    }
     
-    BlockPos searchPos = pos.offset(dir);
-    Log.warn(searchPos.toString());
-    
+    return blocks;
+  }
+
+  public BlockPos[] getBlockPositions()
+  {
+    BlockPos[] blocks = new BlockPos[27];
+
+    EnumFacing offsetDir = dir.rotateAround(EnumFacing.Axis.Y).getOpposite();
+
+    BlockPos basePos = pos.offset(offsetDir, 1).offset(dir, 1).up(1);
+
+    EnumFacing opposite = offsetDir.getOpposite();
+
+    int count = 0;
+
+    for (int y = 0; y <=2; y++)
+    {
+      BlockPos yBase = basePos.offset(EnumFacing.UP, y);
+      for (int i = 0; i <= 8; i++)
+      {
+        blocks[count++] = yBase.offset(opposite, i % 3).offset(dir, i / 3);
+      }
+    }
+
     return blocks;
   }
   
   public RecipeMiniature checkRecipe()
   {
     IBlockState[] blocks = getBlocksInside();
-  
+
     return MiniatureRecipeRegistry.getRecipeFromInput(blocks);
   }
   
@@ -147,7 +177,24 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
         if (progress >= totalTime)
         {
           // remove the blocks
+
+          IBlockState[] blocks = new IBlockState[27];
+
+          BlockPos[] positions = getBlockPositions();
+
+          for (int i = 0; i <= 26; i++)
+          {
+            world.setBlockToAir(positions[i]);
+          }
+
           // spawn the item
+
+          BlockPos pos = positions[4];
+          BlockPos controllerPos = getPos();
+
+          EntityItem item = new EntityItem(world, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, currentRecipe.getRecipeOutput());
+          item.motionX = item.motionY = item.motionZ = 0;
+          world.spawnEntity(item);
           
           progress = 0;
           currentRecipe = null;

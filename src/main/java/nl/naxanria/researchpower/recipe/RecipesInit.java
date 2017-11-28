@@ -39,11 +39,11 @@ public class RecipesInit
   {
     public static final RecipeMiniature RAINBOW = new RecipeMiniature(
       new ItemStack(BlocksInit.Other.RAINBOW),
-      "RRR", "RRR", "RRR",
-      "LLL", "LLL", "LLL",
-      "RRR", "RRR", "RRR",
-      'R', Blocks.REDSTONE_BLOCK,
-      'L', Blocks.LAPIS_BLOCK
+      "RLR", "LRL", "RRR",
+      "LRL", "RLR", "LRL",
+      "LLL", "LRL", "RLR",
+      'R', Blocks.REDSTONE_BLOCK.getDefaultState(),
+      'L', Blocks.LAPIS_BLOCK.getDefaultState()
     );
   }
   

@@ -67,11 +67,11 @@ public class BlocksInit
         miniatureStructure[2][0][0] = controller.getDefaultState();
 
         // air!
-        for(int x = 0; x <= 4; x++)
+        for(int x = 0; x <= 4; x += 4)
         {
-          for(int y = 0; y <= 4; y++)
+          for(int y = 0; y <= 4; y += 4)
           {
-            for(int z = 0; z <= 4; z++)
+            for(int z = 0; z <= 4; z += 4)
             {
               if (miniatureStructure[x][y][z] == null)
               {
