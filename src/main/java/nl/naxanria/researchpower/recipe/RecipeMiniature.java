@@ -1,6 +1,7 @@
 package nl.naxanria.researchpower.recipe;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
@@ -10,7 +11,7 @@ public class RecipeMiniature
 {
   private ItemStack output;
   
-  private HashMap<Character, Block> patternMap = new HashMap<>();
+  private HashMap<Character, IBlockState> patternMap = new HashMap<>();
   private String pattern;
   
   public RecipeMiniature(ItemStack output,
@@ -26,13 +27,13 @@ public class RecipeMiniature
     for (int i = 0; i < arguments.length - 1; i += 2)
     {
       char c = (char) arguments[i];
-      Block b = (Block) arguments[i + 1];
+      IBlockState b = (IBlockState) arguments[i + 1];
       
       patternMap.put(c, b);
     }
   }
   
-  public boolean matches(Block[] blocks, EntityPlayer player)
+  public boolean matches(IBlockState[] blocks, EntityPlayer player)
   {
     for (int i = 0; i < pattern.length(); i++)
     {
@@ -41,7 +42,7 @@ public class RecipeMiniature
       {
         continue;
       }
-      Block b = patternMap.getOrDefault(c, null);
+      IBlockState b = patternMap.getOrDefault(c, null);
       if (b != blocks[i])
       {
         return false;

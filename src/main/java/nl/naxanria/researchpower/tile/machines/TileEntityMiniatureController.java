@@ -2,6 +2,7 @@ package nl.naxanria.researchpower.tile.machines;
 
 
 import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -25,15 +26,16 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
   protected int baseLightningChance = 2;
   protected int lightningChance = 0;
   protected RecipeMiniature currentRecipe;
-
+  
+  EnumFacing dir = null;
+  
   public TileEntityMiniatureController()
   {
     super(CAPACITY, MAX_USE);
   }
-
+  
   public boolean makeOwnStructure()
   {
-    EnumFacing dir = null;
     if (world.getBlockState(pos.north()) == BlocksInit.Machines.MACHINE_FRAME_BASE.getDefaultState())
     {
       dir = EnumFacing.NORTH;
@@ -93,19 +95,19 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
     return structureGood;
   }
   
-  public Block[] getBlocksInside()
+  public IBlockState[] getBlocksInside()
   {
-    Block[] blocks = new Block[27];
+    IBlockState[] blocks = new IBlockState[27];
     
-    
-    
+    BlockPos searchPos = pos.offset(dir);
+    Log.warn(searchPos.toString());
     
     return blocks;
   }
   
   public RecipeMiniature checkRecipe()
   {
-    Block[] blocks = getBlocksInside();
+    IBlockState[] blocks = getBlocksInside();
   
     return MiniatureRecipeRegistry.getRecipeFromInput(blocks);
   }

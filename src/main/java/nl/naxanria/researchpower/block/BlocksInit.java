@@ -45,6 +45,7 @@ public class BlocksInit
       public static IBlockState[][][] miniatureStructure = new IBlockState[5][5][5];
       static
       {
+        // pillars
         for (int y = 0; y <= 4; y++)
         {
           miniatureStructure[0][y][0] = Machines.MACHINE_FRAME_BASE.getDefaultState();
@@ -53,6 +54,7 @@ public class BlocksInit
           miniatureStructure[4][y][4] = Machines.MACHINE_FRAME_BASE.getDefaultState();
         }
 
+        // floor
         for(int x = 1; x <= 3; x++)
         {
           for (int z = 1; z <= 3; z++)
@@ -61,8 +63,10 @@ public class BlocksInit
           }
         }
 
+        // controller pos
         miniatureStructure[2][0][0] = controller.getDefaultState();
 
+        // air!
         for(int x = 0; x <= 4; x++)
         {
           for(int y = 0; y <= 4; y++)

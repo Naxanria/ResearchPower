@@ -1,6 +1,6 @@
 package nl.naxanria.researchpower.recipe;
 
-import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import scala.actors.threadpool.Arrays;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class MiniatureRecipeRegistry
     MINIATURE_RECIPES.addAll(Arrays.asList(recipes));
   }
   
-  public static RecipeMiniature getRecipeFromInput(Block[] blocks)
+  public static RecipeMiniature getRecipeFromInput(IBlockState[] blocks)
   {
     for (RecipeMiniature recipe :
       MINIATURE_RECIPES)
