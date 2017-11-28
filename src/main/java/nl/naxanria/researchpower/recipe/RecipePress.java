@@ -1,12 +1,8 @@
 package nl.naxanria.researchpower.recipe;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.Container;
-import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-import nl.naxanria.nlib.recipe.RecipeBase;
-import nl.naxanria.researchpower.containers.ContainerPress;
+import nl.naxanria.researchpower.research.ResearchDatabase;
 
 public class RecipePress
 {
@@ -24,8 +20,9 @@ public class RecipePress
   public boolean matches(ItemStack input, EntityPlayer player)
   {
     // check research
-    
-    return  (input.getItem() == this.input.getItem() && input.getCount() >= this.input.getCount());
+    return ResearchDatabase.isUnlocked(this, player) &&
+      input.getItem() == this.input.getItem() &&
+      input.getCount() >= this.input.getCount();
   }
 
   public ItemStack getCraftingResult()

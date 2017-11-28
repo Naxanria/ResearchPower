@@ -8,36 +8,32 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.util.Log;
+import nl.naxanria.researchpower.recipe.RecipePress;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
 
 public class ResearchDatabase
 {
-  protected static List<ResearchEntry> researchEntries = new ArrayList<>();
+  private static HashMap<EntityPlayer, ResearchTree> trees = new HashMap<>();
   
   public static boolean isUnlocked(IRecipe recipe, EntityPlayer player)
   {
+    
+    
     return true;
   }
   
-  public static void initAll()
+  public static boolean isUnlocked(RecipePress recipe, EntityPlayer player)
   {
-    Log.info("Loading research");
-  
-    for (IRecipe recipe : CraftingManager.REGISTRY)
+    if (player == null)
     {
-      addEntry(recipe, recipe.getRegistryName());
+      return true;
     }
+    
+    return true;
   }
-  
-  protected static void addEntry(IRecipe recipe, ResourceLocation resourceLocation)
-  {
-    researchEntries.add(new ResearchEntry(Research.createOrUpdate(resourceLocation.getResourceDomain(), recipe), recipe));
-  }
+
   
   
 }

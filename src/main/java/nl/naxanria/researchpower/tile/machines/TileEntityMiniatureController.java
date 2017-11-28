@@ -1,39 +1,58 @@
 package nl.naxanria.researchpower.tile.machines;
 
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
+
+import net.minecraft.block.Block;
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import nl.naxanria.nlib.tile.power.BaseEnergyAcceptor;
-import nl.naxanria.researchpower.ResearchPower;
+import nl.naxanria.nlib.util.Log;
+import nl.naxanria.nlib.util.RandomHelper;
 import nl.naxanria.researchpower.block.BlocksInit;
-import nl.naxanria.researchpower.gui.ModGuiHandler;
+import nl.naxanria.researchpower.recipe.MiniatureRecipeRegistry;
+import nl.naxanria.researchpower.recipe.RecipeMiniature;
 
 public class TileEntityMiniatureController extends BaseEnergyAcceptor
 {
-
   public static final int CAPACITY = 20000;
   public static final int MAX_USE = 1500;
+  
+  protected boolean structureGood;
+  
+  protected int progress = 0;
+  protected int totalTime = 500;
+  protected boolean inProgress = false;
+  protected int baseLightningChance = 2;
+  protected int lightningChance = 0;
+  protected RecipeMiniature currentRecipe;
 
   public TileEntityMiniatureController()
   {
     super(CAPACITY, MAX_USE);
   }
 
-  public void makeOwnStructure()
+  public boolean makeOwnStructure()
   {
     EnumFacing dir = null;
-    if (world.getBlockState(pos.north()) == BlocksInit.Machines.machineFrameBase.getDefaultState()) {
+    if (world.getBlockState(pos.north()) == BlocksInit.Machines.MACHINE_FRAME_BASE.getDefaultState())
+    {
       dir = EnumFacing.NORTH;
-    } else if (world.getBlockState(pos.east()) == BlocksInit.Machines.machineFrameBase.getDefaultState()) {
+    }
+    else if (world.getBlockState(pos.east()) == BlocksInit.Machines.MACHINE_FRAME_BASE.getDefaultState())
+    {
       dir = EnumFacing.EAST;
-    } else if (world.getBlockState(pos.south()) == BlocksInit.Machines.machineFrameBase.getDefaultState()) {
+    }
+    else if (world.getBlockState(pos.south()) == BlocksInit.Machines.MACHINE_FRAME_BASE.getDefaultState())
+    {
       dir = EnumFacing.SOUTH;
-    } else if (world.getBlockState(pos.west()) == BlocksInit.Machines.machineFrameBase.getDefaultState()) {
+    }
+    else if (world.getBlockState(pos.west()) == BlocksInit.Machines.MACHINE_FRAME_BASE.getDefaultState())
+    {
       dir = EnumFacing.WEST;
+    }
+    if (dir == null)
+    {
+      return false;
     }
 
     System.out.println(dir);
@@ -64,9 +83,90 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
       }
     }
 
-    if (valid)
+    structureGood = valid;
+    
+    return structureGood;
+  }
+  
+  public boolean isStructureGood()
+  {
+    return structureGood;
+  }
+  
+  public Block[] getBlocksInside()
+  {
+    Block[] blocks = new Block[27];
+    
+    
+    
+    
+    return blocks;
+  }
+  
+  public RecipeMiniature checkRecipe()
+  {
+    Block[] blocks = getBlocksInside();
+  
+    return MiniatureRecipeRegistry.getRecipeFromInput(blocks);
+  }
+  
+  public void startRecipe()
+  {
+    RecipeMiniature r = checkRecipe();
+    if (r != null)
     {
-      // do stuff;
+      currentRecipe = r;
+      progress = 0;
+      inProgress = true;
     }
+  }
+  
+  @Override
+  protected void entityUpdate()
+  {
+    super.entityUpdate();
+    
+    if (!world.isRemote)
+    {
+      if (inProgress)
+      {
+        progress++;
+        
+        if (RandomHelper.chance(world.rand, (lightningChance += baseLightningChance)))
+        {
+          lightningChance = baseLightningChance;
+  
+          EntityLightningBolt bolt = new EntityLightningBolt(world, pos.getX(), pos.getY(), pos.getZ(), true);
+          world.spawnEntity(bolt);
+  
+          Log.warn("Lightning!!");
+        }
+        
+        if (progress >= totalTime)
+        {
+          // remove the blocks
+          // spawn the item
+          
+          progress = 0;
+          currentRecipe = null;
+          inProgress = false;
+        }
+      }
+    }
+  }
+  
+  public boolean isInProgress()
+  {
+    return inProgress;
+  }
+  
+  public int getProgress()
+  {
+    return progress;
+  }
+  
+  public int getTotalTime()
+  {
+    return totalTime;
   }
 }

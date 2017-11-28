@@ -4,7 +4,7 @@
   {
     "textures":
     {
-      "all" : "researchpower:blocks/miniature/miniature_controller"
+      "all" : "researchpower:blocks/machine_frame_advanced"
     }
   },
   "variants":

@@ -20,23 +20,26 @@ public class BlocksInit
   
   public static class Ores
   {
-    public static final BlockCopperOre copperOre = new BlockCopperOre();
+    public static final BlockCopperOre COPPER_ORE = new BlockCopperOre();
   }
   
   public static class Metals
   {
-    public static final BlockBase copperBlock = new BlockBase(Material.IRON, "copper_block");
+    public static final BlockBase COPPER_BLOCK = new BlockBase(Material.IRON, "copper_block");
   }
   
   public static class Machines
   {
-    public static final BlockResearchStation researchStation = new BlockResearchStation();
-    public static final BlockBattery battery = new BlockBattery();
-    public static final BlockVacuumGenerator vacuumGenerator = new BlockVacuumGenerator();
-    public static final BlockBase machineFrameBase = new BlockBase(Material.IRON, "machine_frame_base");
-    public static final BlockMachinePress machinePress = new BlockMachinePress();
+    public static final BlockResearchStation RESEARCH_STATION = new BlockResearchStation();
+    public static final BlockBattery BATTERY = new BlockBattery();
+    public static final BlockVacuumGenerator VACUUM_GENERATOR = new BlockVacuumGenerator();
+    public static final BlockBase MACHINE_FRAME_BASE = new BlockBase(Material.IRON, "machine_frame_base");
+    public static final BlockBase MACHINE_FRAME_ADVANCED = new BlockBase(Material.IRON, "machine_frame_advanced");
+    public static final BlockBase MACHINE_FRAME_REINVIGORATED = new BlockBase(Material.IRON, "machine_frame_reinvigorated");
+    public static final BlockMachinePress MACHINE_PRESS = new BlockMachinePress();
 
-    public static class Miniature {
+    public static class Miniature
+    {
       public static final BlockMiniatureController controller = new BlockMiniatureController();
 
       public static IBlockState[][][] miniatureStructure = new IBlockState[5][5][5];
@@ -44,31 +47,44 @@ public class BlocksInit
       {
         for (int y = 0; y <= 4; y++)
         {
-          miniatureStructure[0][y][0] = Machines.machineFrameBase.getDefaultState();
-          miniatureStructure[0][y][4] = Machines.machineFrameBase.getDefaultState();
-          miniatureStructure[4][y][0] = Machines.machineFrameBase.getDefaultState();
-          miniatureStructure[4][y][4] = Machines.machineFrameBase.getDefaultState();
+          miniatureStructure[0][y][0] = Machines.MACHINE_FRAME_BASE.getDefaultState();
+          miniatureStructure[0][y][4] = Machines.MACHINE_FRAME_BASE.getDefaultState();
+          miniatureStructure[4][y][0] = Machines.MACHINE_FRAME_BASE.getDefaultState();
+          miniatureStructure[4][y][4] = Machines.MACHINE_FRAME_BASE.getDefaultState();
         }
 
         for(int x = 1; x <= 3; x++)
         {
           for (int z = 1; z <= 3; z++)
           {
-            miniatureStructure[x][0][z] = Machines.machineFrameBase.getDefaultState();
+            miniatureStructure[x][0][z] = Machines.MACHINE_FRAME_BASE.getDefaultState();
           }
         }
 
         miniatureStructure[2][0][0] = controller.getDefaultState();
 
         for(int x = 0; x <= 4; x++)
+        {
           for(int y = 0; y <= 4; y++)
+          {
             for(int z = 0; z <= 4; z++)
+            {
               if (miniatureStructure[x][y][z] == null)
+              {
                 miniatureStructure[x][y][z] = Blocks.AIR.getDefaultState();
+              }
+            }
+          }
+        }
       }
     }
 
-    public static final BlockSolarGenerator solarGenerator = new BlockSolarGenerator();
+    public static final BlockSolarGenerator SOLAR_GENERATOR = new BlockSolarGenerator();
+  }
+  
+  public static class Other
+  {
+    public static final BlockBase RAINBOW = new BlockBase(Material.IRON, "rainbow");
   }
   
   public static void init(BlockRegistry registry)
@@ -81,21 +97,25 @@ public class BlocksInit
     registry.addAll
     (
       // ores
-      Ores.copperOre,
+      Ores.COPPER_ORE,
       
       // metals
-      Metals.copperBlock,
+      Metals.COPPER_BLOCK,
       
       // machines
-      Machines.battery,
-      Machines.researchStation,
-      Machines.vacuumGenerator,
-      Machines.machineFrameBase,
-      Machines.machinePress,
+      Machines.BATTERY,
+      Machines.RESEARCH_STATION,
+      Machines.VACUUM_GENERATOR,
+      Machines.MACHINE_FRAME_BASE,
+      Machines.MACHINE_FRAME_ADVANCED,
+      Machines.MACHINE_FRAME_REINVIGORATED,
+      Machines.MACHINE_PRESS,
       Machines.Miniature.controller,
       
       // solar
-      Machines.solarGenerator
+      Machines.SOLAR_GENERATOR,
+      
+      Other.RAINBOW
     );
     
     init = true;

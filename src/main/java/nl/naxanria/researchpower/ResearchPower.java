@@ -2,8 +2,6 @@ package nl.naxanria.researchpower;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.DimensionManager;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -90,9 +88,9 @@ public class ResearchPower extends NMod
     OreHelper.registerInOreDict
       (
         new OreBuilder("Copper")
-          .ore(BlocksInit.Ores.copperOre)
-          .ingot(ItemsInit.Metals.ingotCopper)
-          .fullBlock(BlocksInit.Metals.copperBlock)
+          .ore(BlocksInit.Ores.COPPER_ORE)
+          .ingot(ItemsInit.Metals.INGOT_COPPER)
+          .fullBlock(BlocksInit.Metals.COPPER_BLOCK)
       );
   }
   
@@ -100,7 +98,7 @@ public class ResearchPower extends NMod
   protected void onPostInit(FMLPostInitializationEvent event)
   {
     Log.info("Post Initialization");
-    ResearchDatabase.initAll();
+
   }
   
   public static class ResearchPowerTab extends CreativeTabs

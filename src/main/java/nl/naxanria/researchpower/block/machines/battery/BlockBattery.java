@@ -17,7 +17,7 @@ public class BlockBattery extends BlockTileBase<BlockBatteryEntity>
 {
   public BlockBattery()
   {
-    super(Material.IRON, "battery");
+    super(Material.IRON, "BATTERY");
   }
   
   @Nullable

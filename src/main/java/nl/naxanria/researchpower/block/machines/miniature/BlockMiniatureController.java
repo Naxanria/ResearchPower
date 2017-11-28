@@ -7,6 +7,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import nl.naxanria.nlib.block.BlockTileBase;
 import nl.naxanria.researchpower.tile.machines.TileEntityMiniatureController;
@@ -40,11 +41,24 @@ public class BlockMiniatureController extends BlockTileBase<TileEntityMiniatureC
     {
       if (!world.isRemote)
       {
-        TileEntity entity = world.getTileEntity(pos);
-        if (entity instanceof TileEntityMiniatureController)
+        TileEntityMiniatureController controller = getTileEntity(world, pos);
+        
+        if (!controller.isStructureGood())
         {
-          TileEntityMiniatureController controller = (TileEntityMiniatureController) entity;
-          controller.makeOwnStructure();
+          boolean g = controller.makeOwnStructure();
+          player.sendMessage(new TextComponentString("Controller is " + g));
+        }
+        else
+        {
+          if (!controller.isInProgress())
+          {
+            controller.startRecipe();
+            player.sendStatusMessage(new TextComponentString("Trying to start the recipe"), true);
+          }
+          else
+          {
+            player.sendStatusMessage(new TextComponentString("Progress: " + controller.getProgress() + " " + controller.getTotalTime()), true);
+          }
         }
       }
       return true;

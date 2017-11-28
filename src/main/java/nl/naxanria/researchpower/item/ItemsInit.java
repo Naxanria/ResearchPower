@@ -1,7 +1,6 @@
 package nl.naxanria.researchpower.item;
 
 import nl.naxanria.nlib.Registy.ItemRegistry;
-import nl.naxanria.nlib.item.IItemBase;
 import nl.naxanria.nlib.item.ItemBase;
 import nl.naxanria.researchpower.item.metals.ItemCopperIngot;
 
@@ -11,15 +10,16 @@ public class ItemsInit
   
   public static class Metals
   {
-    public static final ItemCopperIngot ingotCopper = new ItemCopperIngot();
+    public static final ItemCopperIngot INGOT_COPPER = new ItemCopperIngot();
   }
   
   public static class MachineParts
   {
-    public static final ItemBase redstoneConnectorHorizontal = new ItemBase("redstone_connector_horizontal");
-    public static final ItemBase redstoneConnectorVertical = new ItemBase("redstone_connector_vertical");
-    public static final ItemBase redstoneRing = new ItemBase("redstone_ring");
-    public static final ItemBase lapisWafer = new ItemBase("lapis_wafer");
+    public static final ItemBase REDSTONE_CONNECTOR_HORIZONTAL = new ItemBase("redstone_connector_horizontal");
+    public static final ItemBase REDSTONE_CONNECTOR_VERTICAL = new ItemBase("redstone_connector_vertical");
+    public static final ItemBase REDSTONE_RING = new ItemBase("redstone_ring");
+    public static final ItemBase LAPIS_WAFER = new ItemBase("lapis_wafer");
+    public static final ItemBase GLOWSTONE_WAFER = new ItemBase("glowstone_wafer");
   }
   
   public static void init(ItemRegistry registry)
@@ -31,12 +31,13 @@ public class ItemsInit
     
     registry.addAll
     (
-      Metals.ingotCopper,
+      Metals.INGOT_COPPER,
       
-      MachineParts.redstoneConnectorHorizontal,
-      MachineParts.redstoneConnectorVertical,
-      MachineParts.redstoneRing,
-      MachineParts.lapisWafer
+      MachineParts.REDSTONE_CONNECTOR_HORIZONTAL,
+      MachineParts.REDSTONE_CONNECTOR_VERTICAL,
+      MachineParts.REDSTONE_RING,
+      MachineParts.LAPIS_WAFER,
+      MachineParts.GLOWSTONE_WAFER
     );
     
     init = true;

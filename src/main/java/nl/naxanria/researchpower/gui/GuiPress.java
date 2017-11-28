@@ -49,7 +49,7 @@ public class GuiPress extends GuiContainerBase
   @Override
   protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
   {
-    String name = Proxy.getLocal(BlocksInit.Machines.machinePress.getUnlocalizedName() + ".name");
+    String name = Proxy.getLocal(BlocksInit.Machines.MACHINE_PRESS.getUnlocalizedName() + ".name");
     drawCenteredString(fontRenderer, name, xSize / 2, 6, Color.WHITE.color);
     drawString(fontRenderer, playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, Color.WHITE.color);
   

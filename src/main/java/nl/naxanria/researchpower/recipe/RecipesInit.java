@@ -20,18 +20,30 @@ public class RecipesInit
   
   public static class Press
   {
-    public static final RecipePress lapisWafer = new RecipePress
+    public static final RecipePress LAPIS_WAFER = new RecipePress
     (
       new ItemStack(LAPIS, 2),
-      new ItemStack(ItemsInit.MachineParts.lapisWafer),
+      new ItemStack(ItemsInit.MachineParts.LAPIS_WAFER),
       120
     );
     
-    public static final RecipePress LapisWafer2 = new RecipePress
+    public static final RecipePress LAPIS_WAFER_2 = new RecipePress
     (
       new ItemStack(Blocks.LAPIS_BLOCK),
-      new ItemStack(ItemsInit.MachineParts.lapisWafer, 5),
+      new ItemStack(ItemsInit.MachineParts.LAPIS_WAFER, 5),
       240
+    );
+  }
+  
+  public static class Miniature
+  {
+    public static final RecipeMiniature RAINBOW = new RecipeMiniature(
+      new ItemStack(BlocksInit.Other.RAINBOW),
+      "RRR", "RRR", "RRR",
+      "LLL", "LLL", "LLL",
+      "RRR", "RRR", "RRR",
+      'R', Blocks.REDSTONE_BLOCK,
+      'L', Blocks.LAPIS_BLOCK
     );
   }
   
@@ -39,30 +51,28 @@ public class RecipesInit
   
   public static void init(RecipeRegistry registry)
   {
-    
-
     GameRegistry.addSmelting
     (
-      BlocksInit.Ores.copperOre,
-      new ItemStack(ItemsInit.Metals.ingotCopper),
+      BlocksInit.Ores.COPPER_ORE,
+      new ItemStack(ItemsInit.Metals.INGOT_COPPER),
       0.5f
     );
     
     addShapeless(
-      new ItemStack(BlocksInit.Metals.copperBlock),
-      Ingredient.fromStacks(new ItemStack(ItemsInit.Metals.ingotCopper, 9))
+      new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
+      Ingredient.fromStacks(new ItemStack(ItemsInit.Metals.INGOT_COPPER, 9))
     );
     
     addShaped(
-      new ItemStack(BlocksInit.Metals.copperBlock),
+      new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
       "AAA",
       "AAA",
       "AAA",
-      'A', new ItemStack(ItemsInit.Metals.ingotCopper)
+      'A', new ItemStack(ItemsInit.Metals.INGOT_COPPER)
     );
   
     addShaped(
-      new ItemStack(ItemsInit.MachineParts.redstoneConnectorHorizontal),
+      new ItemStack(ItemsInit.MachineParts.REDSTONE_CONNECTOR_HORIZONTAL),
       "RRR",
       "LIL",
       "RRR",
@@ -72,7 +82,7 @@ public class RecipesInit
     );
   
     addShaped(
-      new ItemStack(ItemsInit.MachineParts.redstoneConnectorVertical),
+      new ItemStack(ItemsInit.MachineParts.REDSTONE_CONNECTOR_VERTICAL),
       "RLR",
       "RIR",
       "RLR",
@@ -82,21 +92,62 @@ public class RecipesInit
     );
     
     addShaped(
-      new ItemStack(ItemsInit.MachineParts.redstoneRing),
+      new ItemStack(ItemsInit.MachineParts.REDSTONE_RING),
       "BHB",
       "V V",
       "BHB",
       'B', net.minecraft.init.Blocks.REDSTONE_BLOCK,
-      'H', ItemsInit.MachineParts.redstoneConnectorHorizontal,
-      'V', ItemsInit.MachineParts.redstoneConnectorVertical
+      'H', ItemsInit.MachineParts.REDSTONE_CONNECTOR_HORIZONTAL,
+      'V', ItemsInit.MachineParts.REDSTONE_CONNECTOR_VERTICAL
+    );
+    
+    addShaped(
+      new ItemStack(BlocksInit.Machines.MACHINE_FRAME_BASE),
+      "ICI",
+      "C C",
+      "ICI",
+      'I', Items.IRON_INGOT,
+      'C', ItemsInit.Metals.INGOT_COPPER
+    );
+    
+    addShaped(
+      new ItemStack(BlocksInit.Machines.MACHINE_PRESS),
+      "IPI",
+      "RFR",
+      "IPI",
+      'I', Items.IRON_INGOT,
+      'P', Blocks.PISTON,
+      'R', ItemsInit.MachineParts.REDSTONE_RING,
+      'F', BlocksInit.Machines.MACHINE_FRAME_BASE
+    );
+    
+    addShaped(
+      new ItemStack(BlocksInit.Machines.SOLAR_GENERATOR, 1, 0),
+      "WWW",
+      "wRw",
+      "www",
+      'W', ItemsInit.MachineParts.LAPIS_WAFER,
+      'w', Blocks.PLANKS,
+      'R', Items.REDSTONE
+    );
+  
+    addShaped(
+      new ItemStack(BlocksInit.Machines.SOLAR_GENERATOR, 1, 1),
+      "111",
+      "1F1",
+      "111",
+      '1', (new ItemStack(BlocksInit.Machines.SOLAR_GENERATOR, 1, 0).getItem()),
+      'F', BlocksInit.Machines.MACHINE_FRAME_BASE
     );
 
-    registry.addAll( );
-    
     PressRecipeRegistry.addAll
     (
-      Press.lapisWafer,
-      Press.LapisWafer2
+      Press.LAPIS_WAFER,
+      Press.LAPIS_WAFER_2
+    );
+    
+    MiniatureRecipeRegistry.addAll(
+      Miniature.RAINBOW
     );
   }
   
