@@ -90,8 +90,6 @@ public class ResearchPower extends NMod
   @Override
   protected void onInit(FMLInitializationEvent event)
   {
-    GuiContainerBase.defaultSlotImage = new ResourceLocation(MOD_ID, "textures/gui/slot.png");
-    
     OreHelper.registerInOreDict
       (
         new OreBuilder("Copper")

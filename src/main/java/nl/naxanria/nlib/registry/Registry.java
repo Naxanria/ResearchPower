@@ -1,4 +1,4 @@
-package nl.naxanria.nlib.Registy;
+package nl.naxanria.nlib.registry;
 
 import java.util.ArrayList;
 

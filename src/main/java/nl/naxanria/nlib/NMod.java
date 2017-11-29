@@ -11,14 +11,12 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import nl.naxanria.nlib.Registy.BlockRegistry;
-import nl.naxanria.nlib.Registy.ItemRegistry;
-import nl.naxanria.nlib.Registy.RecipeRegistry;
+import nl.naxanria.nlib.registry.BlockRegistry;
+import nl.naxanria.nlib.registry.ItemRegistry;
+import nl.naxanria.nlib.registry.RecipeRegistry;
 import nl.naxanria.nlib.network.PacketHandler;
 import nl.naxanria.nlib.util.Log;
 import nl.naxanria.nlib.util.LogColor;
-import nl.naxanria.nlib.util.ores.OreBuilder;
-import nl.naxanria.nlib.util.ores.OreHelper;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

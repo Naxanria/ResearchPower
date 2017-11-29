@@ -6,7 +6,7 @@ import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.IStringSerializable;
-import nl.naxanria.nlib.Registy.BlockRegistry;
+import nl.naxanria.nlib.registry.BlockRegistry;
 import nl.naxanria.nlib.block.BlockBase;
 import nl.naxanria.researchpower.block.machines.BlockMachinePress;
 import nl.naxanria.researchpower.block.machines.battery.BlockBattery;

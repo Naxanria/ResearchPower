@@ -1,4 +1,4 @@
-package nl.naxanria.nlib.Registy;
+package nl.naxanria.nlib.registry;
 
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.registries.IForgeRegistry;

@@ -1,6 +1,6 @@
 package nl.naxanria.researchpower.item;
 
-import nl.naxanria.nlib.Registy.ItemRegistry;
+import nl.naxanria.nlib.registry.ItemRegistry;
 import nl.naxanria.nlib.item.ItemBase;
 import nl.naxanria.researchpower.item.metals.ItemCopperIngot;
 

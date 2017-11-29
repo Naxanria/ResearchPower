@@ -3,23 +3,24 @@ package nl.naxanria.nlib.gui;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.util.ResourceLocation;
-import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.container.ContainerBase;
 import nl.naxanria.nlib.util.Color;
+
+import static nl.naxanria.researchpower.ResearchPower.MOD_ID;
 
 public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiContainer
 {
   public static ResourceLocation defaultBackgroundImage = new ResourceLocation("minecraft:textures/gui/demo_background.png");
-  public static ResourceLocation defaultSlotImage;
+  public static ResourceLocation spriteSheet = new ResourceLocation(MOD_ID, "textures/gui/slot.png");;
   
   public final TC container;
   public final EntityPlayer player;
   
-  protected TextureInfo backgroundImage;
-  protected TextureInfo slotImage;
+  protected ITextureInfo backgroundImage;
+  protected ITextureInfo slotImage;
+  protected ITextureInfo spriteImage;
   
   public GuiContainerBase(TC inventorySlots, EntityPlayer player)
   {
@@ -33,9 +34,10 @@ public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiCont
       backgroundImage = new TextureInfo(defaultBackgroundImage);
     }
     
-    if (defaultSlotImage != null)
+    if (spriteSheet != null)
     {
-      slotImage = new TextureInfo(defaultSlotImage);
+      spriteImage = new TextureInfo(spriteSheet);
+      slotImage = SpriteManager.registerSprite("slot", 0, 0, 18, 18, spriteImage);
     }
   }
   
@@ -93,12 +95,12 @@ public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiCont
     );
   }
   
-  public void drawTexture(int x, int y, TextureInfo texture)
+  public void drawTexture(int x, int y, ITextureInfo texture)
   {
     drawTexture(x, y, texture, Color.WHITE);
   }
   
-  public void drawTexture(int x, int y, TextureInfo texture, Color color)
+  public void drawTexture(int x, int y, ITextureInfo texture, Color color)
   {
     if (texture == null)
     {
@@ -106,8 +108,8 @@ public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiCont
     }
     
     GlStateManager.color(color.getRedFloat(), color.getGreenFloat(), color.getBlueFloat(), color.getAlphaFloat());
-    mc.getTextureManager().bindTexture(texture.location);
-    drawTexturedModalRect(x, y, 0, 0, texture.getWidth(), texture.getHeight());
+    mc.getTextureManager().bindTexture(texture.getResource());
+    drawTexturedModalRect(x, y, texture.getX(), texture.getY(), texture.getWidth(), texture.getHeight());
   }
   
   public void drawDefault()

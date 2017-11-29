@@ -9,7 +9,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import nl.naxanria.nlib.NMod;
-import nl.naxanria.nlib.Registy.RecipeRegistry;
+import nl.naxanria.nlib.registry.RecipeRegistry;
 import nl.naxanria.nlib.util.Dye;
 import nl.naxanria.researchpower.block.BlocksInit;
 import nl.naxanria.researchpower.item.ItemsInit;

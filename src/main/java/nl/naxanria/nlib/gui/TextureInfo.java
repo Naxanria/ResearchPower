@@ -9,9 +9,9 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class TextureInfo
+public class TextureInfo implements ITextureInfo
 {
-  public final ResourceLocation location;
+  private final ResourceLocation location;
   private int width, height;
   
   public TextureInfo(ResourceLocation location)
@@ -30,17 +30,28 @@ public class TextureInfo
     {
       e.printStackTrace();
     }
-  
-    Log.info(location.toString());
-    Log.info(location.getResourceDomain());
-    Log.info(location.getResourcePath());
     
 //    BufferedImage img = ImageIO.read(location.getResourcePath() + location.getResourceDomain())
-  
-    Log.info(toString());
-    
   }
-  
+
+  @Override
+  public ResourceLocation getResource()
+  {
+    return location;
+  }
+
+  @Override
+  public int getX()
+  {
+    return 0;
+  }
+
+  @Override
+  public int getY()
+  {
+    return 0;
+  }
+
   public int getWidth()
   {
     return width;
