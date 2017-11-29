@@ -13,7 +13,7 @@ import static nl.naxanria.researchpower.ResearchPower.MOD_ID;
 public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiContainer
 {
   public static ResourceLocation defaultBackgroundImage = new ResourceLocation("minecraft:textures/gui/demo_background.png");
-  public static ResourceLocation spriteSheet = new ResourceLocation(MOD_ID, "textures/gui/slot.png");;
+  public static ResourceLocation spriteSheet = new ResourceLocation(MOD_ID, "textures/gui/slot.png");
   
   public final TC container;
   public final EntityPlayer player;

@@ -10,14 +10,14 @@ public class SpriteManager
 
   public static ITextureInfo registerSprite(String name, int x, int y, int width, int height, ITextureInfo backer)
   {
+    if (sprites.containsKey(name))
+    {
+      return sprites.get(name);
+    }
+
     if (x + width > backer.getWidth() || y + height > backer.getHeight())
     {
       throw new UnsupportedOperationException("Texture is out of bounds!");
-    }
-
-    if (sprites.containsKey(name))
-    {
-      throw new IllegalArgumentException("Key already exists");
     }
 
     ITextureInfo texture = new Sprite(backer, x, y, width, height);
