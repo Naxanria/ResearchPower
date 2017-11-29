@@ -68,6 +68,7 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
     return this;
   }
   
+  @SuppressWarnings({"unchecked", "ConstantConditions"})
   public void registerItemModel(Item itemBlock)
   {
     if (PROPERTY == null && tempProperty == null)
@@ -92,12 +93,17 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
    registerItemModel(Item.getItemFromBlock(this));
   }
   
+  @SuppressWarnings("ConstantConditions")
   public Item createItemBlock()
   {
     if (PROPERTY == null && tempProperty == null)
+    {
       return new ItemBlock(this).setRegistryName(getRegistryName());
+    }
     else
+    {
       return new ItemMetaBlock(this).setRegistryName(getRegistryName());
+    }
   }
   
   @Override
@@ -107,6 +113,7 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
   }
 
   // state stuff
+  @SuppressWarnings("NullableProblems")
   @Override
   protected BlockStateContainer createBlockState()
   {
@@ -118,7 +125,7 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
     return new BlockStateContainer(this, property);
   }
 
-  @SuppressWarnings("deprecation,unchecked")
+  @SuppressWarnings({"deprecation,unchecked", "NullableProblems", "ConstantConditions"})
   @Override
   public IBlockState getStateFromMeta(int meta)
   {
@@ -135,24 +142,29 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
     return getDefaultState();
   }
 
-  @SuppressWarnings("unchecked")
+  @SuppressWarnings({"unchecked", "ConstantConditions"})
   @Override
   public int getMetaFromState(IBlockState state)
   {
     if (PROPERTY == null && tempProperty == null)
+    {
       return super.getMetaFromState(state);
+    }
     Collection<? extends Comparable> allowedValues = PROPERTY.getAllowedValues();
     int count = 0;
     for (Comparable obj : allowedValues)
     {
       IBlockState ourState = getDefaultState().withProperty(PROPERTY, obj);
       if (ourState == state)
+      {
         return count;
+      }
       count++;
     }
     return 0;
   }
 
+  @SuppressWarnings({"ConstantConditions", "unchecked"})
   @Override
   public void getSubBlocks(CreativeTabs itemIn, NonNullList items)
   {

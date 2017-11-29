@@ -4,11 +4,16 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.items.IItemHandler;
 import nl.naxanria.nlib.tile.TileEntityBase;
+import nl.naxanria.nlib.tile.TileFlags;
+import nl.naxanria.nlib.util.WorldUtil;
 
 import javax.annotation.Nullable;
 
@@ -83,5 +88,32 @@ public abstract class BlockTileBaseInternal<T extends IProperty, TE extends Tile
   public int getComparatorInputOverride(IBlockState blockState, World world, BlockPos pos)
   {
     return getTileEntity(world, pos).getComparatorStrength();
+  }
+  
+  @Override
+  public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
+  {
+    if (!worldIn.isRemote)
+    {
+      TileEntityBase tile = getTileEntity(worldIn, pos);
+      if (tile.hasFlags(TileFlags.DropInventory))
+      {
+        IItemHandler[] toDrop = tile.getAllInventoriesToDrop();
+        if (toDrop != null)
+        {
+          for (IItemHandler handler :
+            toDrop)
+          {
+            for (int i = 0; i < handler.getSlots(); i++)
+            {
+              ItemStack stack = handler.getStackInSlot(i);
+              WorldUtil.dropItemInWorld(worldIn, pos, stack);
+            }
+          }
+        }
+      }
+  
+      super.breakBlock(worldIn, pos, state);
+    }
   }
 }

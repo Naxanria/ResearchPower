@@ -60,29 +60,29 @@ public class BlockMachinePress extends BlockTileBase<TileEntityPress>
     return super.onBlockActivated(world, pos, state, player, hand, facing, hitX, hitY, hitZ);
   }
   
-  @Override
-  public void breakBlock(World world, BlockPos pos, IBlockState state)
-  {
-    TileEntityPress tile = getTileEntity(world, pos);
-    IItemHandler handler = tile.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
-    if (handler == null)
-    {
-      return;
-    }
-    
-    ItemStack slot0 = handler.getStackInSlot(0);
-    ItemStack slot1 = handler.getStackInSlot(1);
-  
-    if (!slot0.isEmpty())
-    {
-      WorldUtil.dropItemInWorld(world, pos, slot0);
-    }
-  
-    if (!slot1.isEmpty())
-    {
-      WorldUtil.dropItemInWorld(world, pos, slot0);
-    }
-    
-    super.breakBlock(world, pos, state);
-  }
+//  @Override
+//  public void breakBlock(World world, BlockPos pos, IBlockState state)
+//  {
+//    TileEntityPress tile = getTileEntity(world, pos);
+//    IItemHandler handler = tile.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
+//    if (handler == null)
+//    {
+//      return;
+//    }
+//
+//    ItemStack slot0 = handler.getStackInSlot(0);
+//    ItemStack slot1 = handler.getStackInSlot(1);
+//
+//    if (!slot0.isEmpty())
+//    {
+//      WorldUtil.dropItemInWorld(world, pos, slot0);
+//    }
+//
+//    if (!slot1.isEmpty())
+//    {
+//      WorldUtil.dropItemInWorld(world, pos, slot1);
+//    }
+//
+//    super.breakBlock(world, pos, state);
+//  }
 }

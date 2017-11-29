@@ -5,6 +5,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
+import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.inventory.IInventoryHolder;
 import nl.naxanria.nlib.tile.power.BaseEnergyAcceptor;
 import nl.naxanria.nlib.util.EnumHelper;
@@ -36,6 +37,8 @@ public class TileEntityPress extends BaseEnergyAcceptor implements IInventoryHol
     
     inputStack = ItemStack.EMPTY;
     outputStack = ItemStack.EMPTY;
+    
+    enableFlag(TileFlags.DropInventory);
   }
   
   @Override
@@ -156,5 +159,11 @@ public class TileEntityPress extends BaseEnergyAcceptor implements IInventoryHol
     outputStack = inventory.getStackInSlot(SLOT_OUTPUT);
     
     super.readSyncableNBT(compound, type);
+  }
+  
+  @Override
+  public IItemHandler[] getAllInventories()
+  {
+    return new IItemHandler[] { inventory };
   }
 }

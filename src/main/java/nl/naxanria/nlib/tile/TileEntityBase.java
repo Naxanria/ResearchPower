@@ -20,24 +20,24 @@ import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
 import nl.naxanria.nlib.network.PacketHandler;
 import nl.naxanria.nlib.network.PacketServerToClient;
 import nl.naxanria.nlib.tile.fluid.IFluidSharingProvider;
 import nl.naxanria.nlib.tile.inventory.IInventoryHolder;
 import nl.naxanria.nlib.tile.power.IEnergySharingProvider;
 import nl.naxanria.nlib.util.EnumHelper;
+import nl.naxanria.nlib.util.player.PlayerHelper;
 import nl.naxanria.nlib.util.WorldUtil;
-import nl.naxanria.nlib.util.player.SerializableUUID;
 
 import javax.annotation.Nullable;
 import java.util.UUID;
 
-import static nl.naxanria.nlib.tile.TileEntityBase.Flags.HasOwner;
-
+@SuppressWarnings("NullableProblems")
 public abstract class TileEntityBase extends TileEntity implements ITickable
 {
   protected TileEntity[] tilesAround = new TileEntity[6];
+  
+  protected int ticksPassed = 0;
   
   private boolean isEnergySharingProvider;
   private IEnergySharingProvider energySharingProvider;
@@ -50,13 +50,13 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
   
   private long flags;
   private boolean hasSavedDataOnChangeOrWorldStart = false;
-  private UUID ownerID;
+  private EntityPlayer owner;
   
   public TileEntityBase(boolean needsOwner)
   {
     this();
     
-    enableFlag(HasOwner);
+    enableFlag(TileFlags.HasOwner);
   }
   
   public TileEntityBase()
@@ -65,14 +65,14 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     if (isEnergySharingProvider)
     {
       energySharingProvider = (IEnergySharingProvider) this;
-      enableFlag(Flags.SaveOnWorldChange);
+      enableFlag(TileFlags.SaveOnWorldChange);
     }
     
     isFluidSharingProvider = this instanceof IFluidSharingProvider;
     if (isFluidSharingProvider)
     {
       fluidSharingProvider = (IFluidSharingProvider) this;
-      enableFlag(Flags.SaveOnWorldChange);
+      enableFlag(TileFlags.SaveOnWorldChange);
     }
     
     isInventoryHolder = this instanceof IInventoryHolder;
@@ -84,27 +84,29 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
   
   public void setOwner(EntityPlayer owner)
   {
-    ownerID = owner.getUniqueID();
+    this.owner = owner;
+    
+    markDirty();
   }
   
-  public UUID getOwnerID()
+  public EntityPlayer getOwner()
   {
-    return ownerID;
+    return owner;
   }
   
   public boolean isOwner(EntityPlayer player)
   {
-    return player.getUniqueID().equals(ownerID);
+    return player.equals(owner);
   }
   
-  public void enableFlag(Flags flag)
+  public void enableFlag(TileFlags flag)
   {
     flags |= flag.FLAG;
   }
   
-  public void enableFlags(Flags... flags)
+  public void enableFlags(TileFlags... flags)
   {
-    for (Flags f :
+    for (TileFlags f :
       flags)
     {
        this.flags |= f.FLAG;
@@ -116,14 +118,14 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     this.flags |= flags;
   }
   
-  public void disableFlag(Flags flag)
+  public void disableFlag(TileFlags flag)
   {
     this.flags &= ~flag.FLAG;
   }
   
-  public void disableFlags(Flags... flags)
+  public void disableFlags(TileFlags... flags)
   {
-    for (Flags f :
+    for (TileFlags f :
       flags)
     {
       this.flags &= ~f.FLAG;
@@ -135,10 +137,10 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     this.flags &= ~flags;
   }
   
-  public boolean hasFlags(Flags... flags)
+  public boolean hasFlags(TileFlags... flags)
   {
     long val = 0;
-    for (Flags f :
+    for (TileFlags f :
       flags)
     {
       val |= f.FLAG;
@@ -159,6 +161,8 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
   @Override
   public void update()
   {
+    ticksPassed++;
+    
     if (canUpdate())
     {
       entityUpdate();
@@ -258,7 +262,7 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
   
   public boolean shouldSaveDataOnChangeOrWorldStart()
   {
-    return hasFlags(Flags.SaveOnWorldChange);
+    return hasFlags(TileFlags.SaveOnWorldChange);
   }
   
   @Override
@@ -267,7 +271,7 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     return getCapability(capability, facing) != null;
   }
   
-  @SuppressWarnings("unchecked")
+  @SuppressWarnings({"unchecked", "NullableProblems"})
   @Nullable
   @Override
   public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing)
@@ -315,6 +319,16 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
   public IItemHandler getInventory(EnumFacing facing)
   {
     return null;
+  }
+  
+  public IItemHandler[] getAllInventories()
+  {
+    return new IItemHandler[0];
+  }
+  
+  public IItemHandler[] getAllInventoriesToDrop()
+  {
+    return getAllInventories();
   }
   
   public int getComparatorStrength()
@@ -399,22 +413,11 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     
     if (type == NBTType.SAVE_TILE)
     {
-      if (ownerID != null)
+      if (owner != null)
       {
-        compound.setUniqueId("owner", ownerID);
+        compound.setUniqueId("owner", owner.getUniqueID());
       }
     }
-//
-//    if(type == NBTType.SAVE_TILE)
-//    {
-//      compound.setBoolean("Redstone", this.isRedstonePowered);
-//      compound.setInteger("TicksElapsed", this.ticksElapsed);
-//      compound.setBoolean("StopDrop", this.stopFromDropping);
-//    }
-//    if(this.isRedstoneToggle() && (type != NBTType.SAVE_BLOCK || this.isPulseMode))
-//    {
-//      compound.setBoolean("IsPulseMode", this.isPulseMode);
-//    }
   }
   
   public void readSyncableNBT(NBTTagCompound compound, NBTType type)
@@ -426,17 +429,13 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     
     if (type == NBTType.SAVE_TILE)
     {
-      ownerID = compound.getUniqueId("owner");
+      UUID ownerID = compound.getUniqueId("owner");
+      if (ownerID != null)
+      {
+        
+        owner = PlayerHelper.getPlayerFromUUID(ownerID);
+      }
     }
-    
-//    if(type == NBTType.SAVE_TILE){
-//      this.isRedstonePowered = compound.getBoolean("Redstone");
-//      this.ticksElapsed = compound.getInteger("TicksElapsed");
-//      this.stopFromDropping = compound.getBoolean("StopDrop");
-//    }
-//    if(this.isRedstoneToggle()){
-//      this.isPulseMode = compound.getBoolean("IsPulseMode");
-//    }
   }
   
   @Override
@@ -445,18 +444,7 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     return !oldState.getBlock().isAssociatedBlock(newState.getBlock());
   }
   
-  public enum Flags
-  {
-    SaveOnWorldChange,
-    HasOwner;
-    
-    public final long FLAG;
-  
-    Flags()
-    {
-      this.FLAG = 1 << ordinal();
-    }
-  }
+ 
   
   public enum NBTType
   {

@@ -3,14 +3,13 @@ package nl.naxanria.researchpower.containers;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.ContainerFurnace;
 import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import nl.naxanria.nlib.tile.TileEntityBase;
-import nl.naxanria.nlib.util.Log;
+import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.researchpower.tile.machines.TileEntityPress;
 
 public class ContainerPress extends Container
@@ -100,9 +99,9 @@ public class ContainerPress extends Container
   @Override
   public boolean canInteractWith(EntityPlayer player)
   {
-    if (entityPress.hasFlags(TileEntityBase.Flags.HasOwner))
+    if (entityPress.hasFlags(TileFlags.HasOwner))
     {
-      return entityPress.getOwnerID().equals(player.getUniqueID());
+      return entityPress.getOwner().equals(player);
     }
 
     return true;
