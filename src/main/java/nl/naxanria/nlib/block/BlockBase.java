@@ -82,7 +82,6 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
     for (Comparable obj : allowedValues)
     {
       String str = b.getPropertyString(getDefaultState().withProperty(PROPERTY, obj).getProperties());
-      System.out.println(str);
       Proxy.registerItemRenderWithVariant(Item.getItemFromBlock(this), count, name, str);
       count++;
     }
@@ -172,16 +171,11 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
 
   // This is a hack as Block.java expects the property to be available on creation - and it's constructor runs before ours - so we need to make sure we can get it before our constructor finishes running
 
-  public static BlockBase createBlock(Material blockMaterialIn, String name, IProperty property)
-  {
-    return new BlockBase(blockMaterialIn, name, property);
-  }
-
   @SuppressWarnings("unchecked")
   public static BlockBase createStateVersion(Material blockMaterialIn, String name, IProperty property)
   {
     tempProperty = property;
-    BlockBase block = createBlock(blockMaterialIn, name, property);
+    BlockBase block = new BlockBase(blockMaterialIn, name, property);
     tempProperty = null;
     return block;
   }

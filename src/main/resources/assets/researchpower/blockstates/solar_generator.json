@@ -61,14 +61,6 @@
           "all": "researchpower:blocks/solar/tier_3"
         }
       }
-    },
-    "inventory":
-    {
-      "model" : "cube_all"
-    },
-    "normal":
-    {
-      "model" : "cube_all"
     }
   }
 }

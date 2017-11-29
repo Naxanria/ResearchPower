@@ -32,14 +32,6 @@
           "all" : "researchpower:blocks/machine_frame_reinvigorated"
         }
       }
-    },
-    "normal":
-    {
-      "model" : "cube_all"
-    },
-    "inventory":
-    {
-      "model" : "cube_all"
     }
   }
 }
