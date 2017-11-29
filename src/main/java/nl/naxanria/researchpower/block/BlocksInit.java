@@ -5,7 +5,6 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.IStringSerializable;
 import nl.naxanria.nlib.Registy.BlockRegistry;
 import nl.naxanria.nlib.block.BlockBase;
 import nl.naxanria.researchpower.block.machines.BlockMachinePress;
@@ -37,27 +36,7 @@ public class BlocksInit
     public static final BlockBattery BATTERY = new BlockBattery();
     public static final BlockVacuumGenerator VACUUM_GENERATOR = new BlockVacuumGenerator();
 
-    public enum FRAMES implements IStringSerializable
-    {
-      BASE("base"),
-      ADVANCED("advanced"),
-      REINVIGORATED("reinvigorated");
-
-      final String name;
-
-      FRAMES(String name)
-      {
-        this.name = name;
-      }
-
-      @Override
-      public String getName()
-      {
-        return name;
-      }
-    }
-
-    public static final BlockBase MACHINE_FRAME = BlockBase.createStateVersion(Material.IRON, "machine_frame", PropertyEnum.create("type", FRAMES.class));
+    public static final BlockBase MACHINE_FRAME = BlockBase.createStateVersion(Material.IRON, "machine_frame", PropertyEnum.create("type", BlockSolarGenerator.FRAMES.class));
     public static final BlockMachinePress MACHINE_PRESS = new BlockMachinePress();
 
     public static class Miniature

@@ -17,6 +17,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
@@ -89,5 +90,25 @@ public class BlockSolarGenerator extends BlockTileBaseProperties<PropertyInteger
     BlockSolarGenerator block = new BlockSolarGenerator(property);
     tempProperty = null;
     return block;
+  }
+
+  public enum FRAMES implements IStringSerializable
+  {
+    BASE("base"),
+    ADVANCED("advanced"),
+    REINVIGORATED("reinvigorated");
+
+    final String name;
+
+    FRAMES(String name)
+    {
+      this.name = name;
+    }
+
+    @Override
+    public String getName()
+    {
+      return name;
+    }
   }
 }
