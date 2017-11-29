@@ -92,23 +92,4 @@ public class BlockSolarGenerator extends BlockTileBaseProperties<PropertyInteger
     return block;
   }
 
-  public enum FRAMES implements IStringSerializable
-  {
-    BASE("base"),
-    ADVANCED("advanced"),
-    REINVIGORATED("reinvigorated");
-
-    final String name;
-
-    FRAMES(String name)
-    {
-      this.name = name;
-    }
-
-    @Override
-    public String getName()
-    {
-      return name;
-    }
-  }
 }

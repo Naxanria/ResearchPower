@@ -5,6 +5,7 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.IStringSerializable;
 import nl.naxanria.nlib.Registy.BlockRegistry;
 import nl.naxanria.nlib.block.BlockBase;
 import nl.naxanria.researchpower.block.machines.BlockMachinePress;
@@ -36,7 +37,27 @@ public class BlocksInit
     public static final BlockBattery BATTERY = new BlockBattery();
     public static final BlockVacuumGenerator VACUUM_GENERATOR = new BlockVacuumGenerator();
 
-    public static final BlockBase MACHINE_FRAME = BlockBase.createStateVersion(Material.IRON, "machine_frame", PropertyEnum.create("type", BlockSolarGenerator.FRAMES.class));
+    public enum FRAMES implements IStringSerializable
+    {
+      BASE("base"),
+      ADVANCED("advanced"),
+      REINVIGORATED("reinvigorated");
+
+      final String name;
+
+      FRAMES(String name)
+      {
+        this.name = name;
+      }
+
+      @Override
+      public String getName()
+      {
+        return name;
+      }
+    }
+
+    public static final BlockBase MACHINE_FRAME = BlockBase.createStateVersion(Material.IRON, "machine_frame", PropertyEnum.create("type", FRAMES.class));
     public static final BlockMachinePress MACHINE_PRESS = new BlockMachinePress();
 
     public static class Miniature
@@ -46,21 +67,31 @@ public class BlocksInit
       public static IBlockState[][][] miniatureStructure = new IBlockState[5][5][5];
       static
       {
+        IBlockState floor = Machines.MACHINE_FRAME.getDefaultState().withProperty(MACHINE_FRAME.PROPERTY, FRAMES.BASE);
+        IBlockState pillars = Machines.MACHINE_FRAME.getDefaultState().withProperty(MACHINE_FRAME.PROPERTY, FRAMES.ADVANCED);
+        IBlockState pillarTop = Machines.BATTERY.getDefaultState();
+
         // pillars
-        for (int y = 0; y <= 4; y++)
+        for (int y = 0; y <= 3; y++)
         {
-          miniatureStructure[0][y][0] = Machines.MACHINE_FRAME.getDefaultState();
-          miniatureStructure[0][y][4] = Machines.MACHINE_FRAME.getDefaultState();
-          miniatureStructure[4][y][0] = Machines.MACHINE_FRAME.getDefaultState();
-          miniatureStructure[4][y][4] = Machines.MACHINE_FRAME.getDefaultState();
+          miniatureStructure[0][y][0] = pillars;
+          miniatureStructure[0][y][4] = pillars;
+          miniatureStructure[4][y][0] = pillars;
+          miniatureStructure[4][y][4] = pillars;
         }
+
+        // pillar top
+        miniatureStructure[0][4][0] = pillarTop;
+        miniatureStructure[0][4][4] = pillarTop;
+        miniatureStructure[4][4][0] = pillarTop;
+        miniatureStructure[4][4][4] = pillarTop;
 
         // floor
         for(int x = 1; x <= 3; x++)
         {
           for (int z = 1; z <= 3; z++)
           {
-            miniatureStructure[x][0][z] = Machines.MACHINE_FRAME.getDefaultState();
+            miniatureStructure[x][0][z] = floor;
           }
         }
 

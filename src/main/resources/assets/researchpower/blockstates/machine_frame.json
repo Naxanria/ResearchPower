@@ -22,7 +22,7 @@
       {
         "textures":
         {
-          "all": "researchpower:blocks/machine_frame_base"
+          "all": "researchpower:blocks/machine_frame_advanced"
         }
       },
       "reinvigorated":
