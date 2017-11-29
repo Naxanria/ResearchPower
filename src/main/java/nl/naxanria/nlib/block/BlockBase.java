@@ -8,7 +8,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.statemap.DefaultStateMapper;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -24,10 +23,10 @@ import java.util.Collection;
 public class BlockBase<T extends IProperty> extends Block implements IBlockBase
 {
   protected String name;
-  private static IProperty tempProperty;
+  public static IProperty tempProperty;
   public final T PROPERTY;
 
-  private BlockBase(Material blockMaterialIn, String name, T property)
+  public BlockBase(Material blockMaterialIn, String name, T property)
   {
     super(blockMaterialIn);
 
@@ -143,7 +142,7 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
   {
     if (PROPERTY == null && tempProperty == null)
       return super.getMetaFromState(state);
-    Collection<? extends Comparable<?>> allowedValues = PROPERTY.getAllowedValues();
+    Collection<? extends Comparable> allowedValues = PROPERTY.getAllowedValues();
     int count = 0;
     for (Comparable obj : allowedValues)
     {
@@ -172,11 +171,17 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
   }
 
   // This is a hack as Block.java expects the property to be available on creation - and it's constructor runs before ours - so we need to make sure we can get it before our constructor finishes running
+
+  public static BlockBase createBlock(Material blockMaterialIn, String name, IProperty property)
+  {
+    return new BlockBase(blockMaterialIn, name, property);
+  }
+
   @SuppressWarnings("unchecked")
   public static BlockBase createStateVersion(Material blockMaterialIn, String name, IProperty property)
   {
     tempProperty = property;
-    BlockBase block = new BlockBase(blockMaterialIn, name, property);
+    BlockBase block = createBlock(blockMaterialIn, name, property);
     tempProperty = null;
     return block;
   }

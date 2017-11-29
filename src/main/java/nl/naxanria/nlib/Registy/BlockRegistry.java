@@ -2,12 +2,10 @@ package nl.naxanria.nlib.Registy;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraftforge.registries.IForgeRegistry;
 import nl.naxanria.nlib.block.BlockTileBase;
+import nl.naxanria.nlib.block.BlockTileBaseInternal;
 import nl.naxanria.nlib.block.IBlockBase;
-
-import java.util.ArrayList;
 
 public class BlockRegistry extends Registry<IBlockBase, IForgeRegistry<Block>>
 {
@@ -24,9 +22,9 @@ public class BlockRegistry extends Registry<IBlockBase, IForgeRegistry<Block>>
     {
       registry.register(b.createItemBlock());
 
-      if (b instanceof BlockTileBase)
+      if (b instanceof BlockTileBaseInternal)
       {
-        ((BlockTileBase) b).registerTileEntity();
+        ((BlockTileBaseInternal) b).registerTileEntity();
       }
     }
   }

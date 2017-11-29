@@ -2,6 +2,7 @@ package nl.naxanria.researchpower.block;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.IStringSerializable;
@@ -106,7 +107,7 @@ public class BlocksInit
       }
     }
 
-    public static final BlockSolarGenerator SOLAR_GENERATOR = new BlockSolarGenerator();
+    public static final BlockSolarGenerator SOLAR_GENERATOR = (BlockSolarGenerator)BlockSolarGenerator.createStateVersion(PropertyInteger.create("tier", 1, 7));
   }
   
   public static class Other

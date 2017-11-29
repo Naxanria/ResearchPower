@@ -21,7 +21,9 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
+import nl.naxanria.nlib.block.BlockBase;
 import nl.naxanria.nlib.block.BlockTileBase;
+import nl.naxanria.nlib.block.BlockTileBaseProperties;
 import nl.naxanria.nlib.item.ItemMetaBlock;
 import nl.naxanria.nlib.proxy.Proxy;
 import nl.naxanria.nlib.util.Log;
@@ -30,16 +32,15 @@ import nl.naxanria.researchpower.tile.TileEntitySolarGenerator;
 
 import javax.annotation.Nullable;
 
-public class BlockSolarGenerator extends BlockTileBase<TileEntitySolarGenerator>
+public class BlockSolarGenerator extends BlockTileBaseProperties<PropertyInteger, TileEntitySolarGenerator>
 {
-  protected PropertyInteger TIER;
   protected int base = 2;
   
   protected static boolean needRegistration = true;
   
-  public BlockSolarGenerator()
+  private BlockSolarGenerator(PropertyInteger prop)
   {
-    super(Material.IRON, "solar_generator");
+    super(Material.IRON, "solar_generator", prop);
   }
   
   @Override
@@ -73,7 +74,7 @@ public class BlockSolarGenerator extends BlockTileBase<TileEntitySolarGenerator>
   @Override
   public TileEntitySolarGenerator createTileEntity(World world, IBlockState state)
   {
-    return new TileEntitySolarGenerator(state.getValue(TIER) + 1);
+    return new TileEntitySolarGenerator(state.getValue((PropertyInteger)PROPERTY) + 1);
   }
   
   @Override
@@ -82,55 +83,11 @@ public class BlockSolarGenerator extends BlockTileBase<TileEntitySolarGenerator>
     return TileEntitySolarGenerator.class;
   }
 
-  @SuppressWarnings("deprecation")
-  @Override
-  public IBlockState getStateFromMeta(int meta)
+  public static BlockSolarGenerator createStateVersion(PropertyInteger property)
   {
-    return getDefaultState().withProperty(TIER, meta + 1);
-  }
-
-  /**
-   * Convert the BlockState into the correct metadata value
-   */
-  @Override
-  public int getMetaFromState(IBlockState state)
-  {
-    return state.getValue(TIER) - 1;
-  }
-
-  @Override
-  protected BlockStateContainer createBlockState()
-  {
-    TIER = PropertyInteger.create("tier", 1, 7);
-    return new BlockStateContainer(this, TIER);
-  }
-
-  @Override
-  public void getSubBlocks(CreativeTabs itemIn, NonNullList items)
-  {
-    for (int i = 0; i <= 6; i++)
-    {
-      items.add(new ItemStack(this, 1, i));
-    }
-  }
-
-  @Override
-  public void registerItemModel()
-  {
-    StateMapperBase b = new DefaultStateMapper();
-    BlockStateContainer bsc = getBlockState();
-    ImmutableList<IBlockState> values = bsc.getValidStates();
-
-    for(IBlockState state : values)
-    {
-      String str = b.getPropertyString(state.getProperties());
-      Proxy.registerItemRenderWithVariant(Item.getItemFromBlock(this), getMetaFromState(state), name, str);
-    }
-  }
-
-  @Override
-  public Item createItemBlock()
-  {
-    return new ItemMetaBlock(this).setRegistryName(getRegistryName()); // no harm in using it for everything
+    tempProperty = property;
+    BlockSolarGenerator block = new BlockSolarGenerator(property);
+    tempProperty = null;
+    return block;
   }
 }
