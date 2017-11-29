@@ -6,6 +6,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.util.ResourceLocation;
+import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.container.ContainerBase;
 import nl.naxanria.nlib.util.Color;
 
@@ -112,10 +113,10 @@ public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiCont
   public void drawDefault()
   {
     // background
-    int xpos = (width - xSize) / 2;
-    int ypos = (height - ySize) / 2;
+    int xpos = (width - xSize) >> 1;
+    int ypos = (height - ySize) >> 1;
     
-    drawTexture(xpos, ypos, backgroundImage);
+    drawTexture(xpos - (backgroundImage.getWidth() >> 3), ypos, backgroundImage);
     
     // slots
     for (Slot slot:
@@ -124,7 +125,7 @@ public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiCont
       int x = slot.xPos;
       int y = slot.yPos;
       
-      drawTexture(xpos + x, ypos + y, slotImage);
+      drawTexture(xpos + x - 1, ypos + y - 1, slotImage);
     }
   }
 }
