@@ -33,6 +33,13 @@ public class RecipesInit
       new ItemStack(ItemsInit.MachineParts.LAPIS_WAFER, 5),
       240
     );
+    
+    public static final RecipePress GLOWSTONE_WAFER = new RecipePress
+    (
+      new ItemStack(Blocks.GLOWSTONE),
+      new ItemStack(ItemsInit.MachineParts.GLOWSTONE_WAFER, 2),
+      120
+    );
   }
   
   public static class Miniature
@@ -144,12 +151,14 @@ public class RecipesInit
       );
 
       PressRecipeRegistry.addAll
-        (
-          Press.LAPIS_WAFER,
-          Press.LAPIS_WAFER_2
-        );
+      (
+        Press.LAPIS_WAFER,
+        Press.LAPIS_WAFER_2,
+        Press.GLOWSTONE_WAFER
+      );
 
-      MiniatureRecipeRegistry.addAll(
+      MiniatureRecipeRegistry.addAll
+      (
         Miniature.RAINBOW
       );
     }
