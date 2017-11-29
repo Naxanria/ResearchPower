@@ -42,8 +42,8 @@ public class RecipesInit
       "RLR", "LRL", "RRR",
       "LRL", "RLR", "LRL",
       "LLL", "LRL", "RLR",
-      'R', Blocks.REDSTONE_BLOCK.getDefaultState(),
-      'L', Blocks.LAPIS_BLOCK.getDefaultState()
+      'R', Blocks.REDSTONE_BLOCK,
+      'L', Blocks.LAPIS_BLOCK
     );
   }
   
