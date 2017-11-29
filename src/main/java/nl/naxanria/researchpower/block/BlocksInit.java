@@ -37,7 +37,7 @@ public class BlocksInit
     public static final BlockBattery BATTERY = new BlockBattery();
     public static final BlockVacuumGenerator VACUUM_GENERATOR = new BlockVacuumGenerator();
 
-    private enum FRAMES implements IStringSerializable
+    public enum FRAMES implements IStringSerializable
     {
       BASE("base"),
       ADVANCED("advanced"),
@@ -58,8 +58,6 @@ public class BlocksInit
     }
 
     public static final BlockBase MACHINE_FRAME = BlockBase.createStateVersion(Material.IRON, "machine_frame", PropertyEnum.create("type", FRAMES.class));
-    //public static final BlockBase MACHINE_FRAME_ADVANCED = new BlockBase(Material.IRON, "machine_frame_advanced");
-    //public static final BlockBase MACHINE_FRAME_REINVIGORATED = new BlockBase(Material.IRON, "machine_frame_reinvigorated");
     public static final BlockMachinePress MACHINE_PRESS = new BlockMachinePress();
 
     public static class Miniature
@@ -135,8 +133,6 @@ public class BlocksInit
       Machines.RESEARCH_STATION,
       Machines.VACUUM_GENERATOR,
       Machines.MACHINE_FRAME,
-      /*Machines.MACHINE_FRAME_ADVANCED,
-      Machines.MACHINE_FRAME_REINVIGORATED,*/
       Machines.MACHINE_PRESS,
       Machines.Miniature.controller,
       
