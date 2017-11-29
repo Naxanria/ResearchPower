@@ -100,18 +100,10 @@ public class BlocksInit
 
         // air!
         for(int x = 0; x <= 4; x += 4)
-        {
           for(int y = 0; y <= 4; y += 4)
-          {
             for(int z = 0; z <= 4; z += 4)
-            {
               if (miniatureStructure[x][y][z] == null)
-              {
                 miniatureStructure[x][y][z] = Blocks.AIR.getDefaultState();
-              }
-            }
-          }
-        }
       }
     }
 

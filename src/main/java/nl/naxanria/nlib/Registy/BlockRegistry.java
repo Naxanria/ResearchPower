@@ -3,7 +3,6 @@ package nl.naxanria.nlib.Registy;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
-import nl.naxanria.nlib.block.BlockTileBase;
 import nl.naxanria.nlib.block.BlockTileBaseInternal;
 import nl.naxanria.nlib.block.IBlockBase;
 
