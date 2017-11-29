@@ -10,6 +10,7 @@ import nl.naxanria.nlib.Registy.BlockRegistry;
 import nl.naxanria.nlib.block.BlockBase;
 import nl.naxanria.researchpower.block.machines.BlockMachinePress;
 import nl.naxanria.researchpower.block.machines.battery.BlockBattery;
+import nl.naxanria.researchpower.block.machines.generators.BlockCoalGenerator;
 import nl.naxanria.researchpower.block.machines.generators.solar.BlockSolarGenerator;
 import nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator;
 import nl.naxanria.researchpower.block.machines.miniature.BlockMiniatureController;
@@ -36,6 +37,7 @@ public class BlocksInit
     public static final BlockResearchStation RESEARCH_STATION = new BlockResearchStation();
     public static final BlockBattery BATTERY = new BlockBattery();
     public static final BlockVacuumGenerator VACUUM_GENERATOR = new BlockVacuumGenerator();
+    public static final BlockCoalGenerator COAL_GENERATOR = new BlockCoalGenerator();
 
     public enum FRAMES implements IStringSerializable
     {
@@ -134,6 +136,7 @@ public class BlocksInit
       Machines.BATTERY,
       Machines.RESEARCH_STATION,
       Machines.VACUUM_GENERATOR,
+      Machines.COAL_GENERATOR,
       Machines.MACHINE_FRAME,
       Machines.MACHINE_PRESS,
       Machines.Miniature.controller,

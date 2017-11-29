@@ -1,13 +1,21 @@
 package nl.naxanria.nlib.gui;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
+import nl.naxanria.nlib.container.ContainerBase;
 
-public abstract class GuiContainerBase extends GuiContainer
+public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiContainer
 {
-  public GuiContainerBase(Container inventorySlots)
+  public final TC container;
+  public final EntityPlayer player;
+  
+  public GuiContainerBase(TC inventorySlots, EntityPlayer player)
   {
     super(inventorySlots);
+    
+    container = inventorySlots;
+    this.player = player;
   }
   
   public void drawProgressBar(int left, int top, int right, int bottom, int background, int foreground, float percentage)

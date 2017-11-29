@@ -8,6 +8,9 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
 public class PacketServerToClient extends Packet
 {
+  public PacketServerToClient()
+  {  }
+  
   public PacketServerToClient(NBTTagCompound data, DataHandler tileEntityHandler)
   {
     super(data, tileEntityHandler);

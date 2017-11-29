@@ -382,7 +382,7 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     if(this.world != null && !this.world.isRemote)
     {
       NBTTagCompound compound = new NBTTagCompound();
-      this.writeSyncableNBT(compound, NBTType.SYNC);
+      writeSyncableNBT(compound, NBTType.SYNC);
       
       NBTTagCompound data = new NBTTagCompound();
       data.setTag("Data", compound);
@@ -394,13 +394,27 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
         new PacketServerToClient(data, PacketHandler.TILE_ENTITY_HANDLER),
         new NetworkRegistry.TargetPoint
         (
-          this.world.provider.getDimension(),
-          this.getPos().getX(),
-          this.getPos().getY(),
-          this.getPos().getZ(),
+          world.provider.getDimension(),
+          getPos().getX(),
+          getPos().getY(),
+          getPos().getZ(),
           64
         )
       );
+    }
+  }
+  
+  protected boolean sendUpdateWithInterval()
+  {
+    // Todo: make based on config
+    if(ticksPassed % 20 == 0)
+    {
+      this.sendUpdate();
+      return true;
+    }
+    else
+    {
+      return false;
     }
   }
   
