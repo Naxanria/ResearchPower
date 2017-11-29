@@ -1,9 +1,6 @@
 package nl.naxanria.researchpower.gui;
 
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.ResourceLocation;
-import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.gui.GuiContainerBase;
 import nl.naxanria.nlib.gui.Orientation;
 import nl.naxanria.nlib.gui.PropertiesFactory;
@@ -14,8 +11,6 @@ import nl.naxanria.researchpower.containers.ContainerCoalGenerator;
 
 public class GuiCoalGenerator extends GuiContainerBase<ContainerCoalGenerator>
 {
-  public final ResourceLocation BG_TEXTURE = new ResourceLocation(NMod.getModId(), "textures/gui/single_slot.png");
-  
   private static final PropertiesFactory.BarProperties energyBarProperties = PropertiesFactory.BarProperties.create(11, 11, 18, 60)
     .setBackground(Color.BLACK).setForeground(Color.RED)
     .setOrientation(Orientation.Vertical);
@@ -31,11 +26,7 @@ public class GuiCoalGenerator extends GuiContainerBase<ContainerCoalGenerator>
   @Override
   protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY)
   {
-    GlStateManager.color(1, 1, 1, 1);
-    mc.getTextureManager().bindTexture(BG_TEXTURE);
-    int x = (width - xSize) / 2;
-    int y = (height - ySize) / 2;
-    drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
+    drawDefault();
   }
   
   @Override

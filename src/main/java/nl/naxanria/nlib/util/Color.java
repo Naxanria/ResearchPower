@@ -127,6 +127,28 @@ public class Color
     return (color >> 24) & 0xff;
   }
   
+  public float getAlphaFloat()
+  {
+    return getAlpha() / 255.0f;
+  }
+  
+  public float getRedFloat()
+  {
+    return getRed() / 255.0f;
+  }
+  
+  public float getGreenFloat()
+  {
+    return getGreen() / 255.0f;
+  }
+  public float getBlueFloat()
+  {
+    return getBlue() / 255.0f;
+  }
+  
+  
+  
+  
   public static int getAlpha(int color)
   {
     return (color >> 24) & 0xff;

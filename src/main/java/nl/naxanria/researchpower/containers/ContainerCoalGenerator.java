@@ -8,10 +8,6 @@ import nl.naxanria.researchpower.tile.machines.TileEntityCoalGenerator;
 
 public class ContainerCoalGenerator extends ContainerBase<TileEntityCoalGenerator>
 {
-  public static final int ENERGY_SYNC = 0;
-  public static final int BURN_SYNC = 1;
-  public static final int MAX_BURN_SYNC = 2;
-  
   public ContainerCoalGenerator(TileEntityCoalGenerator tile, EntityPlayer player)
   {
     super(tile, player);
@@ -35,7 +31,7 @@ public class ContainerCoalGenerator extends ContainerBase<TileEntityCoalGenerato
       "Energy",
       tile.storage::setEnergyStored,
       tile.storage::getEnergyStored
-      );
+    );
     
     addSlotToContainer
     (
