@@ -47,16 +47,19 @@ public class BlockSolarGenerator extends BlockTileBaseProperties<PropertyInteger
   @Override
   public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
   {
-    TileEntitySolarGenerator tile = getTileEntity(world, pos);
-    player.sendStatusMessage
-      (
-        new TextComponentString("Producing: " + tile.produce +
-        " Active: " + tile.canGenerate() +
-        " Storage: " + tile.storage.getEnergyStored() + "/" + tile.storage.getMaxEnergyStored() + " " + tile.storage.getStoredPercentage() * 100 + "%"),
-        true
-      );
-    
-    return super.onBlockActivated(world, pos, state, player, hand, facing, hitX, hitY, hitZ);
+    if (!world.isRemote && !player.isSneaking())
+    {
+      TileEntitySolarGenerator tile = getTileEntity(world, pos);
+      player.sendStatusMessage
+        (
+          new TextComponentString("Tier: " + tile.tier + " Producing: " + tile.produce +
+            " Active: " + tile.canGenerate() +
+            " Storage: " + tile.storage.getEnergyStored() + "/" + tile.storage.getMaxEnergyStored() + " " + tile.storage.getStoredPercentage() * 100 + "%"),
+          true
+        );
+      return true;
+    }
+    return false;
   }
   
   @Override
@@ -75,7 +78,7 @@ public class BlockSolarGenerator extends BlockTileBaseProperties<PropertyInteger
   @Override
   public TileEntitySolarGenerator createTileEntity(World world, IBlockState state)
   {
-    return new TileEntitySolarGenerator(state.getValue((PropertyInteger)PROPERTY) + 1);
+    return new TileEntitySolarGenerator(state.getValue((PropertyInteger)PROPERTY));
   }
 
   @Override

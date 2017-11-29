@@ -15,7 +15,7 @@ public class TileEntitySolarGenerator extends GeneratorEntity
   
   public static final int base = 2;
   
-  protected int tier;
+  public int tier;
   
   public TileEntitySolarGenerator()
   {
