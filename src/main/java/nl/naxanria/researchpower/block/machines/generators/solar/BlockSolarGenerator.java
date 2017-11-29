@@ -77,13 +77,14 @@ public class BlockSolarGenerator extends BlockTileBaseProperties<PropertyInteger
   {
     return new TileEntitySolarGenerator(state.getValue((PropertyInteger)PROPERTY) + 1);
   }
-  
+
   @Override
   public Class<TileEntitySolarGenerator> getTileEntityClass()
   {
     return TileEntitySolarGenerator.class;
   }
 
+  //TODO: Rather than having a method like this in any class which has a sub property, currently have two, maybe have some reflection logic to handle it.
   public static BlockSolarGenerator createStateVersion(PropertyInteger property)
   {
     tempProperty = property;
