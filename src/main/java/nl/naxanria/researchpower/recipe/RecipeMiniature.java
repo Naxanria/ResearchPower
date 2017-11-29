@@ -4,6 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import nl.naxanria.nlib.util.Log;
+import nl.naxanria.nlib.util.LogColor;
 
 import java.util.HashMap;
 
@@ -27,7 +29,22 @@ public class RecipeMiniature
     for (int i = 0; i < arguments.length - 1; i += 2)
     {
       char c = (char) arguments[i];
-      IBlockState b = (IBlockState) arguments[i + 1];
+      Object obj = arguments[i + 1];
+      IBlockState b;
+  
+      if (obj instanceof IBlockState)
+      {
+        b = (IBlockState) obj;
+      }
+      else if (obj instanceof Block)
+      {
+        b = ((Block) obj).getDefaultState();
+      }
+      else
+      {
+        Log.error("Given argument is not a " + LogColor.CYAN.CODE + "Block" + LogColor.RED.CODE + " or a " + LogColor.CYAN.CODE + " IBlockState " + LogColor.RED.CODE + " But found instead: " + LogColor.PURPLE.CODE + obj.getClass().getName());
+        continue;
+      }
       
       patternMap.put(c, b);
     }
