@@ -6,6 +6,7 @@ import nl.naxanria.nlib.tile.inventory.TileEntityInventoryBase;
 import nl.naxanria.nlib.tile.power.BaseEnergyStorage;
 import nl.naxanria.nlib.tile.power.IEnergySharingProvider;
 import nl.naxanria.nlib.util.EnumHelper;
+import nl.naxanria.nlib.util.MathUtil;
 
 public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEnergySharingProvider
 {
@@ -22,7 +23,7 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   public BaseEnergyStorage storage;
   
   public int progress = 0;
-  public int totalTime = 0;
+  public int totalTime = 1000;
   public int energyPerTick = 0;
   
   public TileEntityEmpowerer()
@@ -30,6 +31,21 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
     super(6);
     
     storage = new BaseEnergyStorage(ENERGY_CAPACITY, 0, ENERGY_USE_MAX, true);
+  }
+  
+  @Override
+  protected void entityUpdate()
+  {
+    super.entityUpdate();
+    
+    if (!world.isRemote)
+    {
+      progress++;
+      if (progress >= totalTime)
+      {
+        progress = 0;
+      }
+    }
   }
   
   @Override
@@ -54,5 +70,10 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   public boolean canShareEnergyTo(TileEntity tile)
   {
     return false;
+  }
+  
+  public float getProgressPercent()
+  {
+    return MathUtil.clamp01((float) progress / (float) totalTime);
   }
 }

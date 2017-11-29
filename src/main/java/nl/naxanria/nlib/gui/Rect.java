@@ -90,4 +90,9 @@ public class Rect
       ", bottom=" + getBottom() +
       '}';
   }
+  
+  public Rect copy()
+  {
+    return new Rect(x, y, width, height);
+  }
 }

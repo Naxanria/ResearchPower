@@ -12,12 +12,28 @@ public class PropertiesFactory
     protected Color foreground = Color.WHITE;
     protected Color background = Color.DARK_GRAY;
     protected Color border = Color.BLACK;
-    protected Orientation orientation = Orientation.Horizontal;
+    protected Orientation orientation = Orientation.LeftToRight;
     
     
     private BarProperties()
     { }
+  
+    public BarProperties(Rect rect, boolean useBorder, int borderWidth, Color foreground, Color background, Color border, Orientation orientation)
+    {
+      this.rect = rect;
+      this.useBorder = useBorder;
+      this.borderWidth = borderWidth;
+      this.foreground = foreground;
+      this.background = background;
+      this.border = border;
+      this.orientation = orientation;
+    }
     
+    public BarProperties copy()
+    {
+      return new BarProperties(rect.copy(), useBorder, borderWidth, foreground, background, border, orientation);
+    }
+  
     public static BarProperties create()
     {
       return new BarProperties();
@@ -37,6 +53,22 @@ public class PropertiesFactory
       barProperties.rect = new Rect(x, y, width, height);
       
       return barProperties;
+    }
+    
+    public BarProperties setPosition(int x, int y)
+    {
+      rect.setX(x);
+      rect.setY(y);
+      
+      return this;
+    }
+    
+    public BarProperties setDimensions(int width, int height)
+    {
+      rect.setWidth(width);
+      rect.setHeight(height);
+      
+      return this;
     }
   
     public int getX()
@@ -179,6 +211,15 @@ public class PropertiesFactory
     public BarProperties setBackground(int background)
     {
       this.background = Color.color(background);
+      return this;
+    }
+    
+    public BarProperties swapColors()
+    {
+      Color t = background;
+      background = foreground;
+      foreground = background;
+      
       return this;
     }
   
