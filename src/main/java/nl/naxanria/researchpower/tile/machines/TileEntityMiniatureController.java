@@ -1,11 +1,9 @@
 package nl.naxanria.researchpower.tile.machines;
 
 
-import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import nl.naxanria.nlib.tile.power.BaseEnergyAcceptor;
@@ -38,19 +36,19 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
   
   public boolean makeOwnStructure() // TODO: eventually we store this and only invalidate, but for now this is good
   {
-    if (world.getBlockState(pos.north()) == BlocksInit.Machines.MACHINE_FRAME_BASE.getDefaultState())
+    if (world.getBlockState(pos.north()) == BlocksInit.Machines.MACHINE_FRAME.getDefaultState())
     {
       dir = EnumFacing.NORTH;
     }
-    else if (world.getBlockState(pos.east()) == BlocksInit.Machines.MACHINE_FRAME_BASE.getDefaultState())
+    else if (world.getBlockState(pos.east()) == BlocksInit.Machines.MACHINE_FRAME.getDefaultState())
     {
       dir = EnumFacing.EAST;
     }
-    else if (world.getBlockState(pos.south()) == BlocksInit.Machines.MACHINE_FRAME_BASE.getDefaultState())
+    else if (world.getBlockState(pos.south()) == BlocksInit.Machines.MACHINE_FRAME.getDefaultState())
     {
       dir = EnumFacing.SOUTH;
     }
-    else if (world.getBlockState(pos.west()) == BlocksInit.Machines.MACHINE_FRAME_BASE.getDefaultState())
+    else if (world.getBlockState(pos.west()) == BlocksInit.Machines.MACHINE_FRAME.getDefaultState())
     {
       dir = EnumFacing.WEST;
     }
@@ -193,7 +191,7 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
           BlockPos controllerPos = getPos();
 
           EntityItem item = new EntityItem(world, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, currentRecipe.getRecipeOutput());
-          item.motionX = item.motionY = item.motionZ = 0;
+          item.setVelocity(0, 0, 0); // TODO: decide what to do, whether to have it fly randomly or keep it stationary like so.
           world.spawnEntity(item);
           
           progress = 0;

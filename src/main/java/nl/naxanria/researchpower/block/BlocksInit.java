@@ -1,8 +1,10 @@
 package nl.naxanria.researchpower.block;
 
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.IStringSerializable;
 import nl.naxanria.nlib.Registy.BlockRegistry;
 import nl.naxanria.nlib.block.BlockBase;
 import nl.naxanria.researchpower.block.machines.BlockMachinePress;
@@ -33,9 +35,30 @@ public class BlocksInit
     public static final BlockResearchStation RESEARCH_STATION = new BlockResearchStation();
     public static final BlockBattery BATTERY = new BlockBattery();
     public static final BlockVacuumGenerator VACUUM_GENERATOR = new BlockVacuumGenerator();
-    public static final BlockBase MACHINE_FRAME_BASE = new BlockBase(Material.IRON, "machine_frame_base");
-    public static final BlockBase MACHINE_FRAME_ADVANCED = new BlockBase(Material.IRON, "machine_frame_advanced");
-    public static final BlockBase MACHINE_FRAME_REINVIGORATED = new BlockBase(Material.IRON, "machine_frame_reinvigorated");
+
+    private enum FRAMES implements IStringSerializable
+    {
+      BASE("base"),
+      ADVANCED("advanced"),
+      REINVIGORATED("reinvigorated");
+
+      final String name;
+
+      FRAMES(String name)
+      {
+        this.name = name;
+      }
+
+      @Override
+      public String getName()
+      {
+        return name;
+      }
+    }
+
+    public static final BlockBase MACHINE_FRAME = BlockBase.createStateVersion(Material.IRON, "machine_frame", PropertyEnum.create("type", FRAMES.class));
+    //public static final BlockBase MACHINE_FRAME_ADVANCED = new BlockBase(Material.IRON, "machine_frame_advanced");
+    //public static final BlockBase MACHINE_FRAME_REINVIGORATED = new BlockBase(Material.IRON, "machine_frame_reinvigorated");
     public static final BlockMachinePress MACHINE_PRESS = new BlockMachinePress();
 
     public static class Miniature
@@ -48,10 +71,10 @@ public class BlocksInit
         // pillars
         for (int y = 0; y <= 4; y++)
         {
-          miniatureStructure[0][y][0] = Machines.MACHINE_FRAME_BASE.getDefaultState();
-          miniatureStructure[0][y][4] = Machines.MACHINE_FRAME_BASE.getDefaultState();
-          miniatureStructure[4][y][0] = Machines.MACHINE_FRAME_BASE.getDefaultState();
-          miniatureStructure[4][y][4] = Machines.MACHINE_FRAME_BASE.getDefaultState();
+          miniatureStructure[0][y][0] = Machines.MACHINE_FRAME.getDefaultState();
+          miniatureStructure[0][y][4] = Machines.MACHINE_FRAME.getDefaultState();
+          miniatureStructure[4][y][0] = Machines.MACHINE_FRAME.getDefaultState();
+          miniatureStructure[4][y][4] = Machines.MACHINE_FRAME.getDefaultState();
         }
 
         // floor
@@ -59,7 +82,7 @@ public class BlocksInit
         {
           for (int z = 1; z <= 3; z++)
           {
-            miniatureStructure[x][0][z] = Machines.MACHINE_FRAME_BASE.getDefaultState();
+            miniatureStructure[x][0][z] = Machines.MACHINE_FRAME.getDefaultState();
           }
         }
 
@@ -110,9 +133,9 @@ public class BlocksInit
       Machines.BATTERY,
       Machines.RESEARCH_STATION,
       Machines.VACUUM_GENERATOR,
-      Machines.MACHINE_FRAME_BASE,
-      Machines.MACHINE_FRAME_ADVANCED,
-      Machines.MACHINE_FRAME_REINVIGORATED,
+      Machines.MACHINE_FRAME,
+      /*Machines.MACHINE_FRAME_ADVANCED,
+      Machines.MACHINE_FRAME_REINVIGORATED,*/
       Machines.MACHINE_PRESS,
       Machines.Miniature.controller,
       

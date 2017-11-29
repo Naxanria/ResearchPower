@@ -1,0 +1,45 @@
+{
+  "forge_marker": 1,
+  "defaults":
+  {
+    "textures":
+    {
+      "all" : "researchpower:blocks/machine_frame_base"
+    },
+    "model" : "cube_all"
+  },
+  "variants":
+  {
+    "type":
+    {
+      "base":{
+        "textures":
+        {
+          "all": "researchpower:blocks/machine_frame_base"
+        }
+      },
+      "advanced":
+      {
+        "textures":
+        {
+          "all": "researchpower:blocks/machine_frame_base"
+        }
+      },
+      "reinvigorated":
+      {
+        "textures":
+        {
+          "all" : "researchpower:blocks/machine_frame_reinvigorated"
+        }
+      }
+    },
+    "normal":
+    {
+      "model" : "cube_all"
+    },
+    "inventory":
+    {
+      "model" : "cube_all"
+    }
+  }
+}

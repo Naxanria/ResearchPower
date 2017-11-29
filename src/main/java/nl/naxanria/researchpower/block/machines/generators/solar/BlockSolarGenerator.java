@@ -40,7 +40,6 @@ public class BlockSolarGenerator extends BlockTileBase<TileEntitySolarGenerator>
   public BlockSolarGenerator()
   {
     super(Material.IRON, "solar_generator");
-
   }
   
   @Override
@@ -106,7 +105,8 @@ public class BlockSolarGenerator extends BlockTileBase<TileEntitySolarGenerator>
     return new BlockStateContainer(this, TIER);
   }
 
-  public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
+  @Override
+  public void getSubBlocks(CreativeTabs itemIn, NonNullList items)
   {
     for (int i = 0; i <= 6; i++)
     {
@@ -117,23 +117,18 @@ public class BlockSolarGenerator extends BlockTileBase<TileEntitySolarGenerator>
   @Override
   public void registerItemModel()
   {
-    for (int i = 0; i <= 6; i++)
+    StateMapperBase b = new DefaultStateMapper();
+    BlockStateContainer bsc = getBlockState();
+    ImmutableList<IBlockState> values = bsc.getValidStates();
+
+    for(IBlockState state : values)
     {
-      StateMapperBase b = new DefaultStateMapper();
-      BlockStateContainer bsc = getBlockState();
-      ImmutableList<IBlockState> values = bsc.getValidStates();
-      
-      System.out.println("penis");
-      
-      for(IBlockState state : values)
-      {
-        String str = b.getPropertyString(state.getProperties());
-        System.out.println(str);
-        Proxy.registerItemRenderWithVariant(Item.getItemFromBlock(this), getMetaFromState(state), name, str); //TODO: Fix inventory display, this isn't the way to do it
-      }
+      String str = b.getPropertyString(state.getProperties());
+      Proxy.registerItemRenderWithVariant(Item.getItemFromBlock(this), getMetaFromState(state), name, str);
     }
   }
 
+  @Override
   public Item createItemBlock()
   {
     return new ItemMetaBlock(this).setRegistryName(getRegistryName()); // no harm in using it for everything

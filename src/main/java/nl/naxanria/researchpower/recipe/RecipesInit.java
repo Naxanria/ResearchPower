@@ -51,104 +51,113 @@ public class RecipesInit
   
   public static void init(RecipeRegistry registry)
   {
-    GameRegistry.addSmelting
-    (
-      BlocksInit.Ores.COPPER_ORE,
-      new ItemStack(ItemsInit.Metals.INGOT_COPPER),
-      0.5f
-    );
-    
-    addShapeless(
-      new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
-      Ingredient.fromStacks(new ItemStack(ItemsInit.Metals.INGOT_COPPER, 9))
-    );
-    
-    addShaped(
-      new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
-      "AAA",
-      "AAA",
-      "AAA",
-      'A', new ItemStack(ItemsInit.Metals.INGOT_COPPER)
-    );
-  
-    addShaped(
-      new ItemStack(ItemsInit.MachineParts.REDSTONE_CONNECTOR_HORIZONTAL),
-      "RRR",
-      "LIL",
-      "RRR",
-      'R' , Items.REDSTONE,
-      'L', LAPIS,
-      'I', Items.IRON_INGOT
-    );
-  
-    addShaped(
-      new ItemStack(ItemsInit.MachineParts.REDSTONE_CONNECTOR_VERTICAL),
-      "RLR",
-      "RIR",
-      "RLR",
-      'R' , Items.REDSTONE,
-      'L', LAPIS,
-      'I', Items.IRON_INGOT
-    );
-    
-    addShaped(
-      new ItemStack(ItemsInit.MachineParts.REDSTONE_RING),
-      "BHB",
-      "V V",
-      "BHB",
-      'B', net.minecraft.init.Blocks.REDSTONE_BLOCK,
-      'H', ItemsInit.MachineParts.REDSTONE_CONNECTOR_HORIZONTAL,
-      'V', ItemsInit.MachineParts.REDSTONE_CONNECTOR_VERTICAL
-    );
-    
-    addShaped(
-      new ItemStack(BlocksInit.Machines.MACHINE_FRAME_BASE),
-      "ICI",
-      "C C",
-      "ICI",
-      'I', Items.IRON_INGOT,
-      'C', ItemsInit.Metals.INGOT_COPPER
-    );
-    
-    addShaped(
-      new ItemStack(BlocksInit.Machines.MACHINE_PRESS),
-      "IPI",
-      "RFR",
-      "IPI",
-      'I', Items.IRON_INGOT,
-      'P', Blocks.PISTON,
-      'R', ItemsInit.MachineParts.REDSTONE_RING,
-      'F', BlocksInit.Machines.MACHINE_FRAME_BASE
-    );
-    
-    addShaped(
-      new ItemStack(BlocksInit.Machines.SOLAR_GENERATOR, 1, 0),
-      "WWW",
-      "wRw",
-      "www",
-      'W', ItemsInit.MachineParts.LAPIS_WAFER,
-      'w', Blocks.PLANKS,
-      'R', Items.REDSTONE
-    );
-  
-    addShaped(
-      new ItemStack(BlocksInit.Machines.SOLAR_GENERATOR, 1, 1),
-      "111",
-      "1F1",
-      "111",
-      '1', (new ItemStack(BlocksInit.Machines.SOLAR_GENERATOR, 1, 0).getItem()),
-      'F', BlocksInit.Machines.MACHINE_FRAME_BASE
-    );
+    // because we call this with reflection and errors often get eaten, I'm going to wrap this in a try catch
+    try
+    {
+      GameRegistry.addSmelting
+        (
+          BlocksInit.Ores.COPPER_ORE,
+          new ItemStack(ItemsInit.Metals.INGOT_COPPER),
+          0.5f
+        );
 
-    PressRecipeRegistry.addAll
-    (
-      Press.LAPIS_WAFER,
-      Press.LAPIS_WAFER_2
-    );
-    
-    MiniatureRecipeRegistry.addAll(
-      Miniature.RAINBOW
-    );
+      addShapeless(
+        new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
+        Ingredient.fromStacks(new ItemStack(ItemsInit.Metals.INGOT_COPPER, 9))
+      );
+
+      addShaped(
+        new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
+        "AAA",
+        "AAA",
+        "AAA",
+        'A', new ItemStack(ItemsInit.Metals.INGOT_COPPER)
+      );
+
+      addShaped(
+        new ItemStack(ItemsInit.MachineParts.REDSTONE_CONNECTOR_HORIZONTAL),
+        "RRR",
+        "LIL",
+        "RRR",
+        'R', Items.REDSTONE,
+        'L', LAPIS,
+        'I', Items.IRON_INGOT
+      );
+
+      addShaped(
+        new ItemStack(ItemsInit.MachineParts.REDSTONE_CONNECTOR_VERTICAL),
+        "RLR",
+        "RIR",
+        "RLR",
+        'R', Items.REDSTONE,
+        'L', LAPIS,
+        'I', Items.IRON_INGOT
+      );
+
+      addShaped(
+        new ItemStack(ItemsInit.MachineParts.REDSTONE_RING),
+        "BHB",
+        "V V",
+        "BHB",
+        'B', net.minecraft.init.Blocks.REDSTONE_BLOCK,
+        'H', ItemsInit.MachineParts.REDSTONE_CONNECTOR_HORIZONTAL,
+        'V', ItemsInit.MachineParts.REDSTONE_CONNECTOR_VERTICAL
+      );
+
+      addShaped(
+        new ItemStack(BlocksInit.Machines.MACHINE_FRAME),
+        "ICI",
+        "C C",
+        "ICI",
+        'I', Items.IRON_INGOT,
+        'C', ItemsInit.Metals.INGOT_COPPER
+      );
+
+      addShaped(
+        new ItemStack(BlocksInit.Machines.MACHINE_PRESS),
+        "IPI",
+        "RFR",
+        "IPI",
+        'I', Items.IRON_INGOT,
+        'P', Blocks.PISTON,
+        'R', ItemsInit.MachineParts.REDSTONE_RING,
+        'F', BlocksInit.Machines.MACHINE_FRAME
+      );
+
+      addShaped(
+        new ItemStack(BlocksInit.Machines.SOLAR_GENERATOR, 1, 0),
+        "WWW",
+        "wRw",
+        "www",
+        'W', ItemsInit.MachineParts.LAPIS_WAFER,
+        'w', Blocks.PLANKS,
+        'R', Items.REDSTONE
+      );
+
+      addShaped(
+        new ItemStack(BlocksInit.Machines.SOLAR_GENERATOR, 1, 1),
+        "111",
+        "1F1",
+        "111",
+        '1', (new ItemStack(BlocksInit.Machines.SOLAR_GENERATOR, 1, 0).getItem()),
+        'F', BlocksInit.Machines.MACHINE_FRAME
+      );
+
+      PressRecipeRegistry.addAll
+        (
+          Press.LAPIS_WAFER,
+          Press.LAPIS_WAFER_2
+        );
+
+      MiniatureRecipeRegistry.addAll(
+        Miniature.RAINBOW
+      );
+    }
+    catch(Throwable t)
+    {
+      t.printStackTrace();
+      throw t;
+    }
   }
   
   private static void addShapeless(ItemStack result, Ingredient... ingredients)
