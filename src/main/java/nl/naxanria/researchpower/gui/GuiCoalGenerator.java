@@ -13,10 +13,10 @@ public class GuiCoalGenerator extends GuiContainerBase<ContainerCoalGenerator>
 {
   private static final PropertiesFactory.BarProperties energyBarProperties = PropertiesFactory.BarProperties.create(11, 11, 18, 60)
     .setBackground(Color.BLACK).setForeground(Color.RED)
-    .setOrientation(Orientation.Vertical);
+    .setOrientation(Orientation.BottomToTop);
   
   private static final PropertiesFactory.BarProperties progressBarProperties = PropertiesFactory.BarProperties.create(120, 41, 5, 15)
-    .setBackground(Color.BLACK).setForeground(0xFFFF8800).setOrientation(Orientation.Vertical);
+    .setBackground(Color.BLACK).setForeground(0xFFFF8800).setOrientation(Orientation.BottomToTop);
   
   public GuiCoalGenerator(ContainerCoalGenerator inventorySlots, EntityPlayer player)
   {

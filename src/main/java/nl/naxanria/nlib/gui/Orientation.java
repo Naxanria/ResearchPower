@@ -2,6 +2,8 @@ package nl.naxanria.nlib.gui;
 
 public enum Orientation
 {
-  Horizontal,
-  Vertical
+  LeftToRight,
+  TopToBottom,
+  RightToLeft,
+  BottomToTop
 }

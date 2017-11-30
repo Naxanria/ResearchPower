@@ -43,7 +43,7 @@ public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiCont
   
   public void drawProgressBar(int left, int top, int right, int bottom, int background, int foreground, float percentage)
   {
-    drawProgressBar(left, top, right, bottom, background, foreground, percentage, Orientation.Horizontal, false, 0, 0);
+    drawProgressBar(left, top, right, bottom, background, foreground, percentage, Orientation.LeftToRight, false, 0, 0);
   }
   
   public void drawProgressBar(int left, int top, int right, int bottom, int background, int foreground, float percentage, Orientation direction)
@@ -53,7 +53,7 @@ public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiCont
   
   public void drawProgressBar(int left, int top, int right, int bottom, int background, int foreground, float percentage, boolean border, int borderColor, int borderWidth)
   {
-    drawProgressBar(left, top, right, bottom, background, foreground, percentage, Orientation.Horizontal, border, borderColor, borderWidth);
+    drawProgressBar(left, top, right, bottom, background, foreground, percentage, Orientation.LeftToRight, border, borderColor, borderWidth);
   }
   
   public void drawProgressBar(int left, int top, int right, int bottom, int background, int foreground, float percentage, Orientation direction, boolean border, int borderColor, int borderWidth)
@@ -85,14 +85,46 @@ public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiCont
     // background
     drawRect(properties.getLeft(), properties.getTop(), properties.getRight(), properties.getBottom(), properties.getBackground().color);
 
-    drawRect
-    (
-      (properties.getOrientation() == Orientation.Horizontal) ? properties.getLeft() + ((int) ((properties.getWidth()) *  percentage)) : properties.getRight(),
-      (properties.getOrientation() == Orientation.Vertical) ? properties.getBottom() - ((int) ((properties.getHeight()) * percentage)) : properties.getTop(),
-      properties.getLeft(),
-      properties.getBottom(),
-      properties.getForeground().color
-    );
+    int col = properties.foreground.color;
+    int x = properties.getX();
+    int y = properties.getY();
+    int w = properties.getWidth();
+    int h = properties.getHeight();
+    int r = properties.getRight();
+    int b = properties.getBottom();
+    
+    int pw = (int) (percentage * w);
+    int ph = (int) (percentage * h);
+    
+    switch (properties.getOrientation())
+    {
+      case LeftToRight:
+        drawRectWidthHeight(x, y, pw, h, col);
+        break;
+      case TopToBottom:
+        drawRectWidthHeight(x, y, w, ph, col);
+        break;
+      case RightToLeft:
+        drawRectWidthHeight(x + w - pw, y, pw, h, col);
+        break;
+      case BottomToTop:
+        drawRectWidthHeight(x, y + h - ph, w, ph, col);
+        break;
+    }
+    
+//    drawRect
+//    (
+//      (properties.getOrientation() == Orientation.LeftToRight) ? properties.getLeft() + ((int) ((properties.getWidth()) *  percentage)) : properties.getRight(),
+//      (properties.getOrientation() == Orientation.TopToBottom) ? properties.getBottom() - ((int) ((properties.getHeight()) * percentage)) : properties.getTop(),
+//      properties.getLeft(),
+//      properties.getBottom(),
+//      properties.getForeground().color
+//    );
+  }
+  
+  public void drawRectWidthHeight(int x, int y, int width, int height, int color)
+  {
+    drawRect(x, y, x + width, y + height, color);
   }
   
   public void drawTexture(int x, int y, ITextureInfo texture)

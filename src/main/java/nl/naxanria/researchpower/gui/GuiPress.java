@@ -15,7 +15,7 @@ public class GuiPress extends GuiContainerBase<ContainerPress>
 {
   private static final PropertiesFactory.BarProperties energyBarProperties = PropertiesFactory.BarProperties.create(11, 11, 18, 60)
     .setBackground(Color.BLACK).setForeground(Color.RED)
-    .setOrientation(Orientation.Vertical);
+    .setOrientation(Orientation.BottomToTop);
   
   private static final PropertiesFactory.BarProperties progressBarProperties = PropertiesFactory.BarProperties.create(75, 41, 26, 5)
     .setBackground(Color.LIGHT_GRAY).setForeground(0xFFEEEEEE);

@@ -8,6 +8,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.IStringSerializable;
 import nl.naxanria.nlib.registry.BlockRegistry;
 import nl.naxanria.nlib.block.BlockBase;
+import nl.naxanria.researchpower.block.machines.BlockMachineEmpowerer;
 import nl.naxanria.researchpower.block.machines.BlockMachinePress;
 import nl.naxanria.researchpower.block.machines.battery.BlockBattery;
 import nl.naxanria.researchpower.block.machines.generators.BlockCoalGenerator;
@@ -61,6 +62,7 @@ public class BlocksInit
 
     public static final BlockBase MACHINE_FRAME = BlockBase.createStateVersion(Material.IRON, "machine_frame", PropertyEnum.create("type", FRAMES.class));
     public static final BlockMachinePress MACHINE_PRESS = new BlockMachinePress();
+    public static final BlockMachineEmpowerer MACHINE_EMPOWERER = new BlockMachineEmpowerer();
 
     public static class Miniature
     {
@@ -139,6 +141,8 @@ public class BlocksInit
       Machines.COAL_GENERATOR,
       Machines.MACHINE_FRAME,
       Machines.MACHINE_PRESS,
+      Machines.MACHINE_EMPOWERER,
+      
       Machines.Miniature.controller,
       
       // solar
