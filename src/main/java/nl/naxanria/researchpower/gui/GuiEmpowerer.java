@@ -4,11 +4,9 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import nl.naxanria.nlib.NMod;
-import nl.naxanria.nlib.gui.GuiContainerBase;
-import nl.naxanria.nlib.gui.Orientation;
-import nl.naxanria.nlib.gui.PropertiesFactory;
-import nl.naxanria.nlib.gui.TextureInfo;
+import nl.naxanria.nlib.gui.*;
 import nl.naxanria.nlib.util.Color;
+import nl.naxanria.researchpower.Constants;
 import nl.naxanria.researchpower.containers.ContainerEmpowerer;
 
 public class GuiEmpowerer extends GuiContainerBase<ContainerEmpowerer>
@@ -37,22 +35,30 @@ public class GuiEmpowerer extends GuiContainerBase<ContainerEmpowerer>
   @Override
   protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY)
   {
-    drawDefault(0, -22);
+    //drawDefault(0, -22);
+    int xPos = (width - xSize) >> 1;
+    int yPos = ((height - ySize) >> 1);
+    
+    drawNineSlice(xPos, yPos - 22 , xSize, ySize + 22, Constants.DEFAULT_BG);
+  
+    float progress = container.tile.getProgressPercent();
+    int idx = (int) (progress * progressAnim.length);
+  
+    if (idx == progressAnim.length)
+    {
+      idx--;
+    }
+  
+    GlStateManager.color(1, 1, 1, 1);
+    mc.getTextureManager().bindTexture(progressAnim[idx]);
+    drawTexturedModalRect(xPos + 7, yPos - 18, 0, 0, 256, 256);
+    
+    drawSlots(xPos, yPos);
   }
   
   @Override
   protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
   {
-    float progress = container.tile.getProgressPercent();
-    int idx = (int) (progress * progressAnim.length);
-    
-    if (idx == progressAnim.length)
-    {
-      idx--;
-    }
-    
-    GlStateManager.color(1, 1, 1, 1);
-    mc.getTextureManager().bindTexture(progressAnim[idx]);
-    drawTexturedModalRect(7, -18, 0, 0, 256, 256);
+  
   }
 }

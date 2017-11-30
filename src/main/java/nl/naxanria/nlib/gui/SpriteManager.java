@@ -8,6 +8,11 @@ public class SpriteManager
 {
   //private static HashMap<String, ITextureInfo> sprites = new HashMap<>();
 
+  public static ITextureInfo registerSprite(Rect rect, ITextureInfo backer)
+  {
+    return registerSprite(rect.x, rect.y, rect.width, rect.height, backer);
+  }
+  
   public static ITextureInfo registerSprite(/*String name,*/ int x, int y, int width, int height, ITextureInfo backer)
   {
 //    if (sprites.containsKey(name))
