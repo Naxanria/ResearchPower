@@ -2,12 +2,14 @@ package nl.naxanria.researchpower;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import nl.naxanria.nlib.NMod;
+import nl.naxanria.nlib.gui.GuiContainerBase;
 import nl.naxanria.nlib.util.logging.Log;
 import nl.naxanria.nlib.util.ores.OreBuilder;
 import nl.naxanria.nlib.util.ores.OreHelper;
@@ -80,7 +82,7 @@ public class ResearchPower extends NMod
   {
     NetworkRegistry.INSTANCE.registerGuiHandler(mod, new ModGuiHandler());
   
-    
+    GuiContainerBase.defaultSlotImage = new ResourceLocation(MOD_ID, "textures/gui/slot.png");
   }
   
   @Override

@@ -6,14 +6,14 @@ import java.util.HashMap;
 
 public class SpriteManager
 {
-  private static HashMap<String, ITextureInfo> sprites = new HashMap<>();
+  //private static HashMap<String, ITextureInfo> sprites = new HashMap<>();
 
-  public static ITextureInfo registerSprite(String name, int x, int y, int width, int height, ITextureInfo backer)
+  public static ITextureInfo registerSprite(/*String name,*/ int x, int y, int width, int height, ITextureInfo backer)
   {
-    if (sprites.containsKey(name))
-    {
-      return sprites.get(name);
-    }
+//    if (sprites.containsKey(name))
+//    {
+//      return sprites.get(name);
+//    }
 
     if (x + width > backer.getWidth() || y + height > backer.getHeight())
     {
@@ -22,7 +22,7 @@ public class SpriteManager
 
     ITextureInfo texture = new Sprite(backer, x, y, width, height);
 
-    sprites.put(name, texture);
+    //sprites.put(name, texture);
 
     return texture;
   }

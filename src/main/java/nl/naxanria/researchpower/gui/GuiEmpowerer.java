@@ -1,51 +1,58 @@
 package nl.naxanria.researchpower.gui;
 
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ResourceLocation;
+import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.gui.GuiContainerBase;
 import nl.naxanria.nlib.gui.Orientation;
 import nl.naxanria.nlib.gui.PropertiesFactory;
+import nl.naxanria.nlib.gui.TextureInfo;
 import nl.naxanria.nlib.util.Color;
 import nl.naxanria.researchpower.containers.ContainerEmpowerer;
 
 public class GuiEmpowerer extends GuiContainerBase<ContainerEmpowerer>
 {
-  private PropertiesFactory.BarProperties baseBar = PropertiesFactory.BarProperties.create().setBackground(Color.LIGHT_GRAY).setForeground(Color.WHITE).setOrientation(Orientation.LeftToRight);
-  private PropertiesFactory.BarProperties bar0 = baseBar.copy();
-  private PropertiesFactory.BarProperties bar1 = baseBar.copy();
-  private PropertiesFactory.BarProperties bar2 = baseBar.copy();
-  private PropertiesFactory.BarProperties bar3 = baseBar.copy();
+  private static ResourceLocation[] progressAnim;
+  private static TextureInfo background = new TextureInfo(new ResourceLocation(NMod.getModId(),"textures/gui/empowerer/empowerer_bg.png"));
+  
+  static
+  {
+    int steps = 17;
+    String base = "textures/gui/empowerer/empower_progress_";
+    
+    progressAnim = new ResourceLocation[steps];
+    for (int i = 0; i < steps; i++)
+    {
+      progressAnim[i] = new ResourceLocation(NMod.getModId(), base + i + ".png");
+    }
+  }
   
   public GuiEmpowerer(ContainerEmpowerer inventorySlots, EntityPlayer player)
   {
     super(inventorySlots, player);
-  
-    int x = 45;
-    int y = 20;
-    int step = 2 * 18;
-    int offset = 2;
-    int w = 5;
-    int l = (step - offset * 2) / 2;
-    
-    bar0.setPosition(x - step + offset + l, y - w / 2 + 9).setDimensions(l, w).setOrientation(Orientation.LeftToRight);
-    bar1.setPosition(x + step - offset - l, y - w / 2 + 9).setDimensions(l, w).setOrientation(Orientation.RightToLeft);
-    bar2.setPosition(x - w / 2 + 9, y - step + offset + l).setDimensions(w, l).setOrientation(Orientation.TopToBottom);
-    bar3.setPosition(x - w / 2 + 9, y + step - offset - l).setDimensions(w, l).setOrientation(Orientation.BottomToTop);
+    backgroundImage = background;
   }
   
   @Override
   protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY)
   {
-    drawDefault();
+    drawDefault(0, -22);
   }
   
   @Override
   protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
   {
     float progress = container.tile.getProgressPercent();
+    int idx = (int) (progress * progressAnim.length);
     
-    drawProgressBar(bar0, progress);
-    drawProgressBar(bar1, progress);
-    drawProgressBar(bar2, progress);
-    drawProgressBar(bar3, progress);
+    if (idx == progressAnim.length)
+    {
+      idx--;
+    }
+    
+    GlStateManager.color(1, 1, 1, 1);
+    mc.getTextureManager().bindTexture(progressAnim[idx]);
+    drawTexturedModalRect(7, -18, 0, 0, 256, 256);
   }
 }

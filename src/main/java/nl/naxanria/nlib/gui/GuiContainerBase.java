@@ -13,14 +13,14 @@ import static nl.naxanria.researchpower.ResearchPower.MOD_ID;
 public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiContainer
 {
   public static ResourceLocation defaultBackgroundImage = new ResourceLocation("minecraft:textures/gui/demo_background.png");
-  public static ResourceLocation spriteSheet = new ResourceLocation(MOD_ID, "textures/gui/slot.png");
+  public static ResourceLocation defaultSlotImage;
   
   public final TC container;
   public final EntityPlayer player;
   
   protected ITextureInfo backgroundImage;
   protected ITextureInfo slotImage;
-  protected ITextureInfo spriteImage;
+  //protected ITextureInfo spriteImage;
   
   public GuiContainerBase(TC inventorySlots, EntityPlayer player)
   {
@@ -34,11 +34,16 @@ public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiCont
       backgroundImage = new TextureInfo(defaultBackgroundImage);
     }
     
-    if (spriteSheet != null)
+    if (defaultSlotImage != null)
     {
-      spriteImage = new TextureInfo(spriteSheet);
-      slotImage = SpriteManager.registerSprite("slot", 0, 0, 18, 18, spriteImage);
+      slotImage = new TextureInfo(defaultSlotImage);
     }
+    
+//    if (defaultSlotImage != null)
+//    {
+//      spriteImage = new TextureInfo(defaultSlotImage);
+//      //slotImage = SpriteManager.registerSprite("slot", 0, 0, 18, 18, spriteImage);
+//    }
   }
   
   public void drawProgressBar(int left, int top, int right, int bottom, int background, int foreground, float percentage)
@@ -146,20 +151,57 @@ public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiCont
   
   public void drawDefault()
   {
+    drawDefault(0, 0);
+  }
+  
+  
+  public void drawDefault(int bgOffsetX, int bgOffsetY)
+  {
     // background
     int xpos = (width - xSize) >> 1;
     int ypos = (height - ySize) >> 1;
     
-    drawTexture(xpos - (backgroundImage.getWidth() >> 3), ypos, backgroundImage);
+    drawBackground(bgOffsetX + xpos - (backgroundImage.getWidth() >> 3), bgOffsetY + ypos);
     
     // slots
-    for (Slot slot:
-      container.inventorySlots)
+    drawSlots(xpos, ypos);
+  }
+  
+  public void drawBackground()
+  {
+    drawBackground(0, 0);
+  }
+  
+  public void drawBackground(int xOffset, int yOffset)
+  {
+    drawTexture(xOffset, yOffset, backgroundImage);
+  }
+  
+  public void drawSlots()
+  {
+    drawSlots(0, 0);
+  }
+  
+  public void drawSpecificSlots(int start, int end)
+  {
+    drawSlots(0, 0, start, end);
+  }
+  
+  public void drawSlots(int xOff, int yOff)
+  {
+    drawSlots(xOff, yOff, 0, container.inventorySlots.size() - 1);
+  }
+  
+  public void drawSlots(int offX, int offY, int start, int end)
+  {
+    for (int i = start; i <= end; i++)
     {
+      Slot slot = container.inventorySlots.get(i);
+      
       int x = slot.xPos;
       int y = slot.yPos;
-      
-      drawTexture(xpos + x - 1, ypos + y - 1, slotImage);
+    
+      drawTexture(offX + x - 1, offY + y - 1, slotImage);
     }
   }
 }
