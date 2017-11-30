@@ -15,8 +15,8 @@ import nl.naxanria.nlib.registry.BlockRegistry;
 import nl.naxanria.nlib.registry.ItemRegistry;
 import nl.naxanria.nlib.registry.RecipeRegistry;
 import nl.naxanria.nlib.network.PacketHandler;
-import nl.naxanria.nlib.util.Log;
-import nl.naxanria.nlib.util.LogColor;
+import nl.naxanria.nlib.util.logging.Log;
+import nl.naxanria.nlib.util.logging.LogColor;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

@@ -7,13 +7,12 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.inventory.IInventoryHolder;
-import nl.naxanria.nlib.tile.power.BaseEnergyAcceptor;
+import nl.naxanria.nlib.tile.power.TileEntityEnergyAcceptor;
 import nl.naxanria.nlib.util.EnumHelper;
-import nl.naxanria.nlib.util.Log;
 import nl.naxanria.researchpower.recipe.PressRecipeRegistry;
 import nl.naxanria.researchpower.recipe.RecipePress;
 
-public class TileEntityPress extends BaseEnergyAcceptor implements IInventoryHolder
+public class TileEntityPress extends TileEntityEnergyAcceptor implements IInventoryHolder
 {
   public static final int CAPACITY = 25000;
   public static final int MAX_USE = 500;

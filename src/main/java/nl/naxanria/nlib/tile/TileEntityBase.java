@@ -458,8 +458,6 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     return !oldState.getBlock().isAssociatedBlock(newState.getBlock());
   }
   
- 
-  
   public enum NBTType
   {
     SAVE_TILE,

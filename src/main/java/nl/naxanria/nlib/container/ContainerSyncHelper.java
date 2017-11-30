@@ -1,8 +1,6 @@
 package nl.naxanria.nlib.container;
 
 import net.minecraft.inventory.IContainerListener;
-import nl.naxanria.nlib.util.Log;
-import nl.naxanria.nlib.util.LogColor;
 
 import java.util.HashMap;
 import java.util.List;

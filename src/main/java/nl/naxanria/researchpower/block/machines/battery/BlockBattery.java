@@ -9,11 +9,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import nl.naxanria.nlib.block.BlockTileBase;
-import nl.naxanria.researchpower.tile.BlockBatteryEntity;
+import nl.naxanria.researchpower.tile.TileEntityBattery;
 
 import javax.annotation.Nullable;
 
-public class BlockBattery extends BlockTileBase<BlockBatteryEntity>
+public class BlockBattery extends BlockTileBase<TileEntityBattery>
 {
   public BlockBattery()
   {
@@ -22,21 +22,21 @@ public class BlockBattery extends BlockTileBase<BlockBatteryEntity>
   
   @Nullable
   @Override
-  public BlockBatteryEntity createTileEntity(World world, IBlockState state)
+  public TileEntityBattery createTileEntity(World world, IBlockState state)
   {
-    return new BlockBatteryEntity();
+    return new TileEntityBattery();
   }
   
   @Override
-  public Class<BlockBatteryEntity> getTileEntityClass()
+  public Class<TileEntityBattery> getTileEntityClass()
   {
-    return BlockBatteryEntity.class;
+    return TileEntityBattery.class;
   }
   
   @Override
   public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
   {
-    BlockBatteryEntity tile = getTileEntity(world, pos);
+    TileEntityBattery tile = getTileEntity(world, pos);
     
     player.sendStatusMessage(new TextComponentString("Power: " + tile.storage.getEnergyStored() + " " + (tile.storage.getStoredPercentage() * 100)), true);
     

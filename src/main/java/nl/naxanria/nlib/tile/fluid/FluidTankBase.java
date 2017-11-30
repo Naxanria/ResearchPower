@@ -9,16 +9,16 @@ import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.nlib.util.CollectionUtil;
 import nl.naxanria.nlib.util.EnumHelper;
 
-public abstract class BaseFluidTank extends TileEntityBase implements IFluidSharingProvider
+public abstract class FluidTankBase extends TileEntityBase implements IFluidSharingProvider
 {
   protected FluidTank tank;
   
-  public BaseFluidTank()
+  public FluidTankBase()
   {
     tank = new FluidTank(Fluid.BUCKET_VOLUME * 4);
   }
   
-  public BaseFluidTank(int capacity)
+  public FluidTankBase(int capacity)
   {
     tank = new FluidTank(capacity);
   }

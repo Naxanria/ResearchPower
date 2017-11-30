@@ -4,8 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import nl.naxanria.nlib.util.Log;
-import nl.naxanria.nlib.util.LogColor;
+import nl.naxanria.nlib.util.logging.Log;
+import nl.naxanria.nlib.util.logging.LogColor;
 
 import java.util.HashMap;
 

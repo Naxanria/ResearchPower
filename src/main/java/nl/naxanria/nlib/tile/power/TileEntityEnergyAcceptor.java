@@ -1,17 +1,22 @@
 package nl.naxanria.nlib.tile.power;
 
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.energy.IEnergyStorage;
 import nl.naxanria.nlib.tile.TileEntityBase;
+import nl.naxanria.nlib.util.CollectionUtil;
 import nl.naxanria.nlib.util.EnumHelper;
 
-public class BatteryEntity extends TileEntityBase implements IEnergySharingProvider
+public class TileEntityEnergyAcceptor extends TileEntityBase
 {
-  public BaseEnergyStorage storage;
+  public EnergyStorageBase storage;
   
-  public BatteryEntity(BaseEnergyStorage storage)
+  public TileEntityEnergyAcceptor(int capacity, int maxUse)
+  {
+    storage = new EnergyStorageBase(capacity, maxUse, maxUse, false);
+  }
+  
+  public TileEntityEnergyAcceptor(EnergyStorageBase storage)
   {
     this.storage = storage;
   }
@@ -19,31 +24,17 @@ public class BatteryEntity extends TileEntityBase implements IEnergySharingProvi
   @Override
   public IEnergyStorage getEnergyStorage(EnumFacing facing)
   {
-    return storage;
+    if (CollectionUtil.contains(getAcceptingSides(), facing))
+    {
+      return storage;
+    }
+    
+    return null;
   }
   
-  @Override
-  public int getEnergyToShare()
-  {
-    return storage.getEnergyStored();
-  }
-  
-  @Override
-  public boolean doesShareEnergy()
-  {
-    return true;
-  }
-  
-  @Override
-  public EnumFacing[] getEnergyProvidingSides()
+  public EnumFacing[] getAcceptingSides()
   {
     return EnumHelper.Facing.ALL;
-  }
-  
-  @Override
-  public boolean canShareEnergyTo(TileEntity tile)
-  {
-    return true;
   }
   
   @Override

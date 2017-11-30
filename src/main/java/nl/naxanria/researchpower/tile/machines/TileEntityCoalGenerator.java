@@ -6,13 +6,11 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.energy.IEnergyStorage;
-import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.inventory.TileEntityInventoryBase;
-import nl.naxanria.nlib.tile.power.BaseEnergyStorage;
+import nl.naxanria.nlib.tile.power.EnergyStorageBase;
 import nl.naxanria.nlib.tile.power.IEnergySharingProvider;
 import nl.naxanria.nlib.util.EnumHelper;
-import nl.naxanria.nlib.util.Log;
 import nl.naxanria.nlib.util.MathUtil;
 import nl.naxanria.nlib.util.StackUtil;
 
@@ -21,7 +19,7 @@ public class TileEntityCoalGenerator extends TileEntityInventoryBase implements 
   public static final int PRODUCE = 30;
   public static final int SLOT_FUEL = 0;
   
-  public final BaseEnergyStorage storage;
+  public final EnergyStorageBase storage;
   
   public int currBurnTime;
   public int maxBurnTime;
@@ -36,7 +34,7 @@ public class TileEntityCoalGenerator extends TileEntityInventoryBase implements 
     super(1);
     enableFlags(TileFlags.DropInventory);
     
-    storage = new BaseEnergyStorage(10000, 0, 120, true);
+    storage = new EnergyStorageBase(10000, 0, 120, true);
   }
   
   @Override

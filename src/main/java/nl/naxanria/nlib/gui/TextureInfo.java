@@ -2,7 +2,6 @@ package nl.naxanria.nlib.gui;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
-import nl.naxanria.nlib.util.Log;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

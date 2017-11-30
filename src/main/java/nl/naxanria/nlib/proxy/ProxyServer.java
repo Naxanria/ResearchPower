@@ -3,7 +3,7 @@ package nl.naxanria.nlib.proxy;
 import net.minecraft.util.text.translation.I18n;
 
 @SuppressWarnings("deprecation")
-public class ServerProxy extends Proxy
+public class ProxyServer extends Proxy
 {
     @Override
     public String getLocalization(String unlocalized, Object... args)

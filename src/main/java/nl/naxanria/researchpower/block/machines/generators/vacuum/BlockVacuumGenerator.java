@@ -9,11 +9,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import nl.naxanria.nlib.block.BlockTileBase;
-import nl.naxanria.researchpower.tile.VacuumGenerator;
+import nl.naxanria.researchpower.tile.TileEntityVacuumGenerator;
 
 import javax.annotation.Nullable;
 
-public class BlockVacuumGenerator extends BlockTileBase<VacuumGenerator>
+public class BlockVacuumGenerator extends BlockTileBase<TileEntityVacuumGenerator>
 {
   public BlockVacuumGenerator()
   {
@@ -22,21 +22,21 @@ public class BlockVacuumGenerator extends BlockTileBase<VacuumGenerator>
   
   @Nullable
   @Override
-  public VacuumGenerator createTileEntity(World world, IBlockState state)
+  public TileEntityVacuumGenerator createTileEntity(World world, IBlockState state)
   {
-    return new VacuumGenerator();
+    return new TileEntityVacuumGenerator();
   }
   
   @Override
-  public Class<VacuumGenerator> getTileEntityClass()
+  public Class<TileEntityVacuumGenerator> getTileEntityClass()
   {
-    return VacuumGenerator.class;
+    return TileEntityVacuumGenerator.class;
   }
   
   @Override
   public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
   {
-    VacuumGenerator tile = getTileEntity(world, pos);
+    TileEntityVacuumGenerator tile = getTileEntity(world, pos);
     
     if (player.isSneaking())
     {

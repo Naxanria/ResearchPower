@@ -3,7 +3,7 @@ package nl.naxanria.researchpower.tile.machines;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import nl.naxanria.nlib.tile.inventory.TileEntityInventoryBase;
-import nl.naxanria.nlib.tile.power.BaseEnergyStorage;
+import nl.naxanria.nlib.tile.power.EnergyStorageBase;
 import nl.naxanria.nlib.tile.power.IEnergySharingProvider;
 import nl.naxanria.nlib.util.EnumHelper;
 import nl.naxanria.nlib.util.MathUtil;
@@ -20,7 +20,7 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   public static final int SLOT_INPUT_MAYOR = 4;
   public static final int SLOT_OUTPUT = 5;
   
-  public BaseEnergyStorage storage;
+  public EnergyStorageBase storage;
   
   public int progress = 0;
   public int totalTime = 1000;
@@ -30,7 +30,7 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   {
     super(6);
     
-    storage = new BaseEnergyStorage(ENERGY_CAPACITY, 0, ENERGY_USE_MAX, true);
+    storage = new EnergyStorageBase(ENERGY_CAPACITY, 0, ENERGY_USE_MAX, true);
   }
   
   @Override

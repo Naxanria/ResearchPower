@@ -1,4 +1,4 @@
-package nl.naxanria.nlib.util;
+package nl.naxanria.nlib.util.logging;
 
 public class LogColor
 {

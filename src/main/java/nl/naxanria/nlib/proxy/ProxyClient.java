@@ -10,7 +10,7 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.researchpower.ResearchPower;
 
-public class ClientProxy extends Proxy
+public class ProxyClient extends Proxy
 {
     @Override
     public void registerItemRenderer(Item item, int meta, String id)

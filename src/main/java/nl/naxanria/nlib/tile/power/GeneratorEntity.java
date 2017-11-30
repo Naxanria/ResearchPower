@@ -10,15 +10,15 @@ public abstract class GeneratorEntity extends TileEntityBase implements IEnergyS
 {
   public int produce;
   
-  public BaseEnergyStorage storage;
+  public EnergyStorageBase storage;
   
   public GeneratorEntity(int produce)
   {
     this.produce = produce;
-    storage = new BaseEnergyStorage(1000, 0, 100, true);
+    storage = new EnergyStorageBase(1000, 0, 100, true);
   }
   
-  public GeneratorEntity(int produce, BaseEnergyStorage storage)
+  public GeneratorEntity(int produce, EnergyStorageBase storage)
   {
     this.produce = produce;
     this.storage = storage;

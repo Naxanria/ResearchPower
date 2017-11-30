@@ -3,7 +3,6 @@ package nl.naxanria.researchpower.containers;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.items.SlotItemHandler;
 import nl.naxanria.nlib.container.ContainerBase;
-import nl.naxanria.nlib.util.Log;
 import nl.naxanria.researchpower.tile.machines.TileEntityCoalGenerator;
 
 public class ContainerCoalGenerator extends ContainerBase<TileEntityCoalGenerator>

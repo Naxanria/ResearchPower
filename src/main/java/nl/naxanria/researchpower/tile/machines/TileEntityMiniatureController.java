@@ -4,19 +4,18 @@ package nl.naxanria.researchpower.tile.machines;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTUtil;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
-import nl.naxanria.nlib.tile.power.BaseEnergyAcceptor;
-import nl.naxanria.nlib.util.Log;
+import nl.naxanria.nlib.tile.power.TileEntityEnergyAcceptor;
+import nl.naxanria.nlib.util.logging.Log;
 import nl.naxanria.nlib.util.RandomHelper;
 import nl.naxanria.researchpower.block.BlocksInit;
 import nl.naxanria.researchpower.recipe.MiniatureRecipeRegistry;
 import nl.naxanria.researchpower.recipe.RecipeMiniature;
 
-public class TileEntityMiniatureController extends BaseEnergyAcceptor
+public class TileEntityMiniatureController extends TileEntityEnergyAcceptor
 {
   public static final int CAPACITY = 20000;
   public static final int MAX_USE = 1500;
@@ -231,6 +230,11 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
   public int getTotalTime()
   {
     return totalTime;
+  }
+  
+  public float getProgressPercent()
+  {
+    return (float) progress / (float) totalTime;
   }
 
   @Override

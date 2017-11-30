@@ -3,39 +3,39 @@ package nl.naxanria.nlib.tile.power;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.energy.EnergyStorage;
 
-public class BaseEnergyStorage extends EnergyStorage
+public class EnergyStorageBase extends EnergyStorage
 {
   public static final String NBT_ENERGY = "ENERGY";
   
   protected boolean internalStorageOnly = false;
   
-  public BaseEnergyStorage(int capacity, int maxReceive, int maxExtract)
+  public EnergyStorageBase(int capacity, int maxReceive, int maxExtract)
   {
     super(capacity, maxReceive, maxExtract);
   }
   
-  public BaseEnergyStorage(int capacity, int maxReceive, int maxExtract, boolean internalStorageOnly)
+  public EnergyStorageBase(int capacity, int maxReceive, int maxExtract, boolean internalStorageOnly)
   {
     super(capacity, maxReceive, maxExtract);
     
     this.internalStorageOnly = internalStorageOnly;
   }
   
-  public BaseEnergyStorage setMaxReceive(int max)
+  public EnergyStorageBase setMaxReceive(int max)
   {
     maxReceive = max;
     
     return this;
   }
   
-  public BaseEnergyStorage setMaxExtract(int max)
+  public EnergyStorageBase setMaxExtract(int max)
   {
     maxExtract = max;
     
     return this;
   }
   
-  public BaseEnergyStorage setCapacity(int capacity)
+  public EnergyStorageBase setCapacity(int capacity)
   {
     if (capacity < this.capacity)
     {

@@ -1,4 +1,4 @@
-package nl.naxanria.nlib.util;
+package nl.naxanria.nlib.util.logging;
 
 import nl.naxanria.nlib.NMod;
 import org.apache.logging.log4j.LogManager;

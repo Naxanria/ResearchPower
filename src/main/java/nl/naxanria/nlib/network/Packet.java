@@ -4,8 +4,7 @@ import io.netty.buffer.ByteBuf;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
-import nl.naxanria.nlib.NMod;
-import nl.naxanria.nlib.util.Log;
+import nl.naxanria.nlib.util.logging.Log;
 
 import java.io.IOException;
 
