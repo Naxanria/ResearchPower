@@ -4,6 +4,9 @@ package nl.naxanria.researchpower.tile.machines;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.init.Blocks;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTUtil;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import nl.naxanria.nlib.tile.power.BaseEnergyAcceptor;
@@ -18,17 +21,19 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
   public static final int CAPACITY = 20000;
   public static final int MAX_USE = 1500;
   
-  protected boolean structureGood;
+  public boolean structureGood;
   
   protected int progress = 0;
-  protected int totalTime = 500;
+  protected int totalTime = 100;
   protected boolean inProgress = false;
   protected int baseLightningChance = 2;
   protected int lightningChance = 0;
   protected RecipeMiniature currentRecipe;
+
+  public IBlockState[] processingRecipe = new IBlockState[27];
   
-  EnumFacing dir = null;
-  
+  public EnumFacing dir = null;
+
   public TileEntityMiniatureController()
   {
     super(CAPACITY, MAX_USE);
@@ -56,8 +61,6 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
     {
       return false;
     }
-
-    System.out.println(dir);
 
     EnumFacing offsetDir = dir.rotateAround(EnumFacing.Axis.Y).getOpposite();
 
@@ -148,6 +151,13 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
       currentRecipe = r;
       progress = 0;
       inProgress = true;
+      BlockPos[] positions = getBlockPositions();
+      for (int i = 0; i < 27; i++)
+      {
+        processingRecipe[i] = world.getBlockState(positions[i]);
+        world.setBlockToAir(positions[i]);
+      }
+      sendUpdate();
     }
   }
   
@@ -155,23 +165,22 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
   protected void entityUpdate()
   {
     super.entityUpdate();
-    
-    if (!world.isRemote)
+
+    if (inProgress)
     {
-      if (inProgress)
+      progress++;
+      if (!world.isRemote)
       {
-        progress++;
-        
         if (RandomHelper.chance(world.rand, (lightningChance += baseLightningChance)))
         {
           lightningChance = baseLightningChance;
-  
+
           EntityLightningBolt bolt = new EntityLightningBolt(world, pos.getX(), pos.getY(), pos.getZ(), true);
           world.spawnEntity(bolt);
-  
+
           Log.warn("Lightning!!");
         }
-        
+
         if (progress >= totalTime)
         {
           // remove the blocks
@@ -180,23 +189,30 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
 
           BlockPos[] positions = getBlockPositions();
 
-          for (int i = 0; i <= 26; i++)
-          {
-            world.setBlockToAir(positions[i]);
-          }
-
           // spawn the item
 
           BlockPos pos = positions[4];
           BlockPos controllerPos = getPos();
 
-          EntityItem item = new EntityItem(world, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, currentRecipe.getRecipeOutput());
-          item.setVelocity(0, 0, 0); // TODO: decide what to do, whether to have it fly randomly or keep it stationary like so.
-          world.spawnEntity(item);
-          
+          if (currentRecipe != null) //TODO: Proper fix, including serializing the recipe.
+          {
+            EntityItem item = new EntityItem(world, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, currentRecipe.getRecipeOutput());
+            item.setVelocity(0, 0, 0); // TODO: decide what to do, whether to have it fly randomly or keep it stationary like so.
+            world.spawnEntity(item);
+          }
+
+
           progress = 0;
           currentRecipe = null;
           inProgress = false;
+
+          for(int i = 0; i < 27; i++)
+          {
+            world.setBlockState(positions[i], processingRecipe[i]); // for testing so I don't have to keep rebuilding the fucking thing
+          }
+
+          processingRecipe = new IBlockState[27];
+          sendUpdate();
         }
       }
     }
@@ -216,4 +232,60 @@ public class TileEntityMiniatureController extends BaseEnergyAcceptor
   {
     return totalTime;
   }
+
+  @Override
+  public void writeSyncableNBT(NBTTagCompound compound, NBTType type)
+  {
+    super.writeSyncableNBT(compound, type);
+
+    if (type == NBTType.SAVE_TILE  || type == NBTType.SYNC)
+    {
+      compound.setBoolean("structureGood", structureGood);
+      if (structureGood)
+      {
+        compound.setString("dir", dir.getName());
+        compound.setBoolean("inProgress", inProgress);
+        if (inProgress)
+        {
+          compound.setInteger("progress", progress);
+          compound.setInteger("totalTime", totalTime);
+          for(int i = 0; i < 27; i++)
+          {
+            NBTTagCompound stateCompound = new NBTTagCompound();
+            compound.setTag("state" + i, NBTUtil.writeBlockState(stateCompound, processingRecipe[i]));
+          }
+        }
+      }
+    }
+  }
+
+  @Override
+  public void readSyncableNBT(NBTTagCompound compound, NBTType type)
+  {
+    super.readSyncableNBT(compound, type);
+
+    if (type == NBTType.SAVE_TILE || type == NBTType.SYNC)
+    {
+      structureGood = compound.getBoolean("structureGood");
+      if (structureGood)
+      {
+        dir = EnumFacing.byName(compound.getString("dir"));
+        inProgress = compound.getBoolean("inProgress");
+        if (inProgress)
+        {
+          progress = compound.getInteger("progress");
+          totalTime = compound.getInteger("totalTime");
+          for(int i = 0; i < 27; i++)
+          {
+            NBTTagCompound stateCompound = compound.getCompoundTag("state" + i);
+            processingRecipe[i] = NBTUtil.readBlockState(stateCompound);
+          }
+        } else {
+          progress = 0;
+          processingRecipe = new IBlockState[27];
+        }
+      }
+    }
+  }
+
 }

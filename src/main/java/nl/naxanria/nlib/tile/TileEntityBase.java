@@ -74,7 +74,7 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
       fluidSharingProvider = (IFluidSharingProvider) this;
       enableFlag(TileFlags.SaveOnWorldChange);
     }
-    
+
     isInventoryHolder = this instanceof IInventoryHolder;
     if (isInventoryHolder)
     {

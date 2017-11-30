@@ -4,13 +4,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.items.IItemHandler;
+import nl.naxanria.nlib.proxy.Proxy;
 import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.util.WorldUtil;
@@ -54,9 +54,18 @@ public abstract class BlockTileBaseInternal<T extends IProperty, TE extends Tile
     if (needTileEntityRegistration())
     {
       GameRegistry.registerTileEntity(getTileEntityClass(), getRegistryName().toString());
+      if (getTileEntityRendererClass() != null)
+      {
+        Proxy.registerTileEntityRenderer(getTileEntityClass(), getTileEntityRendererClass());
+      }
     }
   }
-  
+
+  public String getTileEntityRendererClass()
+  {
+    return null;
+  }
+
   protected boolean needTileEntityRegistration()
   {
     return true;

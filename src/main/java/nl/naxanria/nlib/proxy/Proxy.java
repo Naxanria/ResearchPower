@@ -1,6 +1,7 @@
 package nl.naxanria.nlib.proxy;
 
 import net.minecraft.item.Item;
+import nl.naxanria.nlib.tile.TileEntityBase;
 
 public abstract class Proxy
 {
@@ -40,5 +41,13 @@ public abstract class Proxy
   }
   
   protected abstract String getLocalization(String unlocalized, Object... args);
-  
+
+  public static <TE extends TileEntityBase> void registerTileEntityRenderer(Class<TE> tileEntityClass, String tileEntityRendererClass)
+  {
+    getCurrent().registerTileEntityRender(tileEntityClass, tileEntityRendererClass);
+  }
+
+  public <TE extends TileEntityBase> void registerTileEntityRender(Class<TE> tileEntityClass, String tileEntityRendererClass)
+  {
+  }
 }

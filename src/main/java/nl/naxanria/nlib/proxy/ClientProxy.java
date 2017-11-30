@@ -1,9 +1,13 @@
 package nl.naxanria.nlib.proxy;
 
+import jline.internal.Log;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
+import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.researchpower.ResearchPower;
 
 public class ClientProxy extends Proxy
@@ -23,5 +27,20 @@ public class ClientProxy extends Proxy
     public String getLocalization(String unlocalized, Object... args)
     {
         return I18n.format(unlocalized, args);
+    }
+
+    public <TE extends TileEntityBase> void registerTileEntityRender(Class<TE> tileEntityClass, String tileEntityRendererClass)
+    {
+        try
+        {
+            Class clazz = Class.forName(tileEntityRendererClass);
+            TileEntitySpecialRenderer renderer = (TileEntitySpecialRenderer) clazz.newInstance();
+            ClientRegistry.bindTileEntitySpecialRenderer(tileEntityClass, renderer);
+        }
+        catch (ClassNotFoundException | IllegalAccessException | InstantiationException e)
+        {
+            Log.error("Unable to register renderer for " + tileEntityClass.toString(), e);
+        }
+
     }
 }

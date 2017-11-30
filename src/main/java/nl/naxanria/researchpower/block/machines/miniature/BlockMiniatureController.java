@@ -66,4 +66,10 @@ public class BlockMiniatureController extends BlockTileBase<TileEntityMiniatureC
 
     return super.onBlockActivated(world, pos, state, player, hand, facing, hitX, hitY, hitZ);
   }
+
+  @Override
+  public String getTileEntityRendererClass()
+  {
+    return "nl.naxanria.researchpower.client.renderer.TileEntityMiniatureRenderer";
+  }
 }

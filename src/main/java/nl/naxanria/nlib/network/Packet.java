@@ -34,7 +34,7 @@ public abstract class Packet implements IMessage
       
       int handlerId = buffer.readInt();
       
-      if (handlerId > 0 && handlerId < PacketHandler.DATA_HANDLERS.size())
+      if (handlerId >= 0 && handlerId < PacketHandler.DATA_HANDLERS.size())
       {
         handler = PacketHandler.DATA_HANDLERS.get(handlerId);
       }
