@@ -48,7 +48,7 @@ public class TileEntityMiniatureRenderer extends TileEntitySpecialRenderer<TileE
       GlStateManager.shadeModel(7424); // 1D00
     }
 
-    bufferbuilder.begin(7, DefaultVertexFormats.BLOCK);
+
 
     BlockPos[] positions = controller.getBlockPositions();
  
@@ -56,11 +56,11 @@ public class TileEntityMiniatureRenderer extends TileEntitySpecialRenderer<TileE
 
     Log.info(controller.dir.toString());
 
-    BlockPos ourPos = positions[0];
+    bufferbuilder.begin(7, DefaultVertexFormats.BLOCK);
 
     for (int i = 0; i < 27; i++)
     {
-      bufferbuilder.setTranslation((double)blockPos.getX() - ourPos.getX(), (double)blockPos.getY() - ourPos.getY(), (double)blockPos.getZ() - ourPos.getZ());
+      bufferbuilder.setTranslation(-0.5, -0.5, -0.5);
 
       renderDispatcher.getBlockModelRenderer()
         .renderModel(controller.getWorld(), this.renderDispatcher.getModelForState(controller.processingRecipe[i]), controller.processingRecipe[i], positions[i], bufferbuilder, false);
@@ -68,28 +68,49 @@ public class TileEntityMiniatureRenderer extends TileEntitySpecialRenderer<TileE
       bufferbuilder.setTranslation(0, 0, 0);
     }
 
-    double xTranslate = -blockPos.getX();
-    double yTranslate = -blockPos.getY();
-    double zTranslate = -blockPos.getZ();
+    //scaleAmount = 1;
+
+    double xTranslate = -positions[4 + 9].getX();
+    double yTranslate = -positions[4 + 9].getY();
+    double zTranslate = -positions[4 + 9].getZ();
+
+    BlockPos ourPos = positions[4];
+
+    switch (controller.dir)
+    {
+      case SOUTH:
+        z += 2;
+        break;
+      case NORTH:
+        z -= 2;
+        break;
+      case EAST:
+        x += 2;
+        break;
+      case WEST:
+        x -= 2;
+    }
+
+    x += 0.5;
+    y += 0.5;
+    y += 2.0;
+    z += 0.5;
 
     xTranslate += x / scaleAmount;
     yTranslate += y / scaleAmount;
     zTranslate += z / scaleAmount;
 
-    double scaleTranslateX, scaleTranslateZ, scaleTranslateY;
-    scaleTranslateX = scaleTranslateY = scaleTranslateZ = 0;
 
-    double translateOffset = 1.50 - (1.50 * scaleAmount);
 
-    BlockPos tempPos = blockPos.up().offset(controller.dir, 1).offset(controller.dir.rotateAround(EnumFacing.Axis.Y).getOpposite(), 1);
-
-    GlStateManager.translate(scaleTranslateX, scaleTranslateY, scaleTranslateZ);
     GlStateManager.pushMatrix();
     {
-      GL11.glScalef(scaleAmount, scaleAmount, scaleAmount);
+      GlStateManager.scale(scaleAmount, scaleAmount, scaleAmount);
+
       GlStateManager.translate(xTranslate, yTranslate, zTranslate);
-  
+
+      GlStateManager.pushMatrix();
       tessellator.draw();
+      GlStateManager.popMatrix();
     }
     GlStateManager.popMatrix();
 
