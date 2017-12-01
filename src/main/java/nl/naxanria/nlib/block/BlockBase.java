@@ -118,10 +118,16 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
   protected BlockStateContainer createBlockState()
   {
     if (PROPERTY == null && tempProperty == null)
+    {
       return super.createBlockState();
+    }
     IProperty property = PROPERTY;
+    
     if (PROPERTY == null)
+    {
       property = tempProperty;
+    }
+    
     return new BlockStateContainer(this, property);
   }
 
@@ -130,15 +136,20 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
   public IBlockState getStateFromMeta(int meta)
   {
     if (PROPERTY == null && tempProperty == null)
+    {
       return super.getStateFromMeta(meta);
+    }
 
     Collection<? extends Comparable<?>> allowedValues = PROPERTY.getAllowedValues();
     int count = 0;
     for (Comparable obj : allowedValues)
     {
       if (count++ == meta)
+      {
         return getDefaultState().withProperty(PROPERTY, obj);
+      }
     }
+    
     return getDefaultState();
   }
 
@@ -150,6 +161,7 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
     {
       return super.getMetaFromState(state);
     }
+    
     Collection<? extends Comparable> allowedValues = PROPERTY.getAllowedValues();
     int count = 0;
     for (Comparable obj : allowedValues)

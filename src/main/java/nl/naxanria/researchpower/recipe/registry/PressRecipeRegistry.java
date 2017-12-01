@@ -1,6 +1,7 @@
-package nl.naxanria.researchpower.recipe;
+package nl.naxanria.researchpower.recipe.registry;
 
 import net.minecraft.item.ItemStack;
+import nl.naxanria.researchpower.recipe.RecipePress;
 
 import java.util.ArrayList;
 import java.util.Arrays;

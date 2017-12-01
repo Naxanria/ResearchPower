@@ -4,20 +4,41 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTBase;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagInt;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.Style;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fluids.FluidUtil;
+import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.items.IItemHandler;
 import nl.naxanria.nlib.proxy.Proxy;
 import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.util.WorldUtil;
+import nl.naxanria.nlib.util.logging.Log;
+import nl.naxanria.nlib.util.logging.LogColor;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
-@SuppressWarnings("WeakerAccess")
+@SuppressWarnings({"WeakerAccess", "NullableProblems"})
 public abstract class BlockTileBaseInternal<T extends IProperty, TE extends TileEntityBase> extends BlockBase
 {
   public BlockTileBaseInternal(Material blockMaterialIn, String name, T property)
@@ -125,4 +146,124 @@ public abstract class BlockTileBaseInternal<T extends IProperty, TE extends Tile
       super.breakBlock(worldIn, pos, state);
     }
   }
+  
+  protected boolean useItemOnTank(EntityPlayer player, EnumHand hand, IFluidHandler tank)
+  {
+    return  (FluidUtil.interactWithFluidHandler(player, hand, tank));
+  }
+  
+  @Override
+  public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase entity, ItemStack stack)
+  {
+    if(stack.hasTagCompound())
+    {
+      TileEntity tile = world.getTileEntity(pos);
+      if(tile instanceof TileEntityBase)
+      {
+        TileEntityBase base = (TileEntityBase) tile;
+        
+        if (stack.getTagCompound() != null)
+        {
+          NBTTagCompound compound = stack.getTagCompound().getCompoundTag("Data");
+  
+          base.readSyncableNBT(compound, TileEntityBase.NBTType.SAVE_BLOCK);
+        }
+        
+        if (entity instanceof EntityPlayer && base.hasFlags(TileFlags.HasOwner))
+        {
+          if (base.getOwner() == null)
+          {
+            base.setOwner((EntityPlayer) entity);
+            base.markDirty();
+          }
+        }
+      }
+    }
+  }
+  
+  @Override
+  public void onBlockHarvested(World world, BlockPos pos, IBlockState state, EntityPlayer player)
+  {
+    if(!player.capabilities.isCreativeMode)
+    {
+      dropBlockAsItem(world, pos, state, 0);
+      //dirty workaround because of Forge calling Item.onBlockStartBreak() twice
+      world.setBlockToAir(pos);
+    }
+  }
+
+  
+  @SuppressWarnings("ConstantConditions")
+  @Override
+  public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
+  {
+    TileEntityBase tile = getTileEntity(world, pos);
+    Random rand = tile == null ? ((World) world).rand : tile.getWorld().rand;
+    
+    if (tile == null)
+    {
+      Log.info("Tile is null");
+      drops.add(new ItemStack(getItemDropped(state, rand, fortune), quantityDropped(state, fortune, rand), damageDropped(state)));
+      return;
+    }
+    
+    NBTTagCompound data = new NBTTagCompound();
+    tile.writeSyncableNBT(data, TileEntityBase.NBTType.SAVE_BLOCK);
+    for (String dataName :
+      data.getKeySet())
+    {
+      Log.info(LogColor.CYAN, "   " + dataName);
+    }
+
+    List<String> keysToRemove = new ArrayList<String>();
+    for (String key : data.getKeySet())
+    {
+      NBTBase tag = data.getTag(key);
+  
+      //Remove only ints because they are the most common ones
+  
+      if (tag instanceof NBTTagInt)
+      {
+        if (((NBTTagInt) tag).getInt() == 0)
+        {
+          keysToRemove.add(key);
+        }
+      }
+    }
+
+    for (String key : keysToRemove)
+    {
+      data.removeTag(key);
+    }
+  
+    Log.info(LogColor.CYAN, "=====================");
+    
+    for (String dataName :
+      data.getKeySet())
+    {
+      Log.info(LogColor.CYAN, "   " + dataName);
+    }
+  
+    //ItemBlock.setTileEntityNBT()
+    ItemStack stack = new ItemStack(getItemDropped(state, rand, fortune),  quantityDropped(state, fortune, rand), damageDropped(state));
+
+    Log.info(stack.hasTagCompound() + "");
+
+    if (data.hasNoTags())
+    {
+      Log.info("Stack has no tags, adding");
+      stack.setTagCompound(new NBTTagCompound());
+      stack.getTagCompound().setTag("Data", data);
+    }
+  
+    Log.info(LogColor.CYAN, "=====================");
+    
+    drops.add(stack);
+  }
+  
+//  @Override
+//  public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player, boolean willHarvest)
+//  {
+//    return true;
+//  }
 }

@@ -9,7 +9,7 @@ import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.inventory.IInventoryHolder;
 import nl.naxanria.nlib.tile.power.TileEntityEnergyAcceptor;
 import nl.naxanria.nlib.util.EnumHelper;
-import nl.naxanria.researchpower.recipe.PressRecipeRegistry;
+import nl.naxanria.researchpower.recipe.registry.PressRecipeRegistry;
 import nl.naxanria.researchpower.recipe.RecipePress;
 
 public class TileEntityPress extends TileEntityEnergyAcceptor implements IInventoryHolder
@@ -95,7 +95,7 @@ public class TileEntityPress extends TileEntityEnergyAcceptor implements IInvent
       {
     
         progress = 0;
-        ItemStack result = currentRecipe.getRecipeOutput();
+        ItemStack result = currentRecipe.getCraftingResult();
     
         inputStack.setCount(inputStack.getCount() - currentRecipe.input.getCount());
     
@@ -123,7 +123,7 @@ public class TileEntityPress extends TileEntityEnergyAcceptor implements IInvent
       RecipePress recipe = PressRecipeRegistry.getRecipeFromInput(inputStack);
       if (recipe != null)
       {
-        ItemStack res = recipe.getRecipeOutput();
+        ItemStack res = recipe.getCraftingResult();
         if (outputStack.isEmpty() || outputStack.getItem() == res.getItem()  && res.getCount() + outputStack.getCount() <= outputStack.getMaxStackSize())
         {
           currentRecipe = recipe;

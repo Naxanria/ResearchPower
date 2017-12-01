@@ -30,7 +30,7 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   {
     super(6);
     
-    storage = new EnergyStorageBase(ENERGY_CAPACITY, ENERGY_USE_MAX * 2, ENERGY_USE_MAX);
+    storage = new EnergyStorageBase(ENERGY_CAPACITY, ENERGY_USE_MAX * 2, ENERGY_USE_MAX, true);
   }
   
   @Override

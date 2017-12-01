@@ -40,4 +40,9 @@ public class StackUtil
     
     return stack;
   }
+  
+  public static boolean canTakeFrom(ItemStack from, ItemStack toTake)
+  {
+    return  (from.getItem().equals(toTake.getItem()) && toTake.getCount() <= from.getCount());
+  }
 }

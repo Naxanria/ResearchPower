@@ -4,7 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import nl.naxanria.researchpower.research.ResearchDatabase;
 
-public class RecipePress
+public class RecipePress implements IRecipeBase
 {
   public final ItemStack input;
   public final ItemStack output;
@@ -20,17 +20,24 @@ public class RecipePress
   public boolean matches(ItemStack input, EntityPlayer player)
   {
     // check research
-    return ResearchDatabase.isUnlocked(this, player) &&
-      input.getItem() == this.input.getItem() &&
-      input.getCount() >= this.input.getCount();
+    return input.getItem() == this.input.getItem() &&
+            input.getCount() >= this.input.getCount();
   }
-
+  
+  @Override
+  public boolean canCraft(EntityPlayer player)
+  {
+    return ResearchDatabase.isUnlocked(this, player);
+  }
+  
+  @Override
   public ItemStack getCraftingResult()
   {
     return output;
   }
-
-  public ItemStack getRecipeOutput()
+  
+  @Override
+  public ItemStack getCraftingOutput()
   {
     return output.copy();
   }

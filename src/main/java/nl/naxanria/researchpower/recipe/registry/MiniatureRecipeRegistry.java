@@ -1,6 +1,7 @@
-package nl.naxanria.researchpower.recipe;
+package nl.naxanria.researchpower.recipe.registry;
 
 import net.minecraft.block.state.IBlockState;
+import nl.naxanria.researchpower.recipe.RecipeMiniature;
 import scala.actors.threadpool.Arrays;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class MiniatureRecipeRegistry
     for (RecipeMiniature recipe :
       MINIATURE_RECIPES)
     {
-      if (recipe.matches(blocks, null))
+      if (recipe.matches(blocks))
       {
         return recipe;
       }

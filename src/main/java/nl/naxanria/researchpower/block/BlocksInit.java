@@ -8,6 +8,8 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.IStringSerializable;
 import nl.naxanria.nlib.registry.BlockRegistry;
 import nl.naxanria.nlib.block.BlockBase;
+import nl.naxanria.researchpower.ResearchPower;
+import nl.naxanria.researchpower.block.fluid.BlockFluidDrum;
 import nl.naxanria.researchpower.block.machines.BlockMachineEmpowerer;
 import nl.naxanria.researchpower.block.machines.BlockMachinePress;
 import nl.naxanria.researchpower.block.machines.battery.BlockBattery;
@@ -111,8 +113,10 @@ public class BlocksInit
       }
     }
 
-    public static final BlockSolarGenerator SOLAR_GENERATOR = (BlockSolarGenerator)BlockSolarGenerator.createStateVersion(PropertyInteger.create("tier", 1, 7));
+    public static final BlockSolarGenerator SOLAR_GENERATOR = (BlockSolarGenerator.createStateVersion(PropertyInteger.create("tier", 1, 7)));
   }
+  
+  public static final BlockFluidDrum FLUID_DRUM = BlockFluidDrum.createStateVersion(PropertyInteger.create("tier", 1, 3));
   
   public static class Other
   {
@@ -147,6 +151,8 @@ public class BlocksInit
       
       // solar
       Machines.SOLAR_GENERATOR,
+      
+      FLUID_DRUM,
       
       Other.RAINBOW
     );

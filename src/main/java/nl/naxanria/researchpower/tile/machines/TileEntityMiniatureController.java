@@ -12,7 +12,7 @@ import nl.naxanria.nlib.tile.power.TileEntityEnergyAcceptor;
 import nl.naxanria.nlib.util.logging.Log;
 import nl.naxanria.nlib.util.RandomHelper;
 import nl.naxanria.researchpower.block.BlocksInit;
-import nl.naxanria.researchpower.recipe.MiniatureRecipeRegistry;
+import nl.naxanria.researchpower.recipe.registry.MiniatureRecipeRegistry;
 import nl.naxanria.researchpower.recipe.RecipeMiniature;
 
 public class TileEntityMiniatureController extends TileEntityEnergyAcceptor
@@ -195,7 +195,7 @@ public class TileEntityMiniatureController extends TileEntityEnergyAcceptor
 
           if (currentRecipe != null) //TODO: Proper fix, including serializing the recipe.
           {
-            EntityItem item = new EntityItem(world, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, currentRecipe.getRecipeOutput());
+            EntityItem item = new EntityItem(world, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, currentRecipe.getCraftingResult());
             item.setVelocity(0, 0, 0); // TODO: decide what to do, whether to have it fly randomly or keep it stationary like so.
             world.spawnEntity(item);
           }

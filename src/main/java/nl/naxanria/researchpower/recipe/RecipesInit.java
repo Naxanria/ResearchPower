@@ -13,6 +13,8 @@ import nl.naxanria.nlib.registry.RecipeRegistry;
 import nl.naxanria.nlib.util.Dye;
 import nl.naxanria.researchpower.block.BlocksInit;
 import nl.naxanria.researchpower.item.ItemsInit;
+import nl.naxanria.researchpower.recipe.registry.MiniatureRecipeRegistry;
+import nl.naxanria.researchpower.recipe.registry.PressRecipeRegistry;
 
 public class RecipesInit
 {

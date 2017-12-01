@@ -9,7 +9,7 @@ import nl.naxanria.nlib.util.logging.LogColor;
 
 import java.util.HashMap;
 
-public class RecipeMiniature
+public class RecipeMiniature implements IRecipeBase
 {
   private ItemStack output;
   
@@ -50,7 +50,7 @@ public class RecipeMiniature
     }
   }
   
-  public boolean matches(IBlockState[] blocks, EntityPlayer player)
+  public boolean matches(IBlockState[] blocks)
   {
     for (int i = 0; i < pattern.length(); i++)
     {
@@ -69,13 +69,21 @@ public class RecipeMiniature
     return true;
   }
   
-  public ItemStack getCraftingResult()
+  @Override
+  public boolean canCraft(EntityPlayer player)
   {
-    return output;
+    return false;
   }
   
-  public ItemStack getRecipeOutput()
+  @Override
+  public ItemStack getCraftingResult()
   {
     return output.copy();
+  }
+  
+  @Override
+  public ItemStack getCraftingOutput()
+  {
+    return output;
   }
 }
