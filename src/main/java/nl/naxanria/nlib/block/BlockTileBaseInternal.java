@@ -182,18 +182,6 @@ public abstract class BlockTileBaseInternal<T extends IProperty, TE extends Tile
     }
   }
   
-  @Override
-  public void onBlockHarvested(World world, BlockPos pos, IBlockState state, EntityPlayer player)
-  {
-    if(!player.capabilities.isCreativeMode)
-    {
-      dropBlockAsItem(world, pos, state, 0);
-      //dirty workaround because of Forge calling Item.onBlockStartBreak() twice
-      world.setBlockToAir(pos);
-    }
-  }
-
-  
   @SuppressWarnings("ConstantConditions")
   @Override
   public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
