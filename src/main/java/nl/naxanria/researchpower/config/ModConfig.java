@@ -1,4 +1,4 @@
-package nl.naxanria.researchpower;
+package nl.naxanria.researchpower.config;
 
 
 import net.minecraftforge.common.config.Config;
@@ -7,6 +7,7 @@ import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import nl.naxanria.nlib.util.logging.Log;
+import nl.naxanria.researchpower.ResearchPower;
 
 @Config(modid = ResearchPower.MOD_ID)
 @Config.LangKey(ResearchPower.MOD_ID + ".config.title")
@@ -33,6 +34,9 @@ public class ModConfig
     @Config.Name("Tier 3")
     public int tier3 = 160000;
   }
+  
+//  public static boolean crap = true;
+//  public static String Cloudy = "TWAT";
   
   @Mod.EventBusSubscriber
   private static class EventHandler
