@@ -2,6 +2,7 @@ package nl.naxanria.researchpower.tile;
 
 import net.minecraft.nbt.NBTTagCompound;
 import nl.naxanria.nlib.tile.fluid.TileEntityFluidTankBase;
+import nl.naxanria.nlib.util.logging.Log;
 
 public class TileEntityDrum extends TileEntityFluidTankBase
 {
@@ -45,6 +46,8 @@ public class TileEntityDrum extends TileEntityFluidTankBase
     tank.setCapacity(capacity);
   }
   
+  
+  
   @Override
   public boolean doesShareFluid()
   {
@@ -65,12 +68,20 @@ public class TileEntityDrum extends TileEntityFluidTankBase
   public void readSyncableNBT(NBTTagCompound compound, NBTType type)
   {
     tier = compound.getInteger(NBT_TIER);
+    
+    tank.readFromNBT(compound.getCompoundTag("tank"));
     if (capacity == 0)
     {
       init(tier);
     }
     
-    tank.readFromNBT(compound.getCompoundTag("tank"));
+    if (tank.getCapacity() != getCapacity(tier))
+    {
+      init(tier);
+    }
+  
+    Log.info(type + " " + tier + " " + capacity);
+    
     super.readSyncableNBT(compound, type);
   }
 }

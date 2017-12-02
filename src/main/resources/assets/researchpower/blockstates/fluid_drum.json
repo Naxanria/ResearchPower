@@ -1,0 +1,22 @@
+{
+  "forge_marker" : 1,
+  "defaults" :
+  {
+    "model" : "researchpower:base_drum"
+  },
+  "variants" :
+  {
+    "tier=1" :
+    {
+      "model" : "researchpower:drum_stone"
+    },
+    "tier=2" :
+    {
+      "model" : "researchpower:drum_iron"
+    },
+    "tier=3" :
+    {
+      "model" : "researchpower:drum_obsidian"
+    }
+  }
+}
