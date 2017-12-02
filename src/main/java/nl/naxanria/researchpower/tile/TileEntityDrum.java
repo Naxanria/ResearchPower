@@ -27,13 +27,19 @@ public class TileEntityDrum extends TileEntityFluidTankBase
   
   private static int getCapacity(int tier)
   {
-    tier = tier - 1;
-    if (tier == -1)
+    switch (tier)
     {
-      tier = 0;
+      case 1:
+        return ModConfig.fluidDrumSize.tier1;
+        
+      case 2:
+        return ModConfig.fluidDrumSize.tier2;
+        
+      case 3:
+        return ModConfig.fluidDrumSize.tier3;
     }
     
-    return ModConfig.fluidDrumSize[tier];
+    return getCapacity(1);
   }
   
   private void init(int tier)

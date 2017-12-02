@@ -8,7 +8,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import nl.naxanria.nlib.util.logging.Log;
 
-
 @Config(modid = ResearchPower.MOD_ID)
 @Config.LangKey(ResearchPower.MOD_ID + ".config.title")
 public class ModConfig
@@ -19,7 +18,21 @@ public class ModConfig
   }
   
   @Config.Comment("Sizes for the fluid drums. (1000 is 1 bucket)")
-  public static int[] fluidDrumSize = new int[] { 16000, 50000, 160000 };
+  @Config.Name("Fluid Drum Size")
+  @Config.RequiresWorldRestart()
+  public static FluidDrumSize fluidDrumSize = new FluidDrumSize();
+  
+  public static class FluidDrumSize
+  {
+    @Config.Name("Tier 1")
+    public int tier1 = 16000;
+  
+    @Config.Name("Tier 2")
+    public int tier2 = 50000;
+  
+    @Config.Name("Tier 3")
+    public int tier3 = 160000;
+  }
   
   @Mod.EventBusSubscriber
   private static class EventHandler
