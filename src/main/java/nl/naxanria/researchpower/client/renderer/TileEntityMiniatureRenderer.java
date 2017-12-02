@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.*;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import nl.naxanria.nlib.util.logging.Log;
@@ -18,6 +19,7 @@ public class TileEntityMiniatureRenderer extends TileEntitySpecialRenderer<TileE
   @Override
   public void render(TileEntityMiniatureController controller, double x, double y, double z, float partialTicks, int destroyStage, float alpha)
   {
+    EntityPlayer player = Minecraft.getMinecraft().player;
     if (!controller.structureGood || !controller.isInProgress())
     {
       return;
@@ -50,7 +52,12 @@ public class TileEntityMiniatureRenderer extends TileEntitySpecialRenderer<TileE
 
 
 
+
     BlockPos[] positions = controller.getBlockPositions();
+
+    double xTranslate = positions[4 + 9].getX();
+    double yTranslate = positions[4 + 9].getY();
+    double zTranslate = positions[4 + 9].getZ();
  
     float scaleAmount = 1.0F - (((float) controller.getProgress() + partialTicks) / (float) controller.getTotalTime());
 
@@ -58,9 +65,11 @@ public class TileEntityMiniatureRenderer extends TileEntitySpecialRenderer<TileE
 
     bufferbuilder.begin(7, DefaultVertexFormats.BLOCK);
 
+
+
     for (int i = 0; i < 27; i++)
     {
-      bufferbuilder.setTranslation(-0.5, -0.5, -0.5);
+      bufferbuilder.setTranslation(-positions[4 + 9].getX() + -0.5, -positions[4 + 9].getY() + -0.5, -positions[4 + 9].getZ() + -0.5);
 
       renderDispatcher.getBlockModelRenderer()
         .renderModel(controller.getWorld(), this.renderDispatcher.getModelForState(controller.processingRecipe[i]), controller.processingRecipe[i], positions[i], bufferbuilder, false);
@@ -70,9 +79,7 @@ public class TileEntityMiniatureRenderer extends TileEntitySpecialRenderer<TileE
 
     //scaleAmount = 1;
 
-    double xTranslate = -positions[4 + 9].getX();
-    double yTranslate = -positions[4 + 9].getY();
-    double zTranslate = -positions[4 + 9].getZ();
+
 
     BlockPos ourPos = positions[4];
 
@@ -96,23 +103,11 @@ public class TileEntityMiniatureRenderer extends TileEntitySpecialRenderer<TileE
     y += 2.0;
     z += 0.5;
 
-    xTranslate += x / scaleAmount;
-    yTranslate += y / scaleAmount;
-    zTranslate += z / scaleAmount;
+    GlStateManager.translate( + x, + y, + z);
+    GlStateManager.scale(scaleAmount, scaleAmount, scaleAmount);
+    GlStateManager.rotate(360F * scaleAmount, 0, 1, 0);
 
-
-
-    GlStateManager.pushMatrix();
-    {
-      GlStateManager.scale(scaleAmount, scaleAmount, scaleAmount);
-
-      GlStateManager.translate(xTranslate, yTranslate, zTranslate);
-
-      GlStateManager.pushMatrix();
-      tessellator.draw();
-      GlStateManager.popMatrix();
-    }
-    GlStateManager.popMatrix();
+    tessellator.draw();
 
     RenderHelper.enableStandardItemLighting();
 

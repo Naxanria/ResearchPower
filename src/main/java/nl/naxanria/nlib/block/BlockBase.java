@@ -176,6 +176,12 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
     return 0;
   }
 
+  @Override
+  public int damageDropped(IBlockState state)
+  {
+    return getMetaFromState(state);
+  }
+
   @SuppressWarnings({"ConstantConditions", "unchecked"})
   @Override
   public void getSubBlocks(CreativeTabs itemIn, NonNullList items)
