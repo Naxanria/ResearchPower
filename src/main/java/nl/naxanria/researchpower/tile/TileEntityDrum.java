@@ -3,6 +3,7 @@ package nl.naxanria.researchpower.tile;
 import net.minecraft.nbt.NBTTagCompound;
 import nl.naxanria.nlib.tile.fluid.TileEntityFluidTankBase;
 import nl.naxanria.nlib.util.logging.Log;
+import nl.naxanria.researchpower.ModConfig;
 
 public class TileEntityDrum extends TileEntityFluidTankBase
 {
@@ -26,18 +27,13 @@ public class TileEntityDrum extends TileEntityFluidTankBase
   
   private static int getCapacity(int tier)
   {
-    switch (tier)
+    tier = tier - 1;
+    if (tier == -1)
     {
-      case 1:
-      default:
-        return 16000;
-        
-      case 2:
-        return 50000;
-        
-      case 3:
-        return 160000;
+      tier = 0;
     }
+    
+    return ModConfig.fluidDrumSize[tier];
   }
   
   private void init(int tier)

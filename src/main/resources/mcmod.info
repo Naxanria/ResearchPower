@@ -7,13 +7,16 @@
     "mcversion": "${mcversion}",
     "url": "",
     "updateUrl": "",
-    "authorList": [
-      "Naxanria"
+    "authorList":
+    [
+      "Naxanria",
+      "Cloudhunter"
     ],
     "credits": "",
     "logoFile": "",
     "screenshots": [],
-    "dependencies": [
+    "dependencies":
+    [
       ""
     ]
   }
