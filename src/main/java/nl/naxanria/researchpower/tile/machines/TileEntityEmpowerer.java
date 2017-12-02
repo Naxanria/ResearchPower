@@ -2,6 +2,7 @@ package nl.naxanria.researchpower.tile.machines;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.inventory.TileEntityInventoryBase;
 import nl.naxanria.nlib.tile.power.EnergyStorageBase;
 import nl.naxanria.nlib.tile.power.IEnergySharingProvider;
@@ -31,6 +32,8 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
     super(6);
     
     storage = new EnergyStorageBase(ENERGY_CAPACITY, ENERGY_USE_MAX * 2, ENERGY_USE_MAX, true);
+    
+    enableFlag(TileFlags.KeepNBTData);
   }
   
   @Override

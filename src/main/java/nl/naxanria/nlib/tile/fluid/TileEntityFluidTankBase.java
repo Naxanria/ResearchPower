@@ -6,6 +6,7 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import nl.naxanria.nlib.tile.TileEntityBase;
+import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.util.CollectionUtil;
 import nl.naxanria.nlib.util.EnumHelper;
 
@@ -16,6 +17,7 @@ public abstract class TileEntityFluidTankBase extends TileEntityBase implements 
   public TileEntityFluidTankBase()
   {
     tank = new FluidTank(Fluid.BUCKET_VOLUME * 4);
+    enableFlag(TileFlags.KeepNBTData);
   }
   
   public TileEntityFluidTankBase(int capacity)

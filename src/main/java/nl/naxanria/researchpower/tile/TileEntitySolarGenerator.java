@@ -4,6 +4,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import nl.naxanria.nlib.tile.TileEntityBase;
+import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.power.GeneratorEntity;
 import nl.naxanria.nlib.util.EnumHelper;
 
@@ -37,6 +38,8 @@ public class TileEntitySolarGenerator extends GeneratorEntity
     
     storage.setCapacity(getCapacity(tier))
       .setMaxExtract(getMaxExtract(tier));
+    
+    enableFlag(TileFlags.KeepNBTData);
   }
   
   public static int getMaxExtract(int tier)

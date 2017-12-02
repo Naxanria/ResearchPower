@@ -2,6 +2,7 @@ package nl.naxanria.researchpower.tile;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.power.EnergyStorageBase;
 import nl.naxanria.nlib.tile.power.GeneratorEntity;
 import nl.naxanria.nlib.util.EnumHelper;
@@ -11,6 +12,8 @@ public class TileEntityVacuumGenerator extends GeneratorEntity
   public TileEntityVacuumGenerator()
   {
     super(20, new EnergyStorageBase(20000, 0, 80, true));
+    
+    enableFlag(TileFlags.KeepNBTData);
   }
   
   @Override

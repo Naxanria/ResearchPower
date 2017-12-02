@@ -4,7 +4,8 @@ public enum TileFlags
 {
   SaveOnWorldChange,
   HasOwner,
-  DropInventory;
+  DropInventory,
+  KeepNBTData;
   
   public final long FLAG;
   

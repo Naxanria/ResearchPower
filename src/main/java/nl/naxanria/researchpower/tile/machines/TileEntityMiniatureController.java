@@ -8,6 +8,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTUtil;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
+import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.power.TileEntityEnergyAcceptor;
 import nl.naxanria.nlib.util.logging.Log;
 import nl.naxanria.nlib.util.RandomHelper;
@@ -36,6 +37,8 @@ public class TileEntityMiniatureController extends TileEntityEnergyAcceptor
   public TileEntityMiniatureController()
   {
     super(CAPACITY, MAX_USE);
+    
+    
   }
   
   public boolean makeOwnStructure() // TODO: eventually we store this and only invalidate, but for now this is good

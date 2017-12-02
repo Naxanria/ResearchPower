@@ -1,5 +1,6 @@
 package nl.naxanria.researchpower.tile;
 
+import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.power.EnergyStorageBase;
 
 public class TileEntityBattery extends nl.naxanria.nlib.tile.power.TileEntityBattery
@@ -7,5 +8,7 @@ public class TileEntityBattery extends nl.naxanria.nlib.tile.power.TileEntityBat
   public TileEntityBattery()
   {
     super(new EnergyStorageBase(1000000, 1000, 1000));
+    
+    enableFlag(TileFlags.KeepNBTData);
   }
 }
