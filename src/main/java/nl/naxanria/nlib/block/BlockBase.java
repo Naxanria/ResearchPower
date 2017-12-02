@@ -8,11 +8,14 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.statemap.DefaultStateMapper;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
 import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.item.ItemMetaBlock;
@@ -198,7 +201,18 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
       items.add(new ItemStack(this, 1, i));
     }
   }
-
+  
+  @Override
+  public void onBlockHarvested(World world, BlockPos pos, IBlockState state, EntityPlayer player)
+  {
+    if(!player.capabilities.isCreativeMode)
+    {
+      dropBlockAsItem(world, pos, state, 0);
+      //dirty workaround because of Forge calling Item.onBlockStartBreak() twice
+      world.setBlockToAir(pos);
+    }
+  }
+  
   // This is a hack as Block.java expects the property to be available on creation - and it's constructor runs before ours - so we need to make sure we can get it before our constructor finishes running
 
   @SuppressWarnings("unchecked")

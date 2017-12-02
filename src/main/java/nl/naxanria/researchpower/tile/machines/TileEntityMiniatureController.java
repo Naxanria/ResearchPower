@@ -10,7 +10,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.SideOnly;import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.power.TileEntityEnergyAcceptor;
 import nl.naxanria.nlib.util.logging.Log;
 import nl.naxanria.nlib.util.RandomHelper;

@@ -2,6 +2,8 @@ package nl.naxanria.researchpower.tile;
 
 import net.minecraft.nbt.NBTTagCompound;
 import nl.naxanria.nlib.tile.fluid.TileEntityFluidTankBase;
+import nl.naxanria.nlib.util.logging.Log;
+import nl.naxanria.researchpower.ModConfig;
 
 public class TileEntityDrum extends TileEntityFluidTankBase
 {
@@ -25,18 +27,13 @@ public class TileEntityDrum extends TileEntityFluidTankBase
   
   private static int getCapacity(int tier)
   {
-    switch (tier)
+    tier = tier - 1;
+    if (tier == -1)
     {
-      case 1:
-      default:
-        return 16000;
-        
-      case 2:
-        return 50000;
-        
-      case 3:
-        return 160000;
+      tier = 0;
     }
+    
+    return ModConfig.fluidDrumSize[tier];
   }
   
   private void init(int tier)
@@ -44,6 +41,8 @@ public class TileEntityDrum extends TileEntityFluidTankBase
     capacity = getCapacity(tier);
     tank.setCapacity(capacity);
   }
+  
+  
   
   @Override
   public boolean doesShareFluid()
@@ -65,12 +64,20 @@ public class TileEntityDrum extends TileEntityFluidTankBase
   public void readSyncableNBT(NBTTagCompound compound, NBTType type)
   {
     tier = compound.getInteger(NBT_TIER);
+    
+    tank.readFromNBT(compound.getCompoundTag("tank"));
     if (capacity == 0)
     {
       init(tier);
     }
     
-    tank.readFromNBT(compound.getCompoundTag("tank"));
+    if (tank.getCapacity() != getCapacity(tier))
+    {
+      init(tier);
+    }
+  
+    Log.info(type + " " + tier + " " + capacity);
+    
     super.readSyncableNBT(compound, type);
   }
 }

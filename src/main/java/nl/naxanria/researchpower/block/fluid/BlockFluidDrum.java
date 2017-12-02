@@ -28,6 +28,8 @@ public class BlockFluidDrum extends BlockTileBaseProperties<PropertyInteger, Til
     setHardness(1.5f);
     setResistance(10.5f);
     setSoundType(SoundType.STONE);
+    
+    
   }
   
   @Nullable
@@ -52,6 +54,12 @@ public class BlockFluidDrum extends BlockTileBaseProperties<PropertyInteger, Til
       return true;
     }
     
+    return false;
+  }
+  
+  @Override
+  public boolean isFullBlock(IBlockState state)
+  {
     return false;
   }
   

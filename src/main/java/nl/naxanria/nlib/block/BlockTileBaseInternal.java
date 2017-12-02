@@ -28,6 +28,7 @@ import net.minecraftforge.items.IItemHandler;
 import nl.naxanria.nlib.proxy.Proxy;
 import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.nlib.tile.TileFlags;
+import nl.naxanria.nlib.util.NBTHelper;
 import nl.naxanria.nlib.util.WorldUtil;
 import nl.naxanria.nlib.util.logging.Log;
 import nl.naxanria.nlib.util.logging.LogColor;
@@ -181,89 +182,73 @@ public abstract class BlockTileBaseInternal<T extends IProperty, TE extends Tile
     }
   }
   
-  @Override
-  public void onBlockHarvested(World world, BlockPos pos, IBlockState state, EntityPlayer player)
-  {
-    if(!player.capabilities.isCreativeMode)
-    {
-      dropBlockAsItem(world, pos, state, 0);
-      //dirty workaround because of Forge calling Item.onBlockStartBreak() twice
-      world.setBlockToAir(pos);
-    }
-  }
-
-  
   @SuppressWarnings("ConstantConditions")
   @Override
   public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
   {
     TileEntityBase tile = getTileEntity(world, pos);
     Random rand = tile == null ? ((World) world).rand : tile.getWorld().rand;
+  
+    ItemStack stack = new ItemStack(getItemDropped(state, rand, fortune),  quantityDropped(state, fortune, rand), damageDropped(state));
     
     if (tile == null)
     {
-      Log.info("Tile is null");
+      Log.warn("Tile is null");
       drops.add(new ItemStack(getItemDropped(state, rand, fortune), quantityDropped(state, fortune, rand), damageDropped(state)));
       return;
     }
     
-    NBTTagCompound data = new NBTTagCompound();
-    tile.writeSyncableNBT(data, TileEntityBase.NBTType.SAVE_BLOCK);
-    for (String dataName :
-      data.getKeySet())
+    if (tile.hasFlags(TileFlags.KeepNBTData))
     {
-      Log.info(LogColor.CYAN, "   " + dataName);
-    }
-
-    List<String> keysToRemove = new ArrayList<String>();
-    for (String key : data.getKeySet())
-    {
-      NBTBase tag = data.getTag(key);
   
-      //Remove only ints because they are the most common ones
+      NBTTagCompound data = new NBTTagCompound();
+      tile.writeSyncableNBT(data, TileEntityBase.NBTType.SAVE_BLOCK);
   
-      if (tag instanceof NBTTagInt)
+      NonNullList<String> toRemove = NonNullList.create();
+      removeNBTTags(toRemove, data);
+  
+      //keysToRemove.addAll(toRemove);
+  
+      for (String key : toRemove)
       {
-        if (((NBTTagInt) tag).getInt() == 0)
-        {
-          keysToRemove.add(key);
-        }
+        data.removeTag(key);
       }
-    }
-
-    for (String key : keysToRemove)
-    {
-      data.removeTag(key);
-    }
   
-    Log.info(LogColor.CYAN, "=====================");
-    
-    for (String dataName :
-      data.getKeySet())
-    {
-      Log.info(LogColor.CYAN, "   " + dataName);
-    }
+      if (!data.hasNoTags())
+      {
+        stack.setTagCompound(new NBTTagCompound());
+        stack.getTagCompound().setTag("Data", data);
+      }
   
-    //ItemBlock.setTileEntityNBT()
-    ItemStack stack = new ItemStack(getItemDropped(state, rand, fortune),  quantityDropped(state, fortune, rand), damageDropped(state));
-
-    Log.info(stack.hasTagCompound() + "");
-
-    if (data.hasNoTags())
-    {
-      Log.info("Stack has no tags, adding");
-      stack.setTagCompound(new NBTTagCompound());
-      stack.getTagCompound().setTag("Data", data);
+      Log.info(LogColor.CYAN, "=====================");
     }
-  
-    Log.info(LogColor.CYAN, "=====================");
     
     drops.add(stack);
   }
   
-//  @Override
-//  public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player, boolean willHarvest)
-//  {
-//    return true;
-//  }
+  public void removeNBTTags(NonNullList<String> toRemove, NBTTagCompound compound)
+  {
+    for (String key : compound.getKeySet())
+    {
+      NBTBase tag = compound.getTag(key);
+    
+      //Remove only ints because they are the most common ones
+    
+      if (tag instanceof NBTTagInt)
+      {
+        if (((NBTTagInt) tag).getInt() == 0)
+        {
+          toRemove.add(key);
+        }
+      }
+    }
+  
+    if (compound.hasKey("tank"))
+    {
+      if (NBTHelper.getFluidAmount(compound, "tank") <= 0)
+      {
+        toRemove.add("tank");
+      }
+    }
+  }
 }

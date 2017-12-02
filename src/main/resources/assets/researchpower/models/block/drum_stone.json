@@ -1,0 +1,7 @@
+{
+  "parent" : "researchpower:block/base_drum",
+  "textures" :
+  {
+    "0" : "minecraft:blocks/stone"
+  }
+}
