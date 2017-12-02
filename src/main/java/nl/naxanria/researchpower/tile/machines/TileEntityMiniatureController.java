@@ -7,7 +7,10 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTUtil;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import nl.naxanria.nlib.tile.power.TileEntityEnergyAcceptor;
 import nl.naxanria.nlib.util.logging.Log;
 import nl.naxanria.nlib.util.RandomHelper;
@@ -290,6 +293,13 @@ public class TileEntityMiniatureController extends TileEntityEnergyAcceptor
         }
       }
     }
+  }
+
+  @Override
+  @SideOnly(Side.CLIENT)
+  public net.minecraft.util.math.AxisAlignedBB getRenderBoundingBox()
+  {
+    return new AxisAlignedBB(getPos().offset(dir.rotateAround(EnumFacing.Axis.Y).getOpposite(), 1).down(), getPos().offset(dir, 3).offset(dir.rotateAround(EnumFacing.Axis.Y), 2).up(4));
   }
 
 }
