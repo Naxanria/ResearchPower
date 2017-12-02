@@ -167,13 +167,6 @@ public class TileEntityCoalGenerator extends TileEntityInventoryBase implements 
   
   public float getProgressPercentage()
   {
-    //Log.info((float) currBurnTime / (float) maxBurnTime + " " + currBurnTime + "/" + maxBurnTime);
-    
-    if (maxBurnTime == 0)
-    {
-      return 0;
-    }
-    
-    return MathUtil.clamp01((float) currBurnTime / (float) maxBurnTime);
+    return MathUtil.getPercent(currBurnTime, maxBurnTime);
   }
 }

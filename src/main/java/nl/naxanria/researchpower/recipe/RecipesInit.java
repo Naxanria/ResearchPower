@@ -13,6 +13,7 @@ import nl.naxanria.nlib.registry.RecipeRegistry;
 import nl.naxanria.nlib.util.Dye;
 import nl.naxanria.researchpower.block.BlocksInit;
 import nl.naxanria.researchpower.item.ItemsInit;
+import nl.naxanria.researchpower.recipe.registry.EmpowererRecipeRegistry;
 import nl.naxanria.researchpower.recipe.registry.MiniatureRecipeRegistry;
 import nl.naxanria.researchpower.recipe.registry.PressRecipeRegistry;
 
@@ -41,6 +42,20 @@ public class RecipesInit
       new ItemStack(Blocks.GLOWSTONE),
       new ItemStack(ItemsInit.MachineParts.GLOWSTONE_WAFER, 2),
       120
+    );
+  }
+  
+  public static class Empowerer
+  {
+    public static final RecipeEmpowerer METAL_DRUM = new RecipeEmpowerer
+    (
+      new ItemStack(BlocksInit.FLUID_DRUM, 1, 1),
+      new ItemStack(ItemsInit.Metals.INGOT_COPPER),
+      new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
+      new ItemStack(ItemsInit.Metals.INGOT_COPPER),
+      new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
+      new ItemStack(BlocksInit.FLUID_DRUM),
+      1000000
     );
   }
   
@@ -163,6 +178,12 @@ public class RecipesInit
       (
         Miniature.RAINBOW
       );
+  
+      EmpowererRecipeRegistry.addAll
+      (
+        Empowerer.METAL_DRUM
+      );
+      
     }
     catch(Throwable t)
     {

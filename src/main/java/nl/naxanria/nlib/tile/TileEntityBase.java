@@ -56,7 +56,10 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
   {
     this();
     
-    enableFlag(TileFlags.HasOwner);
+    if (needsOwner)
+    {
+      enableFlag(TileFlags.HasOwner);
+    }
   }
   
   public TileEntityBase()
@@ -80,6 +83,11 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     {
       inventoryHolder = (IInventoryHolder) this;
     }
+  }
+  
+  public String getInfo()
+  {
+    return "";
   }
   
   public void setOwner(EntityPlayer owner)

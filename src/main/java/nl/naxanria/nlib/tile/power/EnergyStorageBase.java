@@ -2,6 +2,7 @@ package nl.naxanria.nlib.tile.power;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.energy.EnergyStorage;
+import nl.naxanria.nlib.util.MathUtil;
 
 public class EnergyStorageBase extends EnergyStorage
 {
@@ -56,7 +57,7 @@ public class EnergyStorageBase extends EnergyStorage
   
   public float getStoredPercentage(int storage)
   {
-    return storage / (float) capacity;
+    return MathUtil.getPercent(storage, capacity);
   }
   
   public int getCapacity()
@@ -118,5 +119,10 @@ public class EnergyStorageBase extends EnergyStorage
   public void readFromNbt(NBTTagCompound compound)
   {
     setEnergyStored(compound.getInteger(NBT_ENERGY));
+  }
+  
+  public int getMaxExtract()
+  {
+    return maxExtract;
   }
 }

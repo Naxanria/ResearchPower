@@ -9,6 +9,7 @@ import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.inventory.IInventoryHolder;
 import nl.naxanria.nlib.tile.power.TileEntityEnergyAcceptor;
 import nl.naxanria.nlib.util.EnumHelper;
+import nl.naxanria.nlib.util.MathUtil;
 import nl.naxanria.researchpower.recipe.registry.PressRecipeRegistry;
 import nl.naxanria.researchpower.recipe.RecipePress;
 
@@ -54,7 +55,7 @@ public class TileEntityPress extends TileEntityEnergyAcceptor implements IInvent
   
   public float getProgressPercentage()
   {
-    return  (float) progress / (float) totalTime;
+    return MathUtil.getPercent(progress, totalTime);
   }
   
   public int getProgress()

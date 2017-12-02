@@ -9,6 +9,7 @@ import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.util.CollectionUtil;
 import nl.naxanria.nlib.util.EnumHelper;
+import nl.naxanria.nlib.util.MathUtil;
 
 public abstract class TileEntityFluidTankBase extends TileEntityBase implements IFluidSharingProvider
 {
@@ -52,5 +53,10 @@ public abstract class TileEntityFluidTankBase extends TileEntityBase implements 
     }
     
     return null;
+  }
+  
+  public float getFluidPercent()
+  {
+    return MathUtil.getPercent(tank.getFluidAmount(), tank.getCapacity());
   }
 }

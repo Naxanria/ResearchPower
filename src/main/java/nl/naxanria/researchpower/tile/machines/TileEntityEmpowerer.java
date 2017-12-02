@@ -1,5 +1,6 @@
 package nl.naxanria.researchpower.tile.machines;
 
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import nl.naxanria.nlib.tile.TileFlags;
@@ -8,6 +9,12 @@ import nl.naxanria.nlib.tile.power.EnergyStorageBase;
 import nl.naxanria.nlib.tile.power.IEnergySharingProvider;
 import nl.naxanria.nlib.util.EnumHelper;
 import nl.naxanria.nlib.util.MathUtil;
+import nl.naxanria.nlib.util.StackUtil;
+import nl.naxanria.nlib.util.logging.Log;
+import nl.naxanria.researchpower.recipe.RecipeEmpowerer;
+import nl.naxanria.researchpower.recipe.registry.EmpowererRecipeRegistry;
+
+import java.util.List;
 
 public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEnergySharingProvider
 {
@@ -27,11 +34,13 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   public int totalTime = 1000;
   public int energyPerTick = 0;
   
+  public RecipeEmpowerer currentRecipe;
+  
   public TileEntityEmpowerer()
   {
     super(6);
     
-    storage = new EnergyStorageBase(ENERGY_CAPACITY, ENERGY_USE_MAX * 2, ENERGY_USE_MAX, true);
+    storage = new EnergyStorageBase(ENERGY_CAPACITY, ENERGY_USE_MAX * 2, ENERGY_USE_MAX, false);
     
     enableFlag(TileFlags.KeepNBTData);
   }
@@ -40,17 +49,68 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   protected void entityUpdate()
   {
     super.entityUpdate();
+  
+    Log.info(storage.getStoredPercentage() + " " + storage.getEnergyStored() + " server: " + world.isRemote  + " RF/t" + storage.getMaxExtract());
     
     if (!world.isRemote)
     {
-      progress++;
-      if (progress >= totalTime)
+      
+      
+      RecipeEmpowerer recipe = EmpowererRecipeRegistry
+        .getFromInput
+        (
+          inventory.getStackInSlot(SLOT_INPUT_MINOR_0),
+          inventory.getStackInSlot(SLOT_INPUT_MINOR_1),
+          inventory.getStackInSlot(SLOT_INPUT_MINOR_2),
+          inventory.getStackInSlot(SLOT_INPUT_MINOR_3),
+          inventory.getStackInSlot(SLOT_INPUT_MAYOR)
+        );
+      
+      if (currentRecipe != recipe)
       {
+        currentRecipe = recipe;
         progress = 0;
+      }
+  
+      if (currentRecipe != null)
+      {
+        ItemStack craftOutput = currentRecipe.getCraftingOutput();
+        ItemStack output = inventory.getStackInSlot(SLOT_OUTPUT);
+  
+        Log.info("Updating recipe");
+  
+        if (!(output.isEmpty() || StackUtil.areItemsEqual(craftOutput, output, true) && output.getCount() < output.getMaxStackSize() - craftOutput.getCount()))
+        {
+          progress = 0;
+          currentRecipe = null;
+          return;
+        }
+        
+        energyPerTick = currentRecipe.getPowerDrain() / totalTime;
+        
+        if (storage.getEnergyStored() >= energyPerTick)
+        {
+          storage.extractEnergy(energyPerTick, false);
+          
+          progress++;
+          
+          if (progress >= totalTime)
+          {
+            // finish it up
+            inventory.insertItem(SLOT_OUTPUT, currentRecipe.getCraftingResult(), false);
+            inventory.extractItem(SLOT_INPUT_MINOR_0, currentRecipe.getMinorInput0().getCount(), false);
+            inventory.extractItem(SLOT_INPUT_MINOR_1, currentRecipe.getMinorInput1().getCount(), false);
+            inventory.extractItem(SLOT_INPUT_MINOR_2, currentRecipe.getMinorInput2().getCount(), false);
+            inventory.extractItem(SLOT_INPUT_MINOR_3, currentRecipe.getMinorInput3().getCount(), false);
+            inventory.extractItem(SLOT_INPUT_MAYOR, currentRecipe.getMayorInput().getCount(), false);
+            
+            progress = 0;
+          }
+        }
       }
     }
   }
-  
+
   @Override
   public int getEnergyToShare()
   {
@@ -77,6 +137,6 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   
   public float getProgressPercent()
   {
-    return MathUtil.clamp01((float) progress / (float) totalTime);
+    return MathUtil.getPercent(progress, totalTime);
   }
 }

@@ -26,4 +26,9 @@ public class MathUtil
   {
     return clamp(val, 0, 15);
   }
+  
+  public static float getPercent(float current, float max)
+  {
+    return clamp01(current / max);
+  }
 }

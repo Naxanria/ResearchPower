@@ -12,6 +12,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.power.TileEntityEnergyAcceptor;
+import nl.naxanria.nlib.util.MathUtil;
 import nl.naxanria.nlib.util.logging.Log;
 import nl.naxanria.nlib.util.RandomHelper;
 import nl.naxanria.researchpower.block.BlocksInit;
@@ -237,7 +238,7 @@ public class TileEntityMiniatureController extends TileEntityEnergyAcceptor
   
   public float getProgressPercent()
   {
-    return (float) progress / (float) totalTime;
+    return MathUtil.getPercent(progress, totalTime);
   }
 
   @Override
@@ -299,6 +300,11 @@ public class TileEntityMiniatureController extends TileEntityEnergyAcceptor
   @SideOnly(Side.CLIENT)
   public net.minecraft.util.math.AxisAlignedBB getRenderBoundingBox()
   {
+    if (dir == null)
+    {
+      return super.getRenderBoundingBox();
+    }
+    
     return new AxisAlignedBB(getPos().offset(dir.rotateAround(EnumFacing.Axis.Y).getOpposite(), 1).down(), getPos().offset(dir, 3).offset(dir.rotateAround(EnumFacing.Axis.Y), 2).up(4));
   }
 

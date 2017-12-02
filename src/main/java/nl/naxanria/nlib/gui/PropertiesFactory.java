@@ -214,6 +214,19 @@ public class PropertiesFactory
       return this;
     }
     
+    public BarProperties setColors(int foreground, int background)
+    {
+      return setColors(Color.color(foreground), Color.color(background));
+    }
+    
+    public BarProperties setColors(Color foreground, Color background)
+    {
+      this.foreground = foreground;
+      this.background = background;
+      
+      return this;
+    }
+    
     public BarProperties swapColors()
     {
       Color t = background;

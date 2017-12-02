@@ -38,9 +38,10 @@ public class BlockSolarGenerator extends BlockTileBaseProperties<PropertyInteger
             " Storage: " + tile.storage.getEnergyStored() + "/" + tile.storage.getMaxEnergyStored() + " " + tile.storage.getStoredPercentage() * 100 + "%"),
           true
         );
-      return true;
+      //return true;
     }
-    return false;
+    
+    return super.onBlockActivated(world, pos, state, player, hand, facing, hitX, hitY, hitZ);
   }
   
   @Override
