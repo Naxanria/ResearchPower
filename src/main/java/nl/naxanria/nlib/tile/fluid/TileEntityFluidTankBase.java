@@ -18,7 +18,6 @@ public abstract class TileEntityFluidTankBase extends TileEntityBase implements 
   public TileEntityFluidTankBase()
   {
     tank = new FluidTank(Fluid.BUCKET_VOLUME * 4);
-    enableFlag(TileFlags.KeepNBTData);
   }
   
   public TileEntityFluidTankBase(int capacity)

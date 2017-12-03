@@ -29,7 +29,7 @@ public class BlockFluidDrum extends BlockTileBaseProperties<PropertyInteger, Til
     setResistance(10.5f);
     setSoundType(SoundType.STONE);
     
-    
+    needsNBTClearRecipe = true;
   }
   
   @Nullable

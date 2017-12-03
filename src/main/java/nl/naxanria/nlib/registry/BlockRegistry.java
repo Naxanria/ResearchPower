@@ -3,6 +3,7 @@ package nl.naxanria.nlib.registry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
+import nl.naxanria.nlib.block.BlockBase;
 import nl.naxanria.nlib.block.BlockTileBaseInternal;
 import nl.naxanria.nlib.block.IBlockBase;
 
@@ -12,6 +13,15 @@ public class BlockRegistry extends Registry<IBlockBase, IForgeRegistry<Block>>
   public void register(IForgeRegistry<Block> registry, IBlockBase iBlockBase)
   {
     registry.register(iBlockBase.getBlock());
+  
+    if (iBlockBase instanceof BlockBase)
+    {
+      if (((BlockBase) iBlockBase).needsNBTClearRecipe())
+      {
+        RecipeRegistry.BLOCK_NBT_CLEAR.add((Block) iBlockBase);
+      }
+    }
+    
   }
   
   public void registerItemBlocks(IForgeRegistry<Item> registry)

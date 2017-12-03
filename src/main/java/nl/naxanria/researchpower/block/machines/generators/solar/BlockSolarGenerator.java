@@ -23,6 +23,8 @@ public class BlockSolarGenerator extends BlockTileBaseProperties<PropertyInteger
   private BlockSolarGenerator(PropertyInteger prop)
   {
     super(Material.IRON, "solar_generator", prop);
+    
+    needsNBTClearRecipe = true;
   }
   
   @Override

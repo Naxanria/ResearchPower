@@ -183,7 +183,7 @@ public abstract class NMod
     }
     
     @SubscribeEvent
-    public static void registerrecipes(RegistryEvent.Register<IRecipe> event)
+    public static void registerRecipes(RegistryEvent.Register<IRecipe> event)
     {
       initRecipeClass();
       instance.recipeRegistry.registerAll(event.getRegistry());

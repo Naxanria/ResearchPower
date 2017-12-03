@@ -10,6 +10,7 @@ import nl.naxanria.nlib.proxy.Proxy;
 public class ItemBase extends Item implements IItemBase
 {
   protected String name;
+  protected boolean needsNBTClearRecipe;
   
   public ItemBase(String name)
   {
@@ -42,5 +43,10 @@ public class ItemBase extends Item implements IItemBase
   public Ingredient getAsIngredient()
   {
     return Ingredient.fromItem(this);
+  }
+  
+  public boolean needsNBTClearRecipe()
+  {
+    return needsNBTClearRecipe;
   }
 }

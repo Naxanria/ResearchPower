@@ -1,0 +1,93 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "all": "researchpower:blocks/counter/counter_base"
+    },
+    "model" : "cube_all"
+  },
+  "variants": {
+    "power": {
+      "0": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_0"
+        }
+      },
+      "1": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_1"
+        }
+      },
+      "2": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_2"
+        }
+      },
+      "3": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_3"
+        }
+      },
+      "4": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_4"
+        }
+      },
+      "5": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_5"
+        }
+      },
+      "6": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_6"
+        }
+      },
+      "7": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_7"
+        }
+      },
+      "8": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_8"
+        }
+      },
+      "9": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_9"
+        }
+      },
+      "10": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_A"
+        }
+      },
+      "11": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_B"
+        }
+      },
+      "12": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_C"
+        }
+      },
+      "13": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_D"
+        }
+      },
+      "14": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_E"
+        }
+      },
+      "15": {
+        "textures": {
+          "all": "researchpower:blocks/counter/counter_F"
+        }
+      }
+    }
+  }
+}

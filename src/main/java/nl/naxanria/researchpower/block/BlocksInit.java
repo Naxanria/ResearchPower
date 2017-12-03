@@ -5,6 +5,7 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemRedstone;
 import net.minecraft.util.IStringSerializable;
 import nl.naxanria.nlib.registry.BlockRegistry;
 import nl.naxanria.nlib.block.BlockBase;
@@ -19,6 +20,7 @@ import nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGen
 import nl.naxanria.researchpower.block.machines.miniature.BlockMiniatureController;
 import nl.naxanria.researchpower.block.machines.station.BlockResearchStation;
 import nl.naxanria.researchpower.block.ores.BlockCopperOre;
+import nl.naxanria.researchpower.block.redstone.BlockEmitter;
 
 @SuppressWarnings("WeakerAccess")
 public class BlocksInit
@@ -34,6 +36,12 @@ public class BlocksInit
   {
     public static final BlockBase COPPER_BLOCK = new BlockBase(Material.IRON, "copper_block");
   }
+  
+  public static class Redstone
+  {
+    public static final BlockEmitter EMITTER = BlockEmitter.createStateVersion(PropertyInteger.create("power", 0, 15));
+  }
+  
   
   public static class Machines
   {
@@ -66,6 +74,9 @@ public class BlocksInit
     public static final BlockMachinePress MACHINE_PRESS = new BlockMachinePress();
     public static final BlockMachineEmpowerer MACHINE_EMPOWERER = new BlockMachineEmpowerer();
 
+    
+  
+    
     public static class Miniature
     {
       public static final BlockMiniatureController controller = new BlockMiniatureController();
@@ -153,6 +164,8 @@ public class BlocksInit
       Machines.SOLAR_GENERATOR,
       
       FLUID_DRUM,
+      
+      Redstone.EMITTER,
       
       Other.RAINBOW
     );

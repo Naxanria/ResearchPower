@@ -108,20 +108,20 @@ public class RecipesInit
           0.5f
         );
 
-      addShapeless(
+      registry.addShapeless(
         new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
         Ingredient.fromStacks(new ItemStack(ItemsInit.Metals.INGOT_COPPER, 9))
       );
-
-      addShaped(
+  
+      registry.addShaped(
         new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
         "AAA",
         "AAA",
         "AAA",
         'A', new ItemStack(ItemsInit.Metals.INGOT_COPPER)
       );
-
-      addShaped(
+  
+      registry.addShaped(
         new ItemStack(ItemsInit.MachineParts.REDSTONE_CONNECTOR_HORIZONTAL),
         "RRR",
         "LIL",
@@ -130,8 +130,8 @@ public class RecipesInit
         'L', LAPIS,
         'I', Items.IRON_INGOT
       );
-
-      addShaped(
+  
+      registry.addShaped(
         new ItemStack(ItemsInit.MachineParts.REDSTONE_CONNECTOR_VERTICAL),
         "RLR",
         "RIR",
@@ -140,8 +140,8 @@ public class RecipesInit
         'L', LAPIS,
         'I', Items.IRON_INGOT
       );
-
-      addShaped(
+  
+      registry.addShaped(
         new ItemStack(ItemsInit.MachineParts.REDSTONE_RING),
         "BHB",
         "V V",
@@ -150,8 +150,8 @@ public class RecipesInit
         'H', ItemsInit.MachineParts.REDSTONE_CONNECTOR_HORIZONTAL,
         'V', ItemsInit.MachineParts.REDSTONE_CONNECTOR_VERTICAL
       );
-
-      addShaped(
+  
+      registry.addShaped(
         new ItemStack(BlocksInit.Machines.MACHINE_FRAME),
         "ICI",
         "C C",
@@ -159,8 +159,8 @@ public class RecipesInit
         'I', Items.IRON_INGOT,
         'C', ItemsInit.Metals.INGOT_COPPER
       );
-
-      addShaped(
+  
+      registry.addShaped(
         new ItemStack(BlocksInit.Machines.MACHINE_PRESS),
         "IPI",
         "RFR",
@@ -170,8 +170,8 @@ public class RecipesInit
         'R', ItemsInit.MachineParts.REDSTONE_RING,
         'F', BlocksInit.Machines.MACHINE_FRAME
       );
-
-      addShaped(
+  
+      registry.addShaped(
         new ItemStack(BlocksInit.Machines.SOLAR_GENERATOR, 1, 0),
         "WWW",
         "wRw",
@@ -180,8 +180,8 @@ public class RecipesInit
         'w', Blocks.PLANKS,
         'R', Items.REDSTONE
       );
-
-      addShaped(
+  
+      registry.addShaped(
         new ItemStack(BlocksInit.Machines.SOLAR_GENERATOR, 1, 1),
         "111",
         "1F1",
@@ -209,6 +209,8 @@ public class RecipesInit
         Empowerer.OBSIDIAN_DRUM
       );
       
+      registry.registerNBTClearRecipes();
+      
     }
     catch(Throwable t)
     {
@@ -217,27 +219,27 @@ public class RecipesInit
     }
   }
   
-  private static void addShapeless(ItemStack result, Ingredient... ingredients)
-  {
-    String name = NMod.getModId() + ":recipe_" + r++;
-    GameRegistry.addShapelessRecipe
-    (
-      new ResourceLocation(name),
-      new ResourceLocation(name),
-      result,
-      ingredients
-    );
-  }
-  
-  private static void addShaped(ItemStack result, Object... params)
-  {
-    String name = NMod.getModId() + ":recipe_" + r++;
-    GameRegistry.addShapedRecipe
-    (
-      new ResourceLocation(name),
-      new ResourceLocation(name),
-      result,
-      params
-    );
-  }
+//  public static void addShapeless(ItemStack result, Ingredient... ingredients)
+//  {
+//    String name = NMod.getModId() + ":recipe_" + r++;
+//    GameRegistry.addShapelessRecipe
+//    (
+//      new ResourceLocation(name),
+//      new ResourceLocation(name),
+//      result,
+//      ingredients
+//    );
+//  }
+//
+//  private static void addShaped(ItemStack result, Object... params)
+//  {
+//    String name = NMod.getModId() + ":recipe_" + r++;
+//    GameRegistry.addShapedRecipe
+//    (
+//      new ResourceLocation(name),
+//      new ResourceLocation(name),
+//      result,
+//      params
+//    );
+//  }
 }

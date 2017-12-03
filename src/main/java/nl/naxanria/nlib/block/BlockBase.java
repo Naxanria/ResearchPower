@@ -28,6 +28,8 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
   protected String name;
   public static IProperty tempProperty;
   public final T PROPERTY;
+  
+  protected boolean needsNBTClearRecipe = false;
 
   public BlockBase(Material blockMaterialIn, String name, T property)
   {
@@ -211,6 +213,11 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
       //dirty workaround because of Forge calling Item.onBlockStartBreak() twice
       world.setBlockToAir(pos);
     }
+  }
+  
+  public boolean needsNBTClearRecipe()
+  {
+    return needsNBTClearRecipe;
   }
   
   // This is a hack as Block.java expects the property to be available on creation - and it's constructor runs before ours - so we need to make sure we can get it before our constructor finishes running
