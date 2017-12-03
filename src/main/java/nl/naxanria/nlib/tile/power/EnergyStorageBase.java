@@ -29,6 +29,11 @@ public class EnergyStorageBase extends EnergyStorage
     return this;
   }
   
+  public int getMaxReceive()
+  {
+    return maxReceive;
+  }
+  
   public EnergyStorageBase setMaxExtract(int max)
   {
     maxExtract = max;
@@ -125,4 +130,6 @@ public class EnergyStorageBase extends EnergyStorage
   {
     return maxExtract;
   }
+  
+  
 }

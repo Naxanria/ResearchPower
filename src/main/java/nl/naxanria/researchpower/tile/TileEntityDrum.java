@@ -81,8 +81,6 @@ public class TileEntityDrum extends TileEntityFluidTankBase
     {
       init(tier);
     }
-  
-    Log.info(type + " " + tier + " " + capacity);
     
     super.readSyncableNBT(compound, type);
   }

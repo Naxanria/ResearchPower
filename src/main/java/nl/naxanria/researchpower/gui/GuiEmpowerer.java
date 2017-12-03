@@ -64,7 +64,7 @@ public class GuiEmpowerer extends GuiContainerBase<ContainerEmpowerer>
   {
     powerBar.setPosition(-6, 0).setDimensions(10, 30);
     float perc = container.tile.storage.getStoredPercentage();
-    Log.info("Perc: " + perc + " " + container.tile.storage.getEnergyStored() + " " + container.tile.storage.getCapacity());
+    //Log.info("Perc: " + perc + " " + container.tile.storage.getEnergyStored() + " " + container.tile.storage.getCapacity());
     drawProgressBar(powerBar, perc);
   }
 }

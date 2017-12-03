@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.registry.RecipeRegistry;
 import nl.naxanria.nlib.util.Dye;
+import nl.naxanria.nlib.util.Numbers;
 import nl.naxanria.researchpower.block.BlocksInit;
 import nl.naxanria.researchpower.item.ItemsInit;
 import nl.naxanria.researchpower.recipe.registry.EmpowererRecipeRegistry;
@@ -47,6 +48,17 @@ public class RecipesInit
   
   public static class Empowerer
   {
+    public static final RecipeEmpowerer STONE_DRUM = new RecipeEmpowerer
+    (
+      new ItemStack(BlocksInit.FLUID_DRUM, 1, 0),
+      new ItemStack(Blocks.STONE),
+      new ItemStack(Blocks.STONE),
+      new ItemStack(Blocks.STONE_SLAB),
+      new ItemStack(Blocks.STONE_SLAB),
+      new ItemStack(Items.CAULDRON),
+      1000
+    ).setDuration(15);
+    
     public static final RecipeEmpowerer METAL_DRUM = new RecipeEmpowerer
     (
       new ItemStack(BlocksInit.FLUID_DRUM, 1, 1),
@@ -55,8 +67,19 @@ public class RecipesInit
       new ItemStack(ItemsInit.Metals.INGOT_COPPER),
       new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
       new ItemStack(BlocksInit.FLUID_DRUM),
-      1000000
-    );
+      Numbers.K(100)
+    ).setDuration(40);
+    
+    public static final RecipeEmpowerer OBSIDIAN_DRUM = new RecipeEmpowerer
+    (
+      new ItemStack(BlocksInit.FLUID_DRUM, 1, 2),
+      new ItemStack(BlocksInit.FLUID_DRUM, 1, 1),
+      new ItemStack(BlocksInit.FLUID_DRUM, 1, 1),
+      new ItemStack(Blocks.OBSIDIAN),
+      new ItemStack(Blocks.OBSIDIAN),
+      new ItemStack(BlocksInit.FLUID_DRUM, 1, 0),
+      Numbers.M(10)
+    ).setDuration(250);
   }
   
   public static class Miniature
@@ -181,7 +204,9 @@ public class RecipesInit
   
       EmpowererRecipeRegistry.addAll
       (
-        Empowerer.METAL_DRUM
+        Empowerer.STONE_DRUM,
+        Empowerer.METAL_DRUM,
+        Empowerer.OBSIDIAN_DRUM
       );
       
     }

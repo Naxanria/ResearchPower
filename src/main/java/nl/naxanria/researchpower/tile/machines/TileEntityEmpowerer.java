@@ -3,6 +3,7 @@ package nl.naxanria.researchpower.tile.machines;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraftforge.energy.IEnergyStorage;
 import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.inventory.TileEntityInventoryBase;
 import nl.naxanria.nlib.tile.power.EnergyStorageBase;
@@ -50,8 +51,8 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   {
     super.entityUpdate();
   
-    Log.info(storage.getStoredPercentage() + " " + storage.getEnergyStored() + " server: " + world.isRemote  + " RF/t" + storage.getMaxExtract());
-    
+    //Log.info(storage.getStoredPercentage() + " " + storage.getEnergyStored() + " server: " + world.isRemote  + " RF/t" + storage.getMaxReceive());
+
     if (!world.isRemote)
     {
       
@@ -71,13 +72,18 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
         currentRecipe = recipe;
         progress = 0;
       }
+      
+      if (currentRecipe == null)
+      {
+        progress = 0;
+      }
   
       if (currentRecipe != null)
       {
         ItemStack craftOutput = currentRecipe.getCraftingOutput();
         ItemStack output = inventory.getStackInSlot(SLOT_OUTPUT);
   
-        Log.info("Updating recipe");
+        //Log.info("Updating recipe");
   
         if (!(output.isEmpty() || StackUtil.areItemsEqual(craftOutput, output, true) && output.getCount() < output.getMaxStackSize() - craftOutput.getCount()))
         {
@@ -86,6 +92,7 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
           return;
         }
         
+        totalTime = currentRecipe.getDuration();
         energyPerTick = currentRecipe.getPowerDrain() / totalTime;
         
         if (storage.getEnergyStored() >= energyPerTick)
@@ -96,8 +103,19 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
           
           if (progress >= totalTime)
           {
+            ItemStack craftingOutput = currentRecipe.getCraftingOutput();
+            
             // finish it up
-            inventory.insertItem(SLOT_OUTPUT, currentRecipe.getCraftingResult(), false);
+            if (output.isEmpty())
+            {
+              output = craftingOutput;
+              inventory.setStackInSlot(SLOT_OUTPUT, output);
+            }
+            else
+            {
+              output.setCount(output.getCount() + craftingOutput.getCount());
+              inventory.setStackInSlot(SLOT_OUTPUT, output);
+            }
             inventory.extractItem(SLOT_INPUT_MINOR_0, currentRecipe.getMinorInput0().getCount(), false);
             inventory.extractItem(SLOT_INPUT_MINOR_1, currentRecipe.getMinorInput1().getCount(), false);
             inventory.extractItem(SLOT_INPUT_MINOR_2, currentRecipe.getMinorInput2().getCount(), false);
@@ -138,5 +156,11 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   public float getProgressPercent()
   {
     return MathUtil.getPercent(progress, totalTime);
+  }
+  
+  @Override
+  public IEnergyStorage getEnergyStorage(EnumFacing facing)
+  {
+    return storage;
   }
 }

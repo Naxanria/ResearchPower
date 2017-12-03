@@ -21,6 +21,7 @@ public class RecipeEmpowerer implements IRecipeBase
   protected ItemStack mayorInput;
   
   protected int powerDrain;
+  protected int duration = 1000;
   
   public RecipeEmpowerer(ItemStack output, ItemStack minorInput0, ItemStack minorInput1, ItemStack minorInput2, ItemStack minorInput3, ItemStack mayorInput, int powerDrain)
   {
@@ -31,6 +32,17 @@ public class RecipeEmpowerer implements IRecipeBase
     this.minorInput3 = minorInput3;
     this.mayorInput = mayorInput;
     this.powerDrain = powerDrain;
+  }
+  
+  public int getDuration()
+  {
+    return duration;
+  }
+  
+  public RecipeEmpowerer setDuration(int duration)
+  {
+    this.duration = duration;
+    return this;
   }
   
   public boolean hasIngredient(ItemStack input)
