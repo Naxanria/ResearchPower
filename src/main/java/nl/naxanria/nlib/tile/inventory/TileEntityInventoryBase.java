@@ -26,7 +26,7 @@ public class TileEntityInventoryBase extends TileEntityBase implements IInventor
   {
     if (dropInventory)
     {
-      enableFlag(TileFlags.DropInventory);
+      flags.enableFlag(TileFlags.DropInventory);
     }
     inventory = new ItemStackHandlerBase(slots)
     {

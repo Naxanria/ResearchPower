@@ -37,8 +37,12 @@ public class TileEntityPress extends TileEntityEnergyAcceptor implements IInvent
     
     inputStack = ItemStack.EMPTY;
     outputStack = ItemStack.EMPTY;
-    
-    enableFlags(TileFlags.DropInventory, TileFlags.KeepNBTData);
+  }
+  
+  @Override
+  protected TileFlags[] defaultFlags()
+  {
+    return new TileFlags[] { TileFlags.DropInventory, TileFlags.KeepNBTData };
   }
   
   @Override

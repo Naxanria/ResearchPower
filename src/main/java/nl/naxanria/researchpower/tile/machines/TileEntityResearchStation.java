@@ -8,7 +8,11 @@ public class TileEntityResearchStation extends TileEntityEnergyAcceptor
   public TileEntityResearchStation()
   {
     super(100000, 300);
-    
-    enableFlag(TileFlags.KeepNBTData);
+  }
+  
+  @Override
+  protected TileFlags[] defaultFlags()
+  {
+    return new TileFlags[] { TileFlags.KeepNBTData };
   }
 }

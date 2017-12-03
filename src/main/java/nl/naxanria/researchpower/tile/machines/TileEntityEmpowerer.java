@@ -42,8 +42,12 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
     super(6);
     
     storage = new EnergyStorageBase(ENERGY_CAPACITY, ENERGY_USE_MAX * 2, ENERGY_USE_MAX, false);
-    
-    enableFlag(TileFlags.KeepNBTData);
+  }
+  
+  @Override
+  protected TileFlags[] defaultFlags()
+  {
+    return new TileFlags[]{ TileFlags.KeepNBTData };
   }
   
   @Override

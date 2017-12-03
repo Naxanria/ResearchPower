@@ -42,4 +42,6 @@ public class BlockBattery extends BlockTileBase<TileEntityBattery>
     
     return super.onBlockActivated(world, pos, state, player, hand, facing, hitX, hitY, hitZ);
   }
+  
+  
 }

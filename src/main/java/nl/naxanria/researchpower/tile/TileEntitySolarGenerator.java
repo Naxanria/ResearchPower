@@ -38,8 +38,12 @@ public class TileEntitySolarGenerator extends GeneratorEntity
     
     storage.setCapacity(getCapacity(tier))
       .setMaxExtract(getMaxExtract(tier));
-    
-    enableFlag(TileFlags.KeepNBTData);
+  }
+  
+  @Override
+  protected TileFlags[] defaultFlags()
+  {
+    return new TileFlags[]{ TileFlags.KeepNBTData };
   }
   
   public static int getMaxExtract(int tier)

@@ -46,8 +46,12 @@ public class TileEntityDrum extends TileEntityFluidTankBase
   {
     capacity = getCapacity(tier);
     tank.setCapacity(capacity);
-    
-    enableFlag(TileFlags.KeepNBTData);
+  }
+  
+  @Override
+  protected TileFlags[] defaultFlags()
+  {
+    return new TileFlags[] { TileFlags.KeepNBTData };
   }
   
   @Override

@@ -8,6 +8,7 @@ import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
@@ -26,6 +27,7 @@ import nl.naxanria.nlib.tile.fluid.IFluidSharingProvider;
 import nl.naxanria.nlib.tile.inventory.IInventoryHolder;
 import nl.naxanria.nlib.tile.power.IEnergySharingProvider;
 import nl.naxanria.nlib.util.EnumHelper;
+import nl.naxanria.nlib.util.Flags;
 import nl.naxanria.nlib.util.player.PlayerHelper;
 import nl.naxanria.nlib.util.WorldUtil;
 
@@ -47,8 +49,8 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
   
   private boolean isInventoryHolder;
   private IInventoryHolder inventoryHolder;
-  
-  private long flags;
+
+  public final Flags<TileFlags> flags = new Flags<>();
   private boolean hasSavedDataOnChangeOrWorldStart = false;
   private EntityPlayer owner;
   
@@ -58,7 +60,7 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     
     if (needsOwner)
     {
-      enableFlag(TileFlags.HasOwner);
+      flags.enableFlag(TileFlags.HasOwner);
     }
   }
   
@@ -68,14 +70,14 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     if (isEnergySharingProvider)
     {
       energySharingProvider = (IEnergySharingProvider) this;
-      enableFlag(TileFlags.SaveOnWorldChange);
+      flags.enableFlag(TileFlags.SaveOnWorldChange);
     }
     
     isFluidSharingProvider = this instanceof IFluidSharingProvider;
     if (isFluidSharingProvider)
     {
       fluidSharingProvider = (IFluidSharingProvider) this;
-      enableFlag(TileFlags.SaveOnWorldChange);
+      flags.enableFlag(TileFlags.SaveOnWorldChange);
     }
 
     isInventoryHolder = this instanceof IInventoryHolder;
@@ -83,6 +85,13 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     {
       inventoryHolder = (IInventoryHolder) this;
     }
+    
+    this.flags.enableFlags(defaultFlags());
+  }
+  
+  protected TileFlags[] defaultFlags()
+  {
+    return new TileFlags[0];
   }
   
   public String getInfo()
@@ -107,58 +116,17 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
     return player.equals(owner);
   }
   
-  public void enableFlag(TileFlags flag)
-  {
-    flags |= flag.FLAG;
-  }
-  
-  public void enableFlags(TileFlags... flags)
-  {
-    for (TileFlags f :
-      flags)
-    {
-       this.flags |= f.FLAG;
-    }
-  }
-  
-  public void enableFlags(long flags)
-  {
-    this.flags |= flags;
-  }
-  
-  public void disableFlag(TileFlags flag)
-  {
-    this.flags &= ~flag.FLAG;
-  }
-  
-  public void disableFlags(TileFlags... flags)
-  {
-    for (TileFlags f :
-      flags)
-    {
-      this.flags &= ~f.FLAG;
-    }
-  }
-  
-  public void disableFlags(long flags)
-  {
-    this.flags &= ~flags;
-  }
-  
   public boolean hasFlags(TileFlags... flags)
   {
-    long val = 0;
-    for (TileFlags f :
-      flags)
-    {
-      val |= f.FLAG;
-    }
-    return (this.flags & val) != 0;
-  }
-  
-  public boolean hasFlags(long flags)
-  {
-    return (this.flags & flags) != 0;
+//    long val = 0;
+//    for (TileFlags f :
+//      flags)
+//    {
+//      val |= f.FLAG;
+//    }
+//    return (this.flags & val) != 0;
+    
+    return this.flags.hasFlags(flags);
   }
   
   public boolean canUpdate()

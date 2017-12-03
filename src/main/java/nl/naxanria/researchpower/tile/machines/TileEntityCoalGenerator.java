@@ -32,11 +32,14 @@ public class TileEntityCoalGenerator extends TileEntityInventoryBase implements 
   public TileEntityCoalGenerator()
   {
     super(1);
-    enableFlags(TileFlags.DropInventory, TileFlags.KeepNBTData);
     
     storage = new EnergyStorageBase(10000, 0, 120, true);
-    
-    
+  }
+  
+  @Override
+  protected TileFlags[] defaultFlags()
+  {
+    return new TileFlags[]{ TileFlags.DropInventory, TileFlags.KeepNBTData };
   }
   
   @Override

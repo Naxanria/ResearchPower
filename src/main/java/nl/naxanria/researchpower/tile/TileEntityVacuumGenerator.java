@@ -13,7 +13,13 @@ public class TileEntityVacuumGenerator extends GeneratorEntity
   {
     super(20, new EnergyStorageBase(20000, 0, 80, true));
     
-    enableFlag(TileFlags.KeepNBTData);
+    flags.enableFlag(TileFlags.KeepNBTData);
+  }
+  
+  @Override
+  protected TileFlags[] defaultFlags()
+  {
+    return new TileFlags[]{ TileFlags.KeepNBTData };
   }
   
   @Override
