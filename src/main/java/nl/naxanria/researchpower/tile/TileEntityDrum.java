@@ -3,7 +3,6 @@ package nl.naxanria.researchpower.tile;
 import net.minecraft.nbt.NBTTagCompound;
 import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.fluid.TileEntityFluidTankBase;
-import nl.naxanria.nlib.util.logging.Log;
 import nl.naxanria.researchpower.config.ModConfig;
 
 public class TileEntityDrum extends TileEntityFluidTankBase
@@ -24,8 +23,6 @@ public class TileEntityDrum extends TileEntityFluidTankBase
     
     this.tier = tier;
     init(tier);
-    
-    enableFlag(TileFlags.KeepNBTData);
   }
   
   private static int getCapacity(int tier)
@@ -49,9 +46,9 @@ public class TileEntityDrum extends TileEntityFluidTankBase
   {
     capacity = getCapacity(tier);
     tank.setCapacity(capacity);
+    
+    enableFlag(TileFlags.KeepNBTData);
   }
-  
-  
   
   @Override
   public boolean doesShareFluid()
