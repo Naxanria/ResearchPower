@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.gui.GuiContainerBase;
@@ -14,6 +15,7 @@ import nl.naxanria.nlib.util.logging.Log;
 import nl.naxanria.nlib.util.ores.OreBuilder;
 import nl.naxanria.nlib.util.ores.OreHelper;
 import nl.naxanria.researchpower.block.BlocksInit;
+import nl.naxanria.researchpower.command.CommandTest;
 import nl.naxanria.researchpower.gui.ModGuiHandler;
 import nl.naxanria.researchpower.item.ItemsInit;
 import nl.naxanria.nlib.proxy.Proxy;
@@ -102,6 +104,12 @@ public class ResearchPower extends NMod
   {
     Log.info("Post Initialization");
 
+  }
+  
+  @Override
+  public void registerCommands(FMLServerStartingEvent event)
+  {
+    event.registerServerCommand(new CommandTest());
   }
   
   public static class ResearchPowerTab extends CreativeTabs

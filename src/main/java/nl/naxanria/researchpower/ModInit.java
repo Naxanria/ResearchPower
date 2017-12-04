@@ -4,6 +4,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import nl.naxanria.nlib.NMod;
 import nl.naxanria.researchpower.config.GuiFactoryResearchPower;
 
@@ -38,5 +39,11 @@ public class ModInit
     public final void postInit(FMLPostInitializationEvent event)
     {
         NModInstance.postInit(event);
+    }
+  
+    @Mod.EventHandler
+    public final void serverLoad(FMLServerStartingEvent event)
+    {
+      NModInstance.registerCommands(event);
     }
 }

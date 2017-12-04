@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import nl.naxanria.nlib.registry.BlockRegistry;
 import nl.naxanria.nlib.registry.ItemRegistry;
@@ -162,6 +163,8 @@ public abstract class NMod
   {
     initClass(instance.getRecipeClass(), instance.recipeRegistry);
   }
+  
+  public abstract void registerCommands(FMLServerStartingEvent event);
   
   @Mod.EventBusSubscriber
   public static class ObjectRegistryHandler
