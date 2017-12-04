@@ -39,8 +39,8 @@ public class CommandTest extends Command
     }
     else if (validArguments.size() == 2)
     {
-      int a = ArgumentInteger.staticValue(validArguments.get(0));
-      int b = ArgumentInteger.staticValue(validArguments.get(1));
+      int a = ArgumentInteger.value(validArguments.get(0));
+      int b = ArgumentInteger.value(validArguments.get(1));
       
       sender.sendMessage(new TextComponentString( a + " + " + b + " = " + (a + b)));
     }

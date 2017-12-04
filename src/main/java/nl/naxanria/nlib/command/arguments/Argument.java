@@ -68,7 +68,7 @@ public abstract class Argument<T>
   }
   
   @SuppressWarnings("unchecked")
-  public static <T> T staticValue(Argument<?> argument)
+  public static <T> T value(Argument<?> argument)
   {
     return (T) argument.getValue();
   }

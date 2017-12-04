@@ -81,4 +81,30 @@ public class EnumHelper
     
     return array;
   }
+  
+  public static <T extends Enum<?>> String[] getEnumNames(Class<T> enumClass)
+  {
+    Enum[] constants =  enumClass.getEnumConstants();
+    String[] output = new String[constants.length];
+    for (int i = 0; i < constants.length; i++)
+    {
+      output[i] = constants[i].name();
+    }
+    
+    return output;
+  }
+  
+  public static <T extends Enum<?>> Enum<?> getFromName(Class<T> enumClass, String name)
+  {
+    for (Enum e :
+      enumClass.getEnumConstants())
+    {
+      if (e.name().equalsIgnoreCase(name))
+      {
+        return e;
+      }
+    }
+    
+    return null;
+  }
 }
