@@ -164,7 +164,7 @@ public abstract class NMod
     initClass(instance.getRecipeClass(), instance.recipeRegistry);
   }
   
-  public abstract void registerCommands(FMLServerStartingEvent event);
+  public abstract void onServerStarting(FMLServerStartingEvent event);
   
   @Mod.EventBusSubscriber
   public static class ObjectRegistryHandler

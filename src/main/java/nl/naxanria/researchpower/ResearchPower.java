@@ -107,7 +107,7 @@ public class ResearchPower extends NMod
   }
   
   @Override
-  public void registerCommands(FMLServerStartingEvent event)
+  public void onServerStarting(FMLServerStartingEvent event)
   {
     event.registerServerCommand(new CommandTest());
   }
