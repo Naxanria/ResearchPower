@@ -172,4 +172,10 @@ public class TileEntityCoalGenerator extends TileEntityInventoryBase implements 
   {
     return MathUtil.getPercent(currBurnTime, maxBurnTime);
   }
+  
+  @Override
+  public boolean validForSlot(int slot, ItemStack stack)
+  {
+    return slot == SLOT_FUEL && TileEntityFurnace.isItemFuel(stack);
+  }
 }

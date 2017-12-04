@@ -111,6 +111,8 @@ public class ContainerEmpowerer extends ContainerBase<TileEntityEmpowerer>
           }
         }
       );
+    
+    createPlayerInventorySlots(player.inventory);
   }
   
   

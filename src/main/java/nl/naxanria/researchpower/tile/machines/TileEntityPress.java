@@ -52,6 +52,29 @@ public class TileEntityPress extends TileEntityEnergyAcceptor implements IInvent
   }
   
   @Override
+  public boolean validForSlot(int slot, ItemStack stack)
+  {
+    if (stack == null || stack.isEmpty())
+    {
+      return false;
+    }
+    
+    if (slot == SLOT_OUTPUT)
+    {
+      return false;
+    }
+    
+    if (slot == SLOT_INPUT)
+    {
+      //ItemStack input = inventory.getStackInSlot(SLOT_INPUT);
+      
+      return  (PressRecipeRegistry.getRecipeFromInput(stack) != null);
+    }
+    
+    return false;
+  }
+  
+  @Override
   public IItemHandler getInventory(EnumFacing facing)
   {
     return inventory;
@@ -100,7 +123,7 @@ public class TileEntityPress extends TileEntityEnergyAcceptor implements IInvent
       {
     
         progress = 0;
-        ItemStack result = currentRecipe.getCraftingResult();
+        ItemStack result = currentRecipe.getCraftingOutput();
     
         inputStack.setCount(inputStack.getCount() - currentRecipe.input.getCount());
     

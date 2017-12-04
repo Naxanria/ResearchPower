@@ -16,20 +16,10 @@ public abstract class ContainerBase<TTE extends TileEntityBase> extends Containe
   
   public ContainerBase(TTE tile, EntityPlayer player)
   {
-    this(tile, player, true);
-  }
-  
-  public ContainerBase(TTE tile, EntityPlayer player, boolean generatePlayerSlots)
-  {
     this.tile = tile;
     this.player = player;
     
     syncHelper = new ContainerSyncHelper(this, listeners);
-    
-    if (generatePlayerSlots)
-    {
-      createPlayerInventorySlots(player.inventory);
-    }
   }
   
   @Override

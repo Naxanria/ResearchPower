@@ -1,6 +1,7 @@
 package nl.naxanria.researchpower.containers;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
 import nl.naxanria.nlib.container.ContainerBase;
 import nl.naxanria.researchpower.tile.machines.TileEntityCoalGenerator;
@@ -43,5 +44,13 @@ public class ContainerCoalGenerator extends ContainerBase<TileEntityCoalGenerato
        }
       }
     );
+    
+    createPlayerInventorySlots(player.inventory);
+  }
+  
+  @Override
+  public ItemStack transferStackInSlot(EntityPlayer playerIn, int index)
+  {
+    return super.transferStackInSlot(playerIn, index);
   }
 }

@@ -167,4 +167,10 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   {
     return storage;
   }
+  
+  @Override
+  public boolean validForSlot(int slot, ItemStack stack)
+  {
+    return false;
+  }
 }
