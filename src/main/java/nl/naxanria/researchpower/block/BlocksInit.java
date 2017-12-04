@@ -12,6 +12,7 @@ import nl.naxanria.nlib.block.BlockBase;
 import nl.naxanria.researchpower.ResearchPower;
 import nl.naxanria.researchpower.block.fluid.BlockFluidDrum;
 import nl.naxanria.researchpower.block.machines.BlockMachineEmpowerer;
+import nl.naxanria.researchpower.block.machines.BlockMachineFrame;
 import nl.naxanria.researchpower.block.machines.BlockMachinePress;
 import nl.naxanria.researchpower.block.machines.battery.BlockBattery;
 import nl.naxanria.researchpower.block.machines.generators.BlockCoalGenerator;
@@ -39,7 +40,7 @@ public class BlocksInit
   
   public static class Redstone
   {
-    public static final BlockEmitter EMITTER = BlockEmitter.createStateVersion(PropertyInteger.create("power", 0, 15));
+    public static final BlockEmitter EMITTER = (BlockEmitter) BlockEmitter.stateVersion(BlockEmitter.class, PropertyInteger.create("power", 0, 15));
   }
   
   
@@ -70,12 +71,9 @@ public class BlocksInit
       }
     }
 
-    public static final BlockBase MACHINE_FRAME = BlockBase.createStateVersion(Material.IRON, "machine_frame", PropertyEnum.create("type", FRAMES.class));
+    public static final BlockBase MACHINE_FRAME = BlockMachineFrame.stateVersion(BlockMachineFrame.class, PropertyEnum.create("type", FRAMES.class));
     public static final BlockMachinePress MACHINE_PRESS = new BlockMachinePress();
     public static final BlockMachineEmpowerer MACHINE_EMPOWERER = new BlockMachineEmpowerer();
-
-    
-  
     
     public static class Miniature
     {
@@ -124,10 +122,11 @@ public class BlocksInit
       }
     }
 
+    //(BlockSolarGenerator) BlockSolarGenerator.stateVersion(BlockSolarGenerator.class, PropertyInteger.create("tier", 1, 7));
     public static final BlockSolarGenerator SOLAR_GENERATOR = (BlockSolarGenerator.createStateVersion(PropertyInteger.create("tier", 1, 7)));
   }
   
-  public static final BlockFluidDrum FLUID_DRUM = BlockFluidDrum.createStateVersion(PropertyInteger.create("tier", 1, 3));
+  public static final BlockFluidDrum FLUID_DRUM = (BlockFluidDrum) BlockFluidDrum.stateVersion(BlockFluidDrum.class, PropertyInteger.create("tier", 1, 3)); //BlockFluidDrum.createStateVersion(PropertyInteger.create("tier", 1, 3));
   
   public static class Other
   {

@@ -20,7 +20,11 @@ import net.minecraftforge.oredict.OreDictionary;
 import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.item.ItemMetaBlock;
 import nl.naxanria.nlib.proxy.Proxy;
+import nl.naxanria.nlib.util.logging.Log;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Parameter;
 import java.util.Collection;
 
 public class BlockBase<T extends IProperty> extends Block implements IBlockBase
@@ -30,6 +34,16 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
   public final T PROPERTY;
   
   protected boolean needsNBTClearRecipe = false;
+  
+  /**
+   * Internal use only!
+   * @param property
+   */
+  @Deprecated
+  public BlockBase(T property)
+  {
+    this(Material.IRON, "UNKNOWN", property);
+  }
 
   public BlockBase(Material blockMaterialIn, String name, T property)
   {
@@ -221,13 +235,52 @@ public class BlockBase<T extends IProperty> extends Block implements IBlockBase
   }
   
   // This is a hack as Block.java expects the property to be available on creation - and it's constructor runs before ours - so we need to make sure we can get it before our constructor finishes running
-
+  
   @SuppressWarnings("unchecked")
-  public static BlockBase createStateVersion(Material blockMaterialIn, String name, IProperty property)
+  public static <TB extends IProperty<?>> BlockBase<?> stateVersion(Class<?> blockClass, TB property)
   {
-    tempProperty = property;
-    BlockBase block = new BlockBase(blockMaterialIn, name, property);
-    tempProperty = null;
-    return block;
+    try
+    {
+      tempProperty = property;
+      BlockBase<TB> b = null;
+//      Constructor constructor = blockClass.getConstructor(IProperty.class);
+      for (Constructor c : blockClass.getConstructors())
+      {
+        Class[] parameters = c.getParameterTypes();
+        if (parameters.length == 1)
+        {
+          if (parameters[0] == property.getClass())
+          {
+            b = (BlockBase<TB>) c.newInstance(property);
+            break;
+          }
+        }
+      }
+      
+      tempProperty = null;
+      
+      if (b == null)
+      {
+        Log.error("Error with property block " + blockClass.getName());
+        new Exception().printStackTrace();
+      }
+      
+      return b;
+    }
+    catch (InstantiationException | IllegalAccessException | InvocationTargetException e)
+    {
+      e.printStackTrace();
+    }
+  
+    return null;
   }
+  
+//  @SuppressWarnings("unchecked")
+//  public static BlockBase createStateVersion(Material blockMaterialIn, String name, IProperty property)
+//  {
+//    tempProperty = property;
+//    BlockBase block = new BlockBase(blockMaterialIn, name, property);
+//    tempProperty = null;
+//    return block;
+//  }
 }
