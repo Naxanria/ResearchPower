@@ -84,11 +84,15 @@ public class EnumHelper
   
   public static <T extends Enum<?>> String[] getEnumNames(Class<T> enumClass)
   {
+    return getEnumNames(enumClass, false);
+  }
+  public static <T extends Enum<?>> String[] getEnumNames(Class<T> enumClass, boolean lowerCase)
+  {
     Enum[] constants =  enumClass.getEnumConstants();
     String[] output = new String[constants.length];
     for (int i = 0; i < constants.length; i++)
     {
-      output[i] = constants[i].name();
+      output[i] = (lowerCase) ? constants[i].name().toLowerCase() :  constants[i].name();
     }
     
     return output;
