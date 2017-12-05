@@ -66,8 +66,6 @@ public class TileEntityPress extends TileEntityEnergyAcceptor implements IInvent
     
     if (slot == SLOT_INPUT)
     {
-      //ItemStack input = inventory.getStackInSlot(SLOT_INPUT);
-      
       return  (PressRecipeRegistry.getRecipeFromInput(stack) != null);
     }
     

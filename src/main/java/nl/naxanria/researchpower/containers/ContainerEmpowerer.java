@@ -1,6 +1,7 @@
 package nl.naxanria.researchpower.containers;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
 import nl.naxanria.nlib.container.ContainerBase;
 import nl.naxanria.nlib.gui.PropertiesFactory;
@@ -111,9 +112,9 @@ public class ContainerEmpowerer extends ContainerBase<TileEntityEmpowerer>
           }
         }
       );
+   
+    INVENTORY_START = 6;
     
     createPlayerInventorySlots(player.inventory);
   }
-  
-  
 }

@@ -171,6 +171,22 @@ public class TileEntityEmpowerer extends TileEntityInventoryBase implements IEne
   @Override
   public boolean validForSlot(int slot, ItemStack stack)
   {
+    if (stack == null || stack.isEmpty())
+    {
+      return false;
+    }
+    
+    if (slot == SLOT_OUTPUT)
+    {
+      return false;
+    }
+
+    if (currentRecipe == null)
+    {
+      List<RecipeEmpowerer> recipe = EmpowererRecipeRegistry.getFromInput(stack);
+      return  !(recipe.isEmpty());
+    }
+    
     return false;
   }
 }

@@ -72,62 +72,64 @@ public class ContainerPress extends ContainerBase<TileEntityPress>
       }
     });
     
+    INVENTORY_START = 2;
+    
     createPlayerInventorySlots(player.inventory);
   }
   
-  @Override
-  public ItemStack transferStackInSlot(EntityPlayer playerIn, int index)
-  {
-    int inventoryStart = 2;
-    int inventoryEnd = inventoryStart + 26;
-    int hotbarStart = inventoryEnd + 1;
-    int hotbarEnd = hotbarStart + 8;
-    
-    ItemStack empty = ItemStack.EMPTY;
-    
-    Slot slot = inventorySlots.get(index);
-    
-    // want to move items?
-    if (slot != null && slot.getHasStack())
-    {
-      ItemStack newStack = slot.getStack();
-      ItemStack currentStack = newStack.copy();
-      
-      if (index >= inventoryStart)
-      {
-        if (PressRecipeRegistry.getRecipeFromInput(newStack) != null)
-        {
-          if (!mergeItemStack(newStack, TileEntityPress.SLOT_INPUT, TileEntityPress.SLOT_INPUT + 1, false))
-          {
-            return empty;
-          }
-        }
-        else if (index <= inventoryEnd && !mergeItemStack(newStack, hotbarStart, hotbarEnd + 1, false))
-        {
-          return empty;
-        }
-        else if (index >= hotbarStart + 1 && index < hotbarEnd + 1 && !mergeItemStack(newStack, inventoryStart, inventoryEnd + 1, false))
-        {
-          return empty;
-        }
-      }
-      else if (mergeItemStack(newStack, inventoryStart, hotbarEnd + 1, false))
-      {
-        return empty;
-      }
-      
-      slot.onSlotChanged();
-      
-      if (currentStack.getCount() == newStack.getCount())
-      {
-        return empty;
-      }
-      
-      slot.onTake(player, newStack);
-      
-      return currentStack;
-    }
-    
-    return empty;
-  }
+//  @Override
+//  public ItemStack transferStackInSlot(EntityPlayer playerIn, int index)
+//  {
+//    int inventoryStart = 2;
+//    int inventoryEnd = inventoryStart + 26;
+//    int hotbarStart = inventoryEnd + 1;
+//    int hotbarEnd = hotbarStart + 8;
+//
+//    ItemStack empty = ItemStack.EMPTY;
+//
+//    Slot slot = inventorySlots.get(index);
+//
+//    // want to move items?
+//    if (slot != null && slot.getHasStack())
+//    {
+//      ItemStack newStack = slot.getStack();
+//      ItemStack currentStack = newStack.copy();
+//
+//      if (index >= inventoryStart)
+//      {
+//        if (PressRecipeRegistry.getRecipeFromInput(newStack) != null)
+//        {
+//          if (!mergeItemStack(newStack, TileEntityPress.SLOT_INPUT, TileEntityPress.SLOT_INPUT + 1, false))
+//          {
+//            return empty;
+//          }
+//        }
+//        else if (index <= inventoryEnd && !mergeItemStack(newStack, hotbarStart, hotbarEnd + 1, false))
+//        {
+//          return empty;
+//        }
+//        else if (index >= hotbarStart + 1 && index < hotbarEnd + 1 && !mergeItemStack(newStack, inventoryStart, inventoryEnd + 1, false))
+//        {
+//          return empty;
+//        }
+//      }
+//      else if (mergeItemStack(newStack, inventoryStart, hotbarEnd + 1, false))
+//      {
+//        return empty;
+//      }
+//
+//      slot.onSlotChanged();
+//
+//      if (currentStack.getCount() == newStack.getCount())
+//      {
+//        return empty;
+//      }
+//
+//      slot.onTake(playerIn, newStack);
+//
+//      return currentStack;
+//    }
+//
+//    return empty;
+//  }
 }
