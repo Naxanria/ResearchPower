@@ -5,15 +5,14 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemRedstone;
 import net.minecraft.util.IStringSerializable;
 import nl.naxanria.nlib.registry.BlockRegistry;
 import nl.naxanria.nlib.block.BlockBase;
-import nl.naxanria.researchpower.ResearchPower;
 import nl.naxanria.researchpower.block.fluid.BlockFluidDrum;
 import nl.naxanria.researchpower.block.machines.BlockMachineEmpowerer;
 import nl.naxanria.researchpower.block.machines.BlockMachineFrame;
 import nl.naxanria.researchpower.block.machines.BlockMachinePress;
+import nl.naxanria.researchpower.block.machines.BlockMachineSanding;
 import nl.naxanria.researchpower.block.machines.battery.BlockBattery;
 import nl.naxanria.researchpower.block.machines.generators.BlockCoalGenerator;
 import nl.naxanria.researchpower.block.machines.generators.solar.BlockSolarGenerator;
@@ -50,6 +49,8 @@ public class BlocksInit
     public static final BlockBattery BATTERY = new BlockBattery();
     public static final BlockVacuumGenerator VACUUM_GENERATOR = new BlockVacuumGenerator();
     public static final BlockCoalGenerator COAL_GENERATOR = new BlockCoalGenerator();
+    public static final BlockMachineSanding MACHINE_SANDING = new BlockMachineSanding();
+    
 
     public enum FRAMES implements IStringSerializable
     {
@@ -131,6 +132,7 @@ public class BlocksInit
   public static class Other
   {
     public static final BlockBase RAINBOW = new BlockBase(Material.IRON, "rainbow");
+    public static final BlockCleanedSand CLEANED_SAND = new BlockCleanedSand();
   }
   
   public static void init(BlockRegistry registry)
@@ -156,6 +158,7 @@ public class BlocksInit
       Machines.MACHINE_FRAME,
       Machines.MACHINE_PRESS,
       Machines.MACHINE_EMPOWERER,
+      Machines.MACHINE_SANDING,
       
       Machines.Miniature.controller,
       
@@ -166,7 +169,8 @@ public class BlocksInit
       
       Redstone.EMITTER,
       
-      Other.RAINBOW
+      Other.RAINBOW,
+      Other.CLEANED_SAND
     );
     
     init = true;

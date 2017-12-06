@@ -9,8 +9,10 @@ import net.minecraftforge.fml.common.network.IGuiHandler;
 import nl.naxanria.researchpower.containers.ContainerCoalGenerator;
 import nl.naxanria.researchpower.containers.ContainerEmpowerer;
 import nl.naxanria.researchpower.containers.ContainerPress;
+import nl.naxanria.researchpower.containers.ContainerSanding;
 import nl.naxanria.researchpower.tile.machines.TileEntityCoalGenerator;
 import nl.naxanria.researchpower.tile.machines.TileEntityEmpowerer;
+import nl.naxanria.researchpower.tile.machines.TileEntityMachineSanding;
 import nl.naxanria.researchpower.tile.machines.TileEntityPress;
 
 import javax.annotation.Nullable;
@@ -20,6 +22,7 @@ public class ModGuiHandler implements IGuiHandler
   public static final int PRESS = 0;
   public static final int GENERATOR_COAL = 1;
   public static final int EMPOWERER = 2;
+  public static final int SANDING = 3;
   
   @Nullable
   @Override
@@ -35,6 +38,8 @@ public class ModGuiHandler implements IGuiHandler
         return new ContainerCoalGenerator((TileEntityCoalGenerator) tile, player);
       case EMPOWERER:
         return new ContainerEmpowerer((TileEntityEmpowerer) tile, player);
+      case SANDING:
+        return new ContainerSanding((TileEntityMachineSanding) tile, player);
       default:
         return null;
     }
@@ -54,6 +59,8 @@ public class ModGuiHandler implements IGuiHandler
         return new GuiCoalGenerator((ContainerCoalGenerator) container, player);
       case EMPOWERER:
         return new GuiEmpowerer((ContainerEmpowerer) container, player);
+      case SANDING:
+        return new GuiSanding((ContainerSanding) container, player);
       default:
         return null;
     }

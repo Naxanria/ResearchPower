@@ -13,10 +13,6 @@ public class EnumHelper
     public final static EnumFacing[] SIDES = EnumFacing.HORIZONTALS;
     public final static EnumFacing[] TOP_BOTTOM = { EnumFacing.UP, EnumFacing.DOWN };
     
-    public final static long FLAGS_ALL        = getAsFlags(ALL);
-    public final static long FLAGS_SIDES      = getAsFlags(SIDES);
-    public final static long FLAGS_TOP_BOTTOM = getAsFlags(TOP_BOTTOM);
-    
     public static EnumFacing[] combine(EnumFacing[] array, EnumFacing... faces)
     {
       ArrayList<EnumFacing> arrayList = new ArrayList<>();
@@ -30,11 +26,59 @@ public class EnumHelper
           arrayList.add(f);
         }
       }
-      
+  
       EnumFacing[] out = new EnumFacing[arrayList.size()];
       return arrayList.toArray(out);
     }
+  
+    public static EnumFacing right(EnumFacing facing)
+    {
+      switch (facing)
+      {
+      
+        case DOWN:
+        case NORTH:
+        case UP:
+          return EnumFacing.EAST;
+      
+        case SOUTH:
+          return EnumFacing.WEST;
+      
+        case WEST:
+          return EnumFacing.NORTH;
+      
+        case EAST:
+          return EnumFacing.SOUTH;
+      }
+    
+      return facing;
+    }
+  
+    public static EnumFacing left(EnumFacing facing)
+    {
+      switch (facing)
+      {
+      
+        case DOWN:
+        case NORTH:
+        case UP:
+          return EnumFacing.WEST;
+      
+        case SOUTH:
+          return EnumFacing.EAST;
+      
+        case WEST:
+          return EnumFacing.SOUTH;
+      
+        case EAST:
+          return EnumFacing.NORTH;
+      }
+    
+      return facing;
+    }
   }
+  
+  
   
   public static long getAsFlag(Enum<?> e)
   {

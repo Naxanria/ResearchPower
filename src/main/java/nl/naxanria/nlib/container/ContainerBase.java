@@ -29,7 +29,7 @@ public abstract class ContainerBase<TTE extends TileEntityBase> extends Containe
   @Override
   public boolean canInteractWith(EntityPlayer player)
   {
-    return !tile.hasFlags(TileFlags.HasOwner) || tile.getOwner().equals(player);
+    return !tile.hasFlags(TileFlags.HasOwner) || (tile.getOwner() == null || tile.getOwner().equals(player));
   
   }
   
