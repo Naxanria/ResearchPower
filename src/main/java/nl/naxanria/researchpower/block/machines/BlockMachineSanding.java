@@ -6,6 +6,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidTank;
 import nl.naxanria.nlib.block.BlockTileBase;
@@ -48,6 +49,10 @@ public class BlockMachineSanding extends BlockTileBase<TileEntityMachineSanding>
           playerIn.openGui(ResearchPower.getMod(), ModGuiHandler.SANDING, worldIn, pos.getX(), pos.getY(), pos.getZ());
         }
         return true;
+      }
+      else
+      {
+        playerIn.sendMessage(new TextComponentString(getTileEntity(worldIn, pos).getInfo()));
       }
     }
     return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);

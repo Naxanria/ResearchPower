@@ -79,4 +79,9 @@ public class StackUtil
       )
     );
   }
+  
+  public static boolean matchesItemAndHasSpace(ItemStack toInsert, ItemStack stack, boolean oreDict)
+  {
+    return areItemsEqual(toInsert, stack, oreDict) && toInsert.getCount() + stack.getCount() <= stack.getMaxStackSize();
+  }
 }

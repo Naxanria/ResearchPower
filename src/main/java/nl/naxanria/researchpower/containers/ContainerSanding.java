@@ -2,6 +2,8 @@ package nl.naxanria.researchpower.containers;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.items.SlotItemHandler;
 import nl.naxanria.nlib.container.ContainerBase;
 import nl.naxanria.researchpower.tile.machines.TileEntityMachineSanding;
@@ -35,7 +37,19 @@ public class ContainerSanding extends ContainerBase<TileEntityMachineSanding>
     
     syncHelper.create(
       "water",
-      (i) -> tile.tank.getContents().amount = i,
+      (i) ->
+      {
+        FluidStack contents = tile.tank.getContents();
+        if (contents == null)
+        {
+          contents = new FluidStack(FluidRegistry.WATER, i);
+        }
+        else
+        {
+          contents.amount = i;
+        }
+        tile.tank.setFluid(contents);
+      },
       tile.tank::getFluidAmount
     );
     

@@ -17,6 +17,8 @@ import nl.naxanria.researchpower.item.ItemsInit;
 import nl.naxanria.researchpower.recipe.registry.EmpowererRecipeRegistry;
 import nl.naxanria.researchpower.recipe.registry.MiniatureRecipeRegistry;
 import nl.naxanria.researchpower.recipe.registry.PressRecipeRegistry;
+import nl.naxanria.researchpower.recipe.registry.SandingRecipeRegistry;
+import nl.naxanria.researchpower.tile.machines.TileEntityMachineSanding;
 
 public class RecipesInit
 {
@@ -93,6 +95,19 @@ public class RecipesInit
       'L', Blocks.LAPIS_BLOCK
     );
   }
+  
+  public static class Sanding
+  {
+    public static final RecipeSanding CLEANED_SAND = new RecipeSanding
+      (
+        new ItemStack(Blocks.SAND),
+        new ItemStack(BlocksInit.Other.CLEANED_SAND),
+        TileEntityMachineSanding.getSandAmount(BlocksInit.Other.CLEANED_SAND) - TileEntityMachineSanding.getSandAmount(Blocks.SAND),
+        250,
+        10
+      );
+  }
+  
   
   private static int r = 0;
   
@@ -207,6 +222,11 @@ public class RecipesInit
         Empowerer.STONE_DRUM,
         Empowerer.METAL_DRUM,
         Empowerer.OBSIDIAN_DRUM
+      );
+  
+      SandingRecipeRegistry.addAll
+      (
+        Sanding.CLEANED_SAND
       );
       
       registry.registerNBTClearRecipes();
