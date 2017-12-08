@@ -1,4 +1,4 @@
-package nl.naxanria.researchpower.tile.machines;
+package nl.naxanria.researchpower.tile.machines.generators;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -33,7 +33,7 @@ public class TileEntityCoalGenerator extends TileEntityInventoryBase implements 
   {
     super(1);
     
-    storage = new EnergyStorageBase(10000, 0, 120, true);
+    storage = new EnergyStorageBase(50000, 0, 120, true);
   }
   
   @Override

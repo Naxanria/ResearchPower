@@ -10,7 +10,7 @@ import nl.naxanria.researchpower.containers.ContainerCoalGenerator;
 import nl.naxanria.researchpower.containers.ContainerEmpowerer;
 import nl.naxanria.researchpower.containers.ContainerPress;
 import nl.naxanria.researchpower.containers.ContainerSanding;
-import nl.naxanria.researchpower.tile.machines.TileEntityCoalGenerator;
+import nl.naxanria.researchpower.tile.machines.generators.TileEntityCoalGenerator;
 import nl.naxanria.researchpower.tile.machines.TileEntityEmpowerer;
 import nl.naxanria.researchpower.tile.machines.TileEntityMachineSanding;
 import nl.naxanria.researchpower.tile.machines.TileEntityPress;

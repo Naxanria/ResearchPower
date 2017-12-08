@@ -1,4 +1,4 @@
-package nl.naxanria.researchpower.tile;
+package nl.naxanria.researchpower.tile.machines.generators;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -7,6 +7,7 @@ import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.power.GeneratorEntity;
 import nl.naxanria.nlib.util.EnumHelper;
+import nl.naxanria.researchpower.ModConfig;
 
 public class TileEntitySolarGenerator extends GeneratorEntity
 {
@@ -32,12 +33,42 @@ public class TileEntitySolarGenerator extends GeneratorEntity
   
   private void init(int tier)
   {
-    produce = getProduce(tier);
-    
     this.tier = tier;
     
-    storage.setCapacity(getCapacity(tier))
-      .setMaxExtract(getMaxExtract(tier));
+    ModConfig.SolarPanel config = getConfigValues(tier);
+    
+    produce = config.produce;
+    
+    storage.setCapacity(config.capacity)
+      .setMaxExtract(config.transfer);
+  }
+  
+  private ModConfig.SolarPanel getConfigValues(int tier)
+  {
+    switch (tier)
+    {
+      case 1:
+      default:
+        return ModConfig.SolarPanels.tier1;
+        
+      case 2:
+        return ModConfig.SolarPanels.tier2;
+        
+      case 3:
+        return ModConfig.SolarPanels.tier3;
+        
+      case 4:
+        return ModConfig.SolarPanels.tier4;
+        
+      case 5:
+        return ModConfig.SolarPanels.tier5;
+        
+      case 6:
+        return ModConfig.SolarPanels.tier6;
+        
+      case 7:
+        return ModConfig.SolarPanels.tier7;
+    }
   }
   
   @Override

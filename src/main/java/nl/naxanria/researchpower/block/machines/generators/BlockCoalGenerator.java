@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.block.BlockTileBase;
 import nl.naxanria.researchpower.gui.ModGuiHandler;
-import nl.naxanria.researchpower.tile.machines.TileEntityCoalGenerator;
+import nl.naxanria.researchpower.tile.machines.generators.TileEntityCoalGenerator;
 
 import javax.annotation.Nullable;
 

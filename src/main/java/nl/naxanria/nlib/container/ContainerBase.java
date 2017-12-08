@@ -7,7 +7,6 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.nlib.tile.TileFlags;
-import nl.naxanria.researchpower.tile.machines.TileEntityCoalGenerator;
 
 public abstract class ContainerBase<TTE extends TileEntityBase> extends Container
 {

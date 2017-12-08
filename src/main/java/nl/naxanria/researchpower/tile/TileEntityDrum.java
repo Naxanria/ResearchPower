@@ -3,7 +3,7 @@ package nl.naxanria.researchpower.tile;
 import net.minecraft.nbt.NBTTagCompound;
 import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.fluid.TileEntityFluidTankBase;
-import nl.naxanria.researchpower.config.ModConfig;
+import nl.naxanria.researchpower.ModConfig;
 
 public class TileEntityDrum extends TileEntityFluidTankBase
 {
