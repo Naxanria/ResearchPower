@@ -9,10 +9,7 @@ import net.minecraft.util.IStringSerializable;
 import nl.naxanria.nlib.registry.BlockRegistry;
 import nl.naxanria.nlib.block.BlockBase;
 import nl.naxanria.researchpower.block.fluid.BlockFluidDrum;
-import nl.naxanria.researchpower.block.machines.BlockMachineEmpowerer;
-import nl.naxanria.researchpower.block.machines.BlockMachineFrame;
-import nl.naxanria.researchpower.block.machines.BlockMachinePress;
-import nl.naxanria.researchpower.block.machines.BlockMachineSanding;
+import nl.naxanria.researchpower.block.machines.*;
 import nl.naxanria.researchpower.block.machines.battery.BlockBattery;
 import nl.naxanria.researchpower.block.machines.generators.BlockCoalGenerator;
 import nl.naxanria.researchpower.block.machines.generators.solar.BlockSolarGenerator;
@@ -50,7 +47,7 @@ public class BlocksInit
     public static final BlockVacuumGenerator VACUUM_GENERATOR = new BlockVacuumGenerator();
     public static final BlockCoalGenerator COAL_GENERATOR = new BlockCoalGenerator();
     public static final BlockMachineSanding MACHINE_SANDING = new BlockMachineSanding();
-    
+    public static final BlockElectricFurnace ELECTRIC_FURNACE = new BlockElectricFurnace();
 
     public enum FRAMES implements IStringSerializable
     {
@@ -160,6 +157,7 @@ public class BlocksInit
       Machines.MACHINE_PRESS,
       Machines.MACHINE_EMPOWERER,
       Machines.MACHINE_SANDING,
+      Machines.ELECTRIC_FURNACE,
       
       Machines.Miniature.controller,
       
