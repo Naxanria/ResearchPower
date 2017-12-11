@@ -15,8 +15,9 @@ public class TileEntitySolarGenerator extends GeneratorEntity
 {
   public static final String NBT_TIER = "TIER";
   public static final int BONUS = 2;
+  public static final int MAX_BONUS_COUNT = 10;
   
-  protected EnumFacing[] providingFaces = EnumHelper.Facing.combine(EnumHelper.Facing.SIDES, EnumFacing.DOWN);
+  protected static EnumFacing[] providingFaces = EnumHelper.Facing.combine(EnumHelper.Facing.SIDES, EnumFacing.DOWN);
   
   public static final int base = 2;
   
@@ -48,6 +49,11 @@ public class TileEntitySolarGenerator extends GeneratorEntity
         if (world.getBlockState(npos) == BlocksInit.Other.GLASS_FOCUS.getDefaultState())
         {
           bonusCount++;
+          if (bonusCount > MAX_BONUS_COUNT)
+          {
+            bonusCount = MAX_BONUS_COUNT;
+            break;
+          }
         }
         else
         {
