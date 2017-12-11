@@ -15,7 +15,7 @@ public abstract class ContainerBase<TTE extends TileEntityBase> extends Containe
   
   public final ContainerSyncHelper syncHelper;
   
-  protected int INVENTORY_START;
+  public int INVENTORY_START;
   
   public ContainerBase(TTE tile, EntityPlayer player)
   {

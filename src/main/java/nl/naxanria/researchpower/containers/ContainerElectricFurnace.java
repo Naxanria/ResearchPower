@@ -4,6 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
 import nl.naxanria.nlib.container.ContainerBase;
+import nl.naxanria.researchpower.tile.machines.furnace.SmeltModule;
 import nl.naxanria.researchpower.tile.machines.furnace.TileEntityElectricFurnace;
 
 import javax.annotation.Nonnull;
@@ -13,34 +14,74 @@ public class ContainerElectricFurnace extends ContainerBase<TileEntityElectricFu
   public ContainerElectricFurnace(TileEntityElectricFurnace tile, EntityPlayer player)
   {
     super(tile, player);
+    
+    int c = tile.moduleCount;
+    int spacing = 160 / c;
+    
+    int xStart = spacing + 6;
+    
+    for (int i = 0; i < tile.moduleCount; i++)
+    {
+      SmeltModule m = tile.modules.get(i);
+      
+      int x = xStart + spacing * i - (spacing / 2) - 9;
   
-    syncHelper.create
-      (
-        "progress1",
-        (i) -> tile.module1.progress = i,
-        () -> tile.module1.progress
-      );
+      // syncing
+      
+      syncHelper.create
+        (
+          "progress" + i,
+          (n) -> m.progress = n,
+          () -> m.progress
+        );
   
-    syncHelper.create
-      (
-        "total1",
-        (i) -> tile.module1.total = i,
-        () -> tile.module1.total
-      );
+      syncHelper.create
+        (
+          "total" + i,
+          (n) -> m.total = n,
+          () -> m.total
+        );
+      
+      // inventory slots
   
-    syncHelper.create
-      (
-        "progress2",
-        (i) -> tile.module2.progress = i,
-        () -> tile.module2.progress
-      );
+      addSlotToContainer
+        (
+          new SlotItemHandler(m.input, 0, x, 10)
+          {
+            @Override
+            public boolean isItemValid(@Nonnull ItemStack stack)
+            {
+              return tile.validForSlot(0, stack);
+            }
+        
+            @Override
+            public void onSlotChange(@Nonnull ItemStack p_75220_1_, @Nonnull ItemStack p_75220_2_)
+            {
+              tile.markDirty();
+              super.onSlotChange(p_75220_1_, p_75220_2_);
+            }
+          }
+        );
   
-    syncHelper.create
-      (
-        "total2",
-        (i) -> tile.module2.total = i,
-        () -> tile.module2.total
-      );
+      addSlotToContainer
+        (
+          new SlotItemHandler(m.output, 0, x, 51)
+          {
+            @Override
+            public boolean isItemValid(@Nonnull ItemStack stack)
+            {
+              return tile.validForSlot(1, stack);
+            }
+        
+            @Override
+            public void onSlotChange(@Nonnull ItemStack p_75220_1_, @Nonnull ItemStack p_75220_2_)
+            {
+              tile.markDirty();
+              super.onSlotChange(p_75220_1_, p_75220_2_);
+            }
+          }
+        );
+    }
   
     syncHelper.create
       (
@@ -48,84 +89,8 @@ public class ContainerElectricFurnace extends ContainerBase<TileEntityElectricFu
         tile.storage::setEnergyStored,
         tile.storage::getEnergyStored
       );
-  
-    addSlotToContainer
-      (
-        new SlotItemHandler(tile.module1.input, 0, 40, 10)
-        {
-          @Override
-          public boolean isItemValid(@Nonnull ItemStack stack)
-          {
-            return tile.validForSlot(TileEntityElectricFurnace.SLOT_MODULE_0_INPUT, stack);
-          }
-        
-          @Override
-          public void onSlotChange(@Nonnull ItemStack p_75220_1_, @Nonnull ItemStack p_75220_2_)
-          {
-            tile.markDirty();
-            super.onSlotChange(p_75220_1_, p_75220_2_);
-          }
-        }
-      );
-  
-    addSlotToContainer
-      (
-        new SlotItemHandler(tile.module1.output, 0, 40, 51)
-        {
-          @Override
-          public boolean isItemValid(@Nonnull ItemStack stack)
-          {
-            return tile.validForSlot(TileEntityElectricFurnace.SLOT_MODULE_0_OUTPUT, stack);
-          }
-        
-          @Override
-          public void onSlotChange(@Nonnull ItemStack p_75220_1_, @Nonnull ItemStack p_75220_2_)
-          {
-            tile.markDirty();
-            super.onSlotChange(p_75220_1_, p_75220_2_);
-          }
-        }
-      );
-  
-    addSlotToContainer
-      (
-        new SlotItemHandler(tile.module2.input, 0, 80, 10)
-        {
-          @Override
-          public boolean isItemValid(@Nonnull ItemStack stack)
-          {
-            return tile.validForSlot(TileEntityElectricFurnace.SLOT_MODULE_1_INPUT, stack);
-          }
-        
-          @Override
-          public void onSlotChange(@Nonnull ItemStack p_75220_1_, @Nonnull ItemStack p_75220_2_)
-          {
-            tile.markDirty();
-            super.onSlotChange(p_75220_1_, p_75220_2_);
-          }
-        }
-      );
-  
-    addSlotToContainer
-      (
-        new SlotItemHandler(tile.module2.output, 0, 80, 51)
-        {
-          @Override
-          public boolean isItemValid(@Nonnull ItemStack stack)
-          {
-            return tile.validForSlot(TileEntityElectricFurnace.SLOT_MODULE_1_OUTPUT, stack);
-          }
-        
-          @Override
-          public void onSlotChange(@Nonnull ItemStack p_75220_1_, @Nonnull ItemStack p_75220_2_)
-          {
-            tile.markDirty();
-            super.onSlotChange(p_75220_1_, p_75220_2_);
-          }
-        }
-      );
-      
-    INVENTORY_START = 4;
+    
+    INVENTORY_START = c * 2;
     
     createPlayerInventorySlots(player.inventory);
   }

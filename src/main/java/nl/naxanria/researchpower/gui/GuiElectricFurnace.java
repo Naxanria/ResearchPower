@@ -1,22 +1,36 @@
 package nl.naxanria.researchpower.gui;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Slot;
 import nl.naxanria.nlib.gui.GuiContainerBase;
 import nl.naxanria.nlib.gui.Orientation;
 import nl.naxanria.nlib.gui.PropertiesFactory;
 import nl.naxanria.nlib.util.Color;
-import nl.naxanria.nlib.util.MathUtil;
 import nl.naxanria.researchpower.Constants;
 import nl.naxanria.researchpower.containers.ContainerElectricFurnace;
 import nl.naxanria.researchpower.tile.machines.furnace.TileEntityElectricFurnace;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GuiElectricFurnace extends GuiContainerBase<ContainerElectricFurnace>
 {
+  public PropertiesFactory.BarProperties power = PropertiesFactory.BarProperties.create(10, 10, 10, 30).setColors(Color.RED, Color.BLACK).setOrientation(Orientation.BottomToTop);
+  public List<PropertiesFactory.BarProperties> progBars = new ArrayList<>();
+  
   public GuiElectricFurnace(ContainerElectricFurnace inventorySlots, EntityPlayer player)
   {
     super(inventorySlots, player);
+  
+    int offsetX = 7;
+    int offsetY = 2 + 18;
+    for(int i = 0; i < container.INVENTORY_START; i += 2)
+    {
+      Slot slot = container.inventorySlots.get(i);
+      progBars.add(PropertiesFactory.BarProperties.create(slot.xPos + offsetX, slot.yPos + offsetY, 4, 19).setColors(Color.WHITE, Color.GRAY).setOrientation(Orientation.TopToBottom));
+    }
     
-    
+    power.setPosition(-20, 40);
   }
   
   @Override
@@ -33,17 +47,15 @@ public class GuiElectricFurnace extends GuiContainerBase<ContainerElectricFurnac
   @Override
   protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
   {
-    PropertiesFactory.BarProperties power = PropertiesFactory.BarProperties.create(10, 10, 10, 30).setColors(Color.RED, Color.BLACK).setOrientation(Orientation.BottomToTop);
-    PropertiesFactory.BarProperties prog1 = PropertiesFactory.BarProperties.create(47, 30, 4, 19).setColors(Color.WHITE, Color.GRAY).setOrientation(Orientation.TopToBottom);
-    PropertiesFactory.BarProperties prog2 = prog1.copy().setX(prog1.getX() + 40);
-  
     TileEntityElectricFurnace tile = container.tile;
     float p = tile.storage.getStoredPercentage();
-    float p1 = MathUtil.getPercent(tile.module1.progress, tile.module1.total);
-    float p2 = MathUtil.getPercent(tile.module2.progress, tile.module2.total);
     
     drawProgressBar(power, p);
-    drawProgressBar(prog1, p1);
-    drawProgressBar(prog2, p2);
+    
+    for (int i = 0; i < progBars.size(); i++)
+    {
+      drawProgressBar(progBars.get(i), container.tile.modules.get(i).getProgressPercentage());
+    }
+    
   }
 }

@@ -11,19 +11,72 @@ import nl.naxanria.nlib.tile.inventory.IInventoryHolder;
 import nl.naxanria.nlib.tile.power.EnergyStorageBase;
 import nl.naxanria.nlib.util.EnumHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TileEntityElectricFurnace extends TileEntityBase implements IInventoryHolder
 {
-  public static final int SLOT_MODULE_0_INPUT = 0;
-  public static final int SLOT_MODULE_0_OUTPUT = 1;
-  public static final int SLOT_MODULE_1_INPUT = 2;
-  public static final int SLOT_MODULE_1_OUTPUT = 3;
+//  public static final int SLOT_MODULE_0_INPUT = 0;
+//  public static final int SLOT_MODULE_0_OUTPUT = 1;
+//  public static final int SLOT_MODULE_1_INPUT = 2;
+//  public static final int SLOT_MODULE_1_OUTPUT = 3;
   
   public static final int POWER_USAGE = 20;
   
-  public SmeltModule module1 = new SmeltModule(1.5f);
-  public SmeltModule module2 = new SmeltModule(1.5f);
+  public List<SmeltModule> modules = new ArrayList<>();
+  
+  public int tier = -1;
+  
+//  public SmeltModule module1 = new SmeltModule(1.5f);
+//  public SmeltModule module2 = new SmeltModule(1.5f);
+  
+  public float speed = 1;
+  public int moduleCount = 1;
   
   public EnergyStorageBase storage = new EnergyStorageBase(50000, 5000, 0);
+  
+  public TileEntityElectricFurnace()
+  {  }
+  
+  public TileEntityElectricFurnace(int tier)
+  {
+    this.tier = tier;
+    
+    init(tier);
+  }
+  
+  private void init(int tier)
+  {
+    
+    switch (tier)
+    {
+      case 1:
+      default:
+        moduleCount = 1;
+        speed = 1.25f;
+        break;
+        
+      case 2:
+        moduleCount = 2;
+        speed = 1.35f;
+        break;
+        
+      case 3:
+        moduleCount = 4;
+        speed = 1.5f;
+        break;
+        
+      case 4:
+        moduleCount = 8;
+        speed = 2.2f;
+        break;
+    }
+    
+    for (int i = 0; i < moduleCount; i++)
+    {
+      modules.add(new SmeltModule(speed));
+    }
+  }
   
   @Override
   public EnumFacing[] getInventorySides()
@@ -34,17 +87,7 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
   @Override
   public boolean validForSlot(int slot, ItemStack stack)
   {
-    if (slot == SLOT_MODULE_0_OUTPUT || slot == SLOT_MODULE_1_OUTPUT)
-    {
-      return false;
-    }
-    
-    if (slot == SLOT_MODULE_0_INPUT || slot == SLOT_MODULE_1_INPUT)
-    {
-      return SmeltModule.isValidInput(stack);
-    }
-    
-    return false;
+    return slot % 2 == 0 && SmeltModule.isValidInput(stack);
   }
   
   @Override
@@ -62,7 +105,14 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
   @Override
   public IItemHandler[] getAllInventories()
   {
-    return new IItemHandler[] { module1.input, module1.output, module2.input, module2.output };
+    IItemHandler[] out = new IItemHandler[modules.size() * 2];
+    for (int i = 0; i < modules.size(); i++)
+    {
+      out[i] = modules.get(i).input;
+      out[i + 1] = modules.get(i).output;
+    }
+    
+    return out;
   }
   
   
@@ -72,14 +122,16 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
     NBTTagCompound energy = new NBTTagCompound();
     storage.writeToNBT(energy);
     compound.setTag("Energy", energy);
+    
+    compound.setInteger("Tier", tier);
   
-    NBTTagCompound mod1 = new NBTTagCompound();
-    module1.writeToNBTCompound(mod1);
-    compound.setTag("Module1", mod1);
-  
-    NBTTagCompound mod2 = new NBTTagCompound();
-    module2.writeToNBTCompound(mod2);
-    compound.setTag("Module2", mod2);
+    for (int i = 0; i < moduleCount; i++)
+    {
+      SmeltModule module = modules.get(i);
+      NBTTagCompound c = new NBTTagCompound();
+      module.writeToNBTCompound(c);
+      compound.setTag("Mod" + i, c);
+    }
     
     super.writeSyncableNBT(compound, type);
   }
@@ -88,8 +140,22 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
   public void readSyncableNBT(NBTTagCompound compound, NBTType type)
   {
     storage.readFromNbt(compound.getCompoundTag("Energy"));
-    module1.readFromNBTCompound(compound.getCompoundTag("Module1"));
-    module2.readFromNBTCompound(compound.getCompoundTag("Module2"));
+//    module1.readFromNBTCompound(compound.getCompoundTag("Module1"));
+//    module2.readFromNBTCompound(compound.getCompoundTag("Module2"));
+    
+    int t = tier;
+    tier = compound.getInteger("Tier");
+    
+    if (t != tier || modules.size() == 0)
+    {
+      init(tier);
+    }
+    
+    for (int i = 0; i < moduleCount; i++)
+    {
+      SmeltModule m = modules.get(i);
+      m.readFromNBTCompound(compound.getCompoundTag("Mod" + i));
+    }
     
     super.readSyncableNBT(compound, type);
   }
@@ -98,21 +164,31 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
   protected void entityUpdate()
   {
     super.entityUpdate();
-    int powerUsage = 0;
-    if (module1.isBurning())
-    {
-      powerUsage += POWER_USAGE;
-    }
-    if (module2.isBurning())
-    {
-      powerUsage += POWER_USAGE;
-    }
     
-    if (storage.getEnergyStored() >= powerUsage)
+    if (!world.isRemote)
     {
-      storage.setEnergyStored(storage.getEnergyStored() - powerUsage);
-      module1.update();
-      module2.update();
+      int powerUsage = 0;
+  
+      for (SmeltModule m :
+        modules)
+      {
+        if (m.isBurning())
+        {
+          powerUsage += POWER_USAGE;
+        }
+      }
+  
+      if (storage.getEnergyStored() >= powerUsage)
+      {
+        storage.setEnergyStored(storage.getEnergyStored() - powerUsage);
+    
+        for (SmeltModule m :
+          modules)
+        {
+          m.update();
+        }
+    
+      }
     }
   }
 }

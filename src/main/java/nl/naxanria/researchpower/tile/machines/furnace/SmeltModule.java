@@ -6,7 +6,7 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import nl.naxanria.nlib.inventory.ItemStackHandlerBase;
 import nl.naxanria.nlib.util.ItemUtil;
-import nl.naxanria.nlib.util.logging.Log;
+import nl.naxanria.nlib.util.MathUtil;
 
 public class SmeltModule
 {
@@ -93,6 +93,11 @@ public class SmeltModule
     compound.setTag("Input", input.serializeNBT());
     compound.setTag("Output", output.serializeNBT());
     
+    if (burning != null)
+    {
+      compound.setTag("Burn", burning.writeToNBT(new NBTTagCompound()));
+    }
+    
     return this;
   }
   
@@ -104,7 +109,19 @@ public class SmeltModule
     input.deserializeNBT(compound.getCompoundTag("Input"));
     output.deserializeNBT(compound.getCompoundTag("Output"));
     
+    burning = ItemStack.EMPTY;
+    burning.deserializeNBT(compound.getCompoundTag("Burn"));
+    if (burning.isEmpty())
+    {
+      burning = null;
+    }
+    
     return this;
+  }
+  
+  public float getProgressPercentage()
+  {
+    return MathUtil.getPercent(progress, total);
   }
   
   public boolean isBurning()

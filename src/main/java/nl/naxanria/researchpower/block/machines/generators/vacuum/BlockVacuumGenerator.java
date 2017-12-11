@@ -9,7 +9,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import nl.naxanria.nlib.block.BlockTileBase;
-import nl.naxanria.researchpower.tile.TileEntityVacuumGenerator;
+import nl.naxanria.researchpower.tile.machines.generators.TileEntityVacuumGenerator;
 
 import javax.annotation.Nullable;
 

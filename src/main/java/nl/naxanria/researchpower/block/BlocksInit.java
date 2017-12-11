@@ -47,7 +47,7 @@ public class BlocksInit
     public static final BlockVacuumGenerator VACUUM_GENERATOR = new BlockVacuumGenerator();
     public static final BlockCoalGenerator COAL_GENERATOR = new BlockCoalGenerator();
     public static final BlockMachineSanding MACHINE_SANDING = new BlockMachineSanding();
-    public static final BlockElectricFurnace ELECTRIC_FURNACE = new BlockElectricFurnace();
+    public static final BlockElectricFurnace ELECTRIC_FURNACE = BlockElectricFurnace.createStateVersion(PropertyInteger.create("tier", 1, 4));
 
     public enum FRAMES implements IStringSerializable
     {
