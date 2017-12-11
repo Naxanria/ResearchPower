@@ -10,30 +10,25 @@ import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.inventory.IInventoryHolder;
 import nl.naxanria.nlib.tile.power.EnergyStorageBase;
 import nl.naxanria.nlib.util.EnumHelper;
+import nl.naxanria.nlib.util.logging.Log;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TileEntityElectricFurnace extends TileEntityBase implements IInventoryHolder
 {
-//  public static final int SLOT_MODULE_0_INPUT = 0;
-//  public static final int SLOT_MODULE_0_OUTPUT = 1;
-//  public static final int SLOT_MODULE_1_INPUT = 2;
-//  public static final int SLOT_MODULE_1_OUTPUT = 3;
-  
   public static final int POWER_USAGE = 20;
   
   public List<SmeltModule> modules = new ArrayList<>();
   
   public int tier = -1;
   
-//  public SmeltModule module1 = new SmeltModule(1.5f);
-//  public SmeltModule module2 = new SmeltModule(1.5f);
-  
   public float speed = 1;
   public int moduleCount = 1;
   
   public EnergyStorageBase storage = new EnergyStorageBase(50000, 5000, 0);
+  
+  public boolean autoSort = true;
   
   public TileEntityElectricFurnace()
   {  }
@@ -189,6 +184,80 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
         }
     
       }
+      
+      if (autoSort && ticksPassed % 20 == 0)
+      {
+        // do le autosort!
+  
+        List<Integer> sorted = new ArrayList<>();
+        
+        for (int i = 0; i < moduleCount; i++)
+        {
+          if (sorted.contains(i))
+          {
+            continue;
+          }
+          
+          SmeltModule mod = modules.get(i);
+          ItemStack in = mod.input.getStackInSlot(0);
+          
+          if (in.isEmpty())
+          {
+            continue;
+          }
+          
+          List<Integer> toSort = new ArrayList<>();
+          toSort.add(i);
+          int total = in.getCount();
+          
+          for (int t = 0; t < moduleCount; t++)
+          {
+            if (i == t || sorted.contains(t))
+            {
+              continue;
+            }
+            
+            SmeltModule m = modules.get(t);
+            ItemStack stack = m.input.getStackInSlot(0);
+            
+            if (stack.isEmpty() || stack.isItemEqual(in))
+            {
+              total += stack.getCount();
+              toSort.add(t);
+            }
+          }
+          
+          int per = (int) Math.ceil(total / (float) toSort.size());
+          //Log.info("Spreading " + total + " over " + toSort.size() + " each: " + per);
+  
+          for (Integer aToSort : toSort)
+          {
+            int amount = per;
+            if (amount > total)
+            {
+              amount = total;
+            }
+    
+            SmeltModule m = modules.get(aToSort);
+            ItemStack s = m.input.getStackInSlot(0);
+            s.setCount(amount);
+            if (s.isEmpty())
+            {
+              s = new ItemStack(in.getItem(), amount);
+            }
+            
+            //Log.info(s.getCount() + " " + s.getItem().getRegistryName());
+            
+            m.input.setStackInSlot(0, s);
+    
+            total -= amount;
+          }
+          
+          sorted.addAll(toSort);
+        }
+      }
     }
   }
+  
+ 
 }
