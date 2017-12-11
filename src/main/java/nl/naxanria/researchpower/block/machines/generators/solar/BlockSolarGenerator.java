@@ -37,7 +37,7 @@ public class BlockSolarGenerator extends BlockTileBaseProperties<PropertyInteger
         (
           new TextComponentString("Tier: " + tile.tier + " Producing: " + tile.produce +
             " Active: " + tile.canGenerate() +
-            " Storage: " + tile.storage.getEnergyStored() + "/" + tile.storage.getMaxEnergyStored() + " " + tile.storage.getStoredPercentage() * 100 + "%"),
+            " Storage: " + tile.storage.getEnergyStored() + "/" + tile.storage.getMaxEnergyStored() + " " + tile.storage.getStoredPercentage() * 100 + "% Bonus: " + tile.bonusCount * TileEntitySolarGenerator.BONUS),
           true
         );
       //return true;

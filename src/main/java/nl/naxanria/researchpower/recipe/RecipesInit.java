@@ -122,6 +122,13 @@ public class RecipesInit
           new ItemStack(ItemsInit.Metals.INGOT_COPPER),
           0.5f
         );
+      
+      GameRegistry.addSmelting
+      (
+        BlocksInit.Other.CLEANED_SAND,
+        new ItemStack(BlocksInit.Other.GLASS_FOCUS),
+        0.5f
+      );
 
       registry.addShapeless(
         new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
@@ -239,27 +246,4 @@ public class RecipesInit
     }
   }
   
-//  public static void addShapeless(ItemStack result, Ingredient... ingredients)
-//  {
-//    String name = NMod.getModId() + ":recipe_" + r++;
-//    GameRegistry.addShapelessRecipe
-//    (
-//      new ResourceLocation(name),
-//      new ResourceLocation(name),
-//      result,
-//      ingredients
-//    );
-//  }
-//
-//  private static void addShaped(ItemStack result, Object... params)
-//  {
-//    String name = NMod.getModId() + ":recipe_" + r++;
-//    GameRegistry.addShapedRecipe
-//    (
-//      new ResourceLocation(name),
-//      new ResourceLocation(name),
-//      result,
-//      params
-//    );
-//  }
 }

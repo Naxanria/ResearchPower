@@ -3,21 +3,25 @@ package nl.naxanria.researchpower.tile.machines.generators;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
 import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.power.GeneratorEntity;
 import nl.naxanria.nlib.util.EnumHelper;
 import nl.naxanria.researchpower.ModConfig;
+import nl.naxanria.researchpower.block.BlocksInit;
 
 public class TileEntitySolarGenerator extends GeneratorEntity
 {
   public static final String NBT_TIER = "TIER";
+  public static final int BONUS = 2;
   
   protected EnumFacing[] providingFaces = EnumHelper.Facing.combine(EnumHelper.Facing.SIDES, EnumFacing.DOWN);
   
   public static final int base = 2;
   
   public int tier;
+  public int bonusCount = 0;
   
   public TileEntitySolarGenerator()
   {
@@ -29,6 +33,33 @@ public class TileEntitySolarGenerator extends GeneratorEntity
     super(0);
     
     init(tier);
+  }
+  
+  @Override
+  protected void entityUpdate()
+  {
+    // todo: base this of the config
+    if (ticksPassed % 10 == 0)
+    {
+      bonusCount = 0;
+      BlockPos npos = pos;
+      while (!world.isOutsideBuildHeight(npos = npos.up()))
+      {
+        if (world.getBlockState(npos) == BlocksInit.Other.GLASS_FOCUS.getDefaultState())
+        {
+          bonusCount++;
+        }
+        else
+        {
+          break;
+        }
+      }
+    }
+    
+    float b = (bonusCount * BONUS) / 100f + 1f;
+    
+    produce = Math.round(b * getProduce(tier));
+    super.entityUpdate();
   }
   
   private void init(int tier)

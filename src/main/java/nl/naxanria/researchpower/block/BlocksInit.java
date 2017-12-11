@@ -133,6 +133,7 @@ public class BlocksInit
   {
     public static final BlockBase RAINBOW = new BlockBase(Material.IRON, "rainbow");
     public static final BlockCleanedSand CLEANED_SAND = new BlockCleanedSand();
+    public static final BlockFocusGlass GLASS_FOCUS = new BlockFocusGlass();
   }
   
   public static void init(BlockRegistry registry)
@@ -170,7 +171,9 @@ public class BlocksInit
       Redstone.EMITTER,
       
       Other.RAINBOW,
-      Other.CLEANED_SAND
+      Other.CLEANED_SAND,
+      
+      Other.GLASS_FOCUS
     );
     
     init = true;
