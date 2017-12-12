@@ -90,6 +90,13 @@ public class ContainerElectricFurnace extends ContainerBase<TileEntityElectricFu
         tile.storage::getEnergyStored
       );
     
+    syncHelper.create
+      (
+        "autosort",
+        (i) -> tile.autoSort = (i >= 1),
+        () -> tile.autoSort ? 1 : 0
+      );
+    
     INVENTORY_START = c * 2;
     
     createPlayerInventorySlots(player.inventory);

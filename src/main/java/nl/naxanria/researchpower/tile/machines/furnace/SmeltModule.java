@@ -79,8 +79,14 @@ public class SmeltModule
         progress = 0;
         
         burning = new ItemStack(in.getItem());
-        in.shrink(1);
-        input.setStackInSlot(0, in);
+//        in.shrink(1);
+//        if (in.getCount() == 0)
+//        {
+//          in = ItemStack.EMPTY;
+//        }
+//        input.setStackInSlot(0, in);
+//
+        input.extractItem(0, 1, false);
       }
     }
   }

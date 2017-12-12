@@ -1,15 +1,20 @@
 package nl.naxanria.researchpower.gui;
 
+import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Slot;
+import net.minecraft.util.text.TextFormatting;
+import nl.naxanria.nlib.gui.GuiButtonBase;
 import nl.naxanria.nlib.gui.GuiContainerBase;
 import nl.naxanria.nlib.gui.Orientation;
 import nl.naxanria.nlib.gui.PropertiesFactory;
+import nl.naxanria.nlib.network.PacketHelper;
 import nl.naxanria.nlib.util.Color;
 import nl.naxanria.researchpower.Constants;
 import nl.naxanria.researchpower.containers.ContainerElectricFurnace;
 import nl.naxanria.researchpower.tile.machines.furnace.TileEntityElectricFurnace;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +22,7 @@ public class GuiElectricFurnace extends GuiContainerBase<ContainerElectricFurnac
 {
   public PropertiesFactory.BarProperties power = PropertiesFactory.BarProperties.create(10, 10, 10, 30).setColors(Color.RED, Color.BLACK).setOrientation(Orientation.BottomToTop);
   public List<PropertiesFactory.BarProperties> progBars = new ArrayList<>();
+  public GuiButtonBase sortButton;
   
   public GuiElectricFurnace(ContainerElectricFurnace inventorySlots, EntityPlayer player)
   {
@@ -31,6 +37,35 @@ public class GuiElectricFurnace extends GuiContainerBase<ContainerElectricFurnac
     }
     
     power.setPosition(-20, 40);
+  }
+  
+  @Override
+  public void initGui()
+  {
+    super.initGui();
+    
+    if (container.tile.isButtonEnabled(0, player))
+    {
+      sortButton = new GuiButtonBase(0, guiLeft - 20, guiTop, 10, 10, "S");
+      buttonList.add(sortButton);
+    }
+  }
+  
+  @Override
+  protected void actionPerformed(GuiButton button) throws IOException
+  {
+    PacketHelper.sendButtonPacket(container.tile, button.id);
+  }
+  
+  @Override
+  public void updateScreen()
+  {
+    super.updateScreen();
+    
+    if (container.tile.isButtonEnabled(0, player))
+    {
+      sortButton.displayString = (container.tile.autoSort ? TextFormatting.DARK_GREEN : TextFormatting.DARK_RED) + "S";
+    }
   }
   
   @Override

@@ -384,7 +384,7 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
   protected boolean sendUpdateWithInterval()
   {
     // Todo: make based on config
-    if(ticksPassed % 20 == 0)
+    if(ticksPassed % 5 == 0)
     {
       this.sendUpdate();
       return true;
