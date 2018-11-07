@@ -2,9 +2,13 @@ package nl.naxanria.nlib.gui;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.TextFormatting;
 import nl.naxanria.nlib.container.ContainerBase;
 import nl.naxanria.nlib.util.Color;
 
@@ -216,11 +220,43 @@ public abstract class GuiContainerBase<TC extends ContainerBase> extends GuiCont
     for (int i = start; i <= end; i++)
     {
       Slot slot = container.inventorySlots.get(i);
-      
+  
+  
       int x = slot.xPos;
       int y = slot.yPos;
-    
-      drawTexture(offX + x - 1, offY + y - 1, slotImage);
+      
+//      TextureAtlasSprite sprite = slot.getBackgroundSprite();
+//
+//      if (sprite != null)
+//      {
+//        GlStateManager.disableLighting();
+//
+//        mc.getTextureManager().bindTexture(slot.getBackgroundLocation());
+//        drawTexturedModalRect(x + offX - 1, y + offY - 1, sprite, 16, 16);
+//
+//        GlStateManager.enableLighting();
+//      }
+//
+//
+//      itemRender.renderItemAndEffectIntoGUI(mc.player, slot.getStack(), x, y);
+//      itemRender.renderItemOverlayIntoGUI(fontRenderer, slot.getStack(), x, y, null);
+      
+      int xp = x + offX - 1;
+      int yp = y + offY - 1;
+      
+      drawTexture(xp, yp, slotImage);
+      if (getSlotUnderMouse() == slot)
+      {
+        ItemStack stack = slot.getStack();
+        
+        if (!stack.isEmpty())
+        {
+          itemRender.renderItemAndEffectIntoGUI(mc.player, slot.getStack(), xp, yp);
+          itemRender.renderItemOverlayIntoGUI(fontRenderer, slot.getStack(), xp, yp, null);
+          
+          drawHoveringText(getItemToolTip(stack), xp, yp);
+        }
+      }
     }
   }
   
