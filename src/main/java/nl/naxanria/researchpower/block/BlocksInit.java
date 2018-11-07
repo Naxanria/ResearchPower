@@ -5,14 +5,11 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemRedstone;
 import net.minecraft.util.IStringSerializable;
 import nl.naxanria.nlib.registry.BlockRegistry;
 import nl.naxanria.nlib.block.BlockBase;
-import nl.naxanria.researchpower.ResearchPower;
 import nl.naxanria.researchpower.block.fluid.BlockFluidDrum;
-import nl.naxanria.researchpower.block.machines.BlockMachineEmpowerer;
-import nl.naxanria.researchpower.block.machines.BlockMachinePress;
+import nl.naxanria.researchpower.block.machines.*;
 import nl.naxanria.researchpower.block.machines.battery.BlockBattery;
 import nl.naxanria.researchpower.block.machines.generators.BlockCoalGenerator;
 import nl.naxanria.researchpower.block.machines.generators.solar.BlockSolarGenerator;
@@ -39,7 +36,7 @@ public class BlocksInit
   
   public static class Redstone
   {
-    public static final BlockEmitter EMITTER = BlockEmitter.createStateVersion(PropertyInteger.create("power", 0, 15));
+    public static final BlockEmitter EMITTER = (BlockEmitter) BlockEmitter.stateVersion(BlockEmitter.class, PropertyInteger.create("power", 0, 15));
   }
   
   
@@ -49,6 +46,8 @@ public class BlocksInit
     public static final BlockBattery BATTERY = new BlockBattery();
     public static final BlockVacuumGenerator VACUUM_GENERATOR = new BlockVacuumGenerator();
     public static final BlockCoalGenerator COAL_GENERATOR = new BlockCoalGenerator();
+    public static final BlockMachineSanding MACHINE_SANDING = new BlockMachineSanding();
+    public static final BlockElectricFurnace ELECTRIC_FURNACE = BlockElectricFurnace.createStateVersion(PropertyInteger.create("tier", 1, 4));
 
     public enum FRAMES implements IStringSerializable
     {
@@ -70,12 +69,9 @@ public class BlocksInit
       }
     }
 
-    public static final BlockBase MACHINE_FRAME = BlockBase.createStateVersion(Material.IRON, "machine_frame", PropertyEnum.create("type", FRAMES.class));
+    public static final BlockBase MACHINE_FRAME = BlockMachineFrame.stateVersion(BlockMachineFrame.class, PropertyEnum.create("type", FRAMES.class));
     public static final BlockMachinePress MACHINE_PRESS = new BlockMachinePress();
     public static final BlockMachineEmpowerer MACHINE_EMPOWERER = new BlockMachineEmpowerer();
-
-    
-  
     
     public static class Miniature
     {
@@ -124,14 +120,17 @@ public class BlocksInit
       }
     }
 
+    //(BlockSolarGenerator) BlockSolarGenerator.stateVersion(BlockSolarGenerator.class, PropertyInteger.create("tier", 1, 7));
     public static final BlockSolarGenerator SOLAR_GENERATOR = (BlockSolarGenerator.createStateVersion(PropertyInteger.create("tier", 1, 7)));
   }
   
-  public static final BlockFluidDrum FLUID_DRUM = BlockFluidDrum.createStateVersion(PropertyInteger.create("tier", 1, 3));
+  public static final BlockFluidDrum FLUID_DRUM = (BlockFluidDrum) BlockFluidDrum.stateVersion(BlockFluidDrum.class, PropertyInteger.create("tier", 1, 3)); //BlockFluidDrum.createStateVersion(PropertyInteger.create("tier", 1, 3));
   
   public static class Other
   {
     public static final BlockBase RAINBOW = new BlockBase(Material.IRON, "rainbow");
+    public static final BlockCleanedSand CLEANED_SAND = new BlockCleanedSand();
+    public static final BlockFocusGlass GLASS_FOCUS = new BlockFocusGlass();
   }
   
   public static void init(BlockRegistry registry)
@@ -157,6 +156,8 @@ public class BlocksInit
       Machines.MACHINE_FRAME,
       Machines.MACHINE_PRESS,
       Machines.MACHINE_EMPOWERER,
+      Machines.MACHINE_SANDING,
+      Machines.ELECTRIC_FURNACE,
       
       Machines.Miniature.controller,
       
@@ -167,7 +168,10 @@ public class BlocksInit
       
       Redstone.EMITTER,
       
-      Other.RAINBOW
+      Other.RAINBOW,
+      Other.CLEANED_SAND,
+      
+      Other.GLASS_FOCUS
     );
     
     init = true;

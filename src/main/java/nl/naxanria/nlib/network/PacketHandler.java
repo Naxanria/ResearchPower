@@ -1,17 +1,22 @@
 package nl.naxanria.nlib.network;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import nl.naxanria.researchpower.ResearchPower;
+import nl.naxanria.nlib.tile.IButtonResponder;
 import nl.naxanria.nlib.tile.TileEntityBase;
+import nl.naxanria.nlib.util.NBTHelper;
+import nl.naxanria.researchpower.ResearchPower;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +45,26 @@ public class PacketHandler
     }
   };
   
+  public static final DataHandler GUI_BUTTON_TO_TILE_HANDLER = new DataHandler()
+  {
+    @Override
+    public void handleData(NBTTagCompound compound, MessageContext context)
+    {
+      World world = DimensionManager.getWorld(compound.getInteger("WorldID"));
+      TileEntity tile = world.getTileEntity(NBTHelper.readBlockPos(compound));
+      
+      if (tile instanceof IButtonResponder)
+      {
+        IButtonResponder responder = (IButtonResponder) tile;
+        Entity entity = world.getEntityByID(compound.getInteger("PlayerID"));
+        if (entity instanceof EntityPlayer)
+        {
+          responder.onButtonPressed(compound.getInteger("ButtonID"), (EntityPlayer) entity);
+        }
+      }
+    }
+  };
+  
   public static void init()
   {
     networkWrapper = NetworkRegistry.INSTANCE.newSimpleChannel(ResearchPower.MOD_ID);
@@ -48,7 +73,8 @@ public class PacketHandler
     
     addAll
     (
-      TILE_ENTITY_HANDLER
+      TILE_ENTITY_HANDLER,
+      GUI_BUTTON_TO_TILE_HANDLER
     );
   }
   

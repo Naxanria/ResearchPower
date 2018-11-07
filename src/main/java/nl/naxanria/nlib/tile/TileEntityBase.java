@@ -2,6 +2,7 @@ package nl.naxanria.nlib.tile;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
@@ -383,7 +384,7 @@ public abstract class TileEntityBase extends TileEntity implements ITickable
   protected boolean sendUpdateWithInterval()
   {
     // Todo: make based on config
-    if(ticksPassed % 20 == 0)
+    if(ticksPassed % 5 == 0)
     {
       this.sendUpdate();
       return true;

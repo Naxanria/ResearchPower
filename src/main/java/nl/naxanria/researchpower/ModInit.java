@@ -6,7 +6,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import nl.naxanria.nlib.NMod;
-import nl.naxanria.researchpower.config.GuiFactoryResearchPower;
 
 @Mod
 (
@@ -44,6 +43,6 @@ public class ModInit
     @Mod.EventHandler
     public final void serverLoad(FMLServerStartingEvent event)
     {
-      NModInstance.registerCommands(event);
+      NModInstance.onServerStarting(event);
     }
 }

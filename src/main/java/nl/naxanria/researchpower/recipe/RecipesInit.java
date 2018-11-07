@@ -17,6 +17,8 @@ import nl.naxanria.researchpower.item.ItemsInit;
 import nl.naxanria.researchpower.recipe.registry.EmpowererRecipeRegistry;
 import nl.naxanria.researchpower.recipe.registry.MiniatureRecipeRegistry;
 import nl.naxanria.researchpower.recipe.registry.PressRecipeRegistry;
+import nl.naxanria.researchpower.recipe.registry.SandingRecipeRegistry;
+import nl.naxanria.researchpower.tile.machines.TileEntityMachineSanding;
 
 public class RecipesInit
 {
@@ -94,6 +96,19 @@ public class RecipesInit
     );
   }
   
+  public static class Sanding
+  {
+    public static final RecipeSanding CLEANED_SAND = new RecipeSanding
+      (
+        new ItemStack(Blocks.SAND),
+        new ItemStack(BlocksInit.Other.CLEANED_SAND),
+        TileEntityMachineSanding.getSandAmount(BlocksInit.Other.CLEANED_SAND) - TileEntityMachineSanding.getSandAmount(Blocks.SAND),
+        250,
+        10
+      );
+  }
+  
+  
   private static int r = 0;
   
   public static void init(RecipeRegistry registry)
@@ -107,6 +122,13 @@ public class RecipesInit
           new ItemStack(ItemsInit.Metals.INGOT_COPPER),
           0.5f
         );
+      
+      GameRegistry.addSmelting
+      (
+        BlocksInit.Other.CLEANED_SAND,
+        new ItemStack(BlocksInit.Other.GLASS_FOCUS),
+        0.5f
+      );
 
       registry.addShapeless(
         new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
@@ -208,6 +230,11 @@ public class RecipesInit
         Empowerer.METAL_DRUM,
         Empowerer.OBSIDIAN_DRUM
       );
+  
+      SandingRecipeRegistry.addAll
+      (
+        Sanding.CLEANED_SAND
+      );
       
       registry.registerNBTClearRecipes();
       
@@ -219,27 +246,4 @@ public class RecipesInit
     }
   }
   
-//  public static void addShapeless(ItemStack result, Ingredient... ingredients)
-//  {
-//    String name = NMod.getModId() + ":recipe_" + r++;
-//    GameRegistry.addShapelessRecipe
-//    (
-//      new ResourceLocation(name),
-//      new ResourceLocation(name),
-//      result,
-//      ingredients
-//    );
-//  }
-//
-//  private static void addShaped(ItemStack result, Object... params)
-//  {
-//    String name = NMod.getModId() + ":recipe_" + r++;
-//    GameRegistry.addShapedRecipe
-//    (
-//      new ResourceLocation(name),
-//      new ResourceLocation(name),
-//      result,
-//      params
-//    );
-//  }
 }

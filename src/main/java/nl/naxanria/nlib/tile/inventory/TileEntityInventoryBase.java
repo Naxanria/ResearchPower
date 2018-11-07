@@ -13,7 +13,7 @@ import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.util.CollectionUtil;
 import nl.naxanria.nlib.util.EnumHelper;
 
-public class TileEntityInventoryBase extends TileEntityBase implements IInventoryHolder
+public abstract class TileEntityInventoryBase extends TileEntityBase implements IInventoryHolder
 {
   public final ItemStackHandlerBase inventory;
   

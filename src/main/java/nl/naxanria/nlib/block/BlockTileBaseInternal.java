@@ -156,9 +156,9 @@ public abstract class BlockTileBaseInternal<T extends IProperty, TE extends Tile
   @Override
   public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase entity, ItemStack stack)
   {
+    TileEntity tile = world.getTileEntity(pos);
     if(stack.hasTagCompound())
     {
-      TileEntity tile = world.getTileEntity(pos);
       if(tile instanceof TileEntityBase)
       {
         TileEntityBase base = (TileEntityBase) tile;
@@ -177,6 +177,19 @@ public abstract class BlockTileBaseInternal<T extends IProperty, TE extends Tile
             base.setOwner((EntityPlayer) entity);
             base.markDirty();
           }
+        }
+      }
+    }
+    else if (tile instanceof TileEntityBase)
+    {
+      TileEntityBase base = (TileEntityBase) tile;
+  
+      if (entity instanceof EntityPlayer && base.hasFlags(TileFlags.HasOwner))
+      {
+        if (base.getOwner() == null)
+        {
+          base.setOwner((EntityPlayer) entity);
+          base.markDirty();
         }
       }
     }

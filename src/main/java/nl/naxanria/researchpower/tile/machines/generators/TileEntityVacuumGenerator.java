@@ -1,4 +1,4 @@
-package nl.naxanria.researchpower.tile;
+package nl.naxanria.researchpower.tile.machines.generators;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;

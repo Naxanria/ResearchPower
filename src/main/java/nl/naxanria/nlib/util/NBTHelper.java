@@ -1,6 +1,7 @@
 package nl.naxanria.nlib.util;
 
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
@@ -33,5 +34,19 @@ public class NBTHelper
   {
     FluidTank tank = getFluidTank(compound, tankName);
     return tank == null ? new FluidStack(FluidRegistry.WATER, 0) : tank.getFluid();
+  }
+  
+  public static BlockPos readBlockPos(NBTTagCompound compound)
+  {
+    return new BlockPos(compound.getInteger("X"), compound.getInteger("Y"), compound.getInteger("Z"));
+  }
+  
+  public static NBTTagCompound writeBlockPos(BlockPos pos, NBTTagCompound compound)
+  {
+    compound.setInteger("X", pos.getX());
+    compound.setInteger("Y", pos.getY());
+    compound.setInteger("Z", pos.getZ());
+    
+    return compound;
   }
 }

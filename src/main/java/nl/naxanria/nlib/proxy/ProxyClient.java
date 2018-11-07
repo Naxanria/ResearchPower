@@ -1,6 +1,5 @@
 package nl.naxanria.nlib.proxy;
 
-import jline.internal.Log;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.client.resources.I18n;
@@ -8,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import nl.naxanria.nlib.tile.TileEntityBase;
+import nl.naxanria.nlib.util.logging.Log;
 import nl.naxanria.researchpower.ResearchPower;
 
 public class ProxyClient extends Proxy
@@ -39,8 +39,7 @@ public class ProxyClient extends Proxy
         }
         catch (ClassNotFoundException | IllegalAccessException | InstantiationException e)
         {
-            Log.error("Unable to register renderer for " + tileEntityClass.toString(), e);
+            Log.error("Unable to register renderer for " + tileEntityClass.toString() + e);
         }
-
     }
 }

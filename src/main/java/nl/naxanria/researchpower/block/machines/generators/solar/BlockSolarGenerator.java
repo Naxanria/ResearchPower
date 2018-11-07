@@ -10,7 +10,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import nl.naxanria.nlib.block.BlockTileBaseProperties;
-import nl.naxanria.researchpower.tile.TileEntitySolarGenerator;
+import nl.naxanria.researchpower.tile.machines.generators.TileEntitySolarGenerator;
 
 import javax.annotation.Nullable;
 
@@ -37,7 +37,7 @@ public class BlockSolarGenerator extends BlockTileBaseProperties<PropertyInteger
         (
           new TextComponentString("Tier: " + tile.tier + " Producing: " + tile.produce +
             " Active: " + tile.canGenerate() +
-            " Storage: " + tile.storage.getEnergyStored() + "/" + tile.storage.getMaxEnergyStored() + " " + tile.storage.getStoredPercentage() * 100 + "%"),
+            " Storage: " + tile.storage.getEnergyStored() + "/" + tile.storage.getMaxEnergyStored() + " " + tile.storage.getStoredPercentage() * 100 + "% Bonus: " + tile.bonusCount * TileEntitySolarGenerator.BONUS),
           true
         );
       //return true;
