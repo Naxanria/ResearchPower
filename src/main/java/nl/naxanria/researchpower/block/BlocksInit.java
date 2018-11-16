@@ -15,7 +15,8 @@ import nl.naxanria.researchpower.block.machines.generators.BlockCoalGenerator;
 import nl.naxanria.researchpower.block.machines.generators.solar.BlockSolarGenerator;
 import nl.naxanria.researchpower.block.machines.generators.vacuum.BlockVacuumGenerator;
 import nl.naxanria.researchpower.block.machines.miniature.BlockMiniatureController;
-import nl.naxanria.researchpower.block.machines.station.BlockResearchStation;
+import nl.naxanria.researchpower.block.machines.research.BlockResearchManager;
+import nl.naxanria.researchpower.block.machines.research.BlockResearchStation;
 import nl.naxanria.researchpower.block.ores.BlockCopperOre;
 import nl.naxanria.researchpower.block.redstone.BlockEmitter;
 
@@ -43,11 +44,16 @@ public class BlocksInit
   public static class Machines
   {
     public static final BlockResearchStation RESEARCH_STATION = new BlockResearchStation();
+    public static final BlockResearchManager RESEARCH_MANAGER = new BlockResearchManager();
+    
     public static final BlockBattery BATTERY = new BlockBattery();
+    
     public static final BlockVacuumGenerator VACUUM_GENERATOR = new BlockVacuumGenerator();
     public static final BlockCoalGenerator COAL_GENERATOR = new BlockCoalGenerator();
     public static final BlockMachineSanding MACHINE_SANDING = new BlockMachineSanding();
     public static final BlockElectricFurnace ELECTRIC_FURNACE = BlockElectricFurnace.createStateVersion(PropertyInteger.create("tier", 1, 4));
+    
+    
 
     public enum FRAMES implements IStringSerializable
     {
@@ -150,10 +156,15 @@ public class BlocksInit
       
       // machines
       Machines.BATTERY,
+      
       Machines.RESEARCH_STATION,
+      Machines.RESEARCH_MANAGER,
+      
       Machines.VACUUM_GENERATOR,
       Machines.COAL_GENERATOR,
+      
       Machines.MACHINE_FRAME,
+      
       Machines.MACHINE_PRESS,
       Machines.MACHINE_EMPOWERER,
       Machines.MACHINE_SANDING,

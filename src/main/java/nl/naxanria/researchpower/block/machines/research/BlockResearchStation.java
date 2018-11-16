@@ -1,4 +1,4 @@
-package nl.naxanria.researchpower.block.machines.station;
+package nl.naxanria.researchpower.block.machines.research;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -9,7 +9,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import nl.naxanria.nlib.block.BlockTileBase;
-import nl.naxanria.researchpower.tile.machines.TileEntityResearchStation;
+import nl.naxanria.researchpower.research.Research;
+import nl.naxanria.researchpower.tile.machines.research.TileEntityResearchStation;
 
 import javax.annotation.Nullable;
 
@@ -40,10 +41,13 @@ public class BlockResearchStation extends BlockTileBase<TileEntityResearchStatio
     
     if (player.isSneaking())
     {
-      tile.storage.extractEnergy(tile.storage.getCapacity(), false);
+      //tile.storage.extractEnergy(tile.storage.getCapacity(), false);
+      // start dummy research
+      Research research = new Research("test_research", "no desc", 50, null, null);
+      research.start(player);
     }
     
-    player.sendStatusMessage(new TextComponentString("Power: " + tile.storage.getEnergyStored() + " " + (tile.storage.getStoredPercentage() * 100) + "%"), true);
+    player.sendStatusMessage(new TextComponentString("Power: " + tile.storage.getEnergyStored() + " work: " + tile.getWorkProgress() * 100 + "%"), true);
     
     return true;
   }

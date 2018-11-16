@@ -20,6 +20,7 @@ import nl.naxanria.researchpower.gui.ModGuiHandler;
 import nl.naxanria.researchpower.item.ItemsInit;
 import nl.naxanria.nlib.proxy.Proxy;
 import nl.naxanria.researchpower.recipe.RecipesInit;
+import nl.naxanria.researchpower.research.ResearchInit;
 
 public class ResearchPower extends NMod
 {
@@ -97,6 +98,9 @@ public class ResearchPower extends NMod
           .ingot(ItemsInit.Metals.INGOT_COPPER)
           .fullBlock(BlocksInit.Metals.COPPER_BLOCK)
       );
+  
+    ResearchInit.init();
+    SyncInit.Init();
   }
   
   @Override

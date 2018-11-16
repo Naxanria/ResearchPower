@@ -38,6 +38,8 @@ public class ItemsInit
       MachineParts.REDSTONE_RING,
       MachineParts.LAPIS_WAFER,
       MachineParts.GLOWSTONE_WAFER
+      
+
     );
     
     init = true;

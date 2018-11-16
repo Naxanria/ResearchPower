@@ -95,7 +95,7 @@ public class ResearchTree
   @SuppressWarnings("unchecked")
   protected List<Research> getResearchWithStatus(ResearchStatus status)
   {
-    List out = new ArrayList();
+    List<Research> out = new ArrayList<>();
     for (Research research :
       researches)
     {

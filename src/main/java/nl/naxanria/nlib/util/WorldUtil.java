@@ -20,11 +20,14 @@ public class WorldUtil
   {
     if (maxTransfer > 0)
     {
-      EnumFacing opp = sideTo == null ? null : sideTo.getOpposite();
+  
       if (tileFrom == null || tileTo == null)
       {
         return;
       }
+      
+      EnumFacing opp = sideTo == null ? null : sideTo.getOpposite();
+
       if (tileFrom.hasCapability(CapabilityEnergy.ENERGY, sideTo) && tileTo.hasCapability(CapabilityEnergy.ENERGY, opp))
       {
         IEnergyStorage handlerFrom = tileFrom.getCapability(CapabilityEnergy.ENERGY, sideTo);

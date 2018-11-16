@@ -9,28 +9,29 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import nl.naxanria.nlib.NMod;
 import nl.naxanria.nlib.block.BlockTileBase;
+import nl.naxanria.nlib.block.BlockTileGuiBase;
 import nl.naxanria.researchpower.gui.ModGuiHandler;
 import nl.naxanria.researchpower.tile.machines.generators.TileEntityCoalGenerator;
 
 import javax.annotation.Nullable;
 
-public class BlockCoalGenerator extends BlockTileBase<TileEntityCoalGenerator>
+public class BlockCoalGenerator extends BlockTileGuiBase<TileEntityCoalGenerator>
 {
   public BlockCoalGenerator()
   {
-    super(Material.IRON, "generator_coal");
+    super(Material.IRON, "generator_coal", ModGuiHandler.GENERATOR_COAL);
   }
   
-  @Override
-  public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
-  {
-    if (!worldIn.isRemote && !playerIn.isSneaking())
-    {
-      playerIn.openGui(NMod.getMod(), ModGuiHandler.GENERATOR_COAL, worldIn, pos.getX(), pos.getY(), pos.getZ());
-    }
-    
-    return true;
-  }
+//  @Override
+//  public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+//  {
+//    if (!worldIn.isRemote && !playerIn.isSneaking())
+//    {
+//      playerIn.openGui(NMod.getMod(), ModGuiHandler.GENERATOR_COAL, worldIn, pos.getX(), pos.getY(), pos.getZ());
+//    }
+//
+//    return true;
+//  }
   
   @Nullable
   @Override

@@ -16,6 +16,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import nl.naxanria.nlib.tile.IButtonResponder;
 import nl.naxanria.nlib.tile.TileEntityBase;
 import nl.naxanria.nlib.util.NBTHelper;
+import nl.naxanria.nlib.util.logging.Log;
+import nl.naxanria.nlib.util.logging.LogColor;
 import nl.naxanria.researchpower.ResearchPower;
 
 import java.util.ArrayList;
@@ -26,6 +28,7 @@ public class PacketHandler
   public static SimpleNetworkWrapper networkWrapper;
   
   public static final List<DataHandler> DATA_HANDLERS = new ArrayList<>();
+  public static final List<ISync> SYNC_RECEIVERS = new ArrayList<>();
   
   public static final DataHandler TILE_ENTITY_HANDLER = new DataHandler()
   {
@@ -59,9 +62,25 @@ public class PacketHandler
         Entity entity = world.getEntityByID(compound.getInteger("PlayerID"));
         if (entity instanceof EntityPlayer)
         {
-          responder.onButtonPressed(compound.getInteger("ButtonID"), (EntityPlayer) entity);
+          int bID = compound.getInteger("ButtonID");
+          responder.onButtonPressed(bID, (EntityPlayer) entity);
+          Log.info(LogColor.YELLOW, "Button Remote:" + world.isRemote + " ID: " + bID);
         }
       }
+    }
+  };
+  
+  public static final DataHandler SYNC_HANDLER = new DataHandler()
+  {
+    @Override
+    public void handleData(NBTTagCompound compound, MessageContext context)
+    {
+      int syncId = compound.getInteger("SyncID");
+      NBTTagCompound data = compound.getCompoundTag("Data");
+      ISync sync = SYNC_RECEIVERS.get(syncId);
+      sync.sync(data);
+  
+      Log.info(LogColor.YELLOW, "Syncing Remote:" + Minecraft.getMinecraft().world.isRemote + " ID: " + syncId + " ");
     }
   };
   
@@ -74,8 +93,16 @@ public class PacketHandler
     addAll
     (
       TILE_ENTITY_HANDLER,
-      GUI_BUTTON_TO_TILE_HANDLER
+      GUI_BUTTON_TO_TILE_HANDLER,
+      SYNC_HANDLER
     );
+  }
+  
+  public static ISync registerSync(ISync sync)
+  {
+    SYNC_RECEIVERS.add(sync);
+    
+    return sync;
   }
   
   private static void addAll(DataHandler... handlers)

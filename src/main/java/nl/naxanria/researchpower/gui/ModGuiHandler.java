@@ -12,6 +12,7 @@ import nl.naxanria.researchpower.tile.machines.generators.TileEntityCoalGenerato
 import nl.naxanria.researchpower.tile.machines.TileEntityEmpowerer;
 import nl.naxanria.researchpower.tile.machines.TileEntityMachineSanding;
 import nl.naxanria.researchpower.tile.machines.TileEntityPress;
+import nl.naxanria.researchpower.tile.machines.research.TileEntityResearchManager;
 
 import javax.annotation.Nullable;
 
@@ -22,6 +23,8 @@ public class ModGuiHandler implements IGuiHandler
   public static final int EMPOWERER = 2;
   public static final int SANDING = 3;
   public static final int FURNACE = 4;
+  public static final int RESEARCH_MANAGER = 5;
+  public static final int RESEARCH_STATION = 6;
   
   @Nullable
   @Override
@@ -41,6 +44,8 @@ public class ModGuiHandler implements IGuiHandler
         return new ContainerSanding((TileEntityMachineSanding) tile, player);
       case FURNACE:
         return new ContainerElectricFurnace((TileEntityElectricFurnace) tile, player);
+      case RESEARCH_MANAGER:
+        return new ContainerResearchManager((TileEntityResearchManager) tile, player);
       default:
         return null;
     }
@@ -64,6 +69,8 @@ public class ModGuiHandler implements IGuiHandler
         return new GuiSanding((ContainerSanding) container, player);
       case FURNACE:
         return new GuiElectricFurnace((ContainerElectricFurnace) container, player);
+      case RESEARCH_MANAGER:
+        return new GuiResearchManager((ContainerResearchManager) container, player);
       default:
         return null;
     }

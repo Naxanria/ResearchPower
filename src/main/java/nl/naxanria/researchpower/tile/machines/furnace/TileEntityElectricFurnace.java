@@ -18,7 +18,16 @@ import java.util.List;
 
 public class TileEntityElectricFurnace extends TileEntityBase implements IInventoryHolder, IButtonResponder
 {
-  public static final int POWER_USAGE = 20;
+  public static final int BUTTON_SORT = 0;
+  
+  public static final FurnaceData[] DATA =
+    {
+      new FurnaceData(0, 0, 0), // tier 0
+      new FurnaceData(1, 1.25f, 20), // 1 --    20/t
+      new FurnaceData(2, 1.35f, 35), // 2 --    70/t
+      new FurnaceData(4, 1.50f, 65), // 3 --   260/t
+      new FurnaceData(8, 2.20f, 100) // 4 --   800/t
+    };
   
   public List<SmeltModule> modules = new ArrayList<>();
   
@@ -26,6 +35,7 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
   
   public float speed = 1;
   public int moduleCount = 1;
+  public int power = 1;
   
   public EnergyStorageBase storage = new EnergyStorageBase(50000, 5000, 0);
   
@@ -45,29 +55,34 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
   private void init(int tier)
   {
     
-    switch (tier)
-    {
-      case 1:
-      default:
-        moduleCount = 1;
-        speed = 1.25f;
-        break;
-        
-      case 2:
-        moduleCount = 2;
-        speed = 1.35f;
-        break;
-        
-      case 3:
-        moduleCount = 4;
-        speed = 1.5f;
-        break;
-        
-      case 4:
-        moduleCount = 8;
-        speed = 2.2f;
-        break;
-    }
+//    switch (tier)
+//    {
+//      case 1:
+//      default:
+//        moduleCount = 1;
+//        speed = 1.25f;
+//        break;
+//
+//      case 2:
+//        moduleCount = 2;
+//        speed = 1.35f;
+//        break;
+//
+//      case 3:
+//        moduleCount = 4;
+//        speed = 1.5f;
+//        break;
+//
+//      case 4:
+//        moduleCount = 8;
+//        speed = 2.2f;
+//        break;
+//    }
+    
+    FurnaceData data = DATA[tier];
+    moduleCount = data.moduleCount;
+    speed = data.speed;
+    power = data.power;
     
     for (int i = 0; i < moduleCount; i++)
     {
@@ -105,8 +120,9 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
     IItemHandler[] out = new IItemHandler[modules.size() * 2];
     for (int i = 0; i < modules.size(); i++)
     {
-      out[i] = modules.get(i).input;
-      out[i + 1] = modules.get(i).output;
+      int pos = i * 2;
+      out[pos] = modules.get(i).input;
+      out[pos + 1] = modules.get(i).output;
     }
     
     return out;
@@ -145,7 +161,6 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
     int t = tier;
     tier = compound.getInteger("Tier");
     
-    
     if (t != tier || modules.size() == 0)
     {
       init(tier);
@@ -174,7 +189,7 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
       {
         if (m.isBurning())
         {
-          powerUsage += POWER_USAGE;
+          powerUsage += power;
         }
       }
   
@@ -281,7 +296,7 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
   @Override
   public void onButtonPressed(int id, EntityPlayer player)
   {
-    if (id == 0)
+    if (id == BUTTON_SORT)
     {
       autoSort = !autoSort;
     }
@@ -290,7 +305,7 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
   @Override
   public boolean isButtonEnabled(int id, EntityPlayer player)
   {
-    if (id == 0)
+    if (id == BUTTON_SORT)
     {
       return moduleCount > 1;
     }
@@ -299,4 +314,5 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
       return true;
     }
   }
+
 }

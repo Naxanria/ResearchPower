@@ -10,6 +10,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import nl.naxanria.nlib.block.BlockTileBaseProperties;
+import nl.naxanria.nlib.util.Numbers;
 import nl.naxanria.researchpower.tile.machines.generators.TileEntitySolarGenerator;
 
 import javax.annotation.Nullable;
@@ -35,9 +36,10 @@ public class BlockSolarGenerator extends BlockTileBaseProperties<PropertyInteger
       TileEntitySolarGenerator tile = getTileEntity(world, pos);
       player.sendStatusMessage
         (
-          new TextComponentString("Tier: " + tile.tier + " Producing: " + tile.produce +
+          new TextComponentString("Tier: " + tile.tier + " Producing: " + Numbers.format(tile.produce) +
             " Active: " + tile.canGenerate() +
-            " Storage: " + tile.storage.getEnergyStored() + "/" + tile.storage.getMaxEnergyStored() + " " + tile.storage.getStoredPercentage() * 100 + "% Bonus: " + tile.bonusCount * TileEntitySolarGenerator.BONUS),
+            " Storage: " + Numbers.format(tile.storage.getEnergyStored()) + "/" + Numbers.format(tile.storage.getMaxEnergyStored()) + " " +
+            Numbers.round(tile.storage.getStoredPercentage(), 2) * 100 + "% Bonus: " + tile.bonusCount * TileEntitySolarGenerator.BONUS),
           true
         );
       //return true;

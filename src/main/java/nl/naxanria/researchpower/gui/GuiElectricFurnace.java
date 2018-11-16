@@ -44,9 +44,9 @@ public class GuiElectricFurnace extends GuiContainerBase<ContainerElectricFurnac
   {
     super.initGui();
     
-    if (container.tile.isButtonEnabled(0, player))
+    if (container.tile.isButtonEnabled(TileEntityElectricFurnace.BUTTON_SORT, player))
     {
-      sortButton = new GuiButtonBase(0, guiLeft - 20, guiTop, 10, 10, "S");
+      sortButton = new GuiButtonBase(TileEntityElectricFurnace.BUTTON_SORT, guiLeft - 20, guiTop, 10, 10, "S");
       buttonList.add(sortButton);
     }
   }
@@ -62,7 +62,7 @@ public class GuiElectricFurnace extends GuiContainerBase<ContainerElectricFurnac
   {
     super.updateScreen();
     
-    if (container.tile.isButtonEnabled(0, player))
+    if (container.tile.isButtonEnabled(sortButton.id, player))
     {
       sortButton.displayString = (container.tile.autoSort ? TextFormatting.DARK_GREEN : TextFormatting.DARK_RED) + "S";
     }
