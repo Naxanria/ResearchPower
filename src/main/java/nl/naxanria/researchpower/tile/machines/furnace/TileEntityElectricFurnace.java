@@ -12,22 +12,16 @@ import nl.naxanria.nlib.tile.TileFlags;
 import nl.naxanria.nlib.tile.inventory.IInventoryHolder;
 import nl.naxanria.nlib.tile.power.EnergyStorageBase;
 import nl.naxanria.nlib.util.EnumHelper;
+import nl.naxanria.nlib.util.logging.Log;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static nl.naxanria.researchpower.tile.machines.furnace.FurnaceData.DATA;
+
 public class TileEntityElectricFurnace extends TileEntityBase implements IInventoryHolder, IButtonResponder
 {
   public static final int BUTTON_SORT = 0;
-  
-  public static final FurnaceData[] DATA =
-    {
-      new FurnaceData(0, 0, 0), // tier 0
-      new FurnaceData(1, 1.25f, 20), // 1 --    20/t
-      new FurnaceData(2, 1.35f, 35), // 2 --    70/t
-      new FurnaceData(4, 1.50f, 65), // 3 --   260/t
-      new FurnaceData(8, 2.20f, 100) // 4 --   800/t
-    };
   
   public List<SmeltModule> modules = new ArrayList<>();
   
@@ -274,10 +268,17 @@ public class TileEntityElectricFurnace extends TileEntityBase implements IInvent
       
         SmeltModule m = modules.get(aToSort);
         ItemStack s = m.input.getStackInSlot(0);
-        s.setCount(amount);
+        
         if (s.isEmpty())
         {
-          s = new ItemStack(in.getItem(), amount);
+          s = in.copy(); // new ItemStack(in.getItem(), amount);
+        }
+        
+        s.setCount(amount);
+        
+        if (!s.isItemEqual(in))
+        {
+          Log.warn("!?" + in.toString() + " :: " + s.toString());
         }
       
         //Log.info(s.getCount() + " " + s.getItem().getRegistryName());

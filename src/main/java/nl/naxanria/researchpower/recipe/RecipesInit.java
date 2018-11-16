@@ -131,8 +131,8 @@ public class RecipesInit
       );
 
       registry.addShapeless(
-        new ItemStack(BlocksInit.Metals.COPPER_BLOCK),
-        Ingredient.fromStacks(new ItemStack(ItemsInit.Metals.INGOT_COPPER, 9))
+        new ItemStack(ItemsInit.Metals.INGOT_COPPER, 9),
+        Ingredient.fromStacks(new ItemStack(BlocksInit.Metals.COPPER_BLOCK))
       );
   
       registry.addShaped(
